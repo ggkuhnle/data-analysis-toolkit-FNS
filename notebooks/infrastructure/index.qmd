@@ -3,10 +3,26 @@ title: "Infrastructure"
 format: html
 ---
 
-# 📂 Infrastructure
+# 🔧 Infrastructure
 
-Welcome to the **Infrastructure** section of the Data Analysis Toolkit.
+This section covers the *technical environment* needed for data analysis.  
+It explains how to:
 
-Below you'll find all the available notebooks in this area. You can view them directly in GitHub or open them in Colab.
+- Use **Google Colab**, **Jupyter**, and **Quarto**
+- Work with **GitHub** and version control
+- Install packages and understand environments
+- Choose the right tools for local or cloud use
 
-- [01 intro colab git](./01_intro_colab_git.ipynb) [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/infrastructure/01_intro_colab_git.ipynb)
+---
+
+## 📚 Contents
+
+### 🧰 [01 - Getting Started with Colab and GitHub](01_getting_started_colab_git.ipynb)
+
+- Open and run notebooks in Google Colab
+- Save your work to GitHub
+- Link notebooks to your GitHub account
+
+---
+
+_This section lays the foundation for everything else in the course._
