@@ -98,60 +98,81 @@
     "text": "Programming Basics\nThis section includes the following notebooks:\n\n01 intro python syntax\n02 data types and conversion\n03 control structures\n04 functions and oop\n05 code style"
   },
   {
-    "objectID": "notebooks/data_analysis/02_tests_and_anova.html",
-    "href": "notebooks/data_analysis/02_tests_and_anova.html",
-    "title": "🧪 T-tests and ANOVA",
+    "objectID": "notebooks/programming_basics/00_vibe_programming.html",
+    "href": "notebooks/programming_basics/00_vibe_programming.html",
+    "title": "✨ Just Try It: The Vibe of Programming",
     "section": "",
-    "text": "Testing group differences.\nfrom scipy.stats import ttest_ind"
+    "text": "Welcome to coding! This notebook is not about getting things perfect — it’s about trying things, seeing what happens, and getting comfortable with Python.\nIf you’re feeling unsure or scared of “breaking something” — good news: Python is very hard to break. You can always restart and try again.\nLet’s experiment 👇\nCode\n# 🧠 Can you add a string and a number?\n\"hippo\" + 3\nCode\n# 🐾 What happens if I forget a bracket?\nprint(\"Hello Hippo!\"\nCode\n# 🦛 Can I print a hippo emoji?\nprint(\"Here's a hippo: 🦛\")\nCode\n# 🔁 What happens if I divide by zero?\n1 / 0\nCode\n# 🔀 Can I change a number into a string?\nstr(123) + \" hippos\""
   },
   {
-    "objectID": "notebooks/data_analysis/04_logistic_and_survival.html",
-    "href": "notebooks/data_analysis/04_logistic_and_survival.html",
-    "title": "📉 Logistic and Survival Analysis",
-    "section": "",
-    "text": "Using logistic regression and Kaplan-Meier.\n# coming soon"
+    "objectID": "notebooks/programming_basics/00_vibe_programming.html#vibe-tips",
+    "href": "notebooks/programming_basics/00_vibe_programming.html#vibe-tips",
+    "title": "✨ Just Try It: The Vibe of Programming",
+    "section": "🎵 Vibe Tips",
+    "text": "🎵 Vibe Tips\n\nYou don’t need to understand everything at once.\nIf something breaks, it’s a learning opportunity.\nProgramming is just thinking + curiosity + patience.\nIf it works and helps you understand — that’s the vibe ✨\n\nReady to try more? Head to the Introduction to Python Syntax notebook next!"
   },
   {
-    "objectID": "notebooks/data_analysis/01_distributions_and_summary.html",
-    "href": "notebooks/data_analysis/01_distributions_and_summary.html",
-    "title": "📊 Summary Statistics and Distributions",
+    "objectID": "notebooks/data_analysis/02_t_tests_and_anova.html",
+    "href": "notebooks/data_analysis/02_t_tests_and_anova.html",
+    "title": "🔬 T-Tests and ANOVA",
     "section": "",
-    "text": "Code\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.histplot(df['Height'], kde=True)\nplt.show()"
+    "text": "Code\nfrom scipy import stats\nstats.ttest_ind(df['Height'][:50], df['Height'][50:])"
   },
   {
-    "objectID": "notebooks/data_analysis/01_distributions.html",
-    "href": "notebooks/data_analysis/01_distributions.html",
-    "title": "📊 Visualising Distributions",
+    "objectID": "notebooks/data_analysis/example.html",
+    "href": "notebooks/data_analysis/example.html",
+    "title": "📊 Example Notebook: Data Analysis",
     "section": "",
-    "text": "Histograms, KDE plots.\nimport seaborn as sns\nsns.histplot(df['height'])"
+    "text": "This notebook will explore statistical testing, distributions, and plotting using real or simulated data."
   },
   {
-    "objectID": "notebooks/infrastructure/01_getting_started_colab_git.html",
-    "href": "notebooks/infrastructure/01_getting_started_colab_git.html",
-    "title": "🔧 Getting Started with Google Colab and GitHub",
+    "objectID": "notebooks/data_analysis/03_regression.html",
+    "href": "notebooks/data_analysis/03_regression.html",
+    "title": "📈 Regression and Correlation",
     "section": "",
-    "text": "Code\nprint('Welcome to Colab!')"
+    "text": "Linear regression using statsmodels.\nimport statsmodels.api as sm"
   },
   {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html",
-    "title": "🌐 What Is a Data Science Environment?",
+    "objectID": "notebooks/data_analysis/index.html",
+    "href": "notebooks/data_analysis/index.html",
+    "title": "Data Analysis",
     "section": "",
-    "text": "A data science environment refers to the tools, libraries, platforms, and workflows used to analyse data. This includes:\n\nProgramming languages (Python, R)\nInteractive notebooks (Jupyter, Colab)\nLibraries for analysis and plotting\nVersion control (e.g. Git)\nPlatforms for collaboration (GitHub, Overleaf, etc.)"
+    "text": "Data Analysis\nThis section includes the following notebooks:\n\n01 distributions\n02 tests and anova\n03 regression\n04 logistic and survival"
   },
   {
-    "objectID": "notebooks/infrastructure/02_python_vs_r.html",
-    "href": "notebooks/infrastructure/02_python_vs_r.html",
-    "title": "🐍 Python vs 🧮 R vs Other Tools",
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html",
+    "title": "🔁 Git and Version Control",
     "section": "",
-    "text": "Feature\nPython\nR\nExcel\nSAS\n\n\n\n\nGeneral purpose\n✅\n❌\n❌\n❌\n\n\nData manipulation\n✅\n✅\n⚠️\n✅\n\n\nVisualisation\n✅\n✅\n⚠️\n✅\n\n\nReproducibility\n✅\n✅\n❌\n✅\n\n\n\nPython is widely used in data science because it’s general-purpose, scriptable, and integrates well with tools and APIs."
+    "text": "Version control helps track changes to your code and collaborate safely.\nBasic Git workflow:\ngit init\ngit add .\ngit commit -m \"Initial commit\"\ngit push\nUse GitHub to store your project online and collaborate with others."
   },
   {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html",
-    "href": "notebooks/infrastructure/05_installing_packages.html",
-    "title": "📦 Installing and Managing Packages",
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html",
+    "title": "💻 Using Google Colab and Jupyter",
     "section": "",
-    "text": "Python uses pip or conda to install libraries:\npip install pandas matplotlib seaborn\nYou can also use:\n!pip install pandas\ninside Colab."
+    "text": "Colab is a cloud-based version of Jupyter, ideal for students:\n\nPros: No setup, cloud-based, easy sharing\nCons: Needs internet, no persistent storage\n\nLocal Jupyter is great for offline use and full control:\npip install notebook\njupyter notebook"
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "title": "📓 Notebooks vs Scripts vs Markdown vs Quarto",
+    "section": "",
+    "text": "Format\nBest for\nTools\n\n\n\n\nNotebook\nTeaching, exploration\nJupyter, Colab\n\n\nScript\nReproducible pipelines\n.py, R scripts\n\n\nMarkdown\nDocumentation\nGitHub, websites\n\n\nQuarto\nPublications & sites\n.qmd, quarto render"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html",
+    "href": "notebooks/infrastructure/06_finding_help.html",
+    "title": "❓ Finding Help and Documentation",
+    "section": "",
+    "text": "Useful resources: - pandas documentation - Stack Overflow - ? in Jupyter:\npd.read_csv?\n\nhelp() function:\n\nhelp(len)"
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_intro_colab_git.html",
+    "href": "notebooks/infrastructure/01_intro_colab_git.html",
+    "title": "🔧 Getting Started with Colab, Git, and Python",
+    "section": "",
+    "text": "This notebook helps you set up your environment for data analysis using: - Google Colab - GitHub (as version control and notebook storage) - Python as the programming language\nWe’ll walk through basic setup and show how to launch notebooks.\n\n\nCode\n# Try running this cell\nprint(\"Hello, world! 👋\")"
   },
   {
     "objectID": "notebooks/infrastructure/index.html",
@@ -168,67 +189,60 @@
     "text": "01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control\n05 – Installing and Managing Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, and Quarto\n\n\nThis section lays the foundation for everything else in the course."
   },
   {
-    "objectID": "notebooks/infrastructure/01_intro_colab_git.html",
-    "href": "notebooks/infrastructure/01_intro_colab_git.html",
-    "title": "🔧 Getting Started with Colab, Git, and Python",
+    "objectID": "notebooks/infrastructure/05_installing_packages.html",
+    "href": "notebooks/infrastructure/05_installing_packages.html",
+    "title": "📦 Installing and Managing Packages",
     "section": "",
-    "text": "This notebook helps you set up your environment for data analysis using: - Google Colab - GitHub (as version control and notebook storage) - Python as the programming language\nWe’ll walk through basic setup and show how to launch notebooks.\n\n\nCode\n# Try running this cell\nprint(\"Hello, world! 👋\")"
+    "text": "Python uses pip or conda to install libraries:\npip install pandas matplotlib seaborn\nYou can also use:\n!pip install pandas\ninside Colab."
   },
   {
-    "objectID": "notebooks/infrastructure/06_finding_help.html",
-    "href": "notebooks/infrastructure/06_finding_help.html",
-    "title": "❓ Finding Help and Documentation",
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html",
+    "href": "notebooks/infrastructure/02_python_vs_r.html",
+    "title": "🐍 Python vs 🧮 R vs Other Tools",
     "section": "",
-    "text": "Useful resources: - pandas documentation - Stack Overflow - ? in Jupyter:\npd.read_csv?\n\nhelp() function:\n\nhelp(len)"
+    "text": "Feature\nPython\nR\nExcel\nSAS\n\n\n\n\nGeneral purpose\n✅\n❌\n❌\n❌\n\n\nData manipulation\n✅\n✅\n⚠️\n✅\n\n\nVisualisation\n✅\n✅\n⚠️\n✅\n\n\nReproducibility\n✅\n✅\n❌\n✅\n\n\n\nPython is widely used in data science because it’s general-purpose, scriptable, and integrates well with tools and APIs."
   },
   {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
-    "title": "📓 Notebooks vs Scripts vs Markdown vs Quarto",
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html",
+    "title": "🌐 What Is a Data Science Environment?",
     "section": "",
-    "text": "Format\nBest for\nTools\n\n\n\n\nNotebook\nTeaching, exploration\nJupyter, Colab\n\n\nScript\nReproducible pipelines\n.py, R scripts\n\n\nMarkdown\nDocumentation\nGitHub, websites\n\n\nQuarto\nPublications & sites\n.qmd, quarto render"
+    "text": "A data science environment refers to the tools, libraries, platforms, and workflows used to analyse data. This includes:\n\nProgramming languages (Python, R)\nInteractive notebooks (Jupyter, Colab)\nLibraries for analysis and plotting\nVersion control (e.g. Git)\nPlatforms for collaboration (GitHub, Overleaf, etc.)"
   },
   {
-    "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
-    "href": "notebooks/infrastructure/03_colab_jupyter.html",
-    "title": "💻 Using Google Colab and Jupyter",
+    "objectID": "notebooks/infrastructure/01_getting_started_colab_git.html",
+    "href": "notebooks/infrastructure/01_getting_started_colab_git.html",
+    "title": "🔧 Getting Started with Google Colab and GitHub",
     "section": "",
-    "text": "Colab is a cloud-based version of Jupyter, ideal for students:\n\nPros: No setup, cloud-based, easy sharing\nCons: Needs internet, no persistent storage\n\nLocal Jupyter is great for offline use and full control:\npip install notebook\njupyter notebook"
+    "text": "Code\nprint('Welcome to Colab!')"
   },
   {
-    "objectID": "notebooks/infrastructure/04_git_and_version_control.html",
-    "href": "notebooks/infrastructure/04_git_and_version_control.html",
-    "title": "🔁 Git and Version Control",
+    "objectID": "notebooks/data_analysis/01_distributions.html",
+    "href": "notebooks/data_analysis/01_distributions.html",
+    "title": "📊 Visualising Distributions",
     "section": "",
-    "text": "Version control helps track changes to your code and collaborate safely.\nBasic Git workflow:\ngit init\ngit add .\ngit commit -m \"Initial commit\"\ngit push\nUse GitHub to store your project online and collaborate with others."
+    "text": "Histograms, KDE plots.\nimport seaborn as sns\nsns.histplot(df['height'])"
   },
   {
-    "objectID": "notebooks/data_analysis/index.html",
-    "href": "notebooks/data_analysis/index.html",
-    "title": "Data Analysis",
+    "objectID": "notebooks/data_analysis/01_distributions_and_summary.html",
+    "href": "notebooks/data_analysis/01_distributions_and_summary.html",
+    "title": "📊 Summary Statistics and Distributions",
     "section": "",
-    "text": "Data Analysis\nThis section includes the following notebooks:\n\n01 distributions\n02 tests and anova\n03 regression\n04 logistic and survival"
+    "text": "Code\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.histplot(df['Height'], kde=True)\nplt.show()"
   },
   {
-    "objectID": "notebooks/data_analysis/03_regression.html",
-    "href": "notebooks/data_analysis/03_regression.html",
-    "title": "📈 Regression and Correlation",
+    "objectID": "notebooks/data_analysis/04_logistic_and_survival.html",
+    "href": "notebooks/data_analysis/04_logistic_and_survival.html",
+    "title": "📉 Logistic and Survival Analysis",
     "section": "",
-    "text": "Linear regression using statsmodels.\nimport statsmodels.api as sm"
+    "text": "Using logistic regression and Kaplan-Meier.\n# coming soon"
   },
   {
-    "objectID": "notebooks/data_analysis/example.html",
-    "href": "notebooks/data_analysis/example.html",
-    "title": "📊 Example Notebook: Data Analysis",
+    "objectID": "notebooks/data_analysis/02_tests_and_anova.html",
+    "href": "notebooks/data_analysis/02_tests_and_anova.html",
+    "title": "🧪 T-tests and ANOVA",
     "section": "",
-    "text": "This notebook will explore statistical testing, distributions, and plotting using real or simulated data."
-  },
-  {
-    "objectID": "notebooks/data_analysis/02_t_tests_and_anova.html",
-    "href": "notebooks/data_analysis/02_t_tests_and_anova.html",
-    "title": "🔬 T-Tests and ANOVA",
-    "section": "",
-    "text": "Code\nfrom scipy import stats\nstats.ttest_ind(df['Height'][:50], df['Height'][50:])"
+    "text": "Testing group differences.\nfrom scipy.stats import ttest_ind"
   },
   {
     "objectID": "notebooks/programming_basics/02_control_structures.html",
