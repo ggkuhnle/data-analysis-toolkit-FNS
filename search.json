@@ -4,7 +4,21 @@
     "href": "index.html",
     "title": "Welcome",
     "section": "",
-    "text": "📦 Data Analysis Toolkit for FNS\nWelcome! This site contains a collection of interactive notebooks, examples, and guidance for students in Food and Nutritional Sciences.\nBrowse the sections above to explore foundational and advanced material in Python programming, data wrangling, statistical analysis, and more."
+    "text": "Welcome to this comprehensive teaching resource to help you develop skills in data handling, programming, and statistical analysis using Python.\nAll materials are structured to be self-guided and modular, supporting both lectures and independent learning. Each section can be explored individually or followed in sequence.\n\n\n\n\n\nUnderstand your data environment, tools, platforms, and version control workflows.\n\n\n\nLearn how to write Python code, structure your work, and document it effectively.\n\n\n\nImport, clean, transform, and manage datasets from simple to complex formats.\n\n\n\nRun statistical tests, build models, and explore results through rich visualisations.\n\n\n\nExplore Bayesian methods, databases, automation, and dashboards for power users.\n\n\n\nUse templates and mini-projects to practice and demonstrate your knowledge.\n\n\n\n\n\n\nSource: GitHub Repository\nRendered Site: ggkuhnle.github.io/data-analysis-toolkit-FNS\nRun code using Google Colab, Jupyter, or locally on your machine.\n\n\n📌 Tip: You can dip into any section independently or follow the structure as a progressive course. All notebooks are open-source and available for reuse with attribution."
+  },
+  {
+    "objectID": "index.html#course-sections",
+    "href": "index.html#course-sections",
+    "title": "Welcome",
+    "section": "",
+    "text": "Understand your data environment, tools, platforms, and version control workflows.\n\n\n\nLearn how to write Python code, structure your work, and document it effectively.\n\n\n\nImport, clean, transform, and manage datasets from simple to complex formats.\n\n\n\nRun statistical tests, build models, and explore results through rich visualisations.\n\n\n\nExplore Bayesian methods, databases, automation, and dashboards for power users.\n\n\n\nUse templates and mini-projects to practice and demonstrate your knowledge."
+  },
+  {
+    "objectID": "index.html#repository-and-usage",
+    "href": "index.html#repository-and-usage",
+    "title": "Welcome",
+    "section": "",
+    "text": "Source: GitHub Repository\nRendered Site: ggkuhnle.github.io/data-analysis-toolkit-FNS\nRun code using Google Colab, Jupyter, or locally on your machine.\n\n\n📌 Tip: You can dip into any section independently or follow the structure as a progressive course. All notebooks are open-source and available for reuse with attribution."
   },
   {
     "objectID": "notebooks/advanced/example.html",
@@ -14,18 +28,46 @@
     "text": "This notebook introduces Bayesian methods and working with databases or APIs."
   },
   {
-    "objectID": "notebooks/projects/example.html",
-    "href": "notebooks/projects/example.html",
-    "title": "🧪 Student Mini-Project Template",
+    "objectID": "notebooks/advanced/index.html",
+    "href": "notebooks/advanced/index.html",
+    "title": "Advanced",
     "section": "",
-    "text": "Use this notebook as a starting point for your independent data project."
+    "text": "Advanced\nThis section includes the following notebooks:\n\n01 bayesian intro\n02 databases intro\n03 workflow automation"
   },
   {
-    "objectID": "notebooks/data_handling/02_cleaning_data.html",
-    "href": "notebooks/data_handling/02_cleaning_data.html",
-    "title": "🧼 Cleaning Data",
+    "objectID": "notebooks/projects/00_mini_project_template.html",
+    "href": "notebooks/projects/00_mini_project_template.html",
+    "title": "🧪 Mini Project Template",
     "section": "",
-    "text": "Code\ndf.columns = df.columns.str.strip().str.lower()\ndf.dropna().head()"
+    "text": "Code\n## Instructions:\n# - Describe your dataset\n# - State your hypotheses\n# - Run your analysis"
+  },
+  {
+    "objectID": "notebooks/projects/00_project_template.html",
+    "href": "notebooks/projects/00_project_template.html",
+    "title": "🧪 Student Mini Project Template",
+    "section": "",
+    "text": "Use this template to organise your project: - Description - Objectives - Methods - Results"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_importing_data.html",
+    "href": "notebooks/data_handling/01_importing_data.html",
+    "title": "📥 Importing Data",
+    "section": "",
+    "text": "Import CSV, Excel, and other files.\nimport pandas as pd\ndf = pd.read_csv('data.csv')"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_loading_data.html",
+    "href": "notebooks/data_handling/01_loading_data.html",
+    "title": "📂 Loading Data with pandas",
+    "section": "",
+    "text": "Code\nimport pandas as pd\ndf = pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv')\ndf.head()"
+  },
+  {
+    "objectID": "notebooks/data_handling/index.html",
+    "href": "notebooks/data_handling/index.html",
+    "title": "Data Handling",
+    "section": "",
+    "text": "Data Handling\nThis section includes the following notebooks:\n\n01 importing data\n02 cleaning data\n03 wrangling\n04 wide long"
   },
   {
     "objectID": "notebooks/programming_basics/01_hello_python.html",
@@ -35,18 +77,39 @@
     "text": "This notebook covers basic syntax, variables, and functions in Python.\n\n\nCode\na = 5\nb = 3\na + b  # Try changing the values!\n\n\n\n\nCode\ndef greet(name):\n    return f\"Hello, {name}!\"\n\ngreet(\"Charlotte\")"
   },
   {
+    "objectID": "notebooks/programming_basics/03_control_structures.html",
+    "href": "notebooks/programming_basics/03_control_structures.html",
+    "title": "🔁 Control Structures",
+    "section": "",
+    "text": "Using if, elif, else, and loops.\nfor i in range(3):\n    print(i)"
+  },
+  {
+    "objectID": "notebooks/programming_basics/04_functions_and_oop.html",
+    "href": "notebooks/programming_basics/04_functions_and_oop.html",
+    "title": "⚙️ Functions and OOP",
+    "section": "",
+    "text": "Learn to write and use functions and simple classes.\ndef greet(name):\n    return f\"Hello, {name}!\""
+  },
+  {
     "objectID": "notebooks/programming_basics/index.html",
     "href": "notebooks/programming_basics/index.html",
     "title": "Programming Basics",
     "section": "",
-    "text": "📂 Programming Basics\nWelcome to the Programming Basics section of the Data Analysis Toolkit.\nBelow you’ll find all the available notebooks in this area. You can view them directly in GitHub or open them in Colab.\n\n01 hello python"
+    "text": "Programming Basics\nThis section includes the following notebooks:\n\n01 intro python syntax\n02 data types and conversion\n03 control structures\n04 functions and oop\n05 code style"
   },
   {
-    "objectID": "notebooks/data_analysis/02_t_tests_and_anova.html",
-    "href": "notebooks/data_analysis/02_t_tests_and_anova.html",
-    "title": "🔬 T-Tests and ANOVA",
+    "objectID": "notebooks/data_analysis/02_tests_and_anova.html",
+    "href": "notebooks/data_analysis/02_tests_and_anova.html",
+    "title": "🧪 T-tests and ANOVA",
     "section": "",
-    "text": "Code\nfrom scipy import stats\nstats.ttest_ind(df['Height'][:50], df['Height'][50:])"
+    "text": "Testing group differences.\nfrom scipy.stats import ttest_ind"
+  },
+  {
+    "objectID": "notebooks/data_analysis/04_logistic_and_survival.html",
+    "href": "notebooks/data_analysis/04_logistic_and_survival.html",
+    "title": "📉 Logistic and Survival Analysis",
+    "section": "",
+    "text": "Using logistic regression and Kaplan-Meier.\n# coming soon"
   },
   {
     "objectID": "notebooks/data_analysis/01_distributions_and_summary.html",
@@ -56,39 +119,39 @@
     "text": "Code\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.histplot(df['Height'], kde=True)\nplt.show()"
   },
   {
-    "objectID": "notebooks/infrastructure/04_git_and_version_control.html",
-    "href": "notebooks/infrastructure/04_git_and_version_control.html",
-    "title": "🔁 Git and Version Control",
+    "objectID": "notebooks/data_analysis/01_distributions.html",
+    "href": "notebooks/data_analysis/01_distributions.html",
+    "title": "📊 Visualising Distributions",
     "section": "",
-    "text": "Version control helps track changes to your code and collaborate safely.\nBasic Git workflow:\ngit init\ngit add .\ngit commit -m \"Initial commit\"\ngit push\nUse GitHub to store your project online and collaborate with others."
+    "text": "Histograms, KDE plots.\nimport seaborn as sns\nsns.histplot(df['height'])"
   },
   {
-    "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
-    "href": "notebooks/infrastructure/03_colab_jupyter.html",
-    "title": "💻 Using Google Colab and Jupyter",
+    "objectID": "notebooks/infrastructure/01_getting_started_colab_git.html",
+    "href": "notebooks/infrastructure/01_getting_started_colab_git.html",
+    "title": "🔧 Getting Started with Google Colab and GitHub",
     "section": "",
-    "text": "Colab is a cloud-based version of Jupyter, ideal for students:\n\nPros: No setup, cloud-based, easy sharing\nCons: Needs internet, no persistent storage\n\nLocal Jupyter is great for offline use and full control:\npip install notebook\njupyter notebook"
+    "text": "Code\nprint('Welcome to Colab!')"
   },
   {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
-    "title": "📓 Notebooks vs Scripts vs Markdown vs Quarto",
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html",
+    "title": "🌐 What Is a Data Science Environment?",
     "section": "",
-    "text": "Format\nBest for\nTools\n\n\n\n\nNotebook\nTeaching, exploration\nJupyter, Colab\n\n\nScript\nReproducible pipelines\n.py, R scripts\n\n\nMarkdown\nDocumentation\nGitHub, websites\n\n\nQuarto\nPublications & sites\n.qmd, quarto render"
+    "text": "A data science environment refers to the tools, libraries, platforms, and workflows used to analyse data. This includes:\n\nProgramming languages (Python, R)\nInteractive notebooks (Jupyter, Colab)\nLibraries for analysis and plotting\nVersion control (e.g. Git)\nPlatforms for collaboration (GitHub, Overleaf, etc.)"
   },
   {
-    "objectID": "notebooks/infrastructure/06_finding_help.html",
-    "href": "notebooks/infrastructure/06_finding_help.html",
-    "title": "❓ Finding Help and Documentation",
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html",
+    "href": "notebooks/infrastructure/02_python_vs_r.html",
+    "title": "🐍 Python vs 🧮 R vs Other Tools",
     "section": "",
-    "text": "Useful resources: - pandas documentation - Stack Overflow - ? in Jupyter:\npd.read_csv?\n\nhelp() function:\n\nhelp(len)"
+    "text": "Feature\nPython\nR\nExcel\nSAS\n\n\n\n\nGeneral purpose\n✅\n❌\n❌\n❌\n\n\nData manipulation\n✅\n✅\n⚠️\n✅\n\n\nVisualisation\n✅\n✅\n⚠️\n✅\n\n\nReproducibility\n✅\n✅\n❌\n✅\n\n\n\nPython is widely used in data science because it’s general-purpose, scriptable, and integrates well with tools and APIs."
   },
   {
-    "objectID": "notebooks/infrastructure/01_intro_colab_git.html",
-    "href": "notebooks/infrastructure/01_intro_colab_git.html",
-    "title": "🔧 Getting Started with Colab, Git, and Python",
+    "objectID": "notebooks/infrastructure/05_installing_packages.html",
+    "href": "notebooks/infrastructure/05_installing_packages.html",
+    "title": "📦 Installing and Managing Packages",
     "section": "",
-    "text": "This notebook helps you set up your environment for data analysis using: - Google Colab - GitHub (as version control and notebook storage) - Python as the programming language\nWe’ll walk through basic setup and show how to launch notebooks.\n\n\nCode\n# Try running this cell\nprint(\"Hello, world! 👋\")"
+    "text": "Python uses pip or conda to install libraries:\npip install pandas matplotlib seaborn\nYou can also use:\n!pip install pandas\ninside Colab."
   },
   {
     "objectID": "notebooks/infrastructure/index.html",
@@ -105,32 +168,53 @@
     "text": "01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control\n05 – Installing and Managing Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, and Quarto\n\n\nThis section lays the foundation for everything else in the course."
   },
   {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html",
-    "href": "notebooks/infrastructure/05_installing_packages.html",
-    "title": "📦 Installing and Managing Packages",
+    "objectID": "notebooks/infrastructure/01_intro_colab_git.html",
+    "href": "notebooks/infrastructure/01_intro_colab_git.html",
+    "title": "🔧 Getting Started with Colab, Git, and Python",
     "section": "",
-    "text": "Python uses pip or conda to install libraries:\npip install pandas matplotlib seaborn\nYou can also use:\n!pip install pandas\ninside Colab."
+    "text": "This notebook helps you set up your environment for data analysis using: - Google Colab - GitHub (as version control and notebook storage) - Python as the programming language\nWe’ll walk through basic setup and show how to launch notebooks.\n\n\nCode\n# Try running this cell\nprint(\"Hello, world! 👋\")"
   },
   {
-    "objectID": "notebooks/infrastructure/02_python_vs_r.html",
-    "href": "notebooks/infrastructure/02_python_vs_r.html",
-    "title": "🐍 Python vs 🧮 R vs Other Tools",
+    "objectID": "notebooks/infrastructure/06_finding_help.html",
+    "href": "notebooks/infrastructure/06_finding_help.html",
+    "title": "❓ Finding Help and Documentation",
     "section": "",
-    "text": "Feature\nPython\nR\nExcel\nSAS\n\n\n\n\nGeneral purpose\n✅\n❌\n❌\n❌\n\n\nData manipulation\n✅\n✅\n⚠️\n✅\n\n\nVisualisation\n✅\n✅\n⚠️\n✅\n\n\nReproducibility\n✅\n✅\n❌\n✅\n\n\n\nPython is widely used in data science because it’s general-purpose, scriptable, and integrates well with tools and APIs."
+    "text": "Useful resources: - pandas documentation - Stack Overflow - ? in Jupyter:\npd.read_csv?\n\nhelp() function:\n\nhelp(len)"
   },
   {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html",
-    "title": "🌐 What Is a Data Science Environment?",
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "title": "📓 Notebooks vs Scripts vs Markdown vs Quarto",
     "section": "",
-    "text": "A data science environment refers to the tools, libraries, platforms, and workflows used to analyse data. This includes:\n\nProgramming languages (Python, R)\nInteractive notebooks (Jupyter, Colab)\nLibraries for analysis and plotting\nVersion control (e.g. Git)\nPlatforms for collaboration (GitHub, Overleaf, etc.)"
+    "text": "Format\nBest for\nTools\n\n\n\n\nNotebook\nTeaching, exploration\nJupyter, Colab\n\n\nScript\nReproducible pipelines\n.py, R scripts\n\n\nMarkdown\nDocumentation\nGitHub, websites\n\n\nQuarto\nPublications & sites\n.qmd, quarto render"
   },
   {
-    "objectID": "notebooks/infrastructure/01_getting_started_colab_git.html",
-    "href": "notebooks/infrastructure/01_getting_started_colab_git.html",
-    "title": "🔧 Getting Started with Google Colab and GitHub",
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html",
+    "title": "💻 Using Google Colab and Jupyter",
     "section": "",
-    "text": "Code\nprint('Welcome to Colab!')"
+    "text": "Colab is a cloud-based version of Jupyter, ideal for students:\n\nPros: No setup, cloud-based, easy sharing\nCons: Needs internet, no persistent storage\n\nLocal Jupyter is great for offline use and full control:\npip install notebook\njupyter notebook"
+  },
+  {
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html",
+    "title": "🔁 Git and Version Control",
+    "section": "",
+    "text": "Version control helps track changes to your code and collaborate safely.\nBasic Git workflow:\ngit init\ngit add .\ngit commit -m \"Initial commit\"\ngit push\nUse GitHub to store your project online and collaborate with others."
+  },
+  {
+    "objectID": "notebooks/data_analysis/index.html",
+    "href": "notebooks/data_analysis/index.html",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "Data Analysis\nThis section includes the following notebooks:\n\n01 distributions\n02 tests and anova\n03 regression\n04 logistic and survival"
+  },
+  {
+    "objectID": "notebooks/data_analysis/03_regression.html",
+    "href": "notebooks/data_analysis/03_regression.html",
+    "title": "📈 Regression and Correlation",
+    "section": "",
+    "text": "Linear regression using statsmodels.\nimport statsmodels.api as sm"
   },
   {
     "objectID": "notebooks/data_analysis/example.html",
@@ -140,6 +224,13 @@
     "text": "This notebook will explore statistical testing, distributions, and plotting using real or simulated data."
   },
   {
+    "objectID": "notebooks/data_analysis/02_t_tests_and_anova.html",
+    "href": "notebooks/data_analysis/02_t_tests_and_anova.html",
+    "title": "🔬 T-Tests and ANOVA",
+    "section": "",
+    "text": "Code\nfrom scipy import stats\nstats.ttest_ind(df['Height'][:50], df['Height'][50:])"
+  },
+  {
     "objectID": "notebooks/programming_basics/02_control_structures.html",
     "href": "notebooks/programming_basics/02_control_structures.html",
     "title": "🔁 Control Structures: if, elif, else",
@@ -147,38 +238,80 @@
     "text": "Code\nage = 20\nif age &lt; 18:\n    print('Minor')\nelif age &lt; 65:\n    print('Adult')\nelse:\n    print('Senior')"
   },
   {
+    "objectID": "notebooks/programming_basics/02_data_types_and_conversion.html",
+    "href": "notebooks/programming_basics/02_data_types_and_conversion.html",
+    "title": "🔢 Data Types and Conversion",
+    "section": "",
+    "text": "Understand common data types and how to convert them.\nx = '123'\nint(x)"
+  },
+  {
+    "objectID": "notebooks/programming_basics/05_code_style.html",
+    "href": "notebooks/programming_basics/05_code_style.html",
+    "title": "🎨 Code Style and Docstrings",
+    "section": "",
+    "text": "Best practices for naming, commenting, and formatting.\n# This is a comment\ndef add(x, y):\n    \"\"\"Adds two numbers\"\"\"\n    return x + y"
+  },
+  {
     "objectID": "notebooks/programming_basics/01_intro_python_syntax.html",
     "href": "notebooks/programming_basics/01_intro_python_syntax.html",
     "title": "🐍 Introduction to Python Syntax",
     "section": "",
-    "text": "Code\nx = 5\ny = 10\nx + y"
+    "text": "Learn about Python syntax, indentation, and variables.\nx = 10\ny = 20\nprint(x + y)"
   },
   {
-    "objectID": "notebooks/data_handling/index.html",
-    "href": "notebooks/data_handling/index.html",
-    "title": "Data Handling",
+    "objectID": "notebooks/data_handling/03_wrangling.html",
+    "href": "notebooks/data_handling/03_wrangling.html",
+    "title": "🔀 Data Wrangling",
     "section": "",
-    "text": "📂 Data Handling\nWelcome to the Data Handling section of the Data Analysis Toolkit.\nBelow you’ll find all the available notebooks in this area. You can view them directly in GitHub or open them in Colab.\n\n01 loading data"
+    "text": "Sorting, grouping, filtering.\ndf.groupby('gender').mean()"
   },
   {
-    "objectID": "notebooks/data_handling/01_loading_data.html",
-    "href": "notebooks/data_handling/01_loading_data.html",
-    "title": "📂 Loading Data with pandas",
+    "objectID": "notebooks/data_handling/02_cleaning_data.html",
+    "href": "notebooks/data_handling/02_cleaning_data.html",
+    "title": "🧼 Cleaning Data",
     "section": "",
-    "text": "Code\nimport pandas as pd\ndf = pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv')\ndf.head()"
+    "text": "Dealing with missing values, renaming, etc.\ndf.dropna(inplace=True)\ndf.columns = df.columns.str.lower()"
   },
   {
-    "objectID": "notebooks/projects/00_mini_project_template.html",
-    "href": "notebooks/projects/00_mini_project_template.html",
-    "title": "🧪 Mini Project Template",
+    "objectID": "notebooks/data_handling/04_wide_long.html",
+    "href": "notebooks/data_handling/04_wide_long.html",
+    "title": "↔︎️ Wide vs Long Data",
     "section": "",
-    "text": "Code\n## Instructions:\n# - Describe your dataset\n# - State your hypotheses\n# - Run your analysis"
+    "text": "Transforming formats using melt/pivot.\npd.melt(df, id_vars='id')"
+  },
+  {
+    "objectID": "notebooks/projects/index.html",
+    "href": "notebooks/projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\nThis section includes the following notebooks:\n\n00 project template"
+  },
+  {
+    "objectID": "notebooks/projects/example.html",
+    "href": "notebooks/projects/example.html",
+    "title": "🧪 Student Mini-Project Template",
+    "section": "",
+    "text": "Use this notebook as a starting point for your independent data project."
+  },
+  {
+    "objectID": "notebooks/advanced/03_workflow_automation.html",
+    "href": "notebooks/advanced/03_workflow_automation.html",
+    "title": "🛠️ Workflow Automation and Reproducibility",
+    "section": "",
+    "text": "Make analysis reproducible with scripts and notebooks."
+  },
+  {
+    "objectID": "notebooks/advanced/02_databases_intro.html",
+    "href": "notebooks/advanced/02_databases_intro.html",
+    "title": "🗄️ Working with Databases",
+    "section": "",
+    "text": "Intro to SQLite and relational data."
   },
   {
     "objectID": "notebooks/advanced/01_bayesian_intro.html",
     "href": "notebooks/advanced/01_bayesian_intro.html",
-    "title": "📈 Bayesian Thinking",
+    "title": "🧠 Introduction to Bayesian Analysis",
     "section": "",
-    "text": "Code\nprint('Bayesian methods coming soon!')"
+    "text": "Concepts of prior, likelihood, and posterior."
   }
 ]
