@@ -17,11 +17,13 @@ It explains how to:
 
 ## 📚 Contents
 
-### 🧰 [01 - Getting Started with Colab and GitHub](01_getting_started_colab_git.ipynb)
-
-- Open and run notebooks in Google Colab
-- Save your work to GitHub
-- Link notebooks to your GitHub account
+- [01 – What is a Data Science Environment?](01_what_is_data_env.ipynb)
+- [02 – Python vs R vs Other Tools](02_python_vs_r.ipynb)
+- [03 – Using Google Colab and Jupyter](03_colab_jupyter.ipynb)
+- [04 – Git and Version Control](04_git_and_version_control.ipynb)
+- [05 – Installing and Managing Packages](05_installing_packages.ipynb)
+- [06 – Finding Help and Documentation](06_finding_help.ipynb)
+- [07 – Notebooks, Scripts, Markdown, and Quarto](07_notebooks_scripts_quarto.ipynb)
 
 ---
 
