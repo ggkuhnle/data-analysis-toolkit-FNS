@@ -1,106 +1,33 @@
-
 # 📦 Data Analysis Toolkit for Food and Nutritional Sciences
 
-Welcome to the *Data Analysis Toolkit for FNS*!  
-This repository provides a modular, self-guided, and teaching-aligned collection of Python-based notebooks and resources to build data literacy and analysis skills.
+This repository contains a modular collection of Jupyter/Colab notebooks designed to support data literacy, programming, and analysis skills for students in Food and Nutritional Sciences.
 
-Each section contains standalone, hands-on notebooks that can be explored independently or aligned with module content across Years 1–3.
+All notebooks are **self-contained** and intended for **pick-and-mix use**, meaning students and staff can dip in and out based on current teaching or learning needs.
 
----
+## 🗂️ Structure
 
-## 📁 Course Structure
+```
+notebooks/
+├── infrastructure/        # Tools, Git, Colab, environments
+├── programming_basics/    # Python, syntax, functions, OOP, Markdown
+├── data_handling/         # Data types, wrangling, cleaning
+├── data_analysis/         # Stats, visualisation, applications
+├── advanced/              # Bayesian methods, databases, pipelines
+├── projects/              # Independent work, case studies
+└── templates/             # Cheatsheets, templates, Quarto
+data/                      # Example datasets
+```
 
-### 🔧 1. Infrastructure and Tools
-_Setting up the data analysis environment._
+## 🚀 How to Use
 
-- What is an environment? (Colab, Jupyter, IDEs)
-- Version control with Git & GitHub
-- Managing packages and libraries
-- Choosing tools: scripts, notebooks, markdown, Quarto
-- Using Colab + GitHub effectively
+Each notebook includes a **Colab badge** for one-click execution.
 
-📂 `notebooks/infrastructure/`
+Topics can be used in standalone form or aligned with modules in the FNS curriculum. The structure supports both scaffolded use across multiple years and ad hoc support based on student interest or need.
 
----
+## 📖 Contributions
 
-### 🐍 2. Basic Programming
-_Introduction to Python programming with a focus on analysis tasks._
-
-- Syntax, indentation, and comments
-- Variables and data types
-- Lists, dictionaries, loops and conditionals
-- Functions and modular code
-- Intro to object-oriented programming
-- Documenting your code (docstrings, markdown)
-- Markdown and Quarto for reproducible notes
-
-📂 `notebooks/programming_basics/`
-
----
-
-### 🧮 3. Data Handling
-_Working with real data: import, clean, organise, and explore._
-
-- Types of data: categorical, continuous, ordinal
-- Tidy data and reshaping (wide ↔ long)
-- Reading CSV, Excel, JSON, and databases
-- Uploading data to Colab
-- Inspecting, cleaning, and recoding variables
-- Filtering, joining, and sorting data
-
-📂 `notebooks/data_handling/`
-
----
-
-### 📊 4. Data Analysis
-_Core statistical methods and visualisations._
-
-- Exploring distributions (histograms, density)
-- Transformation (log, z-score)
-- Converting and recoding types
-- Parametric and non-parametric tests
-- Regression (simple, multiple), correlation
-- Logistic regression and survival analysis
-- Bayesian vs Frequentist perspectives
-- Power calculations and sample size
-- Application areas: RCTs, epidemiology, quality control
-- Plotting: boxplot, scatter, violin, forest, survival curves
-
-📂 `notebooks/data_analysis/`
-
----
-
-### 🚀 5. Advanced Techniques
-_Optional deep-dives for final year and independent learners._
-
-- Bayesian analysis with MCMC (e.g. PyMC)
-- Reproducible pipelines and automation
-- Working with messy or unstructured data
-- Introduction to SQL and database systems (Snowflake, PostgreSQL)
-- Cloud workflows and APIs
-- Building interactive dashboards (Streamlit, Dash)
-
-📂 `notebooks/advanced/`
-
----
-
-### 🧪 6. Projects and Templates
-- Student-led analyses and mini-projects
-- Custom templates for analysis and reporting
-- Cheatsheets and style guides
-
-📂 `notebooks/projects/`  
-📂 `notebooks/templates/`
-
----
-
-## 📥 How to Use
-
-Each notebook includes a Colab badge for one-click use.  
-You can work directly in the browser or clone the repository and use Jupyter locally.
-
----
+Suggestions and additions welcome — feel free to fork, clone, or raise issues.
 
 ## 📝 License
 
-This repository is shared under a **CC-BY license** for educational and academic purposes.
+All content is available for teaching and academic use under a CC-BY license.
