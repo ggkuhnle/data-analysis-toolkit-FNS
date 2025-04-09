@@ -1,0 +1,29 @@
+
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Data Analysis Toolkit for FNS"
+  navbar:
+    left:
+      - text: Home
+        file: index.qmd
+      - text: Infrastructure
+        file: notebooks/infrastructure/index.qmd
+      - text: Programming
+        file: notebooks/programming_basics/index.qmd
+      - text: Data Handling
+        file: notebooks/data_handling/index.qmd
+      - text: Data Analysis
+        file: notebooks/data_analysis/index.qmd
+      - text: Advanced
+        file: notebooks/advanced/index.qmd
+      - text: Projects
+        file: notebooks/projects/index.qmd
+format:
+  html:
+    toc: true
+    theme: cosmo
+    code-fold: true
+    code-tools: true

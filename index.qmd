@@ -1,0 +1,10 @@
+---
+title: "Welcome"
+format: html
+---
+
+# 📦 Data Analysis Toolkit for FNS
+
+Welcome! This site contains a collection of interactive notebooks, examples, and guidance for students in Food and Nutritional Sciences. 
+
+Browse the sections above to explore foundational and advanced material in Python programming, data wrangling, statistical analysis, and more.
