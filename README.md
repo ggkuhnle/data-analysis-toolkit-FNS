@@ -1,4 +1,3 @@
-
 # 📦 Data Analysis Toolkit for Food and Nutritional Sciences
 
 Welcome to the *Data Analysis Toolkit for FNS*!  
@@ -108,13 +107,15 @@ This repository is shared under a **CC-BY license** for educational and academic
 
 ---
 
-## 📚 Notebook Index
+---
+
+## 📚 Notebook Index with Colab Links
 
 ### Data Handling
-- [01 loading data](./notebooks/data_handling/01_loading_data.ipynb)
+- [01 loading data](./notebooks/data_handling/01_loading_data.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/data_handling/01_loading_data.ipynb)
 
 ### Infrastructure
-- [01 intro colab git](./notebooks/infrastructure/01_intro_colab_git.ipynb)
+- [01 intro colab git](./notebooks/infrastructure/01_intro_colab_git.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/infrastructure/01_intro_colab_git.ipynb)
 
 ### Programming Basics
-- [01 hello python](./notebooks/programming_basics/01_hello_python.ipynb)
+- [01 hello python](./notebooks/programming_basics/01_hello_python.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/programming_basics/01_hello_python.ipynb)
