@@ -10,5 +10,23 @@
   },
   "notebooks/programming_basics/01_hello_python.ipynb": {
     "01_hello_python.html": "f884d000"
+  },
+  "notebooks/advanced/example.ipynb": {
+    "example.html": "c232a399"
+  },
+  "notebooks/data_analysis/example.ipynb": {
+    "example.html": "af8905f6"
+  },
+  "notebooks/data_handling/index.qmd": {
+    "index.html": "b6cb6b39"
+  },
+  "notebooks/projects/example.ipynb": {
+    "example.html": "93fdfc58"
+  },
+  "notebooks/infrastructure/index.qmd": {
+    "index.html": "b18ff6d0"
+  },
+  "notebooks/programming_basics/index.qmd": {
+    "index.html": "64de6136"
   }
 }
