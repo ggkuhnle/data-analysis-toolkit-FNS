@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "notebooks/programming_basics/01_hello_python.html",
+    "href": "notebooks/programming_basics/01_hello_python.html",
+    "title": "🐍 Introduction to Python Programming",
+    "section": "",
+    "text": "This notebook covers basic syntax, variables, and functions in Python.\n\n\nCode\na = 5\nb = 3\na + b  # Try changing the values!\n\n\n\n\nCode\ndef greet(name):\n    return f\"Hello, {name}!\"\n\ngreet(\"Charlotte\")"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_loading_data.html",
+    "href": "notebooks/data_handling/01_loading_data.html",
+    "title": "📂 Loading and Inspecting Data",
+    "section": "",
+    "text": "In this notebook we’ll load a CSV file and take a first look.\n\n\nCode\nimport pandas as pd\n\n# Load example from GitHub or local file\nurl = 'https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv'\ndf = pd.read_csv(url)\ndf.head()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "📦 Data Analysis Toolkit for FNS\nWelcome! This site contains a collection of interactive notebooks, examples, and guidance for students in Food and Nutritional Sciences.\nBrowse the sections above to explore foundational and advanced material in Python programming, data wrangling, statistical analysis, and more."
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_intro_colab_git.html",
+    "href": "notebooks/infrastructure/01_intro_colab_git.html",
+    "title": "🔧 Getting Started with Colab, Git, and Python",
+    "section": "",
+    "text": "This notebook helps you set up your environment for data analysis using: - Google Colab - GitHub (as version control and notebook storage) - Python as the programming language\nWe’ll walk through basic setup and show how to launch notebooks.\n\n\nCode\n# Try running this cell\nprint(\"Hello, world! 👋\")"
+  }
+]

@@ -1,0 +1,12 @@
+---
+title: "Infrastructure"
+format: html
+---
+
+# 📂 Infrastructure
+
+Welcome to the **Infrastructure** section of the Data Analysis Toolkit.
+
+Below you'll find all the available notebooks in this area. You can view them directly in GitHub or open them in Colab.
+
+- [01 intro colab git](./01_intro_colab_git.ipynb) [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/infrastructure/01_intro_colab_git.ipynb)

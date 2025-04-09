@@ -1,0 +1,14 @@
+{
+  "index.qmd": {
+    "index.html": "009d5473"
+  },
+  "notebooks/data_handling/01_loading_data.ipynb": {
+    "01_loading_data.html": "6df840f3"
+  },
+  "notebooks/infrastructure/01_intro_colab_git.ipynb": {
+    "01_intro_colab_git.html": "1b8a2e42"
+  },
+  "notebooks/programming_basics/01_hello_python.ipynb": {
+    "01_hello_python.html": "f884d000"
+  }
+}
