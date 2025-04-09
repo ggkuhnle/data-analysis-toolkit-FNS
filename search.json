@@ -56,18 +56,32 @@
     "text": "Code\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.histplot(df['Height'], kde=True)\nplt.show()"
   },
   {
-    "objectID": "notebooks/infrastructure/index.html",
-    "href": "notebooks/infrastructure/index.html",
-    "title": "Infrastructure",
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html",
+    "title": "🔁 Git and Version Control",
     "section": "",
-    "text": "This section covers the technical environment needed for data analysis.\nIt explains how to:\n\nUse Google Colab, Jupyter, and Quarto\nWork with GitHub and version control\nInstall packages and understand environments\nChoose the right tools for local or cloud use\n\n\n\n\n\n\n\nOpen and run notebooks in Google Colab\nSave your work to GitHub\nLink notebooks to your GitHub account\n\n\nThis section lays the foundation for everything else in the course."
+    "text": "Version control helps track changes to your code and collaborate safely.\nBasic Git workflow:\ngit init\ngit add .\ngit commit -m \"Initial commit\"\ngit push\nUse GitHub to store your project online and collaborate with others."
   },
   {
-    "objectID": "notebooks/infrastructure/index.html#contents",
-    "href": "notebooks/infrastructure/index.html#contents",
-    "title": "Infrastructure",
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html",
+    "title": "💻 Using Google Colab and Jupyter",
     "section": "",
-    "text": "Open and run notebooks in Google Colab\nSave your work to GitHub\nLink notebooks to your GitHub account\n\n\nThis section lays the foundation for everything else in the course."
+    "text": "Colab is a cloud-based version of Jupyter, ideal for students:\n\nPros: No setup, cloud-based, easy sharing\nCons: Needs internet, no persistent storage\n\nLocal Jupyter is great for offline use and full control:\npip install notebook\njupyter notebook"
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "title": "📓 Notebooks vs Scripts vs Markdown vs Quarto",
+    "section": "",
+    "text": "Format\nBest for\nTools\n\n\n\n\nNotebook\nTeaching, exploration\nJupyter, Colab\n\n\nScript\nReproducible pipelines\n.py, R scripts\n\n\nMarkdown\nDocumentation\nGitHub, websites\n\n\nQuarto\nPublications & sites\n.qmd, quarto render"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html",
+    "href": "notebooks/infrastructure/06_finding_help.html",
+    "title": "❓ Finding Help and Documentation",
+    "section": "",
+    "text": "Useful resources: - pandas documentation - Stack Overflow - ? in Jupyter:\npd.read_csv?\n\nhelp() function:\n\nhelp(len)"
   },
   {
     "objectID": "notebooks/infrastructure/01_intro_colab_git.html",
@@ -75,6 +89,41 @@
     "title": "🔧 Getting Started with Colab, Git, and Python",
     "section": "",
     "text": "This notebook helps you set up your environment for data analysis using: - Google Colab - GitHub (as version control and notebook storage) - Python as the programming language\nWe’ll walk through basic setup and show how to launch notebooks.\n\n\nCode\n# Try running this cell\nprint(\"Hello, world! 👋\")"
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html",
+    "href": "notebooks/infrastructure/index.html",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "This section covers the technical environment needed for data analysis.\nIt explains how to:\n\nUse Google Colab, Jupyter, and Quarto\nWork with GitHub and version control\nInstall packages and understand environments\nChoose the right tools for local or cloud use\n\n\n\n\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control\n05 – Installing and Managing Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, and Quarto\n\n\nThis section lays the foundation for everything else in the course."
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html#contents",
+    "href": "notebooks/infrastructure/index.html#contents",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control\n05 – Installing and Managing Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, and Quarto\n\n\nThis section lays the foundation for everything else in the course."
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html",
+    "href": "notebooks/infrastructure/05_installing_packages.html",
+    "title": "📦 Installing and Managing Packages",
+    "section": "",
+    "text": "Python uses pip or conda to install libraries:\npip install pandas matplotlib seaborn\nYou can also use:\n!pip install pandas\ninside Colab."
+  },
+  {
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html",
+    "href": "notebooks/infrastructure/02_python_vs_r.html",
+    "title": "🐍 Python vs 🧮 R vs Other Tools",
+    "section": "",
+    "text": "Feature\nPython\nR\nExcel\nSAS\n\n\n\n\nGeneral purpose\n✅\n❌\n❌\n❌\n\n\nData manipulation\n✅\n✅\n⚠️\n✅\n\n\nVisualisation\n✅\n✅\n⚠️\n✅\n\n\nReproducibility\n✅\n✅\n❌\n✅\n\n\n\nPython is widely used in data science because it’s general-purpose, scriptable, and integrates well with tools and APIs."
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html",
+    "title": "🌐 What Is a Data Science Environment?",
+    "section": "",
+    "text": "A data science environment refers to the tools, libraries, platforms, and workflows used to analyse data. This includes:\n\nProgramming languages (Python, R)\nInteractive notebooks (Jupyter, Colab)\nLibraries for analysis and plotting\nVersion control (e.g. Git)\nPlatforms for collaboration (GitHub, Overleaf, etc.)"
   },
   {
     "objectID": "notebooks/infrastructure/01_getting_started_colab_git.html",
