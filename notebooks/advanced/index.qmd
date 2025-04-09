@@ -1,0 +1,14 @@
+---
+title: "Advanced"
+format: html
+---
+
+# Advanced
+
+This section includes the following notebooks:
+
+- [01 bayesian intro](01_bayesian_intro.ipynb)
+- [02 databases intro](02_databases_intro.ipynb)
+- [03 workflow automation](03_workflow_automation.ipynb)
+
+---

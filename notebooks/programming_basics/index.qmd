@@ -3,10 +3,14 @@ title: "Programming Basics"
 format: html
 ---
 
-# 📂 Programming Basics
+# Programming Basics
 
-Welcome to the **Programming Basics** section of the Data Analysis Toolkit.
+This section includes the following notebooks:
 
-Below you'll find all the available notebooks in this area. You can view them directly in GitHub or open them in Colab.
+- [01 intro python syntax](01_intro_python_syntax.ipynb)
+- [02 data types and conversion](02_data_types_and_conversion.ipynb)
+- [03 control structures](03_control_structures.ipynb)
+- [04 functions and oop](04_functions_and_oop.ipynb)
+- [05 code style](05_code_style.ipynb)
 
-- [01 hello python](./01_hello_python.ipynb) [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/programming_basics/01_hello_python.ipynb)
+---

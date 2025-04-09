@@ -3,10 +3,13 @@ title: "Data Handling"
 format: html
 ---
 
-# 📂 Data Handling
+# Data Handling
 
-Welcome to the **Data Handling** section of the Data Analysis Toolkit.
+This section includes the following notebooks:
 
-Below you'll find all the available notebooks in this area. You can view them directly in GitHub or open them in Colab.
+- [01 importing data](01_importing_data.ipynb)
+- [02 cleaning data](02_cleaning_data.ipynb)
+- [03 wrangling](03_wrangling.ipynb)
+- [04 wide long](04_wide_long.ipynb)
 
-- [01 loading data](./01_loading_data.ipynb) [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/data_handling/01_loading_data.ipynb)
+---

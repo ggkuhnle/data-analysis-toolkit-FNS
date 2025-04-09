@@ -1,0 +1,15 @@
+---
+title: "Data Analysis"
+format: html
+---
+
+# Data Analysis
+
+This section includes the following notebooks:
+
+- [01 distributions](01_distributions.ipynb)
+- [02 tests and anova](02_tests_and_anova.ipynb)
+- [03 regression](03_regression.ipynb)
+- [04 logistic and survival](04_logistic_and_survival.ipynb)
+
+---

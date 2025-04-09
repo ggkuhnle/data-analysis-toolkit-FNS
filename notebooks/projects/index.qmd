@@ -1,0 +1,12 @@
+---
+title: "Projects"
+format: html
+---
+
+# Projects
+
+This section includes the following notebooks:
+
+- [00 project template](00_project_template.ipynb)
+
+---

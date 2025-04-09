@@ -3,8 +3,42 @@ title: "Welcome"
 format: html
 ---
 
-# 📦 Data Analysis Toolkit for FNS
+# 📦 Data Analysis Toolkit for Food and Nutritional Sciences
 
-Welcome! This site contains a collection of interactive notebooks, examples, and guidance for students in Food and Nutritional Sciences. 
+Welcome to this comprehensive teaching resource to help you develop skills in data handling, programming, and statistical analysis using Python.
 
-Browse the sections above to explore foundational and advanced material in Python programming, data wrangling, statistical analysis, and more.
+All materials are structured to be self-guided and modular, supporting both lectures and independent learning. Each section can be explored individually or followed in sequence.
+
+---
+
+## 📚 Course Sections
+
+### 🔧 [Foundations and Tools](notebooks/infrastructure/index.qmd)
+Understand your data environment, tools, platforms, and version control workflows.
+
+### 🧱 [Programming Basics](notebooks/programming_basics/index.qmd)
+Learn how to write Python code, structure your work, and document it effectively.
+
+### 🧮 [Data Handling](notebooks/data_handling/index.qmd)
+Import, clean, transform, and manage datasets from simple to complex formats.
+
+### 📊 [Data Analysis](notebooks/data_analysis/index.qmd)
+Run statistical tests, build models, and explore results through rich visualisations.
+
+### 🚀 [Advanced Techniques](notebooks/advanced/index.qmd)
+Explore Bayesian methods, databases, automation, and dashboards for power users.
+
+### 🧪 [Projects and Templates](notebooks/projects/index.qmd)
+Use templates and mini-projects to practice and demonstrate your knowledge.
+
+---
+
+## 🔗 Repository and Usage
+
+- Source: [GitHub Repository](https://github.com/ggkuhnle/data-analysis-toolkit-FNS)
+- Rendered Site: [ggkuhnle.github.io/data-analysis-toolkit-FNS](https://ggkuhnle.github.io/data-analysis-toolkit-FNS)
+- Run code using Google Colab, Jupyter, or locally on your machine.
+
+---
+
+📌 **Tip:** You can dip into any section independently or follow the structure as a progressive course. All notebooks are open-source and available for reuse with attribution.
