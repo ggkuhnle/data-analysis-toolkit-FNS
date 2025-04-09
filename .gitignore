@@ -1,0 +1,19 @@
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment files
+.env
+.venv
+env/
+venv/
+
+# Ignore data and output
+data/*
+!data/README.md
