@@ -1,5 +1,25 @@
 # 📦 Data Analysis Toolkit for Food and Nutritional Sciences
 
+This repository provides a modular, self-guided collection of Python notebooks to build data skills across the FNS curriculum.
+
+## 🚀 Run Notebooks in Google Colab
+
+> ℹ️ Tip: **Right-click** or **Ctrl+Click** a link below to open it in a new tab.
+
+### Data Handling
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/data_handling/01_loading_data.ipynb) 01 loading data
+
+### Infrastructure
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/infrastructure/01_intro_colab_git.ipynb) 01 intro colab git
+
+### Programming Basics
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/programming_basics/01_hello_python.ipynb) 01 hello python
+
+
+---
+
+# 📦 Data Analysis Toolkit for Food and Nutritional Sciences
+
 Welcome to the *Data Analysis Toolkit for FNS*!  
 This repository provides a modular, self-guided, and teaching-aligned collection of Python-based notebooks and resources to build data literacy and analysis skills.
 
