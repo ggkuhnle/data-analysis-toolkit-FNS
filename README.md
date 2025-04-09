@@ -104,3 +104,17 @@ You can work directly in the browser or clone the repository and use Jupyter loc
 ## 📝 License
 
 This repository is shared under a **CC-BY license** for educational and academic purposes.
+
+
+---
+
+## 📚 Notebook Index
+
+### Data Handling
+- [01 loading data](./notebooks/data_handling/01_loading_data.ipynb)
+
+### Infrastructure
+- [01 intro colab git](./notebooks/infrastructure/01_intro_colab_git.ipynb)
+
+### Programming Basics
+- [01 hello python](./notebooks/programming_basics/01_hello_python.ipynb)
