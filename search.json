@@ -60,7 +60,14 @@
     "href": "notebooks/infrastructure/index.html",
     "title": "Infrastructure",
     "section": "",
-    "text": "📂 Infrastructure\nWelcome to the Infrastructure section of the Data Analysis Toolkit.\nBelow you’ll find all the available notebooks in this area. You can view them directly in GitHub or open them in Colab.\n\n01 intro colab git"
+    "text": "This section covers the technical environment needed for data analysis.\nIt explains how to:\n\nUse Google Colab, Jupyter, and Quarto\nWork with GitHub and version control\nInstall packages and understand environments\nChoose the right tools for local or cloud use\n\n\n\n\n\n\n\nOpen and run notebooks in Google Colab\nSave your work to GitHub\nLink notebooks to your GitHub account\n\n\nThis section lays the foundation for everything else in the course."
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html#contents",
+    "href": "notebooks/infrastructure/index.html#contents",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "Open and run notebooks in Google Colab\nSave your work to GitHub\nLink notebooks to your GitHub account\n\n\nThis section lays the foundation for everything else in the course."
   },
   {
     "objectID": "notebooks/infrastructure/01_intro_colab_git.html",
