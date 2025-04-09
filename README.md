@@ -1,141 +1,61 @@
 # 📦 Data Analysis Toolkit for Food and Nutritional Sciences
 
-This repository provides a modular, self-guided collection of Python notebooks to build data skills across the FNS curriculum.
+This repository provides a modular, self-guided collection of Python notebooks and Quarto pages to build data skills across the FNS curriculum.
 
-## 🚀 Run Notebooks in Google Colab
+## 🌐 View the Website
 
-> ℹ️ Tip: **Right-click** or **Ctrl+Click** a link below to open it in a new tab.
+You can explore the rendered teaching materials and course structure at:
 
-### Data Handling
-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/data_handling/01_loading_data.ipynb) 01 loading data
+🔗 [https://ggkuhnle.github.io/data-analysis-toolkit-FNS/](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/)
 
-### Infrastructure
-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/infrastructure/01_intro_colab_git.ipynb) 01 intro colab git
-
-### Programming Basics
-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/programming_basics/01_hello_python.ipynb) 01 hello python
-
+This Quarto-based site includes:
+- Full navigation and section landing pages
+- Rendered notebooks and teaching pages
+- Consistent updates from this repository
 
 ---
 
-# 📦 Data Analysis Toolkit for Food and Nutritional Sciences
+## 🧰 Requirements (for Local Use)
 
-Welcome to the *Data Analysis Toolkit for FNS*!  
-This repository provides a modular, self-guided, and teaching-aligned collection of Python-based notebooks and resources to build data literacy and analysis skills.
+If you want to run these notebooks locally using Jupyter:
 
-Each section contains standalone, hands-on notebooks that can be explored independently or aligned with module content across Years 1–3.
+```bash
+pip install -r requirements.txt
+```
 
----
-
-## 📁 Course Structure
-
-### 🔧 1. Infrastructure and Tools
-_Setting up the data analysis environment._
-
-- What is an environment? (Colab, Jupyter, IDEs)
-- Version control with Git & GitHub
-- Managing packages and libraries
-- Choosing tools: scripts, notebooks, markdown, Quarto
-- Using Colab + GitHub effectively
-
-📂 `notebooks/infrastructure/`
+### Main Python Libraries Used:
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `scipy`
+- `statsmodels`
 
 ---
 
-### 🐍 2. Basic Programming
-_Introduction to Python programming with a focus on analysis tasks._
+## 📂 Directory Structure
 
-- Syntax, indentation, and comments
-- Variables and data types
-- Lists, dictionaries, loops and conditionals
-- Functions and modular code
-- Intro to object-oriented programming
-- Documenting your code (docstrings, markdown)
-- Markdown and Quarto for reproducible notes
-
-📂 `notebooks/programming_basics/`
-
----
-
-### 🧮 3. Data Handling
-_Working with real data: import, clean, organise, and explore._
-
-- Types of data: categorical, continuous, ordinal
-- Tidy data and reshaping (wide ↔ long)
-- Reading CSV, Excel, JSON, and databases
-- Uploading data to Colab
-- Inspecting, cleaning, and recoding variables
-- Filtering, joining, and sorting data
-
-📂 `notebooks/data_handling/`
-
----
-
-### 📊 4. Data Analysis
-_Core statistical methods and visualisations._
-
-- Exploring distributions (histograms, density)
-- Transformation (log, z-score)
-- Converting and recoding types
-- Parametric and non-parametric tests
-- Regression (simple, multiple), correlation
-- Logistic regression and survival analysis
-- Bayesian vs Frequentist perspectives
-- Power calculations and sample size
-- Application areas: RCTs, epidemiology, quality control
-- Plotting: boxplot, scatter, violin, forest, survival curves
-
-📂 `notebooks/data_analysis/`
-
----
-
-### 🚀 5. Advanced Techniques
-_Optional deep-dives for final year and independent learners._
-
-- Bayesian analysis with MCMC (e.g. PyMC)
-- Reproducible pipelines and automation
-- Working with messy or unstructured data
-- Introduction to SQL and database systems (Snowflake, PostgreSQL)
-- Cloud workflows and APIs
-- Building interactive dashboards (Streamlit, Dash)
-
-📂 `notebooks/advanced/`
-
----
-
-### 🧪 6. Projects and Templates
-- Student-led analyses and mini-projects
-- Custom templates for analysis and reporting
-- Cheatsheets and style guides
-
-📂 `notebooks/projects/`  
-📂 `notebooks/templates/`
-
----
-
-## 📥 How to Use
-
-Each notebook includes a Colab badge for one-click use.  
-You can work directly in the browser or clone the repository and use Jupyter locally.
+```
+data-analysis-toolkit-FNS/
+├── notebooks/
+│   ├── infrastructure/
+│   ├── programming_basics/
+│   ├── data_handling/
+│   ├── data_analysis/
+│   ├── advanced/
+│   └── projects/
+├── .github/
+│   └── workflows/
+│       └── quarto-publish.yml
+├── index.qmd
+├── _quarto.yml
+├── requirements.txt
+└── README.md
+```
 
 ---
 
 ## 📝 License
 
-This repository is shared under a **CC-BY license** for educational and academic purposes.
-
-
----
-
----
-
-## 📚 Notebook Index with Colab Links
-
-### Data Handling
-- [01 loading data](./notebooks/data_handling/01_loading_data.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/data_handling/01_loading_data.ipynb)
-
-### Infrastructure
-- [01 intro colab git](./notebooks/infrastructure/01_intro_colab_git.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/infrastructure/01_intro_colab_git.ipynb)
-
-### Programming Basics
-- [01 hello python](./notebooks/programming_basics/01_hello_python.ipynb) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/programming_basics/01_hello_python.ipynb)
+This material is made available for teaching and academic use.  
+You are welcome to adapt and share it **with attribution**.
