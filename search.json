@@ -242,14 +242,14 @@
     "href": "notebooks/infrastructure/index.html",
     "title": "Data Analysis Toolkit for Nutrition and Food Science",
     "section": "",
-    "text": "This site provides a structured, editable, and expandable resource to support data skills from foundational knowledge to advanced applications.\n\n\n\nThis section introduces core tools and workflows that underpin reproducible data science. Each notebook includes basic overviews, advanced insights (foldable), and hands-on exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs\n\n\nMore sections coming soon: Programming, Data Handling, Analysis, and Advanced Topics."
+    "text": "This site provides a structured, editable, and expandable resource to support data skills from foundational knowledge to advanced applications.\n\n\n\nThis section introduces core tools and workflows that underpin reproducible data science. Each notebook includes basic overviews, advanced insights (foldable), and hands-on exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs"
   },
   {
     "objectID": "notebooks/infrastructure/index.html#infrastructure",
     "href": "notebooks/infrastructure/index.html#infrastructure",
     "title": "Data Analysis Toolkit for Nutrition and Food Science",
     "section": "",
-    "text": "This section introduces core tools and workflows that underpin reproducible data science. Each notebook includes basic overviews, advanced insights (foldable), and hands-on exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs\n\n\nMore sections coming soon: Programming, Data Handling, Analysis, and Advanced Topics."
+    "text": "This section introduces core tools and workflows that underpin reproducible data science. Each notebook includes basic overviews, advanced insights (foldable), and hands-on exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs"
   },
   {
     "objectID": "notebooks/infrastructure/05_installing_packages.html",
