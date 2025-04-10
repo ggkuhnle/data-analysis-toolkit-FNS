@@ -18,7 +18,7 @@ This section helps you set up a solid foundation for your data work, including c
 - [05 – Installing and Managing Python Packages](05_installing_packages.ipynb)
 - [06 – Finding Help and Documentation](06_finding_help.ipynb)
 - [07 – Notebooks, Scripts, Markdown and Quarto](07_notebooks_scripts_quarto.ipynb)
-
+- [08 - Documenting your scripts](08_documenting_with_scripts.ipynb)
 ---
 
 ## 🧠 Why It Matters
