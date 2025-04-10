@@ -11,7 +11,7 @@ This site provides a structured, editable, and expandable resource to support da
 
 ## 🧱 Infrastructure
 
-Explore the tools and platforms that form the foundation of reproducible and effective data analysis. Each notebook includes a basic overview, optional advanced content, and exercises.
+This section introduces core tools and workflows that underpin reproducible data science. Each notebook includes basic overviews, advanced insights (foldable), and hands-on exercises.
 
 - [01 – What is a Data Science Environment?](notebooks/infrastructure/01_what_is_data_env.ipynb)
 - [02 – Python vs R vs Other Tools](notebooks/infrastructure/02_python_vs_r.ipynb)
@@ -21,3 +21,7 @@ Explore the tools and platforms that form the foundation of reproducible and eff
 - [06 – Finding Help and Documentation](notebooks/infrastructure/06_finding_help.ipynb)
 - [07 – Notebooks, Scripts, Markdown, or Quarto](notebooks/infrastructure/07_notebooks_scripts_quarto.ipynb)
 - [08 – Documenting Your Work with Scripts and Logs](notebooks/infrastructure/08_documenting_with_scripts.ipynb)
+
+---
+
+More sections coming soon: Programming, Data Handling, Analysis, and Advanced Topics.
