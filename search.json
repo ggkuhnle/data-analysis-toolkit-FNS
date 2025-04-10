@@ -319,21 +319,21 @@
     "href": "notebooks/programming_basics/index.html",
     "title": "Programming Basics",
     "section": "",
-    "text": "This section introduces Python programming from the ground up, with a focus on data applications.\nEach notebook below is self-contained but follows a logical sequence.\nYou can use these as teaching materials or as a reference throughout your degree.\n\n\n\n\n01 – What is Code?\n02 – Variables and Data Types\n03 – Lists and Dictionaries\n04 – Conditionals and Logic\n05 – Loops and Iteration\n06 – Functions\n07 – Coding Style and Comments\n08 – Markdown and Quarto Basics\n09 – Practice and Mini Challenges\n\n\n\n\n\n\nWriting and structuring Python code\nUnderstanding logic, loops, and functions\nUsing comments and good coding style\nCreating readable documentation and Markdown content\n\n\n\n\n\nThese notebooks are a safe place to experiment — don’t be afraid to break things!\nUse Restart & Run All to reset or rerun your code from scratch."
+    "text": "This section introduces Python programming from the ground up, with a focus on data applications.\nEach notebook below is self-contained but follows a logical sequence.\nYou can use these as teaching materials or as a reference throughout your degree.\n\n\n\n\n01 – What is Code?\n02 – Syntax, Variables, and Comments\n03 – Lists and Dictionaries\n04 – Variables and Types\n05 – Conditionals and Logic\n06 – Loops and Iteration\n07 – Functions\n08 – Object-Oriented Programming Basics\n09 – Coding Style and Comments\n10 – Markdown and Quarto Basics\n11 – Practice and Mini Challenges\n\n\n\n\n\n\nWriting and structuring Python code\nUnderstanding variables, types, and containers\nUsing conditionals, loops, and functions\nCreating and using classes and objects\nWriting readable and maintainable code\nDocumenting with Markdown and Quarto\n\n\n\n\n\nThese notebooks are a safe place to experiment — don’t be afraid to break things!\nUse Restart & Run All to reset or rerun your code from scratch."
   },
   {
     "objectID": "notebooks/programming_basics/index.html#notebooks",
     "href": "notebooks/programming_basics/index.html#notebooks",
     "title": "Programming Basics",
     "section": "",
-    "text": "01 – What is Code?\n02 – Variables and Data Types\n03 – Lists and Dictionaries\n04 – Conditionals and Logic\n05 – Loops and Iteration\n06 – Functions\n07 – Coding Style and Comments\n08 – Markdown and Quarto Basics\n09 – Practice and Mini Challenges"
+    "text": "01 – What is Code?\n02 – Syntax, Variables, and Comments\n03 – Lists and Dictionaries\n04 – Variables and Types\n05 – Conditionals and Logic\n06 – Loops and Iteration\n07 – Functions\n08 – Object-Oriented Programming Basics\n09 – Coding Style and Comments\n10 – Markdown and Quarto Basics\n11 – Practice and Mini Challenges"
   },
   {
     "objectID": "notebooks/programming_basics/index.html#skills-youll-build",
     "href": "notebooks/programming_basics/index.html#skills-youll-build",
     "title": "Programming Basics",
     "section": "",
-    "text": "Writing and structuring Python code\nUnderstanding logic, loops, and functions\nUsing comments and good coding style\nCreating readable documentation and Markdown content"
+    "text": "Writing and structuring Python code\nUnderstanding variables, types, and containers\nUsing conditionals, loops, and functions\nCreating and using classes and objects\nWriting readable and maintainable code\nDocumenting with Markdown and Quarto"
   },
   {
     "objectID": "notebooks/programming_basics/index.html#tip",
