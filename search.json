@@ -84,270 +84,53 @@
     "text": "Using if, elif, else, and loops.\nfor i in range(3):\n    print(i)"
   },
   {
-    "objectID": "notebooks/programming_basics/04_functions_and_oop.html",
-    "href": "notebooks/programming_basics/04_functions_and_oop.html",
-    "title": "⚙️ Functions and OOP",
+    "objectID": "notebooks/programming_basics/05_code_style.html",
+    "href": "notebooks/programming_basics/05_code_style.html",
+    "title": "🎨 Code Style and Docstrings",
     "section": "",
-    "text": "Learn to write and use functions and simple classes.\ndef greet(name):\n    return f\"Hello, {name}!\""
+    "text": "Best practices for naming, commenting, and formatting.\n# This is a comment\ndef add(x, y):\n    \"\"\"Adds two numbers\"\"\"\n    return x + y"
   },
   {
-    "objectID": "notebooks/programming_basics/index.html",
-    "href": "notebooks/programming_basics/index.html",
-    "title": "Programming Basics",
+    "objectID": "notebooks/programming_basics/02_data_types_and_conversion.html",
+    "href": "notebooks/programming_basics/02_data_types_and_conversion.html",
+    "title": "🔢 Data Types and Conversion",
     "section": "",
-    "text": "Programming Basics\nThis section includes the following notebooks:\n\n01 intro python syntax\n02 data types and conversion\n03 control structures\n04 functions and oop\n05 code style"
+    "text": "Understand common data types and how to convert them.\nx = '123'\nint(x)"
   },
   {
-    "objectID": "notebooks/programming_basics/00_vibe_programming.html",
-    "href": "notebooks/programming_basics/00_vibe_programming.html",
-    "title": "✨ Just Try It: The Vibe of Programming",
+    "objectID": "notebooks/programming_basics/02_control_structures.html",
+    "href": "notebooks/programming_basics/02_control_structures.html",
+    "title": "🔁 Control Structures: if, elif, else",
     "section": "",
-    "text": "Welcome to coding! This notebook is not about getting things perfect — it’s about trying things, seeing what happens, and getting comfortable with Python.\nIf you’re feeling unsure or scared of “breaking something” — good news: Python is very hard to break. You can always restart and try again.\nLet’s experiment 👇\nCode\n# 🧠 Can you add a string and a number?\n\"hippo\" + 3\nCode\n# 🐾 What happens if I forget a bracket?\nprint(\"Hello Hippo!\"\nCode\n# 🦛 Can I print a hippo emoji?\nprint(\"Here's a hippo: 🦛\")\nCode\n# 🔁 What happens if I divide by zero?\n1 / 0\nCode\n# 🔀 Can I change a number into a string?\nstr(123) + \" hippos\""
+    "text": "Code\nage = 20\nif age &lt; 18:\n    print('Minor')\nelif age &lt; 65:\n    print('Adult')\nelse:\n    print('Senior')"
   },
   {
-    "objectID": "notebooks/programming_basics/00_vibe_programming.html#vibe-tips",
-    "href": "notebooks/programming_basics/00_vibe_programming.html#vibe-tips",
-    "title": "✨ Just Try It: The Vibe of Programming",
-    "section": "🎵 Vibe Tips",
-    "text": "🎵 Vibe Tips\n\nYou don’t need to understand everything at once.\nIf something breaks, it’s a learning opportunity.\nProgramming is just thinking + curiosity + patience.\nIf it works and helps you understand — that’s the vibe ✨\n\nReady to try more? Head to the Introduction to Python Syntax notebook next!"
-  },
-  {
-    "objectID": "notebooks/data_analysis/02_t_tests_and_anova.html",
-    "href": "notebooks/data_analysis/02_t_tests_and_anova.html",
-    "title": "🔬 T-Tests and ANOVA",
+    "objectID": "notebooks/data_analysis/02_tests_and_anova.html",
+    "href": "notebooks/data_analysis/02_tests_and_anova.html",
+    "title": "🧪 T-tests and ANOVA",
     "section": "",
-    "text": "Code\nfrom scipy import stats\nstats.ttest_ind(df['Height'][:50], df['Height'][50:])"
+    "text": "Testing group differences.\nfrom scipy.stats import ttest_ind"
   },
   {
-    "objectID": "notebooks/data_analysis/example.html",
-    "href": "notebooks/data_analysis/example.html",
-    "title": "📊 Example Notebook: Data Analysis",
+    "objectID": "notebooks/data_analysis/04_logistic_and_survival.html",
+    "href": "notebooks/data_analysis/04_logistic_and_survival.html",
+    "title": "📉 Logistic and Survival Analysis",
     "section": "",
-    "text": "This notebook will explore statistical testing, distributions, and plotting using real or simulated data."
+    "text": "Using logistic regression and Kaplan-Meier.\n# coming soon"
   },
   {
-    "objectID": "notebooks/data_analysis/03_regression.html",
-    "href": "notebooks/data_analysis/03_regression.html",
-    "title": "📈 Regression and Correlation",
+    "objectID": "notebooks/data_analysis/01_distributions_and_summary.html",
+    "href": "notebooks/data_analysis/01_distributions_and_summary.html",
+    "title": "📊 Summary Statistics and Distributions",
     "section": "",
-    "text": "Linear regression using statsmodels.\nimport statsmodels.api as sm"
+    "text": "Code\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.histplot(df['Height'], kde=True)\nplt.show()"
   },
   {
-    "objectID": "notebooks/data_analysis/index.html",
-    "href": "notebooks/data_analysis/index.html",
-    "title": "Data Analysis",
+    "objectID": "notebooks/data_analysis/01_distributions.html",
+    "href": "notebooks/data_analysis/01_distributions.html",
+    "title": "📊 Visualising Distributions",
     "section": "",
-    "text": "Data Analysis\nThis section includes the following notebooks:\n\n01 distributions\n02 tests and anova\n03 regression\n04 logistic and survival"
-  },
-  {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html",
-    "title": "🌍 What is a Data Science Environment?",
-    "section": "",
-    "text": "Learn how tools, files, formats and environments work together to support data analysis."
-  },
-  {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
-    "title": "🌍 What is a Data Science Environment?",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nWhat is a data environment?\nWhy this matters (Excel vs scripting)\nExamples of good practice"
-  },
-  {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
-    "title": "🌍 What is a Data Science Environment?",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand advanced concepts\n\n\nIDEs, environments (virtualenv, conda)\nReproducibility & workflow tools\nAutomation pipelines"
-  },
-  {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
-    "title": "🌍 What is a Data Science Environment?",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nDescribe your current “data environment”\nUse Colab to open a notebook and edit one line\nSketch out how Colab and GitHub could fit together"
-  },
-  {
-    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html",
-    "href": "notebooks/infrastructure/08_documenting_with_scripts.html",
-    "title": "📝 Documenting Your Work with Scripts and Logs",
-    "section": "",
-    "text": "Make your analysis traceable, understandable, and repeatable."
-  },
-  {
-    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#basic-view",
-    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#basic-view",
-    "title": "📝 Documenting Your Work with Scripts and Logs",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nScripts tell the story of what you did\nUnlike Excel: nothing disappears"
-  },
-  {
-    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#advanced-view",
-    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#advanced-view",
-    "title": "📝 Documenting Your Work with Scripts and Logs",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nLogging vs printing\nBuilding cleaning pipelines\nStructured protocol templates"
-  },
-  {
-    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#exercises",
-    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#exercises",
-    "title": "📝 Documenting Your Work with Scripts and Logs",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nWrite a script that reads a dataset and drops the first row.\nAdd comments explaining each step.\nOptional: use version control to track script changes over time."
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "",
-    "text": "Pick the right tool for your task: teaching, analysis, documentation, publishing."
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nNotebook: step-by-step analysis\nScript: automated, repeatable\nMarkdown: notes and text\nQuarto: combine all + publish"
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nQuarto for reproducible workflows\nCode–text separation and best practices\nMarkdown extensions for documentation"
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nCreate a Markdown cell and write a heading, bullet list, and italic text.\nExport a notebook to HTML using Colab or Jupyter.\nOptional: install Quarto and try converting a .qmd to HTML or PDF."
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html",
-    "href": "notebooks/infrastructure/06_finding_help.html",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "",
-    "text": "Learning to solve your own problems = a superpower."
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html#basic-view",
-    "href": "notebooks/infrastructure/06_finding_help.html#basic-view",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\n? and help() in notebooks\nGoogle effectively\nLook for examples, not just theory"
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html#advanced-view",
-    "href": "notebooks/infrastructure/06_finding_help.html#advanced-view",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nNavigating official docs (e.g. pandas, matplotlib)\nWhen to use Stack Overflow\nAsking good questions"
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html#exercises",
-    "href": "notebooks/infrastructure/06_finding_help.html#exercises",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nLook up how to use df.describe() and try it.\nGoogle “how to plot a histogram with seaborn”.\nOptional: find an unanswered question on Stack Overflow and draft a helpful answer."
-  },
-  {
-    "objectID": "notebooks/infrastructure/index.html",
-    "href": "notebooks/infrastructure/index.html",
-    "title": "Data Analysis Toolkit for Nutrition and Food Science",
-    "section": "",
-    "text": "This site provides a structured, editable, and expandable resource to support data skills from foundational knowledge to advanced applications.\n\n\n\nExplore the tools and platforms that form the foundation of reproducible and effective data analysis. Each notebook includes a basic overview, optional advanced content, and exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs"
-  },
-  {
-    "objectID": "notebooks/infrastructure/index.html#infrastructure",
-    "href": "notebooks/infrastructure/index.html#infrastructure",
-    "title": "Data Analysis Toolkit for Nutrition and Food Science",
-    "section": "",
-    "text": "Explore the tools and platforms that form the foundation of reproducible and effective data analysis. Each notebook includes a basic overview, optional advanced content, and exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs"
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html",
-    "href": "notebooks/infrastructure/05_installing_packages.html",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "",
-    "text": "Packages are how Python grows. Learn to install, manage, and update them."
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html#basic-view",
-    "href": "notebooks/infrastructure/05_installing_packages.html#basic-view",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nUsing !pip install in Colab\nCommon packages: pandas, matplotlib"
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
-    "href": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nCreating requirements.txt\nUsing venv for clean environments\nVersion pinning and conflicts"
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html#exercises",
-    "href": "notebooks/infrastructure/05_installing_packages.html#exercises",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nInstall a new package in Colab.\nTry exporting your environment with pip freeze &gt; requirements.txt.\nOptional: use venv to create a fresh Python environment."
-  },
-  {
-    "objectID": "notebooks/infrastructure/02_python_vs_r.html",
-    "href": "notebooks/infrastructure/02_python_vs_r.html",
-    "title": "🚗 Python vs R vs Other Tools",
-    "section": "",
-    "text": "Compare different tools for analysis — and why Python is our focus here."
-  },
-  {
-    "objectID": "notebooks/infrastructure/02_python_vs_r.html#basic-view",
-    "href": "notebooks/infrastructure/02_python_vs_r.html#basic-view",
-    "title": "🚗 Python vs R vs Other Tools",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nKey differences between Python and R\nWhere each shines\nMention Excel, SPSS, Prism, XLStat\n\nFun: Statistics as cars (image)"
-  },
-  {
-    "objectID": "notebooks/infrastructure/02_python_vs_r.html#advanced-view",
-    "href": "notebooks/infrastructure/02_python_vs_r.html#advanced-view",
-    "title": "🚗 Python vs R vs Other Tools",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand deeper comparisons\n\n\nSyntax structure\nCommunity and ecosystem\nIntegration into pipelines / APIs"
-  },
-  {
-    "objectID": "notebooks/infrastructure/02_python_vs_r.html#exercises",
-    "href": "notebooks/infrastructure/02_python_vs_r.html#exercises",
-    "title": "🚗 Python vs R vs Other Tools",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nFind out what software is used in a published paper in your field.\nTry running the same simple calculation in Python and Excel.\nSearch for “Python vs R for data analysis” and summarise key points."
-  },
-  {
-    "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
-    "href": "notebooks/infrastructure/03_colab_jupyter.html",
-    "title": "☁️ Using Google Colab and Jupyter",
-    "section": "",
-    "text": "Explore how to work in both Colab and local Jupyter notebooks."
-  },
-  {
-    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#basic-view",
-    "href": "notebooks/infrastructure/03_colab_jupyter.html#basic-view",
-    "title": "☁️ Using Google Colab and Jupyter",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nHow to open and run a Colab notebook\nDifference between code and Markdown cells\nHow to save and download"
-  },
-  {
-    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#advanced-view",
-    "href": "notebooks/infrastructure/03_colab_jupyter.html#advanced-view",
-    "title": "☁️ Using Google Colab and Jupyter",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nInstall Jupyter locally\nSync Colab to Google Drive\nVS Code Jupyter plugin"
-  },
-  {
-    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#exercises",
-    "href": "notebooks/infrastructure/03_colab_jupyter.html#exercises",
-    "title": "☁️ Using Google Colab and Jupyter",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nOpen one of the course notebooks in Colab and run a cell.\nCreate a new Colab notebook and write a “Hello world” message.\nOptional: install Jupyter locally and open a notebook from your files."
+    "text": "Histograms, KDE plots.\nimport seaborn as sns\nsns.histplot(df['height'])"
   },
   {
     "objectID": "notebooks/infrastructure/04_git_and_version_control.html",
@@ -378,53 +161,298 @@
     "text": "🧪 Exercises\n\nCreate a GitHub repo and upload a notebook.\nEdit it in Colab and save changes.\nOptional: try cloning the repo using GitHub Desktop."
   },
   {
-    "objectID": "notebooks/data_analysis/01_distributions.html",
-    "href": "notebooks/data_analysis/01_distributions.html",
-    "title": "📊 Visualising Distributions",
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html",
+    "title": "☁️ Using Google Colab and Jupyter",
     "section": "",
-    "text": "Histograms, KDE plots.\nimport seaborn as sns\nsns.histplot(df['height'])"
+    "text": "Explore how to work in both Colab and local Jupyter notebooks."
   },
   {
-    "objectID": "notebooks/data_analysis/01_distributions_and_summary.html",
-    "href": "notebooks/data_analysis/01_distributions_and_summary.html",
-    "title": "📊 Summary Statistics and Distributions",
-    "section": "",
-    "text": "Code\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.histplot(df['Height'], kde=True)\nplt.show()"
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#basic-view",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html#basic-view",
+    "title": "☁️ Using Google Colab and Jupyter",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nHow to open and run a Colab notebook\nDifference between code and Markdown cells\nHow to save and download"
   },
   {
-    "objectID": "notebooks/data_analysis/04_logistic_and_survival.html",
-    "href": "notebooks/data_analysis/04_logistic_and_survival.html",
-    "title": "📉 Logistic and Survival Analysis",
-    "section": "",
-    "text": "Using logistic regression and Kaplan-Meier.\n# coming soon"
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#advanced-view",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html#advanced-view",
+    "title": "☁️ Using Google Colab and Jupyter",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nInstall Jupyter locally\nSync Colab to Google Drive\nVS Code Jupyter plugin"
   },
   {
-    "objectID": "notebooks/data_analysis/02_tests_and_anova.html",
-    "href": "notebooks/data_analysis/02_tests_and_anova.html",
-    "title": "🧪 T-tests and ANOVA",
-    "section": "",
-    "text": "Testing group differences.\nfrom scipy.stats import ttest_ind"
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#exercises",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html#exercises",
+    "title": "☁️ Using Google Colab and Jupyter",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nOpen one of the course notebooks in Colab and run a cell.\nCreate a new Colab notebook and write a “Hello world” message.\nOptional: install Jupyter locally and open a notebook from your files."
   },
   {
-    "objectID": "notebooks/programming_basics/02_control_structures.html",
-    "href": "notebooks/programming_basics/02_control_structures.html",
-    "title": "🔁 Control Structures: if, elif, else",
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html",
+    "href": "notebooks/infrastructure/02_python_vs_r.html",
+    "title": "🚗 Python vs R vs Other Tools",
     "section": "",
-    "text": "Code\nage = 20\nif age &lt; 18:\n    print('Minor')\nelif age &lt; 65:\n    print('Adult')\nelse:\n    print('Senior')"
+    "text": "Compare different tools for analysis — and why Python is our focus here."
   },
   {
-    "objectID": "notebooks/programming_basics/02_data_types_and_conversion.html",
-    "href": "notebooks/programming_basics/02_data_types_and_conversion.html",
-    "title": "🔢 Data Types and Conversion",
-    "section": "",
-    "text": "Understand common data types and how to convert them.\nx = '123'\nint(x)"
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html#basic-view",
+    "href": "notebooks/infrastructure/02_python_vs_r.html#basic-view",
+    "title": "🚗 Python vs R vs Other Tools",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nKey differences between Python and R\nWhere each shines\nMention Excel, SPSS, Prism, XLStat\n\nFun: Statistics as cars (image)"
   },
   {
-    "objectID": "notebooks/programming_basics/05_code_style.html",
-    "href": "notebooks/programming_basics/05_code_style.html",
-    "title": "🎨 Code Style and Docstrings",
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html#advanced-view",
+    "href": "notebooks/infrastructure/02_python_vs_r.html#advanced-view",
+    "title": "🚗 Python vs R vs Other Tools",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand deeper comparisons\n\n\nSyntax structure\nCommunity and ecosystem\nIntegration into pipelines / APIs"
+  },
+  {
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html#exercises",
+    "href": "notebooks/infrastructure/02_python_vs_r.html#exercises",
+    "title": "🚗 Python vs R vs Other Tools",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nFind out what software is used in a published paper in your field.\nTry running the same simple calculation in Python and Excel.\nSearch for “Python vs R for data analysis” and summarise key points."
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html",
+    "href": "notebooks/infrastructure/05_installing_packages.html",
+    "title": "📦 Installing and Managing Python Packages",
     "section": "",
-    "text": "Best practices for naming, commenting, and formatting.\n# This is a comment\ndef add(x, y):\n    \"\"\"Adds two numbers\"\"\"\n    return x + y"
+    "text": "Packages are how Python grows. Learn to install, manage, and update them."
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#basic-view",
+    "href": "notebooks/infrastructure/05_installing_packages.html#basic-view",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nUsing !pip install in Colab\nCommon packages: pandas, matplotlib"
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
+    "href": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nCreating requirements.txt\nUsing venv for clean environments\nVersion pinning and conflicts"
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#exercises",
+    "href": "notebooks/infrastructure/05_installing_packages.html#exercises",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nInstall a new package in Colab.\nTry exporting your environment with pip freeze &gt; requirements.txt.\nOptional: use venv to create a fresh Python environment."
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html",
+    "href": "notebooks/infrastructure/index.html",
+    "title": "Data Analysis Toolkit for Nutrition and Food Science",
+    "section": "",
+    "text": "This site provides a structured, editable, and expandable resource to support data skills from foundational knowledge to advanced applications.\n\n\n\nExplore the tools and platforms that form the foundation of reproducible and effective data analysis. Each notebook includes a basic overview, optional advanced content, and exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs"
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html#infrastructure",
+    "href": "notebooks/infrastructure/index.html#infrastructure",
+    "title": "Data Analysis Toolkit for Nutrition and Food Science",
+    "section": "",
+    "text": "Explore the tools and platforms that form the foundation of reproducible and effective data analysis. Each notebook includes a basic overview, optional advanced content, and exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html",
+    "href": "notebooks/infrastructure/06_finding_help.html",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "",
+    "text": "Learning to solve your own problems = a superpower."
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#basic-view",
+    "href": "notebooks/infrastructure/06_finding_help.html#basic-view",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\n? and help() in notebooks\nGoogle effectively\nLook for examples, not just theory"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#advanced-view",
+    "href": "notebooks/infrastructure/06_finding_help.html#advanced-view",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nNavigating official docs (e.g. pandas, matplotlib)\nWhen to use Stack Overflow\nAsking good questions"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#exercises",
+    "href": "notebooks/infrastructure/06_finding_help.html#exercises",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nLook up how to use df.describe() and try it.\nGoogle “how to plot a histogram with seaborn”.\nOptional: find an unanswered question on Stack Overflow and draft a helpful answer."
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
+    "section": "",
+    "text": "Pick the right tool for your task: teaching, analysis, documentation, publishing."
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nNotebook: step-by-step analysis\nScript: automated, repeatable\nMarkdown: notes and text\nQuarto: combine all + publish"
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nQuarto for reproducible workflows\nCode–text separation and best practices\nMarkdown extensions for documentation"
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nCreate a Markdown cell and write a heading, bullet list, and italic text.\nExport a notebook to HTML using Colab or Jupyter.\nOptional: install Quarto and try converting a .qmd to HTML or PDF."
+  },
+  {
+    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html",
+    "href": "notebooks/infrastructure/08_documenting_with_scripts.html",
+    "title": "📝 Documenting Your Work with Scripts and Logs",
+    "section": "",
+    "text": "Make your analysis traceable, understandable, and repeatable."
+  },
+  {
+    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#basic-view",
+    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#basic-view",
+    "title": "📝 Documenting Your Work with Scripts and Logs",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nScripts tell the story of what you did\nUnlike Excel: nothing disappears"
+  },
+  {
+    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#advanced-view",
+    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#advanced-view",
+    "title": "📝 Documenting Your Work with Scripts and Logs",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nLogging vs printing\nBuilding cleaning pipelines\nStructured protocol templates"
+  },
+  {
+    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#exercises",
+    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#exercises",
+    "title": "📝 Documenting Your Work with Scripts and Logs",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nWrite a script that reads a dataset and drops the first row.\nAdd comments explaining each step.\nOptional: use version control to track script changes over time."
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "",
+    "text": "Learn how tools, files, formats and environments work together to support data analysis."
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nWhat is a data environment?\nWhy this matters (Excel vs scripting)\nExamples of good practice"
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand advanced concepts\n\n\nIDEs, environments (virtualenv, conda)\nReproducibility & workflow tools\nAutomation pipelines"
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nDescribe your current “data environment”\nUse Colab to open a notebook and edit one line\nSketch out how Colab and GitHub could fit together"
+  },
+  {
+    "objectID": "notebooks/data_analysis/index.html",
+    "href": "notebooks/data_analysis/index.html",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "Data Analysis\nThis section includes the following notebooks:\n\n01 distributions\n02 tests and anova\n03 regression\n04 logistic and survival"
+  },
+  {
+    "objectID": "notebooks/data_analysis/03_regression.html",
+    "href": "notebooks/data_analysis/03_regression.html",
+    "title": "📈 Regression and Correlation",
+    "section": "",
+    "text": "Linear regression using statsmodels.\nimport statsmodels.api as sm"
+  },
+  {
+    "objectID": "notebooks/data_analysis/example.html",
+    "href": "notebooks/data_analysis/example.html",
+    "title": "📊 Example Notebook: Data Analysis",
+    "section": "",
+    "text": "This notebook will explore statistical testing, distributions, and plotting using real or simulated data."
+  },
+  {
+    "objectID": "notebooks/data_analysis/02_t_tests_and_anova.html",
+    "href": "notebooks/data_analysis/02_t_tests_and_anova.html",
+    "title": "🔬 T-Tests and ANOVA",
+    "section": "",
+    "text": "Code\nfrom scipy import stats\nstats.ttest_ind(df['Height'][:50], df['Height'][50:])"
+  },
+  {
+    "objectID": "notebooks/programming_basics/00_vibe_programming.html",
+    "href": "notebooks/programming_basics/00_vibe_programming.html",
+    "title": "✨ Just Try It: The Vibe of Programming",
+    "section": "",
+    "text": "Welcome to coding! This notebook is not about getting things perfect — it’s about trying things, seeing what happens, and getting comfortable with Python.\nIf you’re feeling unsure or scared of “breaking something” — good news: Python is very hard to break. You can always restart and try again.\nLet’s experiment 👇\nCode\n# 🧠 Can you add a string and a number?\n\"hippo\" + 3\nCode\n# 🐾 What happens if I forget a bracket?\nprint(\"Hello Hippo!\"\nCode\n# 🦛 Can I print a hippo emoji?\nprint(\"Here's a hippo: 🦛\")\nCode\n# 🔁 What happens if I divide by zero?\n1 / 0\nCode\n# 🔀 Can I change a number into a string?\nstr(123) + \" hippos\""
+  },
+  {
+    "objectID": "notebooks/programming_basics/00_vibe_programming.html#vibe-tips",
+    "href": "notebooks/programming_basics/00_vibe_programming.html#vibe-tips",
+    "title": "✨ Just Try It: The Vibe of Programming",
+    "section": "🎵 Vibe Tips",
+    "text": "🎵 Vibe Tips\n\nYou don’t need to understand everything at once.\nIf something breaks, it’s a learning opportunity.\nProgramming is just thinking + curiosity + patience.\nIf it works and helps you understand — that’s the vibe ✨\n\nReady to try more? Head to the Introduction to Python Syntax notebook next!"
+  },
+  {
+    "objectID": "notebooks/programming_basics/index.html",
+    "href": "notebooks/programming_basics/index.html",
+    "title": "Programming Basics",
+    "section": "",
+    "text": "Programming Basics\nThis section includes the following notebooks:\n\n01 intro python syntax\n02 data types and conversion\n03 control structures\n04 functions and oop\n05 code style"
+  },
+  {
+    "objectID": "notebooks/programming_basics/04_functions_and_oop.html",
+    "href": "notebooks/programming_basics/04_functions_and_oop.html",
+    "title": "⚙️ Functions and OOP",
+    "section": "",
+    "text": "Learn to write and use functions and simple classes.\ndef greet(name):\n    return f\"Hello, {name}!\""
+  },
+  {
+    "objectID": "notebooks/programming_basics/01_what_is_data_env.html",
+    "href": "notebooks/programming_basics/01_what_is_data_env.html",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "",
+    "text": "Welcome! In this notebook, we explore what a data science environment is — and why setting up the right tools can make your work easier, cleaner, and more reproducible."
+  },
+  {
+    "objectID": "notebooks/programming_basics/01_what_is_data_env.html#basic-view",
+    "href": "notebooks/programming_basics/01_what_is_data_env.html#basic-view",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\nA data environment is a combination of:\n\nSoftware: Python, Jupyter, Excel, R\nTools: Notebooks, scripts, version control\nData: CSVs, spreadsheets, databases\nWorkflows: Reproducible steps, documented processes\n\nThink of it like your lab bench in a research lab. You need the right tools, a clean space, and a way to document what you’ve done.\n\nWhy this matters\nIf you use Excel and manually delete a row or overwrite a number, the change is gone. There is no record of it unless you create backup files (e.g. final_final_02.xlsx 🙃).\nWith Python, your steps are scripted. Anyone (including future-you) can run the same script and get the same output.\n\n\nCode\n# Example: A small data cleaning script\nimport pandas as pd\n\ndf = pd.DataFrame({\n    \"Name\": [\"Hippo\", \"Giraffe\", \"Elephant\"],\n    \"Weight_kg\": [1500, 900, 3000]\n})\n\n# Keep only animals heavier than 1000 kg\ndf = df[df[\"Weight_kg\"] &gt; 1000]\ndf\n\n\nThis script tells you what was done — filtering animals above 1000 kg — and you can re-run it whenever needed.\nIt also produces the same result each time, unlike an unlogged Excel edit."
+  },
+  {
+    "objectID": "notebooks/programming_basics/01_what_is_data_env.html#advanced-view",
+    "href": "notebooks/programming_basics/01_what_is_data_env.html#advanced-view",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand advanced concepts\n\n\nIDEs and Notebooks\n\nIDE = Integrated Development Environment (e.g. VS Code, PyCharm)\nNotebook = An interactive document with code + output + explanation (like this one)\n\n\n\nEnvironments\n\nUse venv or conda to create clean environments\nAvoid package conflicts and make your analysis portable\n\n\n\nVersioning and Reproducibility\n\nUse Git to track changes to code and notebooks\nDocument your workflow with Quarto or Markdown"
+  },
+  {
+    "objectID": "notebooks/programming_basics/01_what_is_data_env.html#exercises",
+    "href": "notebooks/programming_basics/01_what_is_data_env.html#exercises",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nIn your own words, describe what a data environment is.\nTry modifying the Python script above to use 2000 kg as the filter.\nOptional: Open a CSV in Excel, change a number, and ask: “Can I undo this tomorrow?”"
   },
   {
     "objectID": "notebooks/programming_basics/01_intro_python_syntax.html",
