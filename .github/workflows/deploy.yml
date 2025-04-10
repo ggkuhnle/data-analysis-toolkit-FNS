@@ -28,6 +28,17 @@ jobs:
             any::rmarkdown
             any::jsonlite
 
+      - name: Configure Git
+        run: |
+          git config --global g.g.kuhnle@reading.ac.uk "github-actions@github.com"
+          git config --global ggkuhnle "GitHub Actions"
+
+      - name: Clean up existing gh-pages worktree
+        run: |
+          git worktree remove gh-pages --force || true
+          git branch -D gh-pages || true
+          rm -rf gh-pages || true
+
       - name: Render and Publish
         run: |
           quarto render
