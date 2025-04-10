@@ -30,8 +30,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global g.g.kuhnle@reading.ac.uk "github-actions@github.com"
-          git config --global ggkuhnle "GitHub Actions"
+          git config --global user.email "g.g.kuhnle@reading.ac.uk"
+          git config --global user.name "GitHub Actions"
 
       - name: Clean up existing gh-pages worktree
         run: |
