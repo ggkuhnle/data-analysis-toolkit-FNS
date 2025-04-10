@@ -112,5 +112,29 @@
   },
   "notebooks/programming_basics/02_variables_and_types.ipynb": {
     "02_variables_and_types.html": "797d009c"
+  },
+  "notebooks/programming_basics/08_markdown_and_quarto.ipynb": {
+    "08_markdown_and_quarto.html": "090f226a"
+  },
+  "notebooks/programming_basics/07_coding_style_and_comments.ipynb": {
+    "07_coding_style_and_comments.html": "85db3d93"
+  },
+  "notebooks/programming_basics/05_loops_and_iteration.ipynb": {
+    "05_loops_and_iteration.html": "0c5d2300"
+  },
+  "notebooks/programming_basics/09_mini_challenges.ipynb": {
+    "09_mini_challenges.html": "94cebb74"
+  },
+  "notebooks/programming_basics/06_functions.ipynb": {
+    "06_functions.html": "f01628e2"
+  },
+  "notebooks/programming_basics/04_conditionals_and_logic.ipynb": {
+    "04_conditionals_and_logic.html": "1669b532"
+  },
+  "notebooks/programming_basics/03_lists_and_dicts.ipynb": {
+    "03_lists_and_dicts.html": "c1ba58c4"
+  },
+  "notebooks/programming_basics/07_coding_style_and_comments (1).ipynb": {
+    "07_coding_style_and_comments (1).html": "103fc5f8"
   }
 }
