@@ -35,186 +35,249 @@
     "text": "Additional Resources\n\nJupyter Notebook Official Documentation\nGoogle Colab FAQs\n\n\nNote: Ensure you have a stable internet connection when using Google Colab. For local setups, regularly update your packages to the latest versions."
   },
   {
-    "objectID": "notebooks/advanced/qualitative/01_intro_qualitative_research.html",
-    "href": "notebooks/advanced/qualitative/01_intro_qualitative_research.html",
+    "objectID": "notebooks/advanced/02_workflow_automation.html",
+    "href": "notebooks/advanced/02_workflow_automation.html",
+    "title": "Workflow Automation",
+    "section": "",
+    "text": "Use Quarto and GitHub Actions to automate reproducible reports."
+  },
+  {
+    "objectID": "notebooks/advanced/02_workflow_automation.html#concepts",
+    "href": "notebooks/advanced/02_workflow_automation.html#concepts",
+    "title": "Workflow Automation",
+    "section": "Concepts",
+    "text": "Concepts\n\nWhat is a workflow?\nHow to render notebooks automatically with quarto render\nOverview of GitHub Actions YAML file for CI"
+  },
+  {
+    "objectID": "notebooks/advanced/02_workflow_automation.html#exercise",
+    "href": "notebooks/advanced/02_workflow_automation.html#exercise",
+    "title": "Workflow Automation",
+    "section": "Exercise",
+    "text": "Exercise\nCreate a basic Quarto report and configure GitHub Actions to publish it automatically."
+  },
+  {
+    "objectID": "notebooks/advanced/07_image_analysis.html",
+    "href": "notebooks/advanced/07_image_analysis.html",
+    "title": "Intro to Image Analysis",
+    "section": "",
+    "text": "Use Python to analyse visual features in food images.\nCode\nfrom skimage import io, color\nimport matplotlib.pyplot as plt\n\nimage = io.imread('https://upload.wikimedia.org/wikipedia/commons/3/36/Kale-Bundle.jpg')\ngray = color.rgb2gray(image)\nplt.imshow(gray, cmap='gray')\nplt.title('Grayscale Food Image')\nplt.axis('off')\nplt.show()"
+  },
+  {
+    "objectID": "notebooks/advanced/07_image_analysis.html#exercise",
+    "href": "notebooks/advanced/07_image_analysis.html#exercise",
+    "title": "Intro to Image Analysis",
+    "section": "Exercise",
+    "text": "Exercise\nMeasure basic colour intensity and variation in a food image (e.g., bread crust or fruit ripeness)."
+  },
+  {
+    "objectID": "notebooks/advanced/01_bayesian_methods.html",
+    "href": "notebooks/advanced/01_bayesian_methods.html",
+    "title": "Bayesian Methods with PyMC",
+    "section": "",
+    "text": "Estimate posterior distributions using MCMC in nutritional applications.\nCode\nimport pymc as pm\nimport numpy as np\nimport arviz as az\n\ndata = np.random.normal(loc=9, scale=1, size=100)\n\nwith pm.Model() as model:\n    mu = pm.Normal('mu', mu=8.5, sigma=1)\n    sigma = pm.HalfNormal('sigma', sigma=1)\n    obs = pm.Normal('obs', mu=mu, sigma=sigma, observed=data)\n    trace = pm.sample(1000, tune=500)\n\naz.plot_trace(trace);"
+  },
+  {
+    "objectID": "notebooks/advanced/01_bayesian_methods.html#exercise",
+    "href": "notebooks/advanced/01_bayesian_methods.html#exercise",
+    "title": "Bayesian Methods with PyMC",
+    "section": "Exercise",
+    "text": "Exercise\nUse a Bayesian model to estimate the mean intake of under-reported nutrients."
+  },
+  {
+    "objectID": "notebooks/advanced/05_dashboards.html",
+    "href": "notebooks/advanced/05_dashboards.html",
+    "title": "Dashboards and Storytelling with Streamlit",
+    "section": "",
+    "text": "Create interactive data apps for nutritional insights.\nCode\nimport streamlit as st\nimport pandas as pd\n\nst.title(\"Iron Intake by Age and Gender\")\ndata = pd.DataFrame({'age': [25, 35, 45], 'iron': [8.5, 9.0, 8.8]})\nst.bar_chart(data.set_index('age'))"
+  },
+  {
+    "objectID": "notebooks/advanced/05_dashboards.html#exercise",
+    "href": "notebooks/advanced/05_dashboards.html#exercise",
+    "title": "Dashboards and Storytelling with Streamlit",
+    "section": "Exercise",
+    "text": "Exercise\nCreate a mini dashboard that lets users filter by gender and displays nutrient intake."
+  },
+  {
+    "objectID": "notebooks/projects/00_mini_project_template.html",
+    "href": "notebooks/projects/00_mini_project_template.html",
+    "title": "🧪 Mini Project Template",
+    "section": "",
+    "text": "Code\n## Instructions:\n# - Describe your dataset\n# - State your hypotheses\n# - Run your analysis"
+  },
+  {
+    "objectID": "notebooks/projects/00_project_template.html",
+    "href": "notebooks/projects/00_project_template.html",
+    "title": "🧪 Student Mini Project Template",
+    "section": "",
+    "text": "Use this template to organise your project: - Description - Objectives - Methods - Results"
+  },
+  {
+    "objectID": "notebooks/data_handling/03_uploading_saving_colab.html",
+    "href": "notebooks/data_handling/03_uploading_saving_colab.html",
+    "title": "Uploading to Colab and Saving Outputs",
+    "section": "",
+    "text": "Practice uploading files and saving outputs in Colab.\nCode\nfrom google.colab import files\nuploaded = files.upload()\nCode\n# Save a modified dataset\ndf.to_csv('modified_data.csv')\nfiles.download('modified_data.csv')"
+  },
+  {
+    "objectID": "notebooks/data_handling/03_uploading_saving_colab.html#exercise",
+    "href": "notebooks/data_handling/03_uploading_saving_colab.html#exercise",
+    "title": "Uploading to Colab and Saving Outputs",
+    "section": "Exercise",
+    "text": "Exercise\nUpload a .csv, clean it (e.g. rename columns), and save the result."
+  },
+  {
+    "objectID": "notebooks/data_handling/06_format_conversion.html",
+    "href": "notebooks/data_handling/06_format_conversion.html",
+    "title": "Converting Between Formats",
+    "section": "",
+    "text": "Convert data between wide and long format, and export it.\nCode\ndf = pd.DataFrame({'name': ['Alice', 'Bob'], 'day1': [8, 9], 'day2': [7, 8]})\ndf_long = df.melt(id_vars=['name'], var_name='day', value_name='intake')\ndf_long"
+  },
+  {
+    "objectID": "notebooks/data_handling/06_format_conversion.html#exercise",
+    "href": "notebooks/data_handling/06_format_conversion.html#exercise",
+    "title": "Converting Between Formats",
+    "section": "Exercise",
+    "text": "Exercise\nTake a food diary dataset and reshape it to long format using melt(), then save as JSON."
+  },
+  {
+    "objectID": "notebooks/data_handling/02_importing_data.html",
+    "href": "notebooks/data_handling/02_importing_data.html",
+    "title": "Importing Data",
+    "section": "",
+    "text": "Learn how to load data from different sources including CSV and Excel.\nCode\nimport pandas as pd\ndf = pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv')\ndf.head()"
+  },
+  {
+    "objectID": "notebooks/data_handling/02_importing_data.html#exercise",
+    "href": "notebooks/data_handling/02_importing_data.html#exercise",
+    "title": "Importing Data",
+    "section": "Exercise",
+    "text": "Exercise\nLoad a CSV file from a URL and inspect its shape, column names, and basic statistics."
+  },
+  {
+    "objectID": "notebooks/data_handling/05_sorting_filtering_grouping_joining.html",
+    "href": "notebooks/data_handling/05_sorting_filtering_grouping_joining.html",
+    "title": "Sorting, Filtering, Grouping, Joining",
+    "section": "",
+    "text": "Work with data subsets and combine datasets.\nCode\ndf = pd.DataFrame({'group': ['A', 'A', 'B'], 'iron': [8.5, 9.0, 10.0]})\ndf.groupby('group').mean()\nCode\nother = pd.DataFrame({'group': ['A', 'B'], 'vitamin_c': [60, 70]})\npd.merge(df, other, on='group')"
+  },
+  {
+    "objectID": "notebooks/data_handling/05_sorting_filtering_grouping_joining.html#exercise",
+    "href": "notebooks/data_handling/05_sorting_filtering_grouping_joining.html#exercise",
+    "title": "Sorting, Filtering, Grouping, Joining",
+    "section": "Exercise",
+    "text": "Exercise\nGroup a dataset by food type and calculate the average iron content."
+  },
+  {
+    "objectID": "notebooks/programming_basics/01_syntax_variables_comments.html",
+    "href": "notebooks/programming_basics/01_syntax_variables_comments.html",
+    "title": "Syntax, Variables, and Comments",
+    "section": "",
+    "text": "This notebook introduces Python’s basic syntax and shows how to define and use variables, along with comments.\nCode\nname = 'Charlotte'\nprint(f\"Hello, {name}!\")  # Greet the user"
+  },
+  {
+    "objectID": "notebooks/programming_basics/01_syntax_variables_comments.html#exercise",
+    "href": "notebooks/programming_basics/01_syntax_variables_comments.html#exercise",
+    "title": "Syntax, Variables, and Comments",
+    "section": "Exercise",
+    "text": "Exercise\nModify the code above to include your name and add a second line that prints your favourite fruit."
+  },
+  {
+    "objectID": "notebooks/programming_basics/03_loops_conditionals.html",
+    "href": "notebooks/programming_basics/03_loops_conditionals.html",
+    "title": "Loops and Conditionals",
+    "section": "",
+    "text": "Learn how to control the flow of your program using loops and conditional statements.\nCode\nfoods = ['apple', 'cake', 'broccoli']\nfor food in foods:\n    if food == 'cake':\n        print(food, 'is high in sugar!')"
+  },
+  {
+    "objectID": "notebooks/programming_basics/03_loops_conditionals.html#exercise",
+    "href": "notebooks/programming_basics/03_loops_conditionals.html#exercise",
+    "title": "Loops and Conditionals",
+    "section": "Exercise",
+    "text": "Exercise\nAdd more foods to the list and flag anything with ‘chocolate’ in its name."
+  },
+  {
+    "objectID": "notebooks/programming_basics/02_data_types_conversion.html",
+    "href": "notebooks/programming_basics/02_data_types_conversion.html",
+    "title": "Data Types and Conversion",
+    "section": "",
+    "text": "Explore Python’s data types and how to convert between them.\nCode\nage = '42'\nprint(int(age) + 1)  # Converts string to integer\nCode\nnutrients = {'iron': '8.5', 'vitamin_c': '75'}\nfor k, v in nutrients.items():\n    nutrients[k] = float(v)"
+  },
+  {
+    "objectID": "notebooks/programming_basics/02_data_types_conversion.html#exercise",
+    "href": "notebooks/programming_basics/02_data_types_conversion.html#exercise",
+    "title": "Data Types and Conversion",
+    "section": "Exercise",
+    "text": "Exercise\nCreate a dictionary of at least 3 nutrients with string values and convert them all to floats."
+  },
+  {
+    "objectID": "notebooks/programming_basics/04_list_comprehensions.html",
+    "href": "notebooks/programming_basics/04_list_comprehensions.html",
+    "title": "List Comprehensions",
+    "section": "",
+    "text": "Compact and elegant way to filter or transform items in a list.\nCode\nsugar_g = [15, 22, 7, 5]\nsugar_mg = [g * 1000 for g in sugar_g]\nsugar_mg"
+  },
+  {
+    "objectID": "notebooks/programming_basics/04_list_comprehensions.html#exercise",
+    "href": "notebooks/programming_basics/04_list_comprehensions.html#exercise",
+    "title": "List Comprehensions",
+    "section": "Exercise",
+    "text": "Exercise\nConvert a list of fibre values from g to mg using a list comprehension."
+  },
+  {
+    "objectID": "notebooks/qualitative/01_intro_qualitative_research.html",
+    "href": "notebooks/qualitative/01_intro_qualitative_research.html",
     "title": "Introduction to Qualitative Research",
     "section": "",
     "text": "Understand what qualitative research is and when to use it."
   },
   {
-    "objectID": "notebooks/advanced/qualitative/01_intro_qualitative_research.html#key-concepts",
-    "href": "notebooks/advanced/qualitative/01_intro_qualitative_research.html#key-concepts",
+    "objectID": "notebooks/qualitative/01_intro_qualitative_research.html#key-concepts",
+    "href": "notebooks/qualitative/01_intro_qualitative_research.html#key-concepts",
     "title": "Introduction to Qualitative Research",
     "section": "Key Concepts",
     "text": "Key Concepts\n\nFocuses on meaning, experience, and context\nBest for exploring how and why questions\nCommon in public health, behavioural nutrition, sensory science\n\n\nWhen to Use\n\nEarly exploratory phases\nTo complement quantitative findings (mixed methods)\nWhen numbers alone don’t tell the full story"
   },
   {
-    "objectID": "notebooks/advanced/qualitative/01_intro_qualitative_research.html#exercise",
-    "href": "notebooks/advanced/qualitative/01_intro_qualitative_research.html#exercise",
+    "objectID": "notebooks/qualitative/01_intro_qualitative_research.html#exercise",
+    "href": "notebooks/qualitative/01_intro_qualitative_research.html#exercise",
     "title": "Introduction to Qualitative Research",
     "section": "Exercise",
     "text": "Exercise\nIdentify a research question from your field that would benefit from qualitative methods. Explain why."
   },
   {
-    "objectID": "notebooks/advanced/qualitative/02_data_collection_methods.html",
-    "href": "notebooks/advanced/qualitative/02_data_collection_methods.html",
+    "objectID": "notebooks/qualitative/02_data_collection_methods.html",
+    "href": "notebooks/qualitative/02_data_collection_methods.html",
     "title": "Data Collection Methods in Qualitative Research",
     "section": "",
     "text": "Learn how qualitative data are typically collected."
   },
   {
-    "objectID": "notebooks/advanced/qualitative/02_data_collection_methods.html#common-methods",
-    "href": "notebooks/advanced/qualitative/02_data_collection_methods.html#common-methods",
+    "objectID": "notebooks/qualitative/02_data_collection_methods.html#common-methods",
+    "href": "notebooks/qualitative/02_data_collection_methods.html#common-methods",
     "title": "Data Collection Methods in Qualitative Research",
     "section": "Common Methods",
     "text": "Common Methods\n\nInterviews (structured, semi-structured, unstructured)\nFocus groups\nOpen-ended survey questions\n\n\nEthics\n\nInformed consent\nAnonymity and confidentiality\nData storage and transparency"
   },
   {
-    "objectID": "notebooks/advanced/qualitative/02_data_collection_methods.html#exercise",
-    "href": "notebooks/advanced/qualitative/02_data_collection_methods.html#exercise",
+    "objectID": "notebooks/qualitative/02_data_collection_methods.html#exercise",
+    "href": "notebooks/qualitative/02_data_collection_methods.html#exercise",
     "title": "Data Collection Methods in Qualitative Research",
     "section": "Exercise",
     "text": "Exercise\nWrite three open-ended questions you could use in an interview about dietary habits."
   },
   {
-    "objectID": "notebooks/advanced/qualitative/04_text_analysis_python.html",
-    "href": "notebooks/advanced/qualitative/04_text_analysis_python.html",
+    "objectID": "notebooks/qualitative/04_text_analysis_python.html",
+    "href": "notebooks/qualitative/04_text_analysis_python.html",
     "title": "Simple Text Analysis in Python",
     "section": "",
     "text": "Use code to explore qualitative data (e.g. survey comments).\nCode\nimport pandas as pd\nfrom collections import Counter\ncomments = [\n    \"I often skip breakfast\",\n    \"Healthy food is too expensive\",\n    \"I don't know how to cook vegetables\"\n]\ntokens = [word.lower() for c in comments for word in c.split()]\nCounter(tokens)"
   },
   {
-    "objectID": "notebooks/advanced/qualitative/04_text_analysis_python.html#exercise",
-    "href": "notebooks/advanced/qualitative/04_text_analysis_python.html#exercise",
+    "objectID": "notebooks/qualitative/04_text_analysis_python.html#exercise",
+    "href": "notebooks/qualitative/04_text_analysis_python.html#exercise",
     "title": "Simple Text Analysis in Python",
     "section": "Exercise",
     "text": "Exercise\nTokenise and count words in your own dataset or set of comments."
-  },
-  {
-    "objectID": "notebooks/projects/example.html",
-    "href": "notebooks/projects/example.html",
-    "title": "🧪 Student Mini-Project Template",
-    "section": "",
-    "text": "Use this notebook as a starting point for your independent data project."
-  },
-  {
-    "objectID": "notebooks/projects/index.html",
-    "href": "notebooks/projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Projects\nThis section includes the following notebooks:\n\n00 project template"
-  },
-  {
-    "objectID": "notebooks/data_handling/01_what_are_data.html",
-    "href": "notebooks/data_handling/01_what_are_data.html",
-    "title": "What Are Data? Types and Structures",
-    "section": "",
-    "text": "Understand the structure and formats of datasets you’ll encounter in nutrition and food science.\nCode\nimport pandas as pd\nexample = pd.DataFrame({\n    'participant': ['A', 'B'],\n    'day1_energy_kcal': [2000, 1800],\n    'day2_energy_kcal': [2100, 1750]\n})\nexample"
-  },
-  {
-    "objectID": "notebooks/data_handling/01_what_are_data.html#exercise",
-    "href": "notebooks/data_handling/01_what_are_data.html#exercise",
-    "title": "What Are Data? Types and Structures",
-    "section": "Exercise",
-    "text": "Exercise\nConvert this wide dataset to a long format using pd.melt()."
-  },
-  {
-    "objectID": "notebooks/data_handling/04_cleaning_data.html",
-    "href": "notebooks/data_handling/04_cleaning_data.html",
-    "title": "Cleaning Data",
-    "section": "",
-    "text": "Handling missing values, renaming columns, and fixing data types.\nCode\ndf = pd.DataFrame({'iron': ['8.5', None, '10.2'], 'food': ['Spinach', 'Tofu', 'Kale']})\ndf['iron'] = pd.to_numeric(df['iron'], errors='coerce')\ndf = df.rename(columns={'iron': 'iron_mg'})\ndf"
-  },
-  {
-    "objectID": "notebooks/data_handling/04_cleaning_data.html#exercise",
-    "href": "notebooks/data_handling/04_cleaning_data.html#exercise",
-    "title": "Cleaning Data",
-    "section": "Exercise",
-    "text": "Exercise\nUse pd.to_numeric and fillna() to clean a dataset with missing or invalid entries."
-  },
-  {
-    "objectID": "notebooks/data_handling/index.html",
-    "href": "notebooks/data_handling/index.html",
-    "title": "Data Handling",
-    "section": "",
-    "text": "This section covers loading, cleaning, organising, and saving datasets using real-world nutrition examples.\n\n\n\nWhat Are Data? Types and Structures\nImporting Data\nUploading to Colab and Saving Outputs\nCleaning Data\nSorting, Filtering, Grouping, Joining\nConverting Between Formats"
-  },
-  {
-    "objectID": "notebooks/data_handling/index.html#notebooks",
-    "href": "notebooks/data_handling/index.html#notebooks",
-    "title": "Data Handling",
-    "section": "",
-    "text": "What Are Data? Types and Structures\nImporting Data\nUploading to Colab and Saving Outputs\nCleaning Data\nSorting, Filtering, Grouping, Joining\nConverting Between Formats"
-  },
-  {
-    "objectID": "notebooks/programming_basics/07_coding_styles.html",
-    "href": "notebooks/programming_basics/07_coding_styles.html",
-    "title": "Coding Styles",
-    "section": "",
-    "text": "Learn how to write clean and readable code using Python conventions.\nCode\n# Bad example\nx=5\ndef calc():return x*2\nCode\n# Improved version\nx = 5\n\ndef calc():\n    return x * 2"
-  },
-  {
-    "objectID": "notebooks/programming_basics/07_coding_styles.html#exercise",
-    "href": "notebooks/programming_basics/07_coding_styles.html#exercise",
-    "title": "Coding Styles",
-    "section": "Exercise",
-    "text": "Exercise\nReformat a badly written function into PEP8 style."
-  },
-  {
-    "objectID": "notebooks/programming_basics/08_documentation_quarto.html",
-    "href": "notebooks/programming_basics/08_documentation_quarto.html",
-    "title": "Documentation with Markdown and Quarto",
-    "section": "",
-    "text": "Add meaning to your code with narrative explanations.\nCode\nimport pandas as pd\npd.DataFrame({'iron': [8.5, 9.0]})"
-  },
-  {
-    "objectID": "notebooks/programming_basics/08_documentation_quarto.html#exercise",
-    "href": "notebooks/programming_basics/08_documentation_quarto.html#exercise",
-    "title": "Documentation with Markdown and Quarto",
-    "section": "Exercise",
-    "text": "Exercise\nCreate a markdown cell above a plot describing what it shows."
-  },
-  {
-    "objectID": "notebooks/programming_basics/05_functions_modular.html",
-    "href": "notebooks/programming_basics/05_functions_modular.html",
-    "title": "Functions and Modular Code",
-    "section": "",
-    "text": "Create reusable blocks of code with functions.\nCode\ndef calculate_bmi(weight, height):\n    return weight / (height ** 2)\n\ncalculate_bmi(70, 1.75)"
-  },
-  {
-    "objectID": "notebooks/programming_basics/05_functions_modular.html#exercise",
-    "href": "notebooks/programming_basics/05_functions_modular.html#exercise",
-    "title": "Functions and Modular Code",
-    "section": "Exercise",
-    "text": "Exercise\nWrite a function that converts Celsius to Fahrenheit and test it with 20°C."
-  },
-  {
-    "objectID": "notebooks/programming_basics/06_object_oriented_basics.html",
-    "href": "notebooks/programming_basics/06_object_oriented_basics.html",
-    "title": "Object-Oriented Programming Basics",
-    "section": "",
-    "text": "Learn about classes, methods, and objects.\nCode\nclass Person:\n    def __init__(self, name, weight, height):\n        self.name = name\n        self.weight = weight\n        self.height = height\n\n    def bmi(self):\n        return self.weight / (self.height ** 2)\n\np = Person('Alice', 68, 1.65)\nprint(p.name, p.bmi())"
-  },
-  {
-    "objectID": "notebooks/programming_basics/06_object_oriented_basics.html#exercise",
-    "href": "notebooks/programming_basics/06_object_oriented_basics.html#exercise",
-    "title": "Object-Oriented Programming Basics",
-    "section": "Exercise",
-    "text": "Exercise\nAdd a method to return a health message based on the BMI value."
-  },
-  {
-    "objectID": "notebooks/programming_basics/index.html",
-    "href": "notebooks/programming_basics/index.html",
-    "title": "Programming Basics",
-    "section": "",
-    "text": "This section introduces the fundamentals of Python programming with a focus on data science applications. The notebooks below are intended for self-paced learning with exercises and examples relevant to Food and Nutritional Sciences.\n\n\n\nSyntax, Variables, and Comments\nData Types and Conversion\nLoops and Conditionals\nList Comprehensions\nFunctions and Modular Code\nObject-Oriented Programming Basics\nCoding Styles\nDocumentation with Markdown and Quarto\n\nEach notebook includes explanations, code demonstrations, and practical exercises."
-  },
-  {
-    "objectID": "notebooks/programming_basics/index.html#notebooks",
-    "href": "notebooks/programming_basics/index.html#notebooks",
-    "title": "Programming Basics",
-    "section": "",
-    "text": "Syntax, Variables, and Comments\nData Types and Conversion\nLoops and Conditionals\nList Comprehensions\nFunctions and Modular Code\nObject-Oriented Programming Basics\nCoding Styles\nDocumentation with Markdown and Quarto\n\nEach notebook includes explanations, code demonstrations, and practical exercises."
   },
   {
     "objectID": "notebooks/data_analysis/05_statistical_testing.html",
@@ -504,165 +567,221 @@
     "text": "Exercise\nUse Bayesian reasoning to estimate true folate intake from a small sample."
   },
   {
-    "objectID": "notebooks/programming_basics/04_list_comprehensions.html",
-    "href": "notebooks/programming_basics/04_list_comprehensions.html",
-    "title": "List Comprehensions",
-    "section": "",
-    "text": "Compact and elegant way to filter or transform items in a list.\nCode\nsugar_g = [15, 22, 7, 5]\nsugar_mg = [g * 1000 for g in sugar_g]\nsugar_mg"
-  },
-  {
-    "objectID": "notebooks/programming_basics/04_list_comprehensions.html#exercise",
-    "href": "notebooks/programming_basics/04_list_comprehensions.html#exercise",
-    "title": "List Comprehensions",
-    "section": "Exercise",
-    "text": "Exercise\nConvert a list of fibre values from g to mg using a list comprehension."
-  },
-  {
-    "objectID": "notebooks/programming_basics/02_data_types_conversion.html",
-    "href": "notebooks/programming_basics/02_data_types_conversion.html",
-    "title": "Data Types and Conversion",
-    "section": "",
-    "text": "Explore Python’s data types and how to convert between them.\nCode\nage = '42'\nprint(int(age) + 1)  # Converts string to integer\nCode\nnutrients = {'iron': '8.5', 'vitamin_c': '75'}\nfor k, v in nutrients.items():\n    nutrients[k] = float(v)"
-  },
-  {
-    "objectID": "notebooks/programming_basics/02_data_types_conversion.html#exercise",
-    "href": "notebooks/programming_basics/02_data_types_conversion.html#exercise",
-    "title": "Data Types and Conversion",
-    "section": "Exercise",
-    "text": "Exercise\nCreate a dictionary of at least 3 nutrients with string values and convert them all to floats."
-  },
-  {
-    "objectID": "notebooks/programming_basics/03_loops_conditionals.html",
-    "href": "notebooks/programming_basics/03_loops_conditionals.html",
-    "title": "Loops and Conditionals",
-    "section": "",
-    "text": "Learn how to control the flow of your program using loops and conditional statements.\nCode\nfoods = ['apple', 'cake', 'broccoli']\nfor food in foods:\n    if food == 'cake':\n        print(food, 'is high in sugar!')"
-  },
-  {
-    "objectID": "notebooks/programming_basics/03_loops_conditionals.html#exercise",
-    "href": "notebooks/programming_basics/03_loops_conditionals.html#exercise",
-    "title": "Loops and Conditionals",
-    "section": "Exercise",
-    "text": "Exercise\nAdd more foods to the list and flag anything with ‘chocolate’ in its name."
-  },
-  {
-    "objectID": "notebooks/programming_basics/01_syntax_variables_comments.html",
-    "href": "notebooks/programming_basics/01_syntax_variables_comments.html",
-    "title": "Syntax, Variables, and Comments",
-    "section": "",
-    "text": "This notebook introduces Python’s basic syntax and shows how to define and use variables, along with comments.\nCode\nname = 'Charlotte'\nprint(f\"Hello, {name}!\")  # Greet the user"
-  },
-  {
-    "objectID": "notebooks/programming_basics/01_syntax_variables_comments.html#exercise",
-    "href": "notebooks/programming_basics/01_syntax_variables_comments.html#exercise",
-    "title": "Syntax, Variables, and Comments",
-    "section": "Exercise",
-    "text": "Exercise\nModify the code above to include your name and add a second line that prints your favourite fruit."
-  },
-  {
-    "objectID": "notebooks/data_handling/05_sorting_filtering_grouping_joining.html",
-    "href": "notebooks/data_handling/05_sorting_filtering_grouping_joining.html",
-    "title": "Sorting, Filtering, Grouping, Joining",
-    "section": "",
-    "text": "Work with data subsets and combine datasets.\nCode\ndf = pd.DataFrame({'group': ['A', 'A', 'B'], 'iron': [8.5, 9.0, 10.0]})\ndf.groupby('group').mean()\nCode\nother = pd.DataFrame({'group': ['A', 'B'], 'vitamin_c': [60, 70]})\npd.merge(df, other, on='group')"
-  },
-  {
-    "objectID": "notebooks/data_handling/05_sorting_filtering_grouping_joining.html#exercise",
-    "href": "notebooks/data_handling/05_sorting_filtering_grouping_joining.html#exercise",
-    "title": "Sorting, Filtering, Grouping, Joining",
-    "section": "Exercise",
-    "text": "Exercise\nGroup a dataset by food type and calculate the average iron content."
-  },
-  {
-    "objectID": "notebooks/data_handling/02_importing_data.html",
-    "href": "notebooks/data_handling/02_importing_data.html",
-    "title": "Importing Data",
-    "section": "",
-    "text": "Learn how to load data from different sources including CSV and Excel.\nCode\nimport pandas as pd\ndf = pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv')\ndf.head()"
-  },
-  {
-    "objectID": "notebooks/data_handling/02_importing_data.html#exercise",
-    "href": "notebooks/data_handling/02_importing_data.html#exercise",
-    "title": "Importing Data",
-    "section": "Exercise",
-    "text": "Exercise\nLoad a CSV file from a URL and inspect its shape, column names, and basic statistics."
-  },
-  {
-    "objectID": "notebooks/data_handling/06_format_conversion.html",
-    "href": "notebooks/data_handling/06_format_conversion.html",
-    "title": "Converting Between Formats",
-    "section": "",
-    "text": "Convert data between wide and long format, and export it.\nCode\ndf = pd.DataFrame({'name': ['Alice', 'Bob'], 'day1': [8, 9], 'day2': [7, 8]})\ndf_long = df.melt(id_vars=['name'], var_name='day', value_name='intake')\ndf_long"
-  },
-  {
-    "objectID": "notebooks/data_handling/06_format_conversion.html#exercise",
-    "href": "notebooks/data_handling/06_format_conversion.html#exercise",
-    "title": "Converting Between Formats",
-    "section": "Exercise",
-    "text": "Exercise\nTake a food diary dataset and reshape it to long format using melt(), then save as JSON."
-  },
-  {
-    "objectID": "notebooks/data_handling/03_uploading_saving_colab.html",
-    "href": "notebooks/data_handling/03_uploading_saving_colab.html",
-    "title": "Uploading to Colab and Saving Outputs",
-    "section": "",
-    "text": "Practice uploading files and saving outputs in Colab.\nCode\nfrom google.colab import files\nuploaded = files.upload()\nCode\n# Save a modified dataset\ndf.to_csv('modified_data.csv')\nfiles.download('modified_data.csv')"
-  },
-  {
-    "objectID": "notebooks/data_handling/03_uploading_saving_colab.html#exercise",
-    "href": "notebooks/data_handling/03_uploading_saving_colab.html#exercise",
-    "title": "Uploading to Colab and Saving Outputs",
-    "section": "Exercise",
-    "text": "Exercise\nUpload a .csv, clean it (e.g. rename columns), and save the result."
-  },
-  {
-    "objectID": "notebooks/projects/00_project_template.html",
-    "href": "notebooks/projects/00_project_template.html",
-    "title": "🧪 Student Mini Project Template",
-    "section": "",
-    "text": "Use this template to organise your project: - Description - Objectives - Methods - Results"
-  },
-  {
-    "objectID": "notebooks/projects/00_mini_project_template.html",
-    "href": "notebooks/projects/00_mini_project_template.html",
-    "title": "🧪 Mini Project Template",
-    "section": "",
-    "text": "Code\n## Instructions:\n# - Describe your dataset\n# - State your hypotheses\n# - Run your analysis"
-  },
-  {
-    "objectID": "notebooks/advanced/qualitative/index.html",
-    "href": "notebooks/advanced/qualitative/index.html",
+    "objectID": "notebooks/qualitative/index.html",
+    "href": "notebooks/qualitative/index.html",
     "title": "Qualitative Tools",
     "section": "",
     "text": "These notebooks introduce qualitative research, especially for understanding behaviours, experiences, and attitudes in nutrition and food science.\n\n\n\nIntroduction to Qualitative Research\nData Collection Methods\nCoding and Thematic Analysis\nSimple Text Analysis in Python"
   },
   {
-    "objectID": "notebooks/advanced/qualitative/index.html#notebooks",
-    "href": "notebooks/advanced/qualitative/index.html#notebooks",
+    "objectID": "notebooks/qualitative/index.html#notebooks",
+    "href": "notebooks/qualitative/index.html#notebooks",
     "title": "Qualitative Tools",
     "section": "",
     "text": "Introduction to Qualitative Research\nData Collection Methods\nCoding and Thematic Analysis\nSimple Text Analysis in Python"
   },
   {
-    "objectID": "notebooks/advanced/qualitative/03_coding_and_thematic_analysis.html",
-    "href": "notebooks/advanced/qualitative/03_coding_and_thematic_analysis.html",
+    "objectID": "notebooks/qualitative/03_coding_and_thematic_analysis.html",
+    "href": "notebooks/qualitative/03_coding_and_thematic_analysis.html",
     "title": "Coding and Thematic Analysis",
     "section": "",
     "text": "Manually coding qualitative data to identify patterns and themes."
   },
   {
-    "objectID": "notebooks/advanced/qualitative/03_coding_and_thematic_analysis.html#manual-coding",
-    "href": "notebooks/advanced/qualitative/03_coding_and_thematic_analysis.html#manual-coding",
+    "objectID": "notebooks/qualitative/03_coding_and_thematic_analysis.html#manual-coding",
+    "href": "notebooks/qualitative/03_coding_and_thematic_analysis.html#manual-coding",
     "title": "Coding and Thematic Analysis",
     "section": "Manual Coding",
     "text": "Manual Coding\n\nRead and re-read responses\nAssign codes to meaningful units\nGroup into themes\n\n\nTools\n\nOpen-source: taguette, RQDA\nCommercial: NVivo, Atlas.ti"
   },
   {
-    "objectID": "notebooks/advanced/qualitative/03_coding_and_thematic_analysis.html#exercise",
-    "href": "notebooks/advanced/qualitative/03_coding_and_thematic_analysis.html#exercise",
+    "objectID": "notebooks/qualitative/03_coding_and_thematic_analysis.html#exercise",
+    "href": "notebooks/qualitative/03_coding_and_thematic_analysis.html#exercise",
     "title": "Coding and Thematic Analysis",
     "section": "Exercise",
     "text": "Exercise\nRead this set of short responses:\n\n“I often skip breakfast.”\n“Healthy food is too expensive.”\n“I don’t know how to cook vegetables.”\n\nAssign one or two codes to each."
+  },
+  {
+    "objectID": "notebooks/programming_basics/index.html",
+    "href": "notebooks/programming_basics/index.html",
+    "title": "Programming Basics",
+    "section": "",
+    "text": "This section introduces the fundamentals of Python programming with a focus on data science applications. The notebooks below are intended for self-paced learning with exercises and examples relevant to Food and Nutritional Sciences.\n\n\n\nSyntax, Variables, and Comments\nData Types and Conversion\nLoops and Conditionals\nList Comprehensions\nFunctions and Modular Code\nObject-Oriented Programming Basics\nCoding Styles\nDocumentation with Markdown and Quarto\n\nEach notebook includes explanations, code demonstrations, and practical exercises."
+  },
+  {
+    "objectID": "notebooks/programming_basics/index.html#notebooks",
+    "href": "notebooks/programming_basics/index.html#notebooks",
+    "title": "Programming Basics",
+    "section": "",
+    "text": "Syntax, Variables, and Comments\nData Types and Conversion\nLoops and Conditionals\nList Comprehensions\nFunctions and Modular Code\nObject-Oriented Programming Basics\nCoding Styles\nDocumentation with Markdown and Quarto\n\nEach notebook includes explanations, code demonstrations, and practical exercises."
+  },
+  {
+    "objectID": "notebooks/programming_basics/06_object_oriented_basics.html",
+    "href": "notebooks/programming_basics/06_object_oriented_basics.html",
+    "title": "Object-Oriented Programming Basics",
+    "section": "",
+    "text": "Learn about classes, methods, and objects.\nCode\nclass Person:\n    def __init__(self, name, weight, height):\n        self.name = name\n        self.weight = weight\n        self.height = height\n\n    def bmi(self):\n        return self.weight / (self.height ** 2)\n\np = Person('Alice', 68, 1.65)\nprint(p.name, p.bmi())"
+  },
+  {
+    "objectID": "notebooks/programming_basics/06_object_oriented_basics.html#exercise",
+    "href": "notebooks/programming_basics/06_object_oriented_basics.html#exercise",
+    "title": "Object-Oriented Programming Basics",
+    "section": "Exercise",
+    "text": "Exercise\nAdd a method to return a health message based on the BMI value."
+  },
+  {
+    "objectID": "notebooks/programming_basics/05_functions_modular.html",
+    "href": "notebooks/programming_basics/05_functions_modular.html",
+    "title": "Functions and Modular Code",
+    "section": "",
+    "text": "Create reusable blocks of code with functions.\nCode\ndef calculate_bmi(weight, height):\n    return weight / (height ** 2)\n\ncalculate_bmi(70, 1.75)"
+  },
+  {
+    "objectID": "notebooks/programming_basics/05_functions_modular.html#exercise",
+    "href": "notebooks/programming_basics/05_functions_modular.html#exercise",
+    "title": "Functions and Modular Code",
+    "section": "Exercise",
+    "text": "Exercise\nWrite a function that converts Celsius to Fahrenheit and test it with 20°C."
+  },
+  {
+    "objectID": "notebooks/programming_basics/08_documentation_quarto.html",
+    "href": "notebooks/programming_basics/08_documentation_quarto.html",
+    "title": "Documentation with Markdown and Quarto",
+    "section": "",
+    "text": "Add meaning to your code with narrative explanations.\nCode\nimport pandas as pd\npd.DataFrame({'iron': [8.5, 9.0]})"
+  },
+  {
+    "objectID": "notebooks/programming_basics/08_documentation_quarto.html#exercise",
+    "href": "notebooks/programming_basics/08_documentation_quarto.html#exercise",
+    "title": "Documentation with Markdown and Quarto",
+    "section": "Exercise",
+    "text": "Exercise\nCreate a markdown cell above a plot describing what it shows."
+  },
+  {
+    "objectID": "notebooks/programming_basics/07_coding_styles.html",
+    "href": "notebooks/programming_basics/07_coding_styles.html",
+    "title": "Coding Styles",
+    "section": "",
+    "text": "Learn how to write clean and readable code using Python conventions.\nCode\n# Bad example\nx=5\ndef calc():return x*2\nCode\n# Improved version\nx = 5\n\ndef calc():\n    return x * 2"
+  },
+  {
+    "objectID": "notebooks/programming_basics/07_coding_styles.html#exercise",
+    "href": "notebooks/programming_basics/07_coding_styles.html#exercise",
+    "title": "Coding Styles",
+    "section": "Exercise",
+    "text": "Exercise\nReformat a badly written function into PEP8 style."
+  },
+  {
+    "objectID": "notebooks/data_handling/index.html",
+    "href": "notebooks/data_handling/index.html",
+    "title": "Data Handling",
+    "section": "",
+    "text": "This section covers loading, cleaning, organising, and saving datasets using real-world nutrition examples.\n\n\n\nWhat Are Data? Types and Structures\nImporting Data\nUploading to Colab and Saving Outputs\nCleaning Data\nSorting, Filtering, Grouping, Joining\nConverting Between Formats"
+  },
+  {
+    "objectID": "notebooks/data_handling/index.html#notebooks",
+    "href": "notebooks/data_handling/index.html#notebooks",
+    "title": "Data Handling",
+    "section": "",
+    "text": "What Are Data? Types and Structures\nImporting Data\nUploading to Colab and Saving Outputs\nCleaning Data\nSorting, Filtering, Grouping, Joining\nConverting Between Formats"
+  },
+  {
+    "objectID": "notebooks/data_handling/04_cleaning_data.html",
+    "href": "notebooks/data_handling/04_cleaning_data.html",
+    "title": "Cleaning Data",
+    "section": "",
+    "text": "Handling missing values, renaming columns, and fixing data types.\nCode\ndf = pd.DataFrame({'iron': ['8.5', None, '10.2'], 'food': ['Spinach', 'Tofu', 'Kale']})\ndf['iron'] = pd.to_numeric(df['iron'], errors='coerce')\ndf = df.rename(columns={'iron': 'iron_mg'})\ndf"
+  },
+  {
+    "objectID": "notebooks/data_handling/04_cleaning_data.html#exercise",
+    "href": "notebooks/data_handling/04_cleaning_data.html#exercise",
+    "title": "Cleaning Data",
+    "section": "Exercise",
+    "text": "Exercise\nUse pd.to_numeric and fillna() to clean a dataset with missing or invalid entries."
+  },
+  {
+    "objectID": "notebooks/data_handling/01_what_are_data.html",
+    "href": "notebooks/data_handling/01_what_are_data.html",
+    "title": "What Are Data? Types and Structures",
+    "section": "",
+    "text": "Understand the structure and formats of datasets you’ll encounter in nutrition and food science.\nCode\nimport pandas as pd\nexample = pd.DataFrame({\n    'participant': ['A', 'B'],\n    'day1_energy_kcal': [2000, 1800],\n    'day2_energy_kcal': [2100, 1750]\n})\nexample"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_what_are_data.html#exercise",
+    "href": "notebooks/data_handling/01_what_are_data.html#exercise",
+    "title": "What Are Data? Types and Structures",
+    "section": "Exercise",
+    "text": "Exercise\nConvert this wide dataset to a long format using pd.melt()."
+  },
+  {
+    "objectID": "notebooks/projects/index.html",
+    "href": "notebooks/projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\nThis section includes the following notebooks:\n\n00 project template"
+  },
+  {
+    "objectID": "notebooks/projects/example.html",
+    "href": "notebooks/projects/example.html",
+    "title": "🧪 Student Mini-Project Template",
+    "section": "",
+    "text": "Use this notebook as a starting point for your independent data project."
+  },
+  {
+    "objectID": "notebooks/advanced/03_databases.html",
+    "href": "notebooks/advanced/03_databases.html",
+    "title": "Working with Databases in Python",
+    "section": "",
+    "text": "Use SQLite and SQLAlchemy to query structured nutritional data.\nCode\nfrom sqlalchemy import create_engine\nimport pandas as pd\n\nengine = create_engine('sqlite:///nutrition.db')\ndf = pd.read_sql(\"SELECT * FROM food_data LIMIT 5\", engine)\ndf.head()"
+  },
+  {
+    "objectID": "notebooks/advanced/03_databases.html#exercise",
+    "href": "notebooks/advanced/03_databases.html#exercise",
+    "title": "Working with Databases in Python",
+    "section": "Exercise",
+    "text": "Exercise\nQuery iron intake data from a SQLite file and join with demographic data."
+  },
+  {
+    "objectID": "notebooks/advanced/index.html",
+    "href": "notebooks/advanced/index.html",
+    "title": "Advanced Techniques",
+    "section": "",
+    "text": "This section introduces advanced tools and approaches for scalable, reproducible, and innovative analysis workflows in Food and Nutrition Science.\n\n\n\nBayesian Methods with PyMC\nWorkflow Automation\nWorking with Databases\nBig Data Exploration\nDashboards and Storytelling\nMultivariate Analysis\nImage Analysis"
+  },
+  {
+    "objectID": "notebooks/advanced/index.html#notebooks",
+    "href": "notebooks/advanced/index.html#notebooks",
+    "title": "Advanced Techniques",
+    "section": "",
+    "text": "Bayesian Methods with PyMC\nWorkflow Automation\nWorking with Databases\nBig Data Exploration\nDashboards and Storytelling\nMultivariate Analysis\nImage Analysis"
+  },
+  {
+    "objectID": "notebooks/advanced/06_multivariate_analysis.html",
+    "href": "notebooks/advanced/06_multivariate_analysis.html",
+    "title": "Multivariate Analysis in Metabolomics and Sensory Science",
+    "section": "",
+    "text": "Apply PCA to high-dimensional food-related datasets.\nCode\nfrom sklearn.decomposition import PCA\nfrom sklearn.preprocessing import StandardScaler\n\nX = pd.DataFrame({\n    'sucrose': [0.8, 1.1, 0.9, 1.2],\n    'glucose': [0.7, 0.6, 0.8, 0.9],\n    'fructose': [0.9, 1.0, 0.85, 1.1]\n})\n\nX_scaled = StandardScaler().fit_transform(X)\npca = PCA(n_components=2)\ncomponents = pca.fit_transform(X_scaled)\ncomponents"
+  },
+  {
+    "objectID": "notebooks/advanced/06_multivariate_analysis.html#exercise",
+    "href": "notebooks/advanced/06_multivariate_analysis.html#exercise",
+    "title": "Multivariate Analysis in Metabolomics and Sensory Science",
+    "section": "Exercise",
+    "text": "Exercise\nApply PCA to metabolomics or sensory profiling data and interpret the loadings."
+  },
+  {
+    "objectID": "notebooks/advanced/04_big_data_exploration.html",
+    "href": "notebooks/advanced/04_big_data_exploration.html",
+    "title": "Exploratory Data Analysis at Scale",
+    "section": "",
+    "text": "Use tools like dask to analyse large nutrition datasets efficiently.\nCode\nimport dask.dataframe as dd\ndf = dd.read_csv('https://raw.githubusercontent.com/dask/dask/main/dask/data/airline.csv')\ndf.head()"
+  },
+  {
+    "objectID": "notebooks/advanced/04_big_data_exploration.html#exercise",
+    "href": "notebooks/advanced/04_big_data_exploration.html#exercise",
+    "title": "Exploratory Data Analysis at Scale",
+    "section": "Exercise",
+    "text": "Exercise\nProfile a large EFSA dataset by food group using Dask."
   },
   {
     "objectID": "index.html",
