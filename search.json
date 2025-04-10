@@ -1,283 +1,45 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
+    "objectID": "notebooks/programming_basics/02_variables_and_types.html",
+    "href": "notebooks/programming_basics/02_variables_and_types.html",
+    "title": "🔤 Variables and Data Types",
     "section": "",
-    "text": "Welcome to this comprehensive teaching resource to help you develop skills in data handling, programming, and statistical analysis using Python.\nAll materials are structured to be self-guided and modular, supporting both lectures and independent learning. Each section can be explored individually or followed in sequence.\n\n\n\n\n\nUnderstand your data environment, tools, platforms, and version control workflows.\n\n\n\nLearn how to write Python code, structure your work, and document it effectively.\n\n\n\nImport, clean, transform, and manage datasets from simple to complex formats.\n\n\n\nRun statistical tests, build models, and explore results through rich visualisations.\n\n\n\nExplore Bayesian methods, databases, automation, and dashboards for power users.\n\n\n\nUse templates and mini-projects to practice and demonstrate your knowledge.\n\n\n\n\n\n\nSource: GitHub Repository\nRendered Site: ggkuhnle.github.io/data-analysis-toolkit-FNS\nRun code using Google Colab, Jupyter, or locally on your machine.\n\n\n📌 Tip: You can dip into any section independently or follow the structure as a progressive course. All notebooks are open-source and available for reuse with attribution."
+    "text": "In this notebook, we explore how Python stores and labels information using variables, and how it understands data types like numbers, text, and logic."
   },
   {
-    "objectID": "index.html#course-sections",
-    "href": "index.html#course-sections",
-    "title": "Welcome",
-    "section": "",
-    "text": "Understand your data environment, tools, platforms, and version control workflows.\n\n\n\nLearn how to write Python code, structure your work, and document it effectively.\n\n\n\nImport, clean, transform, and manage datasets from simple to complex formats.\n\n\n\nRun statistical tests, build models, and explore results through rich visualisations.\n\n\n\nExplore Bayesian methods, databases, automation, and dashboards for power users.\n\n\n\nUse templates and mini-projects to practice and demonstrate your knowledge."
+    "objectID": "notebooks/programming_basics/02_variables_and_types.html#what-is-a-variable",
+    "href": "notebooks/programming_basics/02_variables_and_types.html#what-is-a-variable",
+    "title": "🔤 Variables and Data Types",
+    "section": "💡 What is a variable?",
+    "text": "💡 What is a variable?\nA variable is a name for a value. Think of it like a labelled container.\nweight = 1200\nNow we can use the word weight instead of typing 1200 again and again.\n\n\nCode\n# Example: storing a value\nhippo_weight = 1200\nprint(\"Weight of the hippo is\", hippo_weight, \"kg\")\n\n\nVariables can change:\n\n\nCode\nhippo_weight = 1300\nprint(\"Updated weight:\", hippo_weight)"
   },
   {
-    "objectID": "index.html#repository-and-usage",
-    "href": "index.html#repository-and-usage",
-    "title": "Welcome",
-    "section": "",
-    "text": "Source: GitHub Repository\nRendered Site: ggkuhnle.github.io/data-analysis-toolkit-FNS\nRun code using Google Colab, Jupyter, or locally on your machine.\n\n\n📌 Tip: You can dip into any section independently or follow the structure as a progressive course. All notebooks are open-source and available for reuse with attribution."
+    "objectID": "notebooks/programming_basics/02_variables_and_types.html#common-data-types-in-python",
+    "href": "notebooks/programming_basics/02_variables_and_types.html#common-data-types-in-python",
+    "title": "🔤 Variables and Data Types",
+    "section": "📦 Common Data Types in Python",
+    "text": "📦 Common Data Types in Python\n\n\n\nType\nExample\nIn Excel/SPSS\n\n\n\n\nint\n42\nWhole numbers\n\n\nfloat\n3.14\nDecimal numbers\n\n\nstr\n\"Hello\"\nText (like “Food Group”)\n\n\nbool\nTrue, False\nLogical (TRUE/FALSE)\n\n\n\n\n\nCode\nage = 25          # int\nheight = 1.78     # float\nname = \"Gunter\"   # str\nhungry = True     # bool\n\nprint(type(age))\nprint(type(height))\nprint(type(name))\nprint(type(hungry))"
   },
   {
-    "objectID": "notebooks/advanced/example.html",
-    "href": "notebooks/advanced/example.html",
-    "title": "🚀 Example Notebook: Advanced Methods",
-    "section": "",
-    "text": "This notebook introduces Bayesian methods and working with databases or APIs."
+    "objectID": "notebooks/programming_basics/02_variables_and_types.html#converting-types",
+    "href": "notebooks/programming_basics/02_variables_and_types.html#converting-types",
+    "title": "🔤 Variables and Data Types",
+    "section": "🔁 Converting Types",
+    "text": "🔁 Converting Types\nSometimes you need to convert between types:\n\nExcel: =VALUE(\"123\")\nPython:\n\n\n\nCode\nweight_str = \"1500\"\nweight_num = int(weight_str)\nprint(weight_num + 100)"
   },
   {
-    "objectID": "notebooks/advanced/index.html",
-    "href": "notebooks/advanced/index.html",
-    "title": "Advanced",
-    "section": "",
-    "text": "Advanced\nThis section includes the following notebooks:\n\n01 bayesian intro\n02 databases intro\n03 workflow automation"
-  },
-  {
-    "objectID": "notebooks/projects/00_mini_project_template.html",
-    "href": "notebooks/projects/00_mini_project_template.html",
-    "title": "🧪 Mini Project Template",
-    "section": "",
-    "text": "Code\n## Instructions:\n# - Describe your dataset\n# - State your hypotheses\n# - Run your analysis"
-  },
-  {
-    "objectID": "notebooks/projects/00_project_template.html",
-    "href": "notebooks/projects/00_project_template.html",
-    "title": "🧪 Student Mini Project Template",
-    "section": "",
-    "text": "Use this template to organise your project: - Description - Objectives - Methods - Results"
-  },
-  {
-    "objectID": "notebooks/data_handling/01_importing_data.html",
-    "href": "notebooks/data_handling/01_importing_data.html",
-    "title": "📥 Importing Data",
-    "section": "",
-    "text": "Import CSV, Excel, and other files.\nimport pandas as pd\ndf = pd.read_csv('data.csv')"
-  },
-  {
-    "objectID": "notebooks/data_handling/01_loading_data.html",
-    "href": "notebooks/data_handling/01_loading_data.html",
-    "title": "📂 Loading Data with pandas",
-    "section": "",
-    "text": "Code\nimport pandas as pd\ndf = pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv')\ndf.head()"
-  },
-  {
-    "objectID": "notebooks/data_handling/index.html",
-    "href": "notebooks/data_handling/index.html",
-    "title": "Data Handling",
-    "section": "",
-    "text": "Data Handling\nThis section includes the following notebooks:\n\n01 importing data\n02 cleaning data\n03 wrangling\n04 wide long"
-  },
-  {
-    "objectID": "notebooks/programming_basics/01_hello_python.html",
-    "href": "notebooks/programming_basics/01_hello_python.html",
-    "title": "🐍 Introduction to Python Programming",
-    "section": "",
-    "text": "This notebook covers basic syntax, variables, and functions in Python.\n\n\nCode\na = 5\nb = 3\na + b  # Try changing the values!\n\n\n\n\nCode\ndef greet(name):\n    return f\"Hello, {name}!\"\n\ngreet(\"Charlotte\")"
-  },
-  {
-    "objectID": "notebooks/programming_basics/05_code_style.html",
-    "href": "notebooks/programming_basics/05_code_style.html",
-    "title": "🎨 Code Style and Docstrings",
-    "section": "",
-    "text": "Best practices for naming, commenting, and formatting.\n# This is a comment\ndef add(x, y):\n    \"\"\"Adds two numbers\"\"\"\n    return x + y"
-  },
-  {
-    "objectID": "notebooks/programming_basics/02_data_types_and_conversion.html",
-    "href": "notebooks/programming_basics/02_data_types_and_conversion.html",
-    "title": "🔢 Data Types and Conversion",
-    "section": "",
-    "text": "Understand common data types and how to convert them.\nx = '123'\nint(x)"
-  },
-  {
-    "objectID": "notebooks/programming_basics/02_control_structures.html",
-    "href": "notebooks/programming_basics/02_control_structures.html",
-    "title": "🔁 Control Structures: if, elif, else",
-    "section": "",
-    "text": "Code\nage = 20\nif age &lt; 18:\n    print('Minor')\nelif age &lt; 65:\n    print('Adult')\nelse:\n    print('Senior')"
-  },
-  {
-    "objectID": "notebooks/data_analysis/02_t_tests_and_anova.html",
-    "href": "notebooks/data_analysis/02_t_tests_and_anova.html",
-    "title": "🔬 T-Tests and ANOVA",
-    "section": "",
-    "text": "Code\nfrom scipy import stats\nstats.ttest_ind(df['Height'][:50], df['Height'][50:])"
-  },
-  {
-    "objectID": "notebooks/data_analysis/example.html",
-    "href": "notebooks/data_analysis/example.html",
-    "title": "📊 Example Notebook: Data Analysis",
-    "section": "",
-    "text": "This notebook will explore statistical testing, distributions, and plotting using real or simulated data."
-  },
-  {
-    "objectID": "notebooks/data_analysis/03_regression.html",
-    "href": "notebooks/data_analysis/03_regression.html",
-    "title": "📈 Regression and Correlation",
-    "section": "",
-    "text": "Linear regression using statsmodels.\nimport statsmodels.api as sm"
-  },
-  {
-    "objectID": "notebooks/data_analysis/index.html",
-    "href": "notebooks/data_analysis/index.html",
-    "title": "Data Analysis",
-    "section": "",
-    "text": "Data Analysis\nThis section includes the following notebooks:\n\n01 distributions\n02 tests and anova\n03 regression\n04 logistic and survival"
-  },
-  {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html",
-    "title": "🌍 What is a Data Science Environment?",
-    "section": "",
-    "text": "Welcome! In this notebook, we explore what a data science environment is — and why setting up the right tools can make your work easier, cleaner, and more reproducible."
-  },
-  {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
-    "title": "🌍 What is a Data Science Environment?",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\nA data environment is a combination of:\n\nSoftware: Python, Jupyter, Excel, R\nTools: Notebooks, scripts, version control\nData: CSVs, spreadsheets, databases\nWorkflows: Reproducible steps, documented processes\n\nThink of it like your lab bench in a research lab. You need the right tools, a clean space, and a way to document what you’ve done.\n\nWhy this matters\nIf you use Excel and manually delete a row or overwrite a number, the change is gone. There is no record of it unless you create backup files (e.g. final_final_02.xlsx 🙃).\nWith Python, your steps are scripted. Anyone (including future-you) can run the same script and get the same output.\n\n\nCode\n# Example: A small data cleaning script\nimport pandas as pd\n\ndf = pd.DataFrame({\n    \"Name\": [\"Hippo\", \"Giraffe\", \"Elephant\"],\n    \"Weight_kg\": [1500, 900, 3000]\n})\n\n# Keep only animals heavier than 1000 kg\ndf = df[df[\"Weight_kg\"] &gt; 1000]\ndf\n\n\nThis script tells you what was done — filtering animals above 1000 kg — and you can re-run it whenever needed.\nIt also produces the same result each time, unlike an unlogged Excel edit."
-  },
-  {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
-    "title": "🌍 What is a Data Science Environment?",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand advanced concepts\n\n\nIDEs and Notebooks\n\nIDE = Integrated Development Environment (e.g. VS Code, PyCharm)\nNotebook = An interactive document with code + output + explanation (like this one)\n\n\n\nEnvironments\n\nUse venv or conda to create clean environments\nAvoid package conflicts and make your analysis portable\n\n\n\nVersioning and Reproducibility\n\nUse Git to track changes to code and notebooks\nDocument your workflow with Quarto or Markdown"
-  },
-  {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
-    "title": "🌍 What is a Data Science Environment?",
+    "objectID": "notebooks/programming_basics/02_variables_and_types.html#exercises",
+    "href": "notebooks/programming_basics/02_variables_and_types.html#exercises",
+    "title": "🔤 Variables and Data Types",
     "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nIn your own words, describe what a data environment is.\nTry modifying the Python script above to use 2000 kg as the filter.\nOptional: Open a CSV in Excel, change a number, and ask: “Can I undo this tomorrow?”"
+    "text": "🧪 Exercises\n\nCreate a variable called species and assign it your favourite animal as text.\nMake a variable legs and assign the number of legs it has.\nTry printing both together in a sentence using print().\nOptional: convert \"2023\" (a string) into an integer."
   },
   {
-    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html",
-    "href": "notebooks/infrastructure/08_documenting_with_scripts.html",
-    "title": "📝 Documenting Your Work with Scripts and Logs",
-    "section": "",
-    "text": "One of the most common issues in research is poor documentation. Scripts, notebooks, and logs help ensure your work is transparent, repeatable, and understandable."
-  },
-  {
-    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#basic-view",
-    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#basic-view",
-    "title": "📝 Documenting Your Work with Scripts and Logs",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nWhy does documentation matter?\n\nSo you don’t forget what you did\nSo someone else can understand your work\nSo you can re-run your analysis reliably\nSo you can trust your own results in 6 months!\n\n\n\nExample: Undocumented vs Documented Code\n❌ Undocumented:\ndf = df[df.x &gt; 0]\n✅ Documented:\n# Remove negative values from the variable 'x'\ndf = df[df[\"x\"] &gt; 0]\nJust one line of comment makes the purpose clear.\n\n\nCode\n# Example: A basic logging approach\nimport pandas as pd\n\nprint(\"Loading data...\")\ndf = pd.read_csv(\"data.csv\")\n\nprint(\"Filtering by BMI &gt; 18.5\")\ndf = df[df[\"BMI\"] &gt; 18.5]\n\nprint(\"Saving cleaned file.\")\ndf.to_csv(\"cleaned.csv\", index=False)\n\n\nThis is a very basic form of logging — telling yourself or others what happens at each step."
-  },
-  {
-    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#advanced-view",
-    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#advanced-view",
-    "title": "📝 Documenting Your Work with Scripts and Logs",
+    "objectID": "notebooks/programming_basics/02_variables_and_types.html#advanced-view",
+    "href": "notebooks/programming_basics/02_variables_and_types.html#advanced-view",
+    "title": "🔤 Variables and Data Types",
     "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nReal Logging with the logging Module\nPython has a built-in logging module for more advanced workflows:\nimport logging\nlogging.basicConfig(level=logging.INFO)\n\nlogging.info(\"Loading data\")\nThis is useful in production scripts and tools.\n\n\nGood Practices\n\nUse descriptive comments, not obvious ones\nKeep a changelog or version history\nUse Git to track changes\nWrite protocol files in Markdown or Quarto to describe:\n\nWhat you did\nWhat decisions were made\nWhere the data came from"
-  },
-  {
-    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#exercises",
-    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#exercises",
-    "title": "📝 Documenting Your Work with Scripts and Logs",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nCreate a short data-cleaning script and add print statements to explain each step.\nTry rewriting your print statements using logging.\nOptional: Create a markdown file documenting the steps you took and link to your dataset."
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "",
-    "text": "Different tools serve different purposes — and knowing when to use each helps you write better, clearer, and more reproducible code."
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nNotebooks\n\nBest for: Teaching, exploration, walkthroughs\nMix code + narrative + results in one file\nYou’re reading a notebook right now!\n\n\n\nScripts (.py)\n\nBest for: Repeating an analysis or cleaning step\nPlain Python code, no output inside\nWorks well for automation and functions\n\n\n\nMarkdown (.md)\n\nBest for: Notes, documentation, readmes\nSimple formatting: headings, bold, links\n\n\n\nQuarto (.qmd)\n\nBest for: Reports, websites, academic writing\nCombines Markdown + code + rendering engine\nPublish to HTML, PDF, Word, slides, dashboards\n\n\n\nCode\n# Example script (could be saved as clean.py)\nimport pandas as pd\ndf = pd.read_csv(\"mydata.csv\")\ndf = df[df[\"BMI\"] &gt; 18.5]\ndf.to_csv(\"cleaned.csv\", index=False)\n\n\nYou could run this script every time you get new data — it’s repeatable and traceable."
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nQuarto in More Detail\n\nLike R Markdown but supports Python, R, Julia, Bash\nCan generate reproducible PDFs (LaTeX), websites, or Word docs\nYou can write teaching materials with it (like this course)\n\nSee quarto.org for examples\n\n\nScripts vs Notebooks\n\n\n\nFeature\nNotebooks\nScripts\n\n\n\n\nGreat for demo\n✅\n❌\n\n\nWorks in terminal\n❌\n✅\n\n\nEasy to document\n✅\n⚠️ (needs comments)\n\n\nGood for publishing\n✅ (via Quarto)\n✅ (via Quarto)"
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nCreate a simple script called hello.py and print \"Hello from a script!\"\nWrite a short Markdown document with a heading and bullet list\nOptional: Install Quarto and render a .qmd file to HTML"
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html",
-    "href": "notebooks/infrastructure/06_finding_help.html",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "",
-    "text": "One of the most important skills in data science is knowing how to find help when you’re stuck.\nPython (and its ecosystem) has vast documentation and a huge community — if you know how to ask."
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html#basic-view",
-    "href": "notebooks/infrastructure/06_finding_help.html#basic-view",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nStart with ? in Jupyter\nYou can get help inside a notebook using a ?:\nlen?\nThis shows the docstring — the little help box for the function.\n\n\nCode\n# Try running this\nlen?\n\n\n\n\nThe help() function\nYou can also use Python’s built-in help system:\nhelp(len)\nOr ask about a package:\nimport pandas as pd\nhelp(pd.read_csv)\n\n\nGoogle it — the smart way\nGood search terms: - “pandas drop NA” - “python list comprehension examples” - “matplotlib change axis labels”\n❌ Avoid: - “Python broken why” - “Help Python code error”"
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html#advanced-view",
-    "href": "notebooks/infrastructure/06_finding_help.html#advanced-view",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nOfficial Docs (high quality)\n\npandas.pydata.org\nmatplotlib.org\nscikit-learn.org\nQuarto Docs\n\n\n\nStack Overflow tips\n\nSearch for error messages in quotes\nLook for posts with ✅ accepted answers\nIf asking: always include a minimal reproducible example"
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html#exercises",
-    "href": "notebooks/infrastructure/06_finding_help.html#exercises",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nUse help() to learn about sum() and sorted().\nGoogle “pandas groupby plot” and try a small example.\nOptional: Try to find the official seaborn documentation and read how to make a violin plot."
-  },
-  {
-    "objectID": "notebooks/infrastructure/index.html",
-    "href": "notebooks/infrastructure/index.html",
-    "title": "Data Analysis Toolkit for Nutrition and Food Science",
-    "section": "",
-    "text": "This site provides a structured, editable, and expandable resource to support data skills from foundational knowledge to advanced applications.\n\n\n\nThis section introduces core tools and workflows that underpin reproducible data science. Each notebook includes basic overviews, advanced insights (foldable), and hands-on exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs"
-  },
-  {
-    "objectID": "notebooks/infrastructure/index.html#infrastructure",
-    "href": "notebooks/infrastructure/index.html#infrastructure",
-    "title": "Data Analysis Toolkit for Nutrition and Food Science",
-    "section": "",
-    "text": "This section introduces core tools and workflows that underpin reproducible data science. Each notebook includes basic overviews, advanced insights (foldable), and hands-on exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs"
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html",
-    "href": "notebooks/infrastructure/05_installing_packages.html",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "",
-    "text": "Python is powerful because of its packages — small add-ons that handle everything from statistics to visualisation to web scraping.\nThis notebook teaches you how to install and manage them."
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html#basic-view",
-    "href": "notebooks/infrastructure/05_installing_packages.html#basic-view",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nWhat is a package?\nA package is a reusable collection of Python code — like a plugin.\nExamples: - pandas — for dataframes and analysis - matplotlib — for plotting - scipy — for statistics\n\n\nInstalling in Google Colab\nColab already includes many packages. To install others:\n!pip install seaborn\nTry it:\n\n\nCode\n# This will install seaborn in Colab\n!pip install seaborn\n\n\nOnce installed, you can import it and use it:\nimport seaborn as sns\n\n\nInstalling Locally\nIn your terminal or Anaconda Prompt:\npip install seaborn\nOr, if you use Anaconda:\nconda install seaborn"
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
-    "href": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nrequirements.txt\nYou can list the packages your project needs:\npandas==2.0.3\nmatplotlib&gt;=3.7\nInstall all with:\npip install -r requirements.txt\nGenerate it using:\npip freeze &gt; requirements.txt\n\n\nVirtual environments\nTo avoid conflicts between projects, create a virtual environment:\npython -m venv venv\nsource venv/bin/activate  # On Mac/Linux\nvenv\\Scripts\\activate   # On Windows\nThen install your packages inside."
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html#exercises",
-    "href": "notebooks/infrastructure/05_installing_packages.html#exercises",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nInstall seaborn and use it to make a simple plot.\nGenerate a requirements.txt from a Colab notebook.\nOptional: Try creating a virtual environment locally."
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nWhy do types matter?\n\nYou can’t do maths with text\nYou can’t compare logic with numbers\nYou might accidentally create “42” instead of 42\n\n\n\nType casting (manual conversion)\n\nstr(42) → \"42\"\nint(\"123\") → 123\nfloat(\"3.14\") → 3.14\n\nPython is stricter than Excel — but that’s a good thing! It helps avoid silent errors."
   },
   {
     "objectID": "notebooks/infrastructure/02_python_vs_r.html",
@@ -308,6 +70,62 @@
     "text": "🧪 Exercises\n\nWrite a short Python script to calculate the median of [1, 2, 3, 4, 100].\nTry making the same plot in Prism and in Python (using seaborn or matplotlib).\nOptional: Google “Python vs R for epidemiology” and summarise what you find."
   },
   {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "",
+    "text": "Welcome! In this notebook, we explore what a data science environment is — and why setting up the right tools can make your work easier, cleaner, and more reproducible."
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\nA data environment is a combination of:\n\nSoftware: Python, Jupyter, Excel, R\nTools: Notebooks, scripts, version control\nData: CSVs, spreadsheets, databases\nWorkflows: Reproducible steps, documented processes\n\nThink of it like your lab bench in a research lab. You need the right tools, a clean space, and a way to document what you’ve done.\n\nWhy this matters\nIf you use Excel and manually delete a row or overwrite a number, the change is gone. There is no record of it unless you create backup files (e.g. final_final_02.xlsx 🙃).\nWith Python, your steps are scripted. Anyone (including future-you) can run the same script and get the same output.\n\n\nCode\n# Example: A small data cleaning script\nimport pandas as pd\n\ndf = pd.DataFrame({\n    \"Name\": [\"Hippo\", \"Giraffe\", \"Elephant\"],\n    \"Weight_kg\": [1500, 900, 3000]\n})\n\n# Keep only animals heavier than 1000 kg\ndf = df[df[\"Weight_kg\"] &gt; 1000]\ndf\n\n\nThis script tells you what was done — filtering animals above 1000 kg — and you can re-run it whenever needed.\nIt also produces the same result each time, unlike an unlogged Excel edit."
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand advanced concepts\n\n\nIDEs and Notebooks\n\nIDE = Integrated Development Environment (e.g. VS Code, PyCharm)\nNotebook = An interactive document with code + output + explanation (like this one)\n\n\n\nEnvironments\n\nUse venv or conda to create clean environments\nAvoid package conflicts and make your analysis portable\n\n\n\nVersioning and Reproducibility\n\nUse Git to track changes to code and notebooks\nDocument your workflow with Quarto or Markdown"
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nIn your own words, describe what a data environment is.\nTry modifying the Python script above to use 2000 kg as the filter.\nOptional: Open a CSV in Excel, change a number, and ask: “Can I undo this tomorrow?”"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html",
+    "href": "notebooks/infrastructure/06_finding_help.html",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "",
+    "text": "One of the most important skills in data science is knowing how to find help when you’re stuck.\nPython (and its ecosystem) has vast documentation and a huge community — if you know how to ask."
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#basic-view",
+    "href": "notebooks/infrastructure/06_finding_help.html#basic-view",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nStart with ? in Jupyter\nYou can get help inside a notebook using a ?:\nlen?\nThis shows the docstring — the little help box for the function.\n\n\nCode\n# Try running this\nlen?\n\n\n\n\nThe help() function\nYou can also use Python’s built-in help system:\nhelp(len)\nOr ask about a package:\nimport pandas as pd\nhelp(pd.read_csv)\n\n\nGoogle it — the smart way\nGood search terms: - “pandas drop NA” - “python list comprehension examples” - “matplotlib change axis labels”\n❌ Avoid: - “Python broken why” - “Help Python code error”"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#advanced-view",
+    "href": "notebooks/infrastructure/06_finding_help.html#advanced-view",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nOfficial Docs (high quality)\n\npandas.pydata.org\nmatplotlib.org\nscikit-learn.org\nQuarto Docs\n\n\n\nStack Overflow tips\n\nSearch for error messages in quotes\nLook for posts with ✅ accepted answers\nIf asking: always include a minimal reproducible example"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#exercises",
+    "href": "notebooks/infrastructure/06_finding_help.html#exercises",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nUse help() to learn about sum() and sorted().\nGoogle “pandas groupby plot” and try a small example.\nOptional: Try to find the official seaborn documentation and read how to make a violin plot."
+  },
+  {
     "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
     "href": "notebooks/infrastructure/03_colab_jupyter.html",
     "title": "☁️ Using Google Colab and Jupyter",
@@ -334,6 +152,286 @@
     "title": "☁️ Using Google Colab and Jupyter",
     "section": "🧪 Exercises",
     "text": "🧪 Exercises\n\nOpen this notebook in Google Colab. Run the first cell.\nAdd a new Markdown cell and type your name using # My name is....\nOptional: install Jupyter and open a local notebook file."
+  },
+  {
+    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html",
+    "href": "notebooks/infrastructure/08_documenting_with_scripts.html",
+    "title": "📝 Documenting Your Work with Scripts and Logs",
+    "section": "",
+    "text": "One of the most common issues in research is poor documentation. Scripts, notebooks, and logs help ensure your work is transparent, repeatable, and understandable."
+  },
+  {
+    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#basic-view",
+    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#basic-view",
+    "title": "📝 Documenting Your Work with Scripts and Logs",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nWhy does documentation matter?\n\nSo you don’t forget what you did\nSo someone else can understand your work\nSo you can re-run your analysis reliably\nSo you can trust your own results in 6 months!\n\n\n\nExample: Undocumented vs Documented Code\n❌ Undocumented:\ndf = df[df.x &gt; 0]\n✅ Documented:\n# Remove negative values from the variable 'x'\ndf = df[df[\"x\"] &gt; 0]\nJust one line of comment makes the purpose clear.\n\n\nCode\n# Example: A basic logging approach\nimport pandas as pd\n\nprint(\"Loading data...\")\ndf = pd.read_csv(\"data.csv\")\n\nprint(\"Filtering by BMI &gt; 18.5\")\ndf = df[df[\"BMI\"] &gt; 18.5]\n\nprint(\"Saving cleaned file.\")\ndf.to_csv(\"cleaned.csv\", index=False)\n\n\nThis is a very basic form of logging — telling yourself or others what happens at each step."
+  },
+  {
+    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#advanced-view",
+    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#advanced-view",
+    "title": "📝 Documenting Your Work with Scripts and Logs",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nReal Logging with the logging Module\nPython has a built-in logging module for more advanced workflows:\nimport logging\nlogging.basicConfig(level=logging.INFO)\n\nlogging.info(\"Loading data\")\nThis is useful in production scripts and tools.\n\n\nGood Practices\n\nUse descriptive comments, not obvious ones\nKeep a changelog or version history\nUse Git to track changes\nWrite protocol files in Markdown or Quarto to describe:\n\nWhat you did\nWhat decisions were made\nWhere the data came from"
+  },
+  {
+    "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html#exercises",
+    "href": "notebooks/infrastructure/08_documenting_with_scripts.html#exercises",
+    "title": "📝 Documenting Your Work with Scripts and Logs",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nCreate a short data-cleaning script and add print statements to explain each step.\nTry rewriting your print statements using logging.\nOptional: Create a markdown file documenting the steps you took and link to your dataset."
+  },
+  {
+    "objectID": "notebooks/projects/example.html",
+    "href": "notebooks/projects/example.html",
+    "title": "🧪 Student Mini-Project Template",
+    "section": "",
+    "text": "Use this notebook as a starting point for your independent data project."
+  },
+  {
+    "objectID": "notebooks/projects/00_mini_project_template.html",
+    "href": "notebooks/projects/00_mini_project_template.html",
+    "title": "🧪 Mini Project Template",
+    "section": "",
+    "text": "Code\n## Instructions:\n# - Describe your dataset\n# - State your hypotheses\n# - Run your analysis"
+  },
+  {
+    "objectID": "notebooks/data_handling/03_wrangling.html",
+    "href": "notebooks/data_handling/03_wrangling.html",
+    "title": "🔀 Data Wrangling",
+    "section": "",
+    "text": "Sorting, grouping, filtering.\ndf.groupby('gender').mean()"
+  },
+  {
+    "objectID": "notebooks/data_handling/02_cleaning_data.html",
+    "href": "notebooks/data_handling/02_cleaning_data.html",
+    "title": "🧼 Cleaning Data",
+    "section": "",
+    "text": "Dealing with missing values, renaming, etc.\ndf.dropna(inplace=True)\ndf.columns = df.columns.str.lower()"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_loading_data.html",
+    "href": "notebooks/data_handling/01_loading_data.html",
+    "title": "📂 Loading Data with pandas",
+    "section": "",
+    "text": "Code\nimport pandas as pd\ndf = pd.read_csv('https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv')\ndf.head()"
+  },
+  {
+    "objectID": "notebooks/data_analysis/example.html",
+    "href": "notebooks/data_analysis/example.html",
+    "title": "📊 Example Notebook: Data Analysis",
+    "section": "",
+    "text": "This notebook will explore statistical testing, distributions, and plotting using real or simulated data."
+  },
+  {
+    "objectID": "notebooks/data_analysis/01_distributions_and_summary.html",
+    "href": "notebooks/data_analysis/01_distributions_and_summary.html",
+    "title": "📊 Summary Statistics and Distributions",
+    "section": "",
+    "text": "Code\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.histplot(df['Height'], kde=True)\nplt.show()"
+  },
+  {
+    "objectID": "notebooks/data_analysis/03_regression.html",
+    "href": "notebooks/data_analysis/03_regression.html",
+    "title": "📈 Regression and Correlation",
+    "section": "",
+    "text": "Linear regression using statsmodels.\nimport statsmodels.api as sm"
+  },
+  {
+    "objectID": "notebooks/data_analysis/04_logistic_and_survival.html",
+    "href": "notebooks/data_analysis/04_logistic_and_survival.html",
+    "title": "📉 Logistic and Survival Analysis",
+    "section": "",
+    "text": "Using logistic regression and Kaplan-Meier.\n# coming soon"
+  },
+  {
+    "objectID": "notebooks/advanced/example.html",
+    "href": "notebooks/advanced/example.html",
+    "title": "🚀 Example Notebook: Advanced Methods",
+    "section": "",
+    "text": "This notebook introduces Bayesian methods and working with databases or APIs."
+  },
+  {
+    "objectID": "notebooks/advanced/01_bayesian_intro.html",
+    "href": "notebooks/advanced/01_bayesian_intro.html",
+    "title": "🧠 Introduction to Bayesian Analysis",
+    "section": "",
+    "text": "Concepts of prior, likelihood, and posterior."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Welcome to this comprehensive teaching resource to help you develop skills in data handling, programming, and statistical analysis using Python.\nAll materials are structured to be self-guided and modular, supporting both lectures and independent learning. Each section can be explored individually or followed in sequence.\n\n\n\n\n\nUnderstand your data environment, tools, platforms, and version control workflows.\n\n\n\nLearn how to write Python code, structure your work, and document it effectively.\n\n\n\nImport, clean, transform, and manage datasets from simple to complex formats.\n\n\n\nRun statistical tests, build models, and explore results through rich visualisations.\n\n\n\nExplore Bayesian methods, databases, automation, and dashboards for power users.\n\n\n\nUse templates and mini-projects to practice and demonstrate your knowledge.\n\n\n\n\n\n\nSource: GitHub Repository\nRendered Site: ggkuhnle.github.io/data-analysis-toolkit-FNS\nRun code using Google Colab, Jupyter, or locally on your machine.\n\n\n📌 Tip: You can dip into any section independently or follow the structure as a progressive course. All notebooks are open-source and available for reuse with attribution."
+  },
+  {
+    "objectID": "index.html#course-sections",
+    "href": "index.html#course-sections",
+    "title": "Welcome",
+    "section": "",
+    "text": "Understand your data environment, tools, platforms, and version control workflows.\n\n\n\nLearn how to write Python code, structure your work, and document it effectively.\n\n\n\nImport, clean, transform, and manage datasets from simple to complex formats.\n\n\n\nRun statistical tests, build models, and explore results through rich visualisations.\n\n\n\nExplore Bayesian methods, databases, automation, and dashboards for power users.\n\n\n\nUse templates and mini-projects to practice and demonstrate your knowledge."
+  },
+  {
+    "objectID": "index.html#repository-and-usage",
+    "href": "index.html#repository-and-usage",
+    "title": "Welcome",
+    "section": "",
+    "text": "Source: GitHub Repository\nRendered Site: ggkuhnle.github.io/data-analysis-toolkit-FNS\nRun code using Google Colab, Jupyter, or locally on your machine.\n\n\n📌 Tip: You can dip into any section independently or follow the structure as a progressive course. All notebooks are open-source and available for reuse with attribution."
+  },
+  {
+    "objectID": "notebooks/advanced/03_workflow_automation.html",
+    "href": "notebooks/advanced/03_workflow_automation.html",
+    "title": "🛠️ Workflow Automation and Reproducibility",
+    "section": "",
+    "text": "Make analysis reproducible with scripts and notebooks."
+  },
+  {
+    "objectID": "notebooks/advanced/index.html",
+    "href": "notebooks/advanced/index.html",
+    "title": "Advanced",
+    "section": "",
+    "text": "Advanced\nThis section includes the following notebooks:\n\n01 bayesian intro\n02 databases intro\n03 workflow automation"
+  },
+  {
+    "objectID": "notebooks/advanced/02_databases_intro.html",
+    "href": "notebooks/advanced/02_databases_intro.html",
+    "title": "🗄️ Working with Databases",
+    "section": "",
+    "text": "Intro to SQLite and relational data."
+  },
+  {
+    "objectID": "notebooks/data_analysis/02_t_tests_and_anova.html",
+    "href": "notebooks/data_analysis/02_t_tests_and_anova.html",
+    "title": "🔬 T-Tests and ANOVA",
+    "section": "",
+    "text": "Code\nfrom scipy import stats\nstats.ttest_ind(df['Height'][:50], df['Height'][50:])"
+  },
+  {
+    "objectID": "notebooks/data_analysis/02_tests_and_anova.html",
+    "href": "notebooks/data_analysis/02_tests_and_anova.html",
+    "title": "🧪 T-tests and ANOVA",
+    "section": "",
+    "text": "Testing group differences.\nfrom scipy.stats import ttest_ind"
+  },
+  {
+    "objectID": "notebooks/data_analysis/index.html",
+    "href": "notebooks/data_analysis/index.html",
+    "title": "Data Analysis",
+    "section": "",
+    "text": "Data Analysis\nThis section includes the following notebooks:\n\n01 distributions\n02 tests and anova\n03 regression\n04 logistic and survival"
+  },
+  {
+    "objectID": "notebooks/data_analysis/01_distributions.html",
+    "href": "notebooks/data_analysis/01_distributions.html",
+    "title": "📊 Visualising Distributions",
+    "section": "",
+    "text": "Histograms, KDE plots.\nimport seaborn as sns\nsns.histplot(df['height'])"
+  },
+  {
+    "objectID": "notebooks/data_handling/index.html",
+    "href": "notebooks/data_handling/index.html",
+    "title": "Data Handling",
+    "section": "",
+    "text": "Data Handling\nThis section includes the following notebooks:\n\n01 importing data\n02 cleaning data\n03 wrangling\n04 wide long"
+  },
+  {
+    "objectID": "notebooks/data_handling/04_wide_long.html",
+    "href": "notebooks/data_handling/04_wide_long.html",
+    "title": "↔︎️ Wide vs Long Data",
+    "section": "",
+    "text": "Transforming formats using melt/pivot.\npd.melt(df, id_vars='id')"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_importing_data.html",
+    "href": "notebooks/data_handling/01_importing_data.html",
+    "title": "📥 Importing Data",
+    "section": "",
+    "text": "Import CSV, Excel, and other files.\nimport pandas as pd\ndf = pd.read_csv('data.csv')"
+  },
+  {
+    "objectID": "notebooks/projects/index.html",
+    "href": "notebooks/projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Projects\nThis section includes the following notebooks:\n\n00 project template"
+  },
+  {
+    "objectID": "notebooks/projects/00_project_template.html",
+    "href": "notebooks/projects/00_project_template.html",
+    "title": "🧪 Student Mini Project Template",
+    "section": "",
+    "text": "Use this template to organise your project: - Description - Objectives - Methods - Results"
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html",
+    "href": "notebooks/infrastructure/05_installing_packages.html",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "",
+    "text": "Python is powerful because of its packages — small add-ons that handle everything from statistics to visualisation to web scraping.\nThis notebook teaches you how to install and manage them."
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#basic-view",
+    "href": "notebooks/infrastructure/05_installing_packages.html#basic-view",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nWhat is a package?\nA package is a reusable collection of Python code — like a plugin.\nExamples: - pandas — for dataframes and analysis - matplotlib — for plotting - scipy — for statistics\n\n\nInstalling in Google Colab\nColab already includes many packages. To install others:\n!pip install seaborn\nTry it:\n\n\nCode\n# This will install seaborn in Colab\n!pip install seaborn\n\n\nOnce installed, you can import it and use it:\nimport seaborn as sns\n\n\nInstalling Locally\nIn your terminal or Anaconda Prompt:\npip install seaborn\nOr, if you use Anaconda:\nconda install seaborn"
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
+    "href": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nrequirements.txt\nYou can list the packages your project needs:\npandas==2.0.3\nmatplotlib&gt;=3.7\nInstall all with:\npip install -r requirements.txt\nGenerate it using:\npip freeze &gt; requirements.txt\n\n\nVirtual environments\nTo avoid conflicts between projects, create a virtual environment:\npython -m venv venv\nsource venv/bin/activate  # On Mac/Linux\nvenv\\Scripts\\activate   # On Windows\nThen install your packages inside."
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#exercises",
+    "href": "notebooks/infrastructure/05_installing_packages.html#exercises",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nInstall seaborn and use it to make a simple plot.\nGenerate a requirements.txt from a Colab notebook.\nOptional: Try creating a virtual environment locally."
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html",
+    "href": "notebooks/infrastructure/index.html",
+    "title": "Data Analysis Toolkit for Nutrition and Food Science",
+    "section": "",
+    "text": "This site provides a structured, editable, and expandable resource to support data skills from foundational knowledge to advanced applications.\n\n\n\nThis section introduces core tools and workflows that underpin reproducible data science. Each notebook includes basic overviews, advanced insights (foldable), and hands-on exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs\n\n\nMore sections coming soon: Programming, Data Handling, Analysis, and Advanced Topics."
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html#infrastructure",
+    "href": "notebooks/infrastructure/index.html#infrastructure",
+    "title": "Data Analysis Toolkit for Nutrition and Food Science",
+    "section": "",
+    "text": "This section introduces core tools and workflows that underpin reproducible data science. Each notebook includes basic overviews, advanced insights (foldable), and hands-on exercises.\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown, or Quarto\n08 – Documenting Your Work with Scripts and Logs\n\n\nMore sections coming soon: Programming, Data Handling, Analysis, and Advanced Topics."
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
+    "section": "",
+    "text": "Different tools serve different purposes — and knowing when to use each helps you write better, clearer, and more reproducible code."
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nNotebooks\n\nBest for: Teaching, exploration, walkthroughs\nMix code + narrative + results in one file\nYou’re reading a notebook right now!\n\n\n\nScripts (.py)\n\nBest for: Repeating an analysis or cleaning step\nPlain Python code, no output inside\nWorks well for automation and functions\n\n\n\nMarkdown (.md)\n\nBest for: Notes, documentation, readmes\nSimple formatting: headings, bold, links\n\n\n\nQuarto (.qmd)\n\nBest for: Reports, websites, academic writing\nCombines Markdown + code + rendering engine\nPublish to HTML, PDF, Word, slides, dashboards\n\n\n\nCode\n# Example script (could be saved as clean.py)\nimport pandas as pd\ndf = pd.read_csv(\"mydata.csv\")\ndf = df[df[\"BMI\"] &gt; 18.5]\ndf.to_csv(\"cleaned.csv\", index=False)\n\n\nYou could run this script every time you get new data — it’s repeatable and traceable."
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nQuarto in More Detail\n\nLike R Markdown but supports Python, R, Julia, Bash\nCan generate reproducible PDFs (LaTeX), websites, or Word docs\nYou can write teaching materials with it (like this course)\n\nSee quarto.org for examples\n\n\nScripts vs Notebooks\n\n\n\nFeature\nNotebooks\nScripts\n\n\n\n\nGreat for demo\n✅\n❌\n\n\nWorks in terminal\n❌\n✅\n\n\nEasy to document\n✅\n⚠️ (needs comments)\n\n\nGood for publishing\n✅ (via Quarto)\n✅ (via Quarto)"
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nCreate a simple script called hello.py and print \"Hello from a script!\"\nWrite a short Markdown document with a heading and bullet list\nOptional: Install Quarto and render a .qmd file to HTML"
   },
   {
     "objectID": "notebooks/infrastructure/04_git_and_version_control.html",
@@ -364,108 +462,38 @@
     "text": "🧪 Exercises\n\nGo to github.com and create a free account (if you don’t have one).\nCreate a new repository for your data coursework.\nClone it using GitHub Desktop or VS Code and add a notebook.\nOptional: edit the notebook in Colab via GitHub and commit changes."
   },
   {
-    "objectID": "notebooks/data_analysis/01_distributions.html",
-    "href": "notebooks/data_analysis/01_distributions.html",
-    "title": "📊 Visualising Distributions",
+    "objectID": "notebooks/programming_basics/01_what_is_code.html",
+    "href": "notebooks/programming_basics/01_what_is_code.html",
+    "title": "🧠 What is Code? (And Why Should You Care?)",
     "section": "",
-    "text": "Histograms, KDE plots.\nimport seaborn as sns\nsns.histplot(df['height'])"
+    "text": "Welcome! In this notebook, we’ll explore the most fundamental question:\nWhat is code? And what does it do?\nIf you’ve ever used formulas in Excel, written commands in SPSS, or followed a cooking recipe, you’ve already met the basic idea of coding."
   },
   {
-    "objectID": "notebooks/data_analysis/01_distributions_and_summary.html",
-    "href": "notebooks/data_analysis/01_distributions_and_summary.html",
-    "title": "📊 Summary Statistics and Distributions",
-    "section": "",
-    "text": "Code\nimport seaborn as sns\nimport matplotlib.pyplot as plt\nsns.histplot(df['Height'], kde=True)\nplt.show()"
+    "objectID": "notebooks/programming_basics/01_what_is_code.html#code-giving-instructions-to-a-computer",
+    "href": "notebooks/programming_basics/01_what_is_code.html#code-giving-instructions-to-a-computer",
+    "title": "🧠 What is Code? (And Why Should You Care?)",
+    "section": "💡 Code: Giving Instructions to a Computer",
+    "text": "💡 Code: Giving Instructions to a Computer\nAt its heart, code is a series of instructions. You’re telling the computer what to do, in what order, and sometimes under what conditions.\nThink of a recipe:\n1. Take two eggs\n2. Whisk them\n3. Add flour and sugar\n4. Bake for 25 minutes\nThat’s a script: a repeatable sequence of steps. That’s what we do when we code."
   },
   {
-    "objectID": "notebooks/data_analysis/04_logistic_and_survival.html",
-    "href": "notebooks/data_analysis/04_logistic_and_survival.html",
-    "title": "📉 Logistic and Survival Analysis",
-    "section": "",
-    "text": "Using logistic regression and Kaplan-Meier.\n# coming soon"
+    "objectID": "notebooks/programming_basics/01_what_is_code.html#interpreted-vs-compiled-code",
+    "href": "notebooks/programming_basics/01_what_is_code.html#interpreted-vs-compiled-code",
+    "title": "🧠 What is Code? (And Why Should You Care?)",
+    "section": "🖥️ Interpreted vs Compiled Code",
+    "text": "🖥️ Interpreted vs Compiled Code\n\nPython is an interpreted language: it runs each line one by one.\nLanguages like C or Java are compiled: they’re turned into a machine-readable program all at once.\n\nIn data science, interpreted languages like Python and R are more popular because they’re easier to experiment with.\n\n\nCode\n# Let's try a simple script\nprint(\"Hello, student!\")\nprint(\"This is Python running your instructions.\")\n\n\n📝 In Excel, you might write:\n=SUM(A1:A10)\nIn Python, we write:\nsum([1, 2, 3, 4, 5])\nSame idea: give instructions → get a result."
   },
   {
-    "objectID": "notebooks/data_analysis/02_tests_and_anova.html",
-    "href": "notebooks/data_analysis/02_tests_and_anova.html",
-    "title": "🧪 T-tests and ANOVA",
-    "section": "",
-    "text": "Testing group differences.\nfrom scipy.stats import ttest_ind"
+    "objectID": "notebooks/programming_basics/01_what_is_code.html#exercises",
+    "href": "notebooks/programming_basics/01_what_is_code.html#exercises",
+    "title": "🧠 What is Code? (And Why Should You Care?)",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nWrite a line of Python that prints your name.\nAdd another line that prints your favourite food.\nOptional: Think of one action you often repeat in Excel or SPSS — how might that be expressed as a step-by-step instruction?"
   },
   {
-    "objectID": "notebooks/programming_basics/index.html",
-    "href": "notebooks/programming_basics/index.html",
-    "title": "Programming Basics",
-    "section": "",
-    "text": "Programming Basics\nThis section includes the following notebooks:\n\n01 intro python syntax\n02 data types and conversion\n03 control structures\n04 functions and oop\n05 code style"
-  },
-  {
-    "objectID": "notebooks/programming_basics/04_functions_and_oop.html",
-    "href": "notebooks/programming_basics/04_functions_and_oop.html",
-    "title": "⚙️ Functions and OOP",
-    "section": "",
-    "text": "Learn to write and use functions and simple classes.\ndef greet(name):\n    return f\"Hello, {name}!\""
-  },
-  {
-    "objectID": "notebooks/programming_basics/03_control_structures.html",
-    "href": "notebooks/programming_basics/03_control_structures.html",
-    "title": "🔁 Control Structures",
-    "section": "",
-    "text": "Using if, elif, else, and loops.\nfor i in range(3):\n    print(i)"
-  },
-  {
-    "objectID": "notebooks/data_handling/03_wrangling.html",
-    "href": "notebooks/data_handling/03_wrangling.html",
-    "title": "🔀 Data Wrangling",
-    "section": "",
-    "text": "Sorting, grouping, filtering.\ndf.groupby('gender').mean()"
-  },
-  {
-    "objectID": "notebooks/data_handling/02_cleaning_data.html",
-    "href": "notebooks/data_handling/02_cleaning_data.html",
-    "title": "🧼 Cleaning Data",
-    "section": "",
-    "text": "Dealing with missing values, renaming, etc.\ndf.dropna(inplace=True)\ndf.columns = df.columns.str.lower()"
-  },
-  {
-    "objectID": "notebooks/data_handling/04_wide_long.html",
-    "href": "notebooks/data_handling/04_wide_long.html",
-    "title": "↔︎️ Wide vs Long Data",
-    "section": "",
-    "text": "Transforming formats using melt/pivot.\npd.melt(df, id_vars='id')"
-  },
-  {
-    "objectID": "notebooks/projects/index.html",
-    "href": "notebooks/projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Projects\nThis section includes the following notebooks:\n\n00 project template"
-  },
-  {
-    "objectID": "notebooks/projects/example.html",
-    "href": "notebooks/projects/example.html",
-    "title": "🧪 Student Mini-Project Template",
-    "section": "",
-    "text": "Use this notebook as a starting point for your independent data project."
-  },
-  {
-    "objectID": "notebooks/advanced/03_workflow_automation.html",
-    "href": "notebooks/advanced/03_workflow_automation.html",
-    "title": "🛠️ Workflow Automation and Reproducibility",
-    "section": "",
-    "text": "Make analysis reproducible with scripts and notebooks."
-  },
-  {
-    "objectID": "notebooks/advanced/02_databases_intro.html",
-    "href": "notebooks/advanced/02_databases_intro.html",
-    "title": "🗄️ Working with Databases",
-    "section": "",
-    "text": "Intro to SQLite and relational data."
-  },
-  {
-    "objectID": "notebooks/advanced/01_bayesian_intro.html",
-    "href": "notebooks/advanced/01_bayesian_intro.html",
-    "title": "🧠 Introduction to Bayesian Analysis",
-    "section": "",
-    "text": "Concepts of prior, likelihood, and posterior."
+    "objectID": "notebooks/programming_basics/01_what_is_code.html#advanced-view",
+    "href": "notebooks/programming_basics/01_what_is_code.html#advanced-view",
+    "title": "🧠 What is Code? (And Why Should You Care?)",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nCode is more than syntax — it’s thinking.\nCoding trains us to: - Break problems into small steps - Be explicit about what we want - Handle unexpected situations (errors, exceptions)\nOver time, you’ll find that even non-coding tasks become more structured — this is why programming is such a powerful skill."
   }
 ]
