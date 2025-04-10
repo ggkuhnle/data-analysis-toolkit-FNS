@@ -49,6 +49,216 @@
     "text": "Use this template to organise your project: - Description - Objectives - Methods - Results"
   },
   {
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html",
+    "title": "Git and Version Control",
+    "section": "",
+    "text": "This notebook is part of the Foundations and Tools module in the Data Analysis Toolkit."
+  },
+  {
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html#introduction",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html#introduction",
+    "title": "Git and Version Control",
+    "section": "Introduction",
+    "text": "Introduction\nExplain key concepts here.\n\n\nCode\n# Example code cell\nprint('Hello, data science!')"
+  },
+  {
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html#exercises",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html#exercises",
+    "title": "Git and Version Control",
+    "section": "Exercises",
+    "text": "Exercises\nProvide practical exercises and tasks here."
+  },
+  {
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html#summary",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html#summary",
+    "title": "Git and Version Control",
+    "section": "Summary",
+    "text": "Summary\nSummarise key points and next steps."
+  },
+  {
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html",
+    "title": "Using Google Colab and Jupyter",
+    "section": "",
+    "text": "This notebook is part of the Foundations and Tools module in the Data Analysis Toolkit."
+  },
+  {
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#introduction",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html#introduction",
+    "title": "Using Google Colab and Jupyter",
+    "section": "Introduction",
+    "text": "Introduction\nExplain key concepts here.\n\n\nCode\n# Example code cell\nprint('Hello, data science!')"
+  },
+  {
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#exercises",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html#exercises",
+    "title": "Using Google Colab and Jupyter",
+    "section": "Exercises",
+    "text": "Exercises\nProvide practical exercises and tasks here."
+  },
+  {
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#summary",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html#summary",
+    "title": "Using Google Colab and Jupyter",
+    "section": "Summary",
+    "text": "Summary\nSummarise key points and next steps."
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "title": "Notebooks, Scripts, Markdown, and Quarto",
+    "section": "",
+    "text": "This notebook is part of the Foundations and Tools module in the Data Analysis Toolkit."
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#introduction",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#introduction",
+    "title": "Notebooks, Scripts, Markdown, and Quarto",
+    "section": "Introduction",
+    "text": "Introduction\nExplain key concepts here.\n\n\nCode\n# Example code cell\nprint('Hello, data science!')"
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
+    "title": "Notebooks, Scripts, Markdown, and Quarto",
+    "section": "Exercises",
+    "text": "Exercises\nProvide practical exercises and tasks here."
+  },
+  {
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#summary",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#summary",
+    "title": "Notebooks, Scripts, Markdown, and Quarto",
+    "section": "Summary",
+    "text": "Summary\nSummarise key points and next steps."
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html",
+    "href": "notebooks/infrastructure/06_finding_help.html",
+    "title": "Finding Help and Documentation",
+    "section": "",
+    "text": "This notebook is part of the Foundations and Tools module in the Data Analysis Toolkit."
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#introduction",
+    "href": "notebooks/infrastructure/06_finding_help.html#introduction",
+    "title": "Finding Help and Documentation",
+    "section": "Introduction",
+    "text": "Introduction\nExplain key concepts here.\n\n\nCode\n# Example code cell\nprint('Hello, data science!')"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#exercises",
+    "href": "notebooks/infrastructure/06_finding_help.html#exercises",
+    "title": "Finding Help and Documentation",
+    "section": "Exercises",
+    "text": "Exercises\nProvide practical exercises and tasks here."
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#summary",
+    "href": "notebooks/infrastructure/06_finding_help.html#summary",
+    "title": "Finding Help and Documentation",
+    "section": "Summary",
+    "text": "Summary\nSummarise key points and next steps."
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html",
+    "href": "notebooks/infrastructure/index.html",
+    "title": "Foundations and Tools",
+    "section": "",
+    "text": "This module introduces students to the essential tools and environments used in modern data analysis. Below are the key topics covered, with direct links to interactive notebooks.\n\n\n\nWhat is a Data Science Environment?\nPython vs R vs Other Tools\nUsing Google Colab and Jupyter\nGit and Version Control\nInstalling and Managing Packages\nFinding Help and Documentation\nNotebooks, Scripts, Markdown, and Quarto\n\nAll notebooks are Colab-compatible and designed for step-by-step, self-paced learning."
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html#topics",
+    "href": "notebooks/infrastructure/index.html#topics",
+    "title": "Foundations and Tools",
+    "section": "",
+    "text": "What is a Data Science Environment?\nPython vs R vs Other Tools\nUsing Google Colab and Jupyter\nGit and Version Control\nInstalling and Managing Packages\nFinding Help and Documentation\nNotebooks, Scripts, Markdown, and Quarto\n\nAll notebooks are Colab-compatible and designed for step-by-step, self-paced learning."
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html",
+    "href": "notebooks/infrastructure/05_installing_packages.html",
+    "title": "Installing and Managing Packages",
+    "section": "",
+    "text": "This notebook is part of the Foundations and Tools module in the Data Analysis Toolkit."
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#introduction",
+    "href": "notebooks/infrastructure/05_installing_packages.html#introduction",
+    "title": "Installing and Managing Packages",
+    "section": "Introduction",
+    "text": "Introduction\nExplain key concepts here.\n\n\nCode\n# Example code cell\nprint('Hello, data science!')"
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#exercises",
+    "href": "notebooks/infrastructure/05_installing_packages.html#exercises",
+    "title": "Installing and Managing Packages",
+    "section": "Exercises",
+    "text": "Exercises\nProvide practical exercises and tasks here."
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#summary",
+    "href": "notebooks/infrastructure/05_installing_packages.html#summary",
+    "title": "Installing and Managing Packages",
+    "section": "Summary",
+    "text": "Summary\nSummarise key points and next steps."
+  },
+  {
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html",
+    "href": "notebooks/infrastructure/02_python_vs_r.html",
+    "title": "Python vs R vs Other Tools",
+    "section": "",
+    "text": "This notebook is part of the Foundations and Tools module in the Data Analysis Toolkit."
+  },
+  {
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html#introduction",
+    "href": "notebooks/infrastructure/02_python_vs_r.html#introduction",
+    "title": "Python vs R vs Other Tools",
+    "section": "Introduction",
+    "text": "Introduction\nExplain key concepts here.\n\n\nCode\n# Example code cell\nprint('Hello, data science!')"
+  },
+  {
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html#exercises",
+    "href": "notebooks/infrastructure/02_python_vs_r.html#exercises",
+    "title": "Python vs R vs Other Tools",
+    "section": "Exercises",
+    "text": "Exercises\nProvide practical exercises and tasks here."
+  },
+  {
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html#summary",
+    "href": "notebooks/infrastructure/02_python_vs_r.html#summary",
+    "title": "Python vs R vs Other Tools",
+    "section": "Summary",
+    "text": "Summary\nSummarise key points and next steps."
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html",
+    "title": "What is a Data Science Environment?",
+    "section": "",
+    "text": "This notebook is part of the Foundations and Tools module in the Data Analysis Toolkit."
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#introduction",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#introduction",
+    "title": "What is a Data Science Environment?",
+    "section": "Introduction",
+    "text": "Introduction\nExplain key concepts here.\n\n\nCode\n# Example code cell\nprint('Hello, data science!')"
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
+    "title": "What is a Data Science Environment?",
+    "section": "Exercises",
+    "text": "Exercises\nProvide practical exercises and tasks here."
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#summary",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#summary",
+    "title": "What is a Data Science Environment?",
+    "section": "Summary",
+    "text": "Summary\nSummarise key points and next steps."
+  },
+  {
     "objectID": "notebooks/projects/index.html",
     "href": "notebooks/projects/index.html",
     "title": "Projects",

@@ -2,26 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/setup/Setup.html</loc>
-    <lastmod>2025-04-10T19:03:24.167Z</lastmod>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/projects/00_mini_project_template.html</loc>
-    <lastmod>2025-04-10T19:03:24.167Z</lastmod>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/projects/00_project_template.html</loc>
-    <lastmod>2025-04-10T19:03:24.167Z</lastmod>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/04_git_and_version_control.html</loc>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/03_colab_jupyter.html</loc>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/07_notebooks_scripts_quarto.html</loc>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/06_finding_help.html</loc>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/index.html</loc>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/05_installing_packages.html</loc>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/02_python_vs_r.html</loc>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/01_what_is_data_env.html</loc>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/projects/index.html</loc>
-    <lastmod>2025-04-10T19:03:24.167Z</lastmod>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/projects/example.html</loc>
-    <lastmod>2025-04-10T19:03:24.167Z</lastmod>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/index.html</loc>
-    <lastmod>2025-04-10T19:03:24.167Z</lastmod>
+    <lastmod>2025-04-10T19:10:00.055Z</lastmod>
   </url>
 </urlset>
