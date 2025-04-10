@@ -2,182 +2,186 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/index.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/advanced/example.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/advanced/index.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/projects/00_mini_project_template.html</loc>
-    <lastmod>2025-04-10T22:28:15.038Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.406Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/projects/00_project_template.html</loc>
-    <lastmod>2025-04-10T22:28:15.038Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.406Z</lastmod>
   </url>
   <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/01_importing_data.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/06_converting_formats.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
   </url>
   <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/01_loading_data.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/04_cleaning_data.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
   </url>
   <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/index.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/03_uploading_and_saving.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
   </url>
   <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/08_oop_basics.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/06_loops_and_iteration.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/11_mini_challenges.html</loc>
-    <lastmod>2025-04-10T22:28:15.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/07_functions.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/10_markdown_and_quarto.html</loc>
-    <lastmod>2025-04-10T22:28:15.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/01_what_is_code.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/02_tests_and_anova.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/04_logistic_and_survival.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/01_distributions_and_summary.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/01_distributions.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/04_git_and_version_control.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/03_colab_jupyter.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/02_python_vs_r.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/05_installing_packages.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/index.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/06_finding_help.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/07_notebooks_scripts_quarto.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/08_documenting_with_scripts.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/01_what_is_data_env.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/index.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/03_regression.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/example.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/02_t_tests_and_anova.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/index.html</loc>
-    <lastmod>2025-04-10T22:28:15.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/04_variables_and_types.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/03_lists_and_dicts.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/05_conditionals_and_logic.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/09_coding_style_and_comments.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/05_sort_filter_group_join.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/02_syntax_variables_comments.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
   </url>
   <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/03_wrangling.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/09_coding_style_and_comments.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
   </url>
   <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/02_cleaning_data.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/05_conditionals_and_logic.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
   </url>
   <url>
-    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/04_wide_long.html</loc>
-    <lastmod>2025-04-10T22:28:15.037Z</lastmod>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/03_lists_and_dicts.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/04_variables_and_types.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/index.html</loc>
+    <lastmod>2025-04-10T22:37:22.406Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/02_t_tests_and_anova.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/example.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/03_regression.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/index.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/01_what_is_data_env.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/08_documenting_with_scripts.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/07_notebooks_scripts_quarto.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/06_finding_help.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/index.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/05_installing_packages.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/02_python_vs_r.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/03_colab_jupyter.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/04_git_and_version_control.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/01_distributions.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/01_distributions_and_summary.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/04_logistic_and_survival.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/02_tests_and_anova.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/01_what_is_code.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/10_markdown_and_quarto.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/07_functions.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/11_mini_challenges.html</loc>
+    <lastmod>2025-04-10T22:37:22.406Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/06_loops_and_iteration.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/08_oop_basics.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/index.html</loc>
+    <lastmod>2025-04-10T22:37:22.405Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/02_importing_data.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/01_what_are_data.html</loc>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/projects/index.html</loc>
-    <lastmod>2025-04-10T22:28:15.038Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.406Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/projects/example.html</loc>
-    <lastmod>2025-04-10T22:28:15.038Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.406Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/advanced/03_workflow_automation.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/advanced/02_databases_intro.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
   </url>
   <url>
     <loc>https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/advanced/01_bayesian_intro.html</loc>
-    <lastmod>2025-04-10T22:28:15.036Z</lastmod>
+    <lastmod>2025-04-10T22:37:22.404Z</lastmod>
   </url>
 </urlset>
