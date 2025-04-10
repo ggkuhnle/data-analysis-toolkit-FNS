@@ -1,35 +1,35 @@
 [
   {
-    "objectID": "setup.html",
-    "href": "setup.html",
+    "objectID": "setup/Setup.html",
+    "href": "setup/Setup.html",
     "title": "Environment Setup Guide",
     "section": "",
     "text": "Welcome to the course! This notebook will guide you through setting up your environment to ensure you have all the necessary tools and packages installed. You have two options:"
   },
   {
-    "objectID": "setup.html#option-1-using-google-colab",
-    "href": "setup.html#option-1-using-google-colab",
+    "objectID": "setup/Setup.html#option-1-using-google-colab",
+    "href": "setup/Setup.html#option-1-using-google-colab",
     "title": "Environment Setup Guide",
     "section": "Option 1: Using Google Colab",
     "text": "Option 1: Using Google Colab\nGoogle Colab allows you to run Jupyter Notebooks in your browser without any setup on your local machine.\nStep 1: Accessing Google Colab\n\nNavigate to Google Colab.\nSign in with your Google account.\n\nStep 2: Mounting Google Drive (Optional)\nIf you wish to save your work directly to your Google Drive:\nfrom google.colab import drive\ndrive.mount('/content/drive')\nStep 3: Installing Necessary Packages\nColab comes with many pre-installed packages. However, you might need to install additional ones:\n!pip install package_name\nStep 4: Setting Up Environment Variables (If Required)\nIf your project requires specific environment variables:\nimport os\nos.environ['VAR_NAME'] = 'value'"
   },
   {
-    "objectID": "setup.html#option-2-using-local-jupyter-notebook",
-    "href": "setup.html#option-2-using-local-jupyter-notebook",
+    "objectID": "setup/Setup.html#option-2-using-local-jupyter-notebook",
+    "href": "setup/Setup.html#option-2-using-local-jupyter-notebook",
     "title": "Environment Setup Guide",
     "section": "Option 2: Using Local Jupyter Notebook",
     "text": "Option 2: Using Local Jupyter Notebook\nIf you prefer to run notebooks on your local machine:\nStep 1: Installing Anaconda\nAnaconda is a distribution that includes Python, Jupyter Notebook, and other essential packages.\n\nDownload Anaconda from the official website.\nFollow the installation instructions for your operating system.\n\nStep 2: Launching Jupyter Notebook\nAfter installation:\n\nOpen Anaconda Navigator and launch Jupyter Notebook.\nAlternatively, open your terminal or command prompt and run:\n\njupyter notebook\nStep 3: Creating a Virtual Environment (Recommended)\nIt’s good practice to create a virtual environment for your projects:\nconda create --name your_env_name python=3.8\nconda activate your_env_name\nStep 4: Installing Necessary Packages\nWith your virtual environment activated:\npip install package_name"
   },
   {
-    "objectID": "setup.html#testing-your-setup",
-    "href": "setup.html#testing-your-setup",
+    "objectID": "setup/Setup.html#testing-your-setup",
+    "href": "setup/Setup.html#testing-your-setup",
     "title": "Environment Setup Guide",
     "section": "Testing Your Setup",
     "text": "Testing Your Setup\nTo ensure everything is set up correctly, run the following code:\ntry:\n    import numpy\n    import pandas\n    print(\"Setup successful!\")\nexcept ImportError as e:\n    print(f\"Setup failed: {e}\")"
   },
   {
-    "objectID": "setup.html#additional-resources",
-    "href": "setup.html#additional-resources",
+    "objectID": "setup/Setup.html#additional-resources",
+    "href": "setup/Setup.html#additional-resources",
     "title": "Environment Setup Guide",
     "section": "Additional Resources",
     "text": "Additional Resources\n\nJupyter Notebook Official Documentation\nGoogle Colab FAQs\n\n\nNote: Ensure you have a stable internet connection when using Google Colab. For local setups, regularly update your packages to the latest versions."
