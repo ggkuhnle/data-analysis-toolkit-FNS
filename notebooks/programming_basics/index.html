@@ -167,7 +167,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#programming-basics" id="toc-programming-basics" class="nav-link active" data-scroll-target="#programming-basics">🧱 Programming Basics</a>
   <ul class="collapse">
-  <li><a href="#notebooks" id="toc-notebooks" class="nav-link" data-scroll-target="#notebooks">📘 Notebooks</a></li>
+  <li><a href="#notebooks" id="toc-notebooks" class="nav-link" data-scroll-target="#notebooks">📚 Notebooks</a></li>
+  <li><a href="#skills-youll-build" id="toc-skills-youll-build" class="nav-link" data-scroll-target="#skills-youll-build">🧠 Skills you’ll build</a></li>
+  <li><a href="#tip" id="toc-tip" class="nav-link" data-scroll-target="#tip">💡 Tip</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -196,20 +198,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="programming-basics" class="level1">
 <h1>🧱 Programming Basics</h1>
-<p>This section introduces the fundamentals of Python programming with a focus on data science applications. The notebooks below are intended for self-paced learning with exercises and examples relevant to Food and Nutritional Sciences.</p>
+<p>This section introduces Python programming from the ground up, with a focus on data applications.</p>
+<p>Each notebook below is self-contained but follows a logical sequence.<br>
+You can use these as teaching materials or as a reference throughout your degree.</p>
+<hr>
 <section id="notebooks" class="level2">
-<h2 class="anchored" data-anchor-id="notebooks">📘 Notebooks</h2>
+<h2 class="anchored" data-anchor-id="notebooks">📚 Notebooks</h2>
 <ul>
-<li><a href="../../notebooks/programming_basics/01_syntax_variables_comments.html">Syntax, Variables, and Comments</a></li>
-<li><a href="../../notebooks/programming_basics/02_data_types_conversion.html">Data Types and Conversion</a></li>
-<li><a href="../../notebooks/programming_basics/03_loops_conditionals.html">Loops and Conditionals</a></li>
-<li><a href="../../notebooks/programming_basics/04_list_comprehensions.html">List Comprehensions</a></li>
-<li><a href="../../notebooks/programming_basics/05_functions_modular.html">Functions and Modular Code</a></li>
-<li><a href="../../notebooks/programming_basics/06_object_oriented_basics.html">Object-Oriented Programming Basics</a></li>
-<li><a href="../../notebooks/programming_basics/07_coding_styles.html">Coding Styles</a></li>
-<li><a href="../../notebooks/programming_basics/08_documentation_quarto.html">Documentation with Markdown and Quarto</a></li>
+<li><a href="../../notebooks/programming_basics/01_what_is_code.html">01 – What is Code?</a></li>
+<li><a href="02_variables_and_types.ipynb">02 – Variables and Data Types</a></li>
+<li><a href="../../notebooks/programming_basics/03_lists_and_dicts.html">03 – Lists and Dictionaries</a></li>
+<li><a href="04_conditionals_and_logic.ipynb">04 – Conditionals and Logic</a></li>
+<li><a href="05_loops_and_iteration.ipynb">05 – Loops and Iteration</a></li>
+<li><a href="06_functions.ipynb">06 – Functions</a></li>
+<li><a href="07_coding_style_and_comments.ipynb">07 – Coding Style and Comments</a></li>
+<li><a href="08_markdown_and_quarto.ipynb">08 – Markdown and Quarto Basics</a></li>
+<li><a href="09_mini_challenges.ipynb">09 – Practice and Mini Challenges</a></li>
 </ul>
-<p>Each notebook includes explanations, code demonstrations, and practical exercises.</p>
+<hr>
+</section>
+<section id="skills-youll-build" class="level2">
+<h2 class="anchored" data-anchor-id="skills-youll-build">🧠 Skills you’ll build</h2>
+<ul>
+<li>Writing and structuring Python code</li>
+<li>Understanding logic, loops, and functions</li>
+<li>Using comments and good coding style</li>
+<li>Creating readable documentation and Markdown content</li>
+</ul>
+<hr>
+</section>
+<section id="tip" class="level2">
+<h2 class="anchored" data-anchor-id="tip">💡 Tip</h2>
+<p>These notebooks are a safe place to experiment — don’t be afraid to break things!<br>
+Use <code>Restart &amp; Run All</code> to reset or rerun your code from scratch.</p>
 
 
 <!-- -->
@@ -693,20 +714,40 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># 🧱 Programming Basics</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>This section introduces the fundamentals of Python programming with a focus on data science applications. The notebooks below are intended for self-paced learning with exercises and examples relevant to Food and Nutritional Sciences.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>This section introduces Python programming from the ground up, with a focus on data applications.</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📘 Notebooks</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Syntax, Variables, and Comments</span><span class="co">](01_syntax_variables_comments.ipynb)</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Data Types and Conversion</span><span class="co">](02_data_types_conversion.ipynb)</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Loops and Conditionals</span><span class="co">](03_loops_conditionals.ipynb)</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">List Comprehensions</span><span class="co">](04_list_comprehensions.ipynb)</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Functions and Modular Code</span><span class="co">](05_functions_modular.ipynb)</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Object-Oriented Programming Basics</span><span class="co">](06_object_oriented_basics.ipynb)</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Coding Styles</span><span class="co">](07_coding_styles.ipynb)</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Documentation with Markdown and Quarto</span><span class="co">](08_documentation_quarto.ipynb)</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Each notebook includes explanations, code demonstrations, and practical exercises.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Each notebook below is self-contained but follows a logical sequence.  </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>You can use these as teaching materials or as a reference throughout your degree.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📚 Notebooks</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">01 – What is Code?</span><span class="co">](01_what_is_code.ipynb)</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">02 – Variables and Data Types</span><span class="co">](02_variables_and_types.ipynb)</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">03 – Lists and Dictionaries</span><span class="co">](03_lists_and_dicts.ipynb)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">04 – Conditionals and Logic</span><span class="co">](04_conditionals_and_logic.ipynb)</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">05 – Loops and Iteration</span><span class="co">](05_loops_and_iteration.ipynb)</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">06 – Functions</span><span class="co">](06_functions.ipynb)</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">07 – Coding Style and Comments</span><span class="co">](07_coding_style_and_comments.ipynb)</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">08 – Markdown and Quarto Basics</span><span class="co">](08_markdown_and_quarto.ipynb)</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">09 – Practice and Mini Challenges</span><span class="co">](09_mini_challenges.ipynb)</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🧠 Skills you'll build</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Writing and structuring Python code</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Understanding logic, loops, and functions</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Using comments and good coding style</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Creating readable documentation and Markdown content</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## 💡 Tip</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>These notebooks are a safe place to experiment — don't be afraid to break things!  </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>Use <span class="in">`Restart &amp; Run All`</span> to reset or rerun your code from scratch.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

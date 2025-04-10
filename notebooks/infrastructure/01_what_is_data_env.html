@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>What is a Data Science Environment? – Data Analysis Toolkit for FNS</title>
+<title>🌍 What is a Data Science Environment? – Data Analysis Toolkit for FNS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -165,8 +165,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#concepts" id="toc-concepts" class="nav-link active" data-scroll-target="#concepts">Concepts</a></li>
-  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  <li><a href="#basic-view" id="toc-basic-view" class="nav-link active" data-scroll-target="#basic-view">💡 Basic View</a>
+  <ul class="collapse">
+  <li><a href="#why-this-matters" id="toc-why-this-matters" class="nav-link" data-scroll-target="#why-this-matters">Why this matters</a></li>
+  </ul></li>
+  <li><a href="#advanced-view" id="toc-advanced-view" class="nav-link" data-scroll-target="#advanced-view">🔍 Advanced View</a>
+  <ul class="collapse">
+  <li><a href="#ides-and-notebooks" id="toc-ides-and-notebooks" class="nav-link" data-scroll-target="#ides-and-notebooks">IDEs and Notebooks</a></li>
+  <li><a href="#environments" id="toc-environments" class="nav-link" data-scroll-target="#environments">Environments</a></li>
+  <li><a href="#versioning-and-reproducibility" id="toc-versioning-and-reproducibility" class="nav-link" data-scroll-target="#versioning-and-reproducibility">Versioning and Reproducibility</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -175,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">What is a Data Science Environment?</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title">🌍 What is a Data Science Environment?</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -192,26 +201,77 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This notebook introduces you to the idea of a data science environment—a space where you can explore data, analyse it, and communicate your results.</p>
-<section id="concepts" class="level2">
-<h2 class="anchored" data-anchor-id="concepts">Concepts</h2>
+<p>Welcome! In this notebook, we explore what a <strong>data science environment</strong> is — and why setting up the right tools can make your work easier, cleaner, and more reproducible.</p>
+<section id="basic-view" class="level2">
+<h2 class="anchored" data-anchor-id="basic-view">💡 Basic View</h2>
+<p>A <strong>data environment</strong> is a combination of:</p>
 <ul>
-<li><strong>Local vs.&nbsp;cloud-based environments</strong></li>
-<li><strong>Interactive vs.&nbsp;script-based work</strong></li>
-<li><strong>Reproducibility</strong> and documentation</li>
-<li>Common environments: Jupyter, Colab, VS Code, RStudio</li>
+<li>Software: Python, Jupyter, Excel, R</li>
+<li>Tools: Notebooks, scripts, version control</li>
+<li>Data: CSVs, spreadsheets, databases</li>
+<li>Workflows: Reproducible steps, documented processes</li>
 </ul>
-<div id="a235771f" class="cell">
+<p>Think of it like your lab bench in a research lab. You need the right tools, a clean space, and a way to document what you’ve done.</p>
+<section id="why-this-matters" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-matters">Why this matters</h3>
+<p>If you use Excel and manually delete a row or overwrite a number, the change is <em>gone</em>. There is no record of it unless you create backup files (e.g.&nbsp;<code>final_final_02.xlsx</code> 🙃).</p>
+<p>With Python, your steps are scripted. Anyone (including future-you) can run the same script and get the same output.</p>
+<div id="8c73fcd5" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> platform</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'You are using:'</span>, platform.system())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: A small data cleaning script</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Name"</span>: [<span class="st">"Hippo"</span>, <span class="st">"Giraffe"</span>, <span class="st">"Elephant"</span>],</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Weight_kg"</span>: [<span class="dv">1500</span>, <span class="dv">900</span>, <span class="dv">3000</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only animals heavier than 1000 kg</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">"Weight_kg"</span>] <span class="op">&gt;</span> <span class="dv">1000</span>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p>This script tells you <strong>what</strong> was done — filtering animals above 1000 kg — and you can re-run it whenever needed.</p>
+<p>It also produces the same result each time, unlike an unlogged Excel edit.</p>
 </section>
-<section id="exercise" class="level2">
-<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
-<p>What environment are you using right now (e.g., Colab, Jupyter Desktop, VS Code)? What are its advantages and drawbacks?</p>
+</section>
+<section id="advanced-view" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-view">🔍 Advanced View</h2>
+<details>
+<summary>
+Click to expand advanced concepts
+</summary>
+<section id="ides-and-notebooks" class="level3">
+<h3 class="anchored" data-anchor-id="ides-and-notebooks">IDEs and Notebooks</h3>
+<ul>
+<li><strong>IDE</strong> = Integrated Development Environment (e.g.&nbsp;VS Code, PyCharm)</li>
+<li><strong>Notebook</strong> = An interactive document with code + output + explanation (like this one)</li>
+</ul>
+</section>
+<section id="environments" class="level3">
+<h3 class="anchored" data-anchor-id="environments">Environments</h3>
+<ul>
+<li>Use <code>venv</code> or <code>conda</code> to create clean environments</li>
+<li>Avoid package conflicts and make your analysis portable</li>
+</ul>
+</section>
+<section id="versioning-and-reproducibility" class="level3">
+<h3 class="anchored" data-anchor-id="versioning-and-reproducibility">Versioning and Reproducibility</h3>
+<ul>
+<li>Use Git to track changes to code and notebooks</li>
+<li>Document your workflow with Quarto or Markdown</li>
+</ul>
+</section></details>
+</section>
+
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">🧪 Exercises</h2>
+<ol type="1">
+<li>In your own words, describe what a data environment is.</li>
+<li>Try modifying the Python script above to use 2000 kg as the filter.</li>
+<li>Optional: Open a CSV in Excel, change a number, and ask: “Can I undo this tomorrow?”</li>
+</ol>
 
 
 </section>
