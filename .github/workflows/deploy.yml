@@ -1,24 +1,32 @@
-name: Deploy Quarto Site
+name: Quarto Publish
 
 on:
   push:
-    branches:
-      - main  # Adjust if your default branch is named differently
+    branches: [main]
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout repository
+      - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
+      - name: Install R and Dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          target: gh-pages
+          packages: |
+            any::rmarkdown
+            any::jsonlite
+
+      - name: Render and Publish
+        run: |
+          quarto render
+          quarto publish gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
