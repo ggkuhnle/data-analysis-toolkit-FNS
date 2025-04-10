@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧪 Student Mini-Project Template – Data Analysis Toolkit for FNS</title>
+<title>🔤 Variables and Data Types – Data Analysis Toolkit for FNS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -126,15 +160,29 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-a-variable" id="toc-what-is-a-variable" class="nav-link active" data-scroll-target="#what-is-a-variable">💡 What is a variable?</a></li>
+  <li><a href="#common-data-types-in-python" id="toc-common-data-types-in-python" class="nav-link" data-scroll-target="#common-data-types-in-python">📦 Common Data Types in Python</a></li>
+  <li><a href="#converting-types" id="toc-converting-types" class="nav-link" data-scroll-target="#converting-types">🔁 Converting Types</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
+  <li><a href="#advanced-view" id="toc-advanced-view" class="nav-link" data-scroll-target="#advanced-view">🔍 Advanced View</a>
+  <ul class="collapse">
+  <li><a href="#why-do-types-matter" id="toc-why-do-types-matter" class="nav-link" data-scroll-target="#why-do-types-matter">Why do types matter?</a></li>
+  <li><a href="#type-casting-manual-conversion" id="toc-type-casting-manual-conversion" class="nav-link" data-scroll-target="#type-casting-manual-conversion">Type casting (manual conversion)</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">🧪 Student Mini-Project Template</h1>
+<div class="quarto-title-block"><div><h1 class="title">🔤 Variables and Data Types</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -151,8 +199,128 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Use this notebook as a starting point for your independent data project.</p>
+<p>In this notebook, we explore how Python stores and labels information using <strong>variables</strong>, and how it understands <strong>data types</strong> like numbers, text, and logic.</p>
+<section id="what-is-a-variable" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-variable">💡 What is a variable?</h2>
+<p>A variable is a <strong>name for a value</strong>. Think of it like a labelled container.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>weight <span class="op">=</span> <span class="dv">1200</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now we can use the word <code>weight</code> instead of typing <code>1200</code> again and again.</p>
+<div id="cd9f71f9" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: storing a value</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>hippo_weight <span class="op">=</span> <span class="dv">1200</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Weight of the hippo is"</span>, hippo_weight, <span class="st">"kg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Variables can change:</p>
+<div id="bfc49d71" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>hippo_weight <span class="op">=</span> <span class="dv">1300</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Updated weight:"</span>, hippo_weight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="common-data-types-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="common-data-types-in-python">📦 Common Data Types in Python</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Example</th>
+<th>In Excel/SPSS</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>int</code></td>
+<td><code>42</code></td>
+<td>Whole numbers</td>
+</tr>
+<tr class="even">
+<td><code>float</code></td>
+<td><code>3.14</code></td>
+<td>Decimal numbers</td>
+</tr>
+<tr class="odd">
+<td><code>str</code></td>
+<td><code>"Hello"</code></td>
+<td>Text (like “Food Group”)</td>
+</tr>
+<tr class="even">
+<td><code>bool</code></td>
+<td><code>True</code>, <code>False</code></td>
+<td>Logical (TRUE/FALSE)</td>
+</tr>
+</tbody>
+</table>
+<div id="272fa376" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">25</span>          <span class="co"># int</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>height <span class="op">=</span> <span class="fl">1.78</span>     <span class="co"># float</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Gunter"</span>   <span class="co"># str</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>hungry <span class="op">=</span> <span class="va">True</span>     <span class="co"># bool</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(age))</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(height))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(name))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(hungry))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="converting-types" class="level2">
+<h2 class="anchored" data-anchor-id="converting-types">🔁 Converting Types</h2>
+<p>Sometimes you need to <strong>convert</strong> between types:</p>
+<ul>
+<li>Excel: <code>=VALUE("123")</code></li>
+<li>Python:</li>
+</ul>
+<div id="8d225212" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>weight_str <span class="op">=</span> <span class="st">"1500"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>weight_num <span class="op">=</span> <span class="bu">int</span>(weight_str)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(weight_num <span class="op">+</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">🧪 Exercises</h2>
+<ol type="1">
+<li>Create a variable called <code>species</code> and assign it your favourite animal as text.</li>
+<li>Make a variable <code>legs</code> and assign the number of legs it has.</li>
+<li>Try printing both together in a sentence using <code>print()</code>.</li>
+<li>Optional: convert <code>"2023"</code> (a string) into an integer.</li>
+</ol>
+</section>
+<section id="advanced-view" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-view">🔍 Advanced View</h2>
+<details>
+<summary>
+Click to expand
+</summary>
+<section id="why-do-types-matter" class="level3">
+<h3 class="anchored" data-anchor-id="why-do-types-matter">Why do types matter?</h3>
+<ul>
+<li>You can’t do maths with text</li>
+<li>You can’t compare logic with numbers</li>
+<li>You might accidentally create <code>“42”</code> instead of <code>42</code></li>
+</ul>
+</section>
+<section id="type-casting-manual-conversion" class="level3">
+<h3 class="anchored" data-anchor-id="type-casting-manual-conversion">Type casting (manual conversion)</h3>
+<ul>
+<li><code>str(42)</code> → <code>"42"</code></li>
+<li><code>int("123")</code> → <code>123</code></li>
+<li><code>float("3.14")</code> → <code>3.14</code></li>
+</ul>
+<p>Python is stricter than Excel — but that’s a good thing! It helps avoid silent errors.</p>
+</section></details>
 
+
+</section>
 
 
 </main> <!-- /main -->

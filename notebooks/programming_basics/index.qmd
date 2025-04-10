@@ -3,14 +3,40 @@ title: "Programming Basics"
 format: html
 ---
 
-# Programming Basics
+# 🧱 Programming Basics
 
-This section includes the following notebooks:
+This section introduces Python programming from the ground up, with a focus on data applications.
 
-- [01 intro python syntax](01_intro_python_syntax.ipynb)
-- [02 data types and conversion](02_data_types_and_conversion.ipynb)
-- [03 control structures](03_control_structures.ipynb)
-- [04 functions and oop](04_functions_and_oop.ipynb)
-- [05 code style](05_code_style.ipynb)
+Each notebook below is self-contained but follows a logical sequence.  
+You can use these as teaching materials or as a reference throughout your degree.
 
 ---
+
+## 📚 Notebooks
+
+- [01 – What is Code?](01_what_is_code.ipynb)
+- [02 – Variables and Data Types](02_variables_and_types.ipynb)
+- [03 – Lists and Dictionaries](03_lists_and_dicts.ipynb)
+- [04 – Conditionals and Logic](04_conditionals_and_logic.ipynb)
+- [05 – Loops and Iteration](05_loops_and_iteration.ipynb)
+- [06 – Functions](06_functions.ipynb)
+- [07 – Coding Style and Comments](07_coding_style_and_comments.ipynb)
+- [08 – Markdown and Quarto Basics](08_markdown_and_quarto.ipynb)
+- [09 – Practice and Mini Challenges](09_mini_challenges.ipynb)
+
+---
+
+## 🧠 Skills you'll build
+
+- Writing and structuring Python code
+- Understanding logic, loops, and functions
+- Using comments and good coding style
+- Creating readable documentation and Markdown content
+
+---
+
+## 💡 Tip
+
+These notebooks are a safe place to experiment — don't be afraid to break things!  
+Use `Restart & Run All` to reset or rerun your code from scratch.
+

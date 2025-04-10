@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧪 Student Mini-Project Template – Data Analysis Toolkit for FNS</title>
+<title>🧾 Notebooks, Scripts, Markdown, or Quarto? – Data Analysis Toolkit for FNS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -126,15 +160,33 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#basic-view" id="toc-basic-view" class="nav-link active" data-scroll-target="#basic-view">💡 Basic View</a>
+  <ul class="collapse">
+  <li><a href="#notebooks" id="toc-notebooks" class="nav-link" data-scroll-target="#notebooks">Notebooks</a></li>
+  <li><a href="#scripts-.py" id="toc-scripts-.py" class="nav-link" data-scroll-target="#scripts-.py">Scripts (<code>.py</code>)</a></li>
+  <li><a href="#markdown-.md" id="toc-markdown-.md" class="nav-link" data-scroll-target="#markdown-.md">Markdown (<code>.md</code>)</a></li>
+  <li><a href="#quarto-.qmd" id="toc-quarto-.qmd" class="nav-link" data-scroll-target="#quarto-.qmd">Quarto (<code>.qmd</code>)</a></li>
+  </ul></li>
+  <li><a href="#advanced-view" id="toc-advanced-view" class="nav-link" data-scroll-target="#advanced-view">🔍 Advanced View</a>
+  <ul class="collapse">
+  <li><a href="#quarto-in-more-detail" id="toc-quarto-in-more-detail" class="nav-link" data-scroll-target="#quarto-in-more-detail">Quarto in More Detail</a></li>
+  <li><a href="#scripts-vs-notebooks" id="toc-scripts-vs-notebooks" class="nav-link" data-scroll-target="#scripts-vs-notebooks">Scripts vs Notebooks</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">🧪 Student Mini-Project Template</h1>
+<div class="quarto-title-block"><div><h1 class="title">🧾 Notebooks, Scripts, Markdown, or Quarto?</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -151,9 +203,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Use this notebook as a starting point for your independent data project.</p>
+<p>Different tools serve different purposes — and knowing when to use each helps you write better, clearer, and more reproducible code.</p>
+<section id="basic-view" class="level2">
+<h2 class="anchored" data-anchor-id="basic-view">💡 Basic View</h2>
+<section id="notebooks" class="level3">
+<h3 class="anchored" data-anchor-id="notebooks">Notebooks</h3>
+<ul>
+<li><strong>Best for</strong>: Teaching, exploration, walkthroughs</li>
+<li>Mix code + narrative + results in one file</li>
+<li>You’re reading a notebook right now!</li>
+</ul>
+</section>
+<section id="scripts-.py" class="level3">
+<h3 class="anchored" data-anchor-id="scripts-.py">Scripts (<code>.py</code>)</h3>
+<ul>
+<li><strong>Best for</strong>: Repeating an analysis or cleaning step</li>
+<li>Plain Python code, no output inside</li>
+<li>Works well for automation and functions</li>
+</ul>
+</section>
+<section id="markdown-.md" class="level3">
+<h3 class="anchored" data-anchor-id="markdown-.md">Markdown (<code>.md</code>)</h3>
+<ul>
+<li><strong>Best for</strong>: Notes, documentation, readmes</li>
+<li>Simple formatting: headings, bold, links</li>
+</ul>
+</section>
+<section id="quarto-.qmd" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-.qmd">Quarto (<code>.qmd</code>)</h3>
+<ul>
+<li><strong>Best for</strong>: Reports, websites, academic writing</li>
+<li>Combines Markdown + code + rendering engine</li>
+<li>Publish to HTML, PDF, Word, slides, dashboards</li>
+</ul>
+<div id="4019cf84" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example script (could be saved as clean.py)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"mydata.csv"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">"BMI"</span>] <span class="op">&gt;</span> <span class="fl">18.5</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">"cleaned.csv"</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>You could run this script every time you get new data — it’s repeatable and traceable.</p>
+</section>
+</section>
+<section id="advanced-view" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-view">🔍 Advanced View</h2>
+<details>
+<summary>
+Click to expand
+</summary>
+<section id="quarto-in-more-detail" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-in-more-detail">Quarto in More Detail</h3>
+<ul>
+<li>Like R Markdown but supports Python, R, Julia, Bash</li>
+<li>Can generate reproducible PDFs (LaTeX), websites, or Word docs</li>
+<li>You can write teaching materials with it (like this course)</li>
+</ul>
+<p>See <a href="https://quarto.org/docs/">quarto.org</a> for examples</p>
+</section>
+<section id="scripts-vs-notebooks" class="level3">
+<h3 class="anchored" data-anchor-id="scripts-vs-notebooks">Scripts vs Notebooks</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Notebooks</th>
+<th>Scripts</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Great for demo</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td>Works in terminal</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr class="odd">
+<td>Easy to document</td>
+<td>✅</td>
+<td>⚠️ (needs comments)</td>
+</tr>
+<tr class="even">
+<td>Good for publishing</td>
+<td>✅ (via Quarto)</td>
+<td>✅ (via Quarto)</td>
+</tr>
+</tbody>
+</table>
+</section></details>
+</section>
+
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">🧪 Exercises</h2>
+<ol type="1">
+<li>Create a simple script called <code>hello.py</code> and print <code>"Hello from a script!"</code></li>
+<li>Write a short Markdown document with a heading and bullet list</li>
+<li>Optional: Install Quarto and render a <code>.qmd</code> file to HTML</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

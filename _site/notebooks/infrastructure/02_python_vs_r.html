@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧪 Student Mini-Project Template – Data Analysis Toolkit for FNS</title>
+<title>🚗 Python vs R vs Other Tools – Data Analysis Toolkit for FNS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -126,15 +160,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#basic-view" id="toc-basic-view" class="nav-link active" data-scroll-target="#basic-view">💡 Basic View</a></li>
+  <li><a href="#advanced-view" id="toc-advanced-view" class="nav-link" data-scroll-target="#advanced-view">🔍 Advanced View</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">🧪 Student Mini-Project Template</h1>
+<div class="quarto-title-block"><div><h1 class="title">🚗 Python vs R vs Other Tools</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -151,9 +193,115 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Use this notebook as a starting point for your independent data project.</p>
+<p>Data analysis can be done with many tools. This notebook helps you understand where Python fits — and why it is widely used in food and nutrition science.</p>
+<section id="basic-view" class="level2">
+<h2 class="anchored" data-anchor-id="basic-view">💡 Basic View</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 44%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Strengths</th>
+<th>Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Python</strong></td>
+<td>General-purpose, readable, automation, machine learning</td>
+<td>Slightly more setup</td>
+</tr>
+<tr class="even">
+<td><strong>R</strong></td>
+<td>Great for statistics, visualisation</td>
+<td>Less general-purpose</td>
+</tr>
+<tr class="odd">
+<td><strong>Excel</strong></td>
+<td>Familiar, quick for small tables</td>
+<td>No version control, error-prone</td>
+</tr>
+<tr class="even">
+<td><strong>SPSS</strong></td>
+<td>Menu-driven stats</td>
+<td>Less flexible, limited scripts</td>
+</tr>
+<tr class="odd">
+<td><strong>Prism</strong></td>
+<td>Beautiful graphs, quick comparisons</td>
+<td>Not programmable</td>
+</tr>
+<tr class="even">
+<td><strong>XLStat</strong></td>
+<td>Built into Excel, good for sensory</td>
+<td>Expensive, closed environment</td>
+</tr>
+</tbody>
+</table>
+<p>Python is our tool of choice because: - It’s open-source and free - It works for small scripts or massive data pipelines - You can write readable code and share it</p>
+<div id="69c21966" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python is readable</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="fl">2.3</span>, <span class="fl">4.5</span>, <span class="fl">1.2</span>, <span class="fl">5.7</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> <span class="bu">sum</span>(data) <span class="op">/</span> <span class="bu">len</span>(data)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The average is </span><span class="sc">{</span>mean<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Compare with R:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">2.3</span>, <span class="fl">4.5</span>, <span class="fl">1.2</span>, <span class="fl">5.7</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>And Excel:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>A</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2.3</td>
+</tr>
+<tr class="even">
+<td>4.5</td>
+</tr>
+<tr class="odd">
+<td>1.2</td>
+</tr>
+<tr class="even">
+<td>5.7</td>
+</tr>
+</tbody>
+</table>
+<p>Use formula: <code>=AVERAGE(A1:A4)</code> — but there’s no clear log of this step.</p>
+</section>
+<section id="advanced-view" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-view">🔍 Advanced View</h2>
+<details>
+<summary>
+Click to expand deeper comparisons
+</summary>
+<ul>
+<li>Python is often used in <strong>pipelines</strong>, web apps, dashboards, and modelling</li>
+<li>R has <strong>ggplot2</strong>, <strong>dplyr</strong>, and built-in stats</li>
+<li>Excel is best for one-off reports or small tables — not reproducible workflows</li>
+</ul>
+</details>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">🧪 Exercises</h2>
+<ol type="1">
+<li>Write a short Python script to calculate the median of <code>[1, 2, 3, 4, 100]</code>.</li>
+<li>Try making the same plot in Prism and in Python (using seaborn or matplotlib).</li>
+<li>Optional: Google “Python vs R for epidemiology” and summarise what you find.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

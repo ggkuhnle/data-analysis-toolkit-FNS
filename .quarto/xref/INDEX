@@ -28,5 +28,89 @@
   },
   "notebooks/programming_basics/index.qmd": {
     "index.html": "64de6136"
+  },
+  "notebooks/advanced/03_workflow_automation.ipynb": {
+    "03_workflow_automation.html": "7fdd2b5a"
+  },
+  "notebooks/advanced/01_bayesian_intro.ipynb": {
+    "01_bayesian_intro.html": "a7b601a0"
+  },
+  "notebooks/advanced/index.qmd": {
+    "index.html": "0e6e7e5f"
+  },
+  "notebooks/advanced/02_databases_intro.ipynb": {
+    "02_databases_intro.html": "db74037c"
+  },
+  "notebooks/data_analysis/04_logistic_and_survival.ipynb": {
+    "04_logistic_and_survival.html": "1c9bb38a"
+  },
+  "notebooks/data_analysis/02_t_tests_and_anova.ipynb": {
+    "02_t_tests_and_anova.html": "92d773ef"
+  },
+  "notebooks/data_analysis/03_regression.ipynb": {
+    "03_regression.html": "9e731a42"
+  },
+  "notebooks/data_analysis/02_tests_and_anova.ipynb": {
+    "02_tests_and_anova.html": "4bab44e6"
+  },
+  "notebooks/data_analysis/01_distributions_and_summary.ipynb": {
+    "01_distributions_and_summary.html": "f40c06c1"
+  },
+  "notebooks/data_analysis/index.qmd": {
+    "index.html": "0861ec1b"
+  },
+  "notebooks/data_analysis/01_distributions.ipynb": {
+    "01_distributions.html": "015d3810"
+  },
+  "notebooks/data_handling/02_cleaning_data.ipynb": {
+    "02_cleaning_data.html": "607dd17e"
+  },
+  "notebooks/data_handling/04_wide_long.ipynb": {
+    "04_wide_long.html": "6243b955"
+  },
+  "notebooks/data_handling/03_wrangling.ipynb": {
+    "03_wrangling.html": "e259a6e3"
+  },
+  "notebooks/data_handling/01_importing_data.ipynb": {
+    "01_importing_data.html": "5ec14c75"
+  },
+  "notebooks/projects/00_mini_project_template.ipynb": {
+    "00_mini_project_template.html": "132b6003"
+  },
+  "notebooks/projects/index.qmd": {
+    "index.html": "2c84de68"
+  },
+  "notebooks/projects/00_project_template.ipynb": {
+    "00_project_template.html": "fba36044"
+  },
+  "notebooks/infrastructure/08_documenting_with_scripts.ipynb": {
+    "08_documenting_with_scripts.html": "d92468d8"
+  },
+  "notebooks/infrastructure/05_installing_packages.ipynb": {
+    "05_installing_packages.html": "68eb1a8d"
+  },
+  "notebooks/infrastructure/03_colab_jupyter.ipynb": {
+    "03_colab_jupyter.html": "ec56f72b"
+  },
+  "notebooks/infrastructure/06_finding_help.ipynb": {
+    "06_finding_help.html": "3a64e59f"
+  },
+  "notebooks/infrastructure/07_notebooks_scripts_quarto.ipynb": {
+    "07_notebooks_scripts_quarto.html": "e9f83355"
+  },
+  "notebooks/infrastructure/01_what_is_data_env.ipynb": {
+    "01_what_is_data_env.html": "b3f35694"
+  },
+  "notebooks/infrastructure/04_git_and_version_control.ipynb": {
+    "04_git_and_version_control.html": "46e4cbfc"
+  },
+  "notebooks/infrastructure/02_python_vs_r.ipynb": {
+    "02_python_vs_r.html": "5b03d5c4"
+  },
+  "notebooks/programming_basics/01_what_is_code.ipynb": {
+    "01_what_is_code.html": "5aa8d967"
+  },
+  "notebooks/programming_basics/02_variables_and_types.ipynb": {
+    "02_variables_and_types.html": "797d009c"
   }
 }

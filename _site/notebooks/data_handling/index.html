@@ -130,7 +130,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Infrastructure</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notebooks/programming_basics/index.html"> 
+    <a class="nav-link" href="../../notebooks/programming_basics/index.qmd"> 
 <span class="menu-text">Programming</span></a>
   </li>  
   <li class="nav-item">
@@ -138,15 +138,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Data Handling</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notebooks/data_analysis/index.qmd"> 
+    <a class="nav-link" href="../../notebooks/data_analysis/index.html"> 
 <span class="menu-text">Data Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notebooks/advanced/index.qmd"> 
+    <a class="nav-link" href="../../notebooks/advanced/index.html"> 
 <span class="menu-text">Advanced</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notebooks/projects/index.qmd"> 
+    <a class="nav-link" href="../../notebooks/projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
@@ -165,7 +165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-handling" id="toc-data-handling" class="nav-link active" data-scroll-target="#data-handling">📂 Data Handling</a></li>
+  <li><a href="#data-handling" id="toc-data-handling" class="nav-link active" data-scroll-target="#data-handling">Data Handling</a></li>
   </ul>
 </nav>
     </div>
@@ -192,12 +192,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="data-handling" class="level1">
-<h1>📂 Data Handling</h1>
-<p>Welcome to the <strong>Data Handling</strong> section of the Data Analysis Toolkit.</p>
-<p>Below you’ll find all the available notebooks in this area. You can view them directly in GitHub or open them in Colab.</p>
+<h1>Data Handling</h1>
+<p>This section includes the following notebooks:</p>
 <ul>
-<li><a href="../../notebooks/data_handling/01_loading_data.html">01 loading data</a> <a href="https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/data_handling/01_loading_data.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Colab"></a></li>
+<li><a href="../../notebooks/data_handling/01_importing_data.html">01 importing data</a></li>
+<li><a href="../../notebooks/data_handling/02_cleaning_data.html">02 cleaning data</a></li>
+<li><a href="../../notebooks/data_handling/03_wrangling.html">03 wrangling</a></li>
+<li><a href="../../notebooks/data_handling/04_wide_long.html">04 wide long</a></li>
 </ul>
+<hr>
 
 
 <!-- -->
@@ -346,7 +349,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ggkuhnle\.github\.io\/data-analysis-toolkit-FNS\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -678,13 +681,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># 📂 Data Handling</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># Data Handling</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Welcome to the **Data Handling** section of the Data Analysis Toolkit.</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>This section includes the following notebooks:</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Below you'll find all the available notebooks in this area. You can view them directly in GitHub or open them in Colab.</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">01 loading data</span><span class="co">](./01_loading_data.ipynb)</span> <span class="co">[</span><span class="al">![Colab](https://colab.research.google.com/assets/colab-badge.svg)</span><span class="co">](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/data_handling/01_loading_data.ipynb)</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">01 importing data</span><span class="co">](01_importing_data.ipynb)</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">02 cleaning data</span><span class="co">](02_cleaning_data.ipynb)</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">03 wrangling</span><span class="co">](03_wrangling.ipynb)</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">04 wide long</span><span class="co">](04_wide_long.ipynb)</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

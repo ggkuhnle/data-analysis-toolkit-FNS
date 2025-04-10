@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧪 Student Mini-Project Template – Data Analysis Toolkit for FNS</title>
+<title>☁️ Using Google Colab and Jupyter – Data Analysis Toolkit for FNS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -126,15 +160,31 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#basic-view" id="toc-basic-view" class="nav-link active" data-scroll-target="#basic-view">💡 Basic View</a>
+  <ul class="collapse">
+  <li><a href="#how-to-run-a-colab-notebook" id="toc-how-to-run-a-colab-notebook" class="nav-link" data-scroll-target="#how-to-run-a-colab-notebook">How to Run a Colab Notebook</a></li>
+  <li><a href="#how-to-use-jupyter-locally" id="toc-how-to-use-jupyter-locally" class="nav-link" data-scroll-target="#how-to-use-jupyter-locally">How to Use Jupyter Locally</a></li>
+  </ul></li>
+  <li><a href="#advanced-view" id="toc-advanced-view" class="nav-link" data-scroll-target="#advanced-view">🔍 Advanced View</a>
+  <ul class="collapse">
+  <li><a href="#which-should-i-use" id="toc-which-should-i-use" class="nav-link" data-scroll-target="#which-should-i-use">Which Should I Use?</a></li>
+  <li><a href="#vs-code-integration" id="toc-vs-code-integration" class="nav-link" data-scroll-target="#vs-code-integration">VS Code Integration</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">🧪 Student Mini-Project Template</h1>
+<div class="quarto-title-block"><div><h1 class="title">☁️ Using Google Colab and Jupyter</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -151,9 +201,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Use this notebook as a starting point for your independent data project.</p>
+<p>Jupyter Notebooks are a core tool for interactive data science. In this notebook, we explore two major ways to use them: Google Colab (cloud) and Jupyter (local).</p>
+<section id="basic-view" class="level2">
+<h2 class="anchored" data-anchor-id="basic-view">💡 Basic View</h2>
+<p><strong>Jupyter Notebooks</strong> are documents that mix: - <strong>Code cells</strong> (you can run) - <strong>Markdown cells</strong> (text, notes, explanations) - <strong>Output</strong> (tables, plots, printed messages)</p>
+<p>You can run them in two main places:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 20%">
+<col style="width: 33%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Platform</th>
+<th>What it is</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Google Colab</td>
+<td>Online notebook in your browser</td>
+<td>Free, no install needed, good for class</td>
+<td>Needs internet</td>
+</tr>
+<tr class="even">
+<td>Jupyter</td>
+<td>Local app (via Anaconda or pip)</td>
+<td>Full control, offline use</td>
+<td>Needs install</td>
+</tr>
+</tbody>
+</table>
+<div id="bebf89bf" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple code cell</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello from a notebook!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="how-to-run-a-colab-notebook" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-run-a-colab-notebook">How to Run a Colab Notebook</h3>
+<ol type="1">
+<li>Go to your GitHub or shared notebook link</li>
+<li>Click “Open in Colab”</li>
+<li>Run each cell using the ▶️ icon or <code>Shift + Enter</code></li>
+</ol>
+<p>You can edit, save to your Google Drive, and download as <code>.ipynb</code> or <code>.pdf</code>.</p>
+</section>
+<section id="how-to-use-jupyter-locally" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-use-jupyter-locally">How to Use Jupyter Locally</h3>
+<p>Install via:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install notebook</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Or install <strong>Anaconda</strong> to get Jupyter preinstalled.</p>
+<p>You’ll open a browser window with access to your files and can run notebooks just like in Colab.</p>
+</section>
+</section>
+<section id="advanced-view" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-view">🔍 Advanced View</h2>
+<details>
+<summary>
+Click to expand
+</summary>
+<section id="which-should-i-use" class="level3">
+<h3 class="anchored" data-anchor-id="which-should-i-use">Which Should I Use?</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Use Case</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Quick work, sharing</td>
+<td>Google Colab</td>
+</tr>
+<tr class="even">
+<td>Heavy data, offline</td>
+<td>Jupyter</td>
+</tr>
+<tr class="odd">
+<td>Integrating with Git</td>
+<td>Jupyter (via VS Code or terminal)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="vs-code-integration" class="level3">
+<h3 class="anchored" data-anchor-id="vs-code-integration">VS Code Integration</h3>
+<p>You can open and run notebooks directly inside <strong>Visual Studio Code</strong> with the Jupyter extension — handy if you prefer one environment.</p>
+</section></details>
+</section>
+
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">🧪 Exercises</h2>
+<ol type="1">
+<li>Open this notebook in Google Colab. Run the first cell.</li>
+<li>Add a new Markdown cell and type your name using <code># My name is...</code>.</li>
+<li>Optional: install Jupyter and open a local notebook file.</li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,27 +1,39 @@
 ---
-title: "Data Analysis Toolkit for Nutrition and Food Science"
+title: "Infrastructure"
 format: html
 ---
 
-# 🧪 Data Analysis Toolkit for Nutrition and Food Science
+# 🧭 Infrastructure for Data Analysis
 
-This site provides a structured, editable, and expandable resource to support data skills from foundational knowledge to advanced applications.
-
----
-
-## 🧱 Infrastructure
-
-This section introduces core tools and workflows that underpin reproducible data science. Each notebook includes basic overviews, advanced insights (foldable), and hands-on exercises.
-
-- [01 – What is a Data Science Environment?](notebooks/infrastructure/01_what_is_data_env.ipynb)
-- [02 – Python vs R vs Other Tools](notebooks/infrastructure/02_python_vs_r.ipynb)
-- [03 – Using Google Colab and Jupyter](notebooks/infrastructure/03_colab_jupyter.ipynb)
-- [04 – Git and Version Control Basics](notebooks/infrastructure/04_git_and_version_control.ipynb)
-- [05 – Installing and Managing Python Packages](notebooks/infrastructure/05_installing_packages.ipynb)
-- [06 – Finding Help and Documentation](notebooks/infrastructure/06_finding_help.ipynb)
-- [07 – Notebooks, Scripts, Markdown, or Quarto](notebooks/infrastructure/07_notebooks_scripts_quarto.ipynb)
-- [08 – Documenting Your Work with Scripts and Logs](notebooks/infrastructure/08_documenting_with_scripts.ipynb)
+This section helps you set up a solid foundation for your data work, including cloud tools, local setup, packages, version control, and documentation strategies.
 
 ---
 
-More sections coming soon: Programming, Data Handling, Analysis, and Advanced Topics.
+## 🧰 Notebooks
+
+- [01 – What is a Data Science Environment?](01_what_is_data_env.ipynb)
+- [02 – Python vs R vs Other Tools](02_python_vs_r.ipynb)
+- [03 – Using Google Colab and Jupyter](03_colab_jupyter.ipynb)
+- [04 – Git and Version Control Basics](04_git_and_version_control.ipynb)
+- [05 – Installing and Managing Python Packages](05_installing_packages.ipynb)
+- [06 – Finding Help and Documentation](06_finding_help.ipynb)
+- [07 – Notebooks, Scripts, Markdown and Quarto](07_notebooks_scripts_quarto.ipynb)
+
+---
+
+## 🧠 Why It Matters
+
+Without the right tools and structure:
+- It’s easy to lose work
+- Mistakes go unnoticed
+- Projects become hard to share or reproduce
+
+With this foundation, your work becomes **robust**, **collaborative**, and **reproducible**.
+
+---
+
+## ✅ Tip
+
+Use these notebooks to guide your first project setups.  
+If something breaks, it’s usually fixable — learning to troubleshoot is part of the process!
+
