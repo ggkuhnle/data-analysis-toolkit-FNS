@@ -249,7 +249,7 @@
     "href": "notebooks/programming_basics/03_lists_and_dicts.html#lists",
     "title": "📚 Lists and Dictionaries",
     "section": "📋 Lists",
-    "text": "📋 Lists\nA list is a collection of items — ordered, and changeable.\nIt’s like a column in Excel or a numbered set of SPSS values.\nfoods = [\"apple\", \"banana\", \"carrot\"]\nYou can: - Access by position (foods[0]) - Add new items (append) - Change them (foods[1] = \"blueberry\")\n\n\nCode\nfoods = [\"apple\", \"banana\", \"carrot\"]\nprint(foods[0])      # First item\nfoods.append(\"date\") # Add a new item\nprint(foods)\n\n\n\nLooping through a list\nfor item in foods:\n    print(item)\n\n\nCode\nfor food in foods:\n    print(\"Food:\", food)"
+    "text": "📋 Lists\nA list is a collection of items — ordered, and changeable.\nIt’s like a column in Excel or a numbered set of SPSS values.\nfoods = [\"apple\", \"banana\", \"carrot\"]\nYou can:\n\nAccess by position (foods[0])\nAdd new items (append)\nChange them (foods[1] = \"blueberry\")\n\n\n\nCode\nfoods = [\"apple\", \"banana\", \"carrot\"]\nprint(foods[0])      # First item\nfoods.append(\"date\") # Add a new item\nprint(foods)\n\n\n\nLooping through a list\nfor item in foods:\n    print(item)\n\n\nCode\nfor food in foods:\n    print(\"Food:\", food)"
   },
   {
     "objectID": "notebooks/programming_basics/03_lists_and_dicts.html#dictionaries",
