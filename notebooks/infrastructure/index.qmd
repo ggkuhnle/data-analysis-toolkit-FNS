@@ -1,30 +1,23 @@
 ---
-title: "Infrastructure"
+title: "Data Analysis Toolkit for Nutrition and Food Science"
 format: html
 ---
 
-# 🔧 Infrastructure
+# 🧪 Data Analysis Toolkit for Nutrition and Food Science
 
-This section covers the *technical environment* needed for data analysis.  
-It explains how to:
-
-- Use **Google Colab**, **Jupyter**, and **Quarto**
-- Work with **GitHub** and version control
-- Install packages and understand environments
-- Choose the right tools for local or cloud use
+This site provides a structured, editable, and expandable resource to support data skills from foundational knowledge to advanced applications.
 
 ---
 
-## 📚 Contents
+## 🧱 Infrastructure
 
-- [01 – What is a Data Science Environment?](01_what_is_data_env.ipynb)
-- [02 – Python vs R vs Other Tools](02_python_vs_r.ipynb)
-- [03 – Using Google Colab and Jupyter](03_colab_jupyter.ipynb)
-- [04 – Git and Version Control](04_git_and_version_control.ipynb)
-- [05 – Installing and Managing Packages](05_installing_packages.ipynb)
-- [06 – Finding Help and Documentation](06_finding_help.ipynb)
-- [07 – Notebooks, Scripts, Markdown, and Quarto](07_notebooks_scripts_quarto.ipynb)
+Explore the tools and platforms that form the foundation of reproducible and effective data analysis. Each notebook includes a basic overview, optional advanced content, and exercises.
 
----
-
-_This section lays the foundation for everything else in the course._
+- [01 – What is a Data Science Environment?](notebooks/infrastructure/01_what_is_data_env.ipynb)
+- [02 – Python vs R vs Other Tools](notebooks/infrastructure/02_python_vs_r.ipynb)
+- [03 – Using Google Colab and Jupyter](notebooks/infrastructure/03_colab_jupyter.ipynb)
+- [04 – Git and Version Control Basics](notebooks/infrastructure/04_git_and_version_control.ipynb)
+- [05 – Installing and Managing Python Packages](notebooks/infrastructure/05_installing_packages.ipynb)
+- [06 – Finding Help and Documentation](notebooks/infrastructure/06_finding_help.ipynb)
+- [07 – Notebooks, Scripts, Markdown, or Quarto](notebooks/infrastructure/07_notebooks_scripts_quarto.ipynb)
+- [08 – Documenting Your Work with Scripts and Logs](notebooks/infrastructure/08_documenting_with_scripts.ipynb)
