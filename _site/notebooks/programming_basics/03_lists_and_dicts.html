@@ -251,7 +251,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Dictionaries are like named columns in SPSS or Excel with headers, but <strong>for one object</strong>.</p>
 <p>Compare:</p>
 <ul>
-<li><p>Excel row: | species | weight | herbivore | |———|——–|———–| | hippo | 1500 | TRUE |</p></li>
+<li><p>Excel row:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>species</th>
+<th>weight</th>
+<th>herbivore</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hippo</td>
+<td>1500</td>
+<td>TRUE</td>
+</tr>
+</tbody>
+</table></li>
 <li><p>Python dict:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"species"</span>: <span class="st">"hippo"</span>, <span class="st">"weight"</span>: <span class="dv">1500</span>, <span class="st">"herbivore"</span>: <span class="va">True</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
@@ -435,7 +451,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ggkuhnle\.github\.io\/data-analysis-toolkit-FNS\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
