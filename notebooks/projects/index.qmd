@@ -1,12 +1,17 @@
 ---
-title: "Projects"
+title: "Project Work"
 format: html
 ---
 
-# Projects
+# 🧪 Project Section
 
-This section includes the following notebooks:
+This section includes templates and challenge prompts for independent or group projects using real-world datasets.
 
-- [00 project template](00_project_template.ipynb)
+## 📁 Notebooks
 
----
+- [01 – NDNS Nutrient Dashboard Template](01_project_template_intro.ipynb)
+- [02 – Mini Project: FFQ Data Challenge](02_mini_project_challenge.ipynb)
+
+## 💡 Tips
+
+These notebooks are designed to help you explore, analyse, and communicate real findings. Feel free to adapt and extend them!
