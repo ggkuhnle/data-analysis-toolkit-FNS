@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧠 What is Code? (And Why Should You Care?) – Data Analysis Toolkit for FNS</title>
+<title>Advanced Techniques – Data Analysis Toolkit for FNS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -142,7 +142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Data Analysis</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notebooks/advanced/index.html"> 
+    <a class="nav-link active" href="../../notebooks/advanced/index.html" aria-current="page"> 
 <span class="menu-text">Advanced</span></a>
   </li>  
   <li class="nav-item">
@@ -165,12 +165,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#code-giving-instructions-to-a-computer" id="toc-code-giving-instructions-to-a-computer" class="nav-link active" data-scroll-target="#code-giving-instructions-to-a-computer">💡 Code: Giving Instructions to a Computer</a></li>
-  <li><a href="#interpreted-vs-compiled-code" id="toc-interpreted-vs-compiled-code" class="nav-link" data-scroll-target="#interpreted-vs-compiled-code">🖥️ Interpreted vs Compiled Code</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
-  <li><a href="#advanced-view" id="toc-advanced-view" class="nav-link" data-scroll-target="#advanced-view">🔍 Advanced View</a>
+  <li><a href="#advanced-techniques" id="toc-advanced-techniques" class="nav-link active" data-scroll-target="#advanced-techniques">🚀 Advanced Techniques</a>
   <ul class="collapse">
-  <li><a href="#code-is-more-than-syntax-its-thinking." id="toc-code-is-more-than-syntax-its-thinking." class="nav-link" data-scroll-target="#code-is-more-than-syntax-its-thinking.">Code is more than syntax — it’s thinking.</a></li>
+  <li><a href="#notebooks" id="toc-notebooks" class="nav-link" data-scroll-target="#notebooks">📚 Notebooks</a></li>
+  <li><a href="#skills-youll-develop" id="toc-skills-youll-develop" class="nav-link" data-scroll-target="#skills-youll-develop">🧠 Skills You’ll Develop</a></li>
+  <li><a href="#suggested-applications" id="toc-suggested-applications" class="nav-link" data-scroll-target="#suggested-applications">🔗 Suggested Applications</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -180,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">🧠 What is Code? (And Why Should You Care?)</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Advanced Techniques</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -197,63 +196,50 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Welcome! In this notebook, we’ll explore the most fundamental question:<br>
-<strong>What <em>is</em> code? And what does it <em>do</em>?</strong></p>
-<p>If you’ve ever used formulas in Excel, written commands in SPSS, or followed a cooking recipe, you’ve already met the basic idea of coding.</p>
-<section id="code-giving-instructions-to-a-computer" class="level2">
-<h2 class="anchored" data-anchor-id="code-giving-instructions-to-a-computer">💡 Code: Giving Instructions to a Computer</h2>
-<p>At its heart, code is <strong>a series of instructions</strong>. You’re telling the computer <em>what</em> to do, <em>in what order</em>, and sometimes <em>under what conditions</em>.</p>
-<p>Think of a recipe:</p>
-<pre class="text"><code>1. Take two eggs
-2. Whisk them
-3. Add flour and sugar
-4. Bake for 25 minutes</code></pre>
-<p>That’s a <strong>script</strong>: a repeatable sequence of steps. That’s what we do when we code.</p>
-</section>
-<section id="interpreted-vs-compiled-code" class="level2">
-<h2 class="anchored" data-anchor-id="interpreted-vs-compiled-code">🖥️ Interpreted vs Compiled Code</h2>
+<section id="advanced-techniques" class="level1">
+<h1>🚀 Advanced Techniques</h1>
+<p>This section introduces powerful tools and workflows for advanced data science applications in nutrition and food science. It is particularly suitable for final-year undergraduate or postgraduate students.</p>
+<hr>
+<section id="notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="notebooks">📚 Notebooks</h2>
 <ul>
-<li><strong>Python</strong> is an <em>interpreted</em> language: it runs each line one by one.</li>
-<li>Languages like C or Java are <em>compiled</em>: they’re turned into a machine-readable program all at once.</li>
+<li><a href="01_bayesian_methods.ipynb">01 – Bayesian Methods (Intro to PyMC, MCMC)</a></li>
+<li><a href="02_workflow_automation.ipynb">02 – Workflow Automation (Make, Quarto, GitHub Actions)</a></li>
+<li><a href="03_databases.ipynb">03 – Databases (Local and Cloud)</a></li>
+<li><a href="04_large_scale_eda.ipynb">04 – Exploratory Data Analysis at Scale</a></li>
+<li><a href="05_dashboards_and_storytelling.ipynb">05 – Dashboards and Storytelling</a></li>
+<li><a href="06_multivariate_analysis.ipynb">06 – Multivariate Analysis (PCA, PLS, Clustering)</a></li>
+<li><a href="07_image_analysis.ipynb">07 – Image Analysis (Intro)</a></li>
 </ul>
-<p>In data science, <strong>interpreted languages</strong> like Python and R are more popular because they’re easier to experiment with.</p>
-<div id="d701f4af" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's try a simple script</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, student!"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"This is Python running your instructions."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>📝 In Excel, you might write:</p>
-<pre><code>=SUM(A1:A10)</code></pre>
-<p>In Python, we write:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Same idea: give instructions → get a result.</p>
+<hr>
 </section>
-<section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">🧪 Exercises</h2>
-<ol type="1">
-<li>Write a line of Python that prints your name.</li>
-<li>Add another line that prints your favourite food.</li>
-<li>Optional: Think of one action you often repeat in Excel or SPSS — how <em>might</em> that be expressed as a step-by-step instruction?</li>
-</ol>
+<section id="skills-youll-develop" class="level2">
+<h2 class="anchored" data-anchor-id="skills-youll-develop">🧠 Skills You’ll Develop</h2>
+<ul>
+<li>Bayesian inference and model estimation</li>
+<li>Workflow automation and reproducibility</li>
+<li>Working with SQL and cloud databases</li>
+<li>Analysing large datasets efficiently</li>
+<li>Building dashboards and interactive visualisation tools</li>
+<li>Multivariate methods for high-dimensional data</li>
+<li>Image analysis techniques for food science</li>
+</ul>
+<hr>
 </section>
-<section id="advanced-view" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-view">🔍 Advanced View</h2>
-<details>
-<summary>
-Click to expand
-</summary>
-<section id="code-is-more-than-syntax-its-thinking." class="level3">
-<h3 class="anchored" data-anchor-id="code-is-more-than-syntax-its-thinking.">Code is more than syntax — it’s thinking.</h3>
-<p>Coding trains us to: - Break problems into small steps - Be explicit about what we want - Handle unexpected situations (errors, exceptions)</p>
-<p>Over time, you’ll find that even <strong>non-coding</strong> tasks become more structured — this is why programming is such a powerful skill.</p>
-</section></details>
+<section id="suggested-applications" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-applications">🔗 Suggested Applications</h2>
+<ul>
+<li>Reproducible nutritional epidemiology pipelines</li>
+<li>Exploratory dashboards for public datasets</li>
+<li>Advanced QC in food and metabolomics data</li>
+<li>Image-based classification of foods or textures</li>
+</ul>
 
 
-</section>
+<!-- -->
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -723,7 +709,49 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Advanced Techniques"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># 🚀 Advanced Techniques</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>This section introduces powerful tools and workflows for advanced data science applications in nutrition and food science. It is particularly suitable for final-year undergraduate or postgraduate students.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## 📚 Notebooks</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">01 – Bayesian Methods (Intro to PyMC, MCMC)</span><span class="co">](01_bayesian_methods.ipynb)</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">02 – Workflow Automation (Make, Quarto, GitHub Actions)</span><span class="co">](02_workflow_automation.ipynb)</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">03 – Databases (Local and Cloud)</span><span class="co">](03_databases.ipynb)</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">04 – Exploratory Data Analysis at Scale</span><span class="co">](04_large_scale_eda.ipynb)</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">05 – Dashboards and Storytelling</span><span class="co">](05_dashboards_and_storytelling.ipynb)</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">06 – Multivariate Analysis (PCA, PLS, Clustering)</span><span class="co">](06_multivariate_analysis.ipynb)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">07 – Image Analysis (Intro)</span><span class="co">](07_image_analysis.ipynb)</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🧠 Skills You'll Develop</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bayesian inference and model estimation</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Workflow automation and reproducibility</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Working with SQL and cloud databases</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Analysing large datasets efficiently</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Building dashboards and interactive visualisation tools</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Multivariate methods for high-dimensional data</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Image analysis techniques for food science</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## 🔗 Suggested Applications</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Reproducible nutritional epidemiology pipelines</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Exploratory dashboards for public datasets</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Advanced QC in food and metabolomics data</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Image-based classification of foods or textures</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 

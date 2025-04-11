@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧠 What is Code? (And Why Should You Care?) – Data Analysis Toolkit for FNS</title>
+<title>📘 6.1 Introduction to Qualitative Research – Data Analysis Toolkit for FNS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -165,13 +131,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#code-giving-instructions-to-a-computer" id="toc-code-giving-instructions-to-a-computer" class="nav-link active" data-scroll-target="#code-giving-instructions-to-a-computer">💡 Code: Giving Instructions to a Computer</a></li>
-  <li><a href="#interpreted-vs-compiled-code" id="toc-interpreted-vs-compiled-code" class="nav-link" data-scroll-target="#interpreted-vs-compiled-code">🖥️ Interpreted vs Compiled Code</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
-  <li><a href="#advanced-view" id="toc-advanced-view" class="nav-link" data-scroll-target="#advanced-view">🔍 Advanced View</a>
-  <ul class="collapse">
-  <li><a href="#code-is-more-than-syntax-its-thinking." id="toc-code-is-more-than-syntax-its-thinking." class="nav-link" data-scroll-target="#code-is-more-than-syntax-its-thinking.">Code is more than syntax — it’s thinking.</a></li>
-  </ul></li>
+  <li><a href="#why-use-qualitative-methods" id="toc-why-use-qualitative-methods" class="nav-link active" data-scroll-target="#why-use-qualitative-methods">Why use qualitative methods?</a></li>
+  <li><a href="#qual-vs-quant" id="toc-qual-vs-quant" class="nav-link" data-scroll-target="#qual-vs-quant">Qual vs Quant</a></li>
+  <li><a href="#mixed-methods" id="toc-mixed-methods" class="nav-link" data-scroll-target="#mixed-methods">Mixed Methods</a></li>
   </ul>
 </nav>
     </div>
@@ -180,7 +142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">🧠 What is Code? (And Why Should You Care?)</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<h1 class="title">📘 6.1 Introduction to Qualitative Research</h1>
 </div>
 
 
@@ -197,63 +159,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Welcome! In this notebook, we’ll explore the most fundamental question:<br>
-<strong>What <em>is</em> code? And what does it <em>do</em>?</strong></p>
-<p>If you’ve ever used formulas in Excel, written commands in SPSS, or followed a cooking recipe, you’ve already met the basic idea of coding.</p>
-<section id="code-giving-instructions-to-a-computer" class="level2">
-<h2 class="anchored" data-anchor-id="code-giving-instructions-to-a-computer">💡 Code: Giving Instructions to a Computer</h2>
-<p>At its heart, code is <strong>a series of instructions</strong>. You’re telling the computer <em>what</em> to do, <em>in what order</em>, and sometimes <em>under what conditions</em>.</p>
-<p>Think of a recipe:</p>
-<pre class="text"><code>1. Take two eggs
-2. Whisk them
-3. Add flour and sugar
-4. Bake for 25 minutes</code></pre>
-<p>That’s a <strong>script</strong>: a repeatable sequence of steps. That’s what we do when we code.</p>
-</section>
-<section id="interpreted-vs-compiled-code" class="level2">
-<h2 class="anchored" data-anchor-id="interpreted-vs-compiled-code">🖥️ Interpreted vs Compiled Code</h2>
+<section id="why-use-qualitative-methods" class="level3">
+<h3 class="anchored" data-anchor-id="why-use-qualitative-methods">Why use qualitative methods?</h3>
 <ul>
-<li><strong>Python</strong> is an <em>interpreted</em> language: it runs each line one by one.</li>
-<li>Languages like C or Java are <em>compiled</em>: they’re turned into a machine-readable program all at once.</li>
+<li><p>Explore human experience, attitudes, and beliefs</p></li>
+<li><p>Useful when little is known or no numerical data exist</p></li>
+<li><p>Emphasises depth over breadth</p></li>
 </ul>
-<p>In data science, <strong>interpreted languages</strong> like Python and R are more popular because they’re easier to experiment with.</p>
-<div id="d701f4af" class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's try a simple script</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, student!"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"This is Python running your instructions."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<p>📝 In Excel, you might write:</p>
-<pre><code>=SUM(A1:A10)</code></pre>
-<p>In Python, we write:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Same idea: give instructions → get a result.</p>
 </section>
-<section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">🧪 Exercises</h2>
-<ol type="1">
-<li>Write a line of Python that prints your name.</li>
-<li>Add another line that prints your favourite food.</li>
-<li>Optional: Think of one action you often repeat in Excel or SPSS — how <em>might</em> that be expressed as a step-by-step instruction?</li>
-</ol>
+<section id="qual-vs-quant" class="level3">
+<h3 class="anchored" data-anchor-id="qual-vs-quant">Qual vs Quant</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 39%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Qualitative</th>
+<th>Quantitative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data</td>
+<td>Text, images, audio</td>
+<td>Numbers, measurements</td>
+</tr>
+<tr class="even">
+<td>Analysis</td>
+<td>Thematic, narrative</td>
+<td>Statistical</td>
+</tr>
+<tr class="odd">
+<td>Goal</td>
+<td>Understanding, meaning</td>
+<td>Testing, prediction</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="advanced-view" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-view">🔍 Advanced View</h2>
-<details>
-<summary>
-Click to expand
-</summary>
-<section id="code-is-more-than-syntax-its-thinking." class="level3">
-<h3 class="anchored" data-anchor-id="code-is-more-than-syntax-its-thinking.">Code is more than syntax — it’s thinking.</h3>
-<p>Coding trains us to: - Break problems into small steps - Be explicit about what we want - Handle unexpected situations (errors, exceptions)</p>
-<p>Over time, you’ll find that even <strong>non-coding</strong> tasks become more structured — this is why programming is such a powerful skill.</p>
-</section></details>
+<section id="mixed-methods" class="level3">
+<h3 class="anchored" data-anchor-id="mixed-methods">Mixed Methods</h3>
+<ul>
+<li>Combines strengths of both</li>
+<li>Can answer both ‘how many’ and ‘why’</li>
+</ul>
+<p><strong>Example:</strong> - Quant: % of consumers who prefer low-sugar drinks - Qual: Why some dislike the taste of stevia</p>
 
 
 </section>
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
