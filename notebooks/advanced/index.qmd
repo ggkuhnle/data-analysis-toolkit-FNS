@@ -9,6 +9,15 @@ This section covers specialised methods and tools for advanced data analysis, es
 
 ## 📚 Notebooks
 
+<!-- - [01 – Bayesian Methods](01_bayesian_methods.ipynb)
+- [02 – Workflow Automation](02_workflow_automation.ipynb) 
+- [03 – Databases: SQLite and PostgreSQL](03_databases_sqlite_postgres.ipynb)
+- [04 – Exploratory Data Analysis at Scale](04_eda_large_data.ipynb)
+- [05 – Dashboards and Visual Narratives](05_dashboards_streamlit.ipynb)
+- [06 – Multivariate Analysis](06_multivariate_analysis.ipynb)
+- [07 – Intro to Image Analysis](07_image_analysis_intro.ipynb) 
+--!>
+
 ---
 
 ## 🧠 Skills you'll build
