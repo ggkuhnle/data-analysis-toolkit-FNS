@@ -207,7 +207,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Welcome to the world of <strong>data</strong>! Think of data as the ingredients in a recipe: they come in different forms, and how you organize them matters for cooking up insights. In this notebook, we’ll unpack the basics of data structures and formats, setting you up to handle real-world datasets like a pro. 🧑‍🍳</p>
-<p><strong>What we’ll cover:</strong> - <strong>Vectors</strong>: The simplest building blocks of data (like a list of numbers). - <strong>Tables</strong>: Organized grids of data (think spreadsheets). - <strong>Tidy data</strong>: A way to structure data so it’s easy to analyze. - <strong>Wide vs.&nbsp;Long formats</strong>: Two ways to arrange your data table. - <strong>Why this matters</strong>: How these concepts connect to tools like Excel and pandas.</p>
+<p><strong>What we’ll cover:</strong></p>
+<ul>
+<li><strong>Vectors</strong>: The simplest building blocks of data (like a list of numbers).</li>
+<li><strong>Tables</strong>: Organized grids of data (think spreadsheets).</li>
+<li><strong>Tidy data</strong>: A way to structure data so it’s easy to analyze.</li>
+<li><strong>Wide vs.&nbsp;Long formats</strong>: Two ways to arrange your data table.</li>
+<li><strong>Why this matters</strong>: How these concepts connect to tools like Excel and pandas.</li>
+</ul>
 <p><strong>Why care?</strong> In nutrition, data might be nutrient intakes, survey responses, or lab results. Understanding their structure helps you clean, analyze, and visualize them effectively.</p>
 <p>Let’s dive in! 🚀</p>
 <details>
@@ -298,7 +305,12 @@ Type: &lt;class 'numpy.ndarray'&gt;</code></pre>
 </section>
 <section id="tidy-data-the-golden-rule" class="level2">
 <h2 class="anchored" data-anchor-id="tidy-data-the-golden-rule">🧼 Tidy Data: The Golden Rule</h2>
-<p><strong>Tidy data</strong> is a way to organize tables so they’re easy to analyze. The rules are simple: 1. Each <strong>variable</strong> is a column. 2. Each <strong>observation</strong> is a row. 3. Each <strong>value</strong> has its own cell.</p>
+<p><strong>Tidy data</strong> is a way to organize tables so they’re easy to analyze. The rules are simple:</p>
+<ol type="1">
+<li>Each <strong>variable</strong> is a column.</li>
+<li>Each <strong>observation</strong> is a row.</li>
+<li>Each <strong>value</strong> has its own cell.</li>
+</ol>
 <p>Our table above isn’t tidy! Why? Because <code>Iron_2020</code> and <code>Iron_2021</code> are values of the same variable (iron intake) split across two columns. Instead, we want one column for <code>Year</code> and one for <code>Iron</code>.</p>
 <p>This brings us to <strong>wide vs.&nbsp;long formats</strong>.</p>
 <details>

@@ -1033,7 +1033,7 @@
     "href": "notebooks/data_handling/01_what_are_data.html",
     "title": "📊 3.1 What Are Data? Types and Structures",
     "section": "",
-    "text": "Welcome to the world of data! Think of data as the ingredients in a recipe: they come in different forms, and how you organize them matters for cooking up insights. In this notebook, we’ll unpack the basics of data structures and formats, setting you up to handle real-world datasets like a pro. 🧑‍🍳\nWhat we’ll cover: - Vectors: The simplest building blocks of data (like a list of numbers). - Tables: Organized grids of data (think spreadsheets). - Tidy data: A way to structure data so it’s easy to analyze. - Wide vs. Long formats: Two ways to arrange your data table. - Why this matters: How these concepts connect to tools like Excel and pandas.\nWhy care? In nutrition, data might be nutrient intakes, survey responses, or lab results. Understanding their structure helps you clean, analyze, and visualize them effectively.\nLet’s dive in! 🚀\nCode\n# Let’s load our trusty tools\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt  # For a quick visual\n%matplotlib inline"
+    "text": "Welcome to the world of data! Think of data as the ingredients in a recipe: they come in different forms, and how you organize them matters for cooking up insights. In this notebook, we’ll unpack the basics of data structures and formats, setting you up to handle real-world datasets like a pro. 🧑‍🍳\nWhat we’ll cover:\nWhy care? In nutrition, data might be nutrient intakes, survey responses, or lab results. Understanding their structure helps you clean, analyze, and visualize them effectively.\nLet’s dive in! 🚀\nCode\n# Let’s load our trusty tools\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt  # For a quick visual\n%matplotlib inline"
   },
   {
     "objectID": "notebooks/data_handling/01_what_are_data.html#vectors-the-simplest-data",
@@ -1054,7 +1054,7 @@
     "href": "notebooks/data_handling/01_what_are_data.html#tidy-data-the-golden-rule",
     "title": "📊 3.1 What Are Data? Types and Structures",
     "section": "🧼 Tidy Data: The Golden Rule",
-    "text": "🧼 Tidy Data: The Golden Rule\nTidy data is a way to organize tables so they’re easy to analyze. The rules are simple: 1. Each variable is a column. 2. Each observation is a row. 3. Each value has its own cell.\nOur table above isn’t tidy! Why? Because Iron_2020 and Iron_2021 are values of the same variable (iron intake) split across two columns. Instead, we want one column for Year and one for Iron.\nThis brings us to wide vs. long formats.\n\n\n🔍 Learn More: Tidy Data\n\nRead Hadley Wickham’s Tidy Data paper for a deeper dive. It’s a classic in data science!"
+    "text": "🧼 Tidy Data: The Golden Rule\nTidy data is a way to organize tables so they’re easy to analyze. The rules are simple:\n\nEach variable is a column.\nEach observation is a row.\nEach value has its own cell.\n\nOur table above isn’t tidy! Why? Because Iron_2020 and Iron_2021 are values of the same variable (iron intake) split across two columns. Instead, we want one column for Year and one for Iron.\nThis brings us to wide vs. long formats.\n\n\n🔍 Learn More: Tidy Data\n\nRead Hadley Wickham’s Tidy Data paper for a deeper dive. It’s a classic in data science!"
   },
   {
     "objectID": "notebooks/data_handling/01_what_are_data.html#wide-vs.-long-formats",
