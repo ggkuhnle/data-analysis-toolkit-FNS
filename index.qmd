@@ -5,40 +5,90 @@ format: html
 
 # 📦 Data Analysis Toolkit for Food and Nutritional Sciences
 
-Welcome to this comprehensive teaching resource to help you develop skills in data handling, programming, and statistical analysis using Python.
-
-All materials are structured to be self-guided and modular, supporting both lectures and independent learning. Each section can be explored individually or followed in sequence.
+Welcome to the **Data Analysis Toolkit**, a modular resource designed for undergraduate and postgraduate students in **Food and Nutritional Sciences** (FNS). This site supports both structured teaching and self-guided exploration, combining Python programming with practical applications in nutrition, food science, public health, and more.
 
 ---
 
-## 📚 Course Sections
+## 📚 Course Structure
+
+Each section builds progressively in depth and complexity — but you can dip into any topic independently.
 
 ### 🔧 [Foundations and Tools](notebooks/infrastructure/index.qmd)
-Understand your data environment, tools, platforms, and version control workflows.
+> Set up your coding environment and learn how to work reproducibly.
+
+- Data science environments (local, cloud)
+- Google Colab, Jupyter, and VS Code
+- Git, GitHub, version control
+- Python packages and dependencies
+- Markdown, scripts, and Quarto
 
 ### 🧱 [Programming Basics](notebooks/programming_basics/index.qmd)
-Learn how to write Python code, structure your work, and document it effectively.
+> Learn Python from scratch, with examples grounded in real-world data.
+
+- Syntax, variables, loops, and functions
+- Data types and coding style
+- Object-oriented programming (with hippos!)
+- Documentation and basic automation
 
 ### 🧮 [Data Handling](notebooks/data_handling/index.qmd)
-Import, clean, transform, and manage datasets from simple to complex formats.
+> Clean, reshape, and prepare real data for analysis.
+
+- Importing from CSV, Excel, APIs
+- Handling missing data, outliers, recoding
+- Filtering, grouping, joining datasets
+- Tidy data, wide vs long format
+- “Clean this mess!” challenge
 
 ### 📊 [Data Analysis](notebooks/data_analysis/index.qmd)
-Run statistical tests, build models, and explore results through rich visualisations.
+> Run and interpret statistical tests and models — with visual output.
+
+- Distributions, transformations, categorical encoding
+- Parametric and non-parametric tests
+- Bayesian vs Frequentist approaches
+- Regression, survival analysis, and power calculations
+- Visualising results: boxplots, violin, forest plots
 
 ### 🚀 [Advanced Techniques](notebooks/advanced/index.qmd)
-Explore Bayesian methods, databases, automation, and dashboards for power users.
+> For curious students and power users.
+
+- Bayesian modelling with PyMC
+- Workflow automation and CI
+- SQL, SQLite, and cloud databases (e.g. Snowflake)
+- Large-scale exploratory analysis (e.g. EFSA datasets)
+- Streamlit dashboards, PCA, and image analysis
+
+### 📋 [Qualitative Methods](notebooks/qualitative/index.qmd)
+> Explore text-based and thematic data analysis.
+
+- Interviews, coding, and focus groups
+- Thematic and sentiment analysis
+- Taguette, NVivo, and Python text processing
 
 ### 🧪 [Projects and Templates](notebooks/projects/index.qmd)
-Use templates and mini-projects to practice and demonstrate your knowledge.
+> Apply your skills to mini-projects or your dissertation.
+
+- Ready-to-use project templates
+- Guided assignments with real data
+- Dashboard creation, epidemiological comparisons, survey coding
 
 ---
 
-## 🔗 Repository and Usage
+## 🔗 Using This Toolkit
 
-- Source: [GitHub Repository](https://github.com/ggkuhnle/data-analysis-toolkit-FNS)
-- Rendered Site: [ggkuhnle.github.io/data-analysis-toolkit-FNS](https://ggkuhnle.github.io/data-analysis-toolkit-FNS)
-- Run code using Google Colab, Jupyter, or locally on your machine.
+- 💾 **Source repository:** [github.com/ggkuhnle/data-analysis-toolkit-FNS](https://github.com/ggkuhnle/data-analysis-toolkit-FNS)
+- 🌐 **View rendered site:** [ggkuhnle.github.io/data-analysis-toolkit-FNS](https://ggkuhnle.github.io/data-analysis-toolkit-FNS)
+- ▶️ **Run notebooks:** You can use **Google Colab**, **Jupyter**, or any local IDE (e.g. VS Code, Anaconda).
 
 ---
 
-📌 **Tip:** You can dip into any section independently or follow the structure as a progressive course. All notebooks are open-source and available for reuse with attribution.
+## 💡 Tips for Getting Started
+
+- Begin with the [Setup notebook](notebooks/infrastructure/00_setup_your_workspace.ipynb) to prepare your environment
+- Use the “mini challenges” to test your skills
+- Everything is open source – adapt for your own coursework or dissertation
+
+---
+
+📝 *Created for educational use. You are welcome to reuse, adapt, or share this content with attribution.*
+
+
