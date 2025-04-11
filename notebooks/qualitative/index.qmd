@@ -1,0 +1,37 @@
+---
+title: "Qualitative Methods"
+format: html
+---
+
+# 🧾 Qualitative Research Methods
+
+This section introduces qualitative research methods relevant to nutrition, public health, and sensory science.
+
+Students will explore when and how to apply qualitative techniques, how to collect and analyse textual data, and how to combine these approaches with quantitative insights.
+
+---
+
+## 📚 Notebooks
+
+- [01 – Introduction to Qualitative Research](01_intro_qualitative.ipynb)
+- [02 – Data Collection Methods](02_data_collection.ipynb)
+- [03 – Coding and Thematic Analysis](03_thematic_analysis.ipynb)
+- [04 – Simple Text Analysis in Python](04_text_analysis_python.ipynb)
+
+---
+
+## 🎯 Learning Outcomes
+
+- Understand when and how to use qualitative methods
+- Compare qualitative and quantitative research
+- Conduct thematic analysis using manual and digital tools
+- Perform basic text analysis and sentiment extraction in Python
+
+---
+
+## 🔍 Tools Introduced
+
+- Manual coding frameworks
+- Taguette, RQDA, NVivo (overview)
+- Python tools for NLP (e.g. NLTK, TextBlob)
+
