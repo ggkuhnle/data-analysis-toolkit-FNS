@@ -1,0 +1,31 @@
+---
+title: "Data Handling"
+format: html
+---
+
+# 🧮 Data Handling
+
+This section covers the foundations of working with real datasets:
+- importing,
+- cleaning,
+- reshaping,
+- and preparing data for analysis.
+
+---
+
+## 📚 Notebooks
+
+- [01 – What Are Data? Types and Structures](01_what_are_data.ipynb)
+- [02 – Importing Data](02_importing_data.ipynb)
+- [03 – Uploading to Colab and Saving Outputs](03_uploading_colab_saving.ipynb)
+- [04 – Cleaning Data](04_cleaning_data.ipynb)
+- [05 – Sorting, Filtering, Grouping, Joining](05_sort_filter_group.ipynb)
+- [06 – Converting Formats](06_format_conversion.ipynb)
+
+---
+
+## 🎯 Learning Outcomes
+
+- Understand data formats and structures
+- Confidently load and inspect datasets
+- Tidy, clean, and reshape data for analysis
