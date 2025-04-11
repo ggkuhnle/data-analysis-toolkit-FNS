@@ -1,4 +1,3 @@
-
 project:
   type: website
   output-dir: _site
@@ -7,23 +6,29 @@ website:
   title: "Data Analysis Toolkit for FNS"
   navbar:
     left:
-      - text: Home
+      - text: "🏠 Home"
         file: index.qmd
-      - text: Infrastructure
+      - text: "🔧 Infrastructure"
         file: notebooks/infrastructure/index.qmd
-      - text: Programming
+      - text: "🧱 Programming"
         file: notebooks/programming_basics/index.qmd
-      - text: Data Handling
+      - text: "🧮 Data Handling"
         file: notebooks/data_handling/index.qmd
-      - text: Data Analysis
+      - text: "📊 Data Analysis"
         file: notebooks/data_analysis/index.qmd
-      - text: Advanced
+      - text: "🚀 Advanced"
         file: notebooks/advanced/index.qmd
-      - text: Projects
+      - text: "🧪 Projects"
         file: notebooks/projects/index.qmd
+      - text: "🗂️ Qualitative"
+        file: notebooks/qualitative/index.qmd
+
 format:
   html:
     toc: true
     theme: cosmo
     code-fold: true
     code-tools: true
+    smooth-scroll: true
+    link-external-newwindow: true
+
