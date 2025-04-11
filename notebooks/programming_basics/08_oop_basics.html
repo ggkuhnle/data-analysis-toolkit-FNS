@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>👤 2.6 Object-Oriented Programming (OOP) Basics – Data Analysis Toolkit for FNS</title>
+<title>🐘 2.6 Object-Oriented Programming (OOP) Basics – Data Analysis Toolkit for FNS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -165,11 +165,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-use-oop" id="toc-why-use-oop" class="nav-link active" data-scroll-target="#why-use-oop">Why Use OOP?</a></li>
-  <li><a href="#defining-a-class-and-creating-objects" id="toc-defining-a-class-and-creating-objects" class="nav-link" data-scroll-target="#defining-a-class-and-creating-objects">🔍 Defining a Class and Creating Objects</a></li>
-  <li><a href="#objects-and-methods" id="toc-objects-and-methods" class="nav-link" data-scroll-target="#objects-and-methods">🛠️ Objects and Methods</a></li>
+  <li><a href="#example-hippo-nutrition" id="toc-example-hippo-nutrition" class="nav-link active" data-scroll-target="#example-hippo-nutrition">🐾 Example: Hippo Nutrition</a></li>
+  <li><a href="#accessing-attributes-and-methods" id="toc-accessing-attributes-and-methods" class="nav-link" data-scroll-target="#accessing-attributes-and-methods">⚙️ Accessing Attributes and Methods</a></li>
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">🧪 Exercise</a></li>
-  <li><a href="#advanced-oop-extras" id="toc-advanced-oop-extras" class="nav-link" data-scroll-target="#advanced-oop-extras">🧠 Advanced: OOP Extras</a></li>
+  <li><a href="#advanced-concepts-click-to-expand" id="toc-advanced-concepts-click-to-expand" class="nav-link" data-scroll-target="#advanced-concepts-click-to-expand">🧠 Advanced Concepts (click to expand)</a>
+  <ul class="collapse">
+  <li><a href="#inheritance" id="toc-inheritance" class="nav-link" data-scroll-target="#inheritance">🔄 Inheritance</a></li>
+  <li><a href="#magic-methods" id="toc-magic-methods" class="nav-link" data-scroll-target="#magic-methods">✨ Magic Methods</a></li>
+  <li><a href="#class-vs-instance-variables" id="toc-class-vs-instance-variables" class="nav-link" data-scroll-target="#class-vs-instance-variables">🆚 Class vs Instance Variables</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">👤 2.6 Object-Oriented Programming (OOP) Basics</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<div class="quarto-title-block"><div><h1 class="title">🐘 2.6 Object-Oriented Programming (OOP) Basics</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -195,83 +199,80 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Object-Oriented Programming is a way of structuring your code so that <strong>data and functions</strong> are bundled together into <strong>objects</strong>.</p>
-<p>Think of a class as a <strong>blueprint</strong>, and an object as a <strong>thing</strong> made using that blueprint.</p>
-<p>This approach helps manage complexity in larger programmes by organising code into logical chunks.</p>
-<section id="why-use-oop" class="level3">
-<h3 class="anchored" data-anchor-id="why-use-oop">Why Use OOP?</h3>
-<ul>
-<li>Reusability: Write once, use many times</li>
-<li>Modularity: Divide code into manageable units</li>
-<li>Abstraction: Hide complexity behind simple interfaces</li>
-<li>Extensibility: Easy to add new behaviour</li>
-</ul>
-<p>In Python, <em>everything</em> is an object — even strings, lists, and integers!</p>
-</section>
-<section id="defining-a-class-and-creating-objects" class="level2">
-<h2 class="anchored" data-anchor-id="defining-a-class-and-creating-objects">🔍 Defining a Class and Creating Objects</h2>
-<p>Let’s define a class for a person:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Person:</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, height, weight):</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name  <span class="co"># Attribute</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.height <span class="op">=</span> height</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.weight <span class="op">=</span> weight</span>
+<p>Object-Oriented Programming (OOP) is a way to organise code by bundling <strong>data</strong> and <strong>functions</strong> into units called <strong>objects</strong>.</p>
+<p><strong>Think of it this way:</strong> - A <code>class</code> is like a <strong>recipe</strong> or <strong>blueprint</strong>. - An <code>object</code> is a <strong>dish</strong> you make from that recipe.</p>
+<p>OOP is useful for: - 🧱 Modularity: keeping code clean and organised - ♻️ Reusability: reuse logic without rewriting - 🔒 Abstraction: hide unnecessary details - 🌱 Extensibility: add new features easily</p>
+<p>In Python, everything is an object — even numbers and strings!</p>
+<section id="example-hippo-nutrition" class="level2">
+<h2 class="anchored" data-anchor-id="example-hippo-nutrition">🐾 Example: Hippo Nutrition</h2>
+<p>Let’s define a class to represent a hippo’s diet:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Hippo:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, weight_kg, daily_grass_kg):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.weight_kg <span class="op">=</span> weight_kg</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.daily_grass_kg <span class="op">=</span> daily_grass_kg</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> bmi(<span class="va">self</span>):  <span class="co"># Method</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.weight <span class="op">/</span> (<span class="va">self</span>.height <span class="op">**</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> daily_energy_kcal(<span class="va">self</span>):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Roughly 2.5 kcal per gram of dry grass</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.daily_grass_kg <span class="op">*</span> <span class="dv">1000</span> <span class="op">*</span> <span class="fl">2.5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li><code>__init__</code> is a <em>special method</em> that runs when you create an object.</li>
-<li><code>self</code> refers to the current instance of the object.</li>
-<li>Attributes like <code>name</code> and <code>height</code> store data.</li>
-<li>The <code>bmi()</code> method uses that data to calculate something.</li>
+<li><code>__init__</code> sets up the hippo’s profile</li>
+<li><code>self</code> refers to the specific hippo</li>
+<li><code>daily_energy_kcal()</code> calculates energy intake</li>
 </ul>
-<div id="61ccf0ce" class="cell">
+<div id="37362193" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> Person(<span class="st">"Gunter"</span>, <span class="fl">1.80</span>, <span class="dv">75</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Name: </span><span class="sc">{</span>p<span class="sc">.</span>name<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"BMI: </span><span class="sc">{</span>p<span class="sc">.</span>bmi()<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>hippy <span class="op">=</span> Hippo(<span class="st">"Hilda"</span>, <span class="dv">1200</span>, <span class="dv">40</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>hippy<span class="sc">.</span>name<span class="sc">}</span><span class="ss"> eats about </span><span class="sc">{</span>hippy<span class="sc">.</span>daily_energy_kcal()<span class="sc">:,.0f}</span><span class="ss"> kcal of grass per day!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
-<section id="objects-and-methods" class="level2">
-<h2 class="anchored" data-anchor-id="objects-and-methods">🛠️ Objects and Methods</h2>
-<p>Once you create an object, you can access its methods and attributes using dot notation.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>p.name         <span class="co"># Access attribute</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>p.bmi()        <span class="co"># Call method</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This is the same syntax you’ve seen in pandas (<code>df.head()</code>, <code>df.describe()</code>) — pandas uses OOP!</p>
+<section id="accessing-attributes-and-methods" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-attributes-and-methods">⚙️ Accessing Attributes and Methods</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>hippy.name           <span class="co"># Attribute</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>hippy.daily_energy_kcal()  <span class="co"># Method</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This is the same dot syntax you’ve used with pandas: - <code>df.head()</code> - <code>df.describe()</code></p>
+<p><code>df</code> is an object too!</p>
 </section>
 <section id="exercise" class="level2">
 <h2 class="anchored" data-anchor-id="exercise">🧪 Exercise</h2>
-<ul>
-<li>Define a class <code>FoodItem</code></li>
-<li>It should have two attributes: <code>name</code> and <code>kcal_per_100g</code></li>
-<li>Add a method <code>kcal_for_portion</code> that takes a portion in grams and returns the kcal</li>
-</ul>
-<p><strong>Hint:</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> kcal_for_portion(<span class="va">self</span>, grams):</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">self</span>.kcal_per_100g <span class="op">*</span> (grams <span class="op">/</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create a class <code>FoodItem</code> that: - Stores <code>name</code>, <code>kcal_per_100g</code> - Has a method <code>kcal_for_portion(grams)</code> to return kcal for a given portion</p>
+<p><strong>Example call:</strong> <code>banana.kcal_for_portion(120)</code></p>
 </section>
-<section id="advanced-oop-extras" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-oop-extras">🧠 Advanced: OOP Extras</h2>
+<section id="advanced-concepts-click-to-expand" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-concepts-click-to-expand">🧠 Advanced Concepts (click to expand)</h2>
 <details>
 <summary>
-Click to expand: Inheritance, Magic Methods, and More
+Inheritance, Magic Methods, and More
 </summary>
-<p><strong>Inheritance</strong> lets you make a new class from an existing one:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Athlete(Person):</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, height, weight, sport):</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(name, height, weight)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.sport <span class="op">=</span> sport</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Magic Methods</strong> let you control behaviour of objects, e.g.&nbsp;how they’re printed:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>height<span class="sc">}</span><span class="ss">m, </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>weight<span class="sc">}</span><span class="ss">kg)"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Other useful methods:</strong> - <code>__repr__</code>: developer-readable string - <code>__eq__</code>: for comparing objects - <code>__len__</code>, <code>__getitem__</code>, etc. — for list-like behaviour</p>
-OOP is powerful when your programme grows or when modelling complex relationships.
-</details>
+<section id="inheritance" class="level3">
+<h3 class="anchored" data-anchor-id="inheritance">🔄 Inheritance</h3>
+<p>Make a new class based on an existing one:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SuperHippo(Hippo):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, weight_kg, daily_grass_kg, extra_supplement_kcal):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(name, weight_kg, daily_grass_kg)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.extra <span class="op">=</span> extra_supplement_kcal</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> total_energy(<span class="va">self</span>):</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.daily_energy_kcal() <span class="op">+</span> <span class="va">self</span>.extra</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="magic-methods" class="level3">
+<h3 class="anchored" data-anchor-id="magic-methods">✨ Magic Methods</h3>
+<p><code>__str__</code> and <code>__repr__</code> make objects more readable:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> <span class="fu">__str__</span>(<span class="va">self</span>):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> the hippo weighs </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>weight_kg<span class="sc">}</span><span class="ss"> kg."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="class-vs-instance-variables" class="level3">
+<h3 class="anchored" data-anchor-id="class-vs-instance-variables">🆚 Class vs Instance Variables</h3>
+<ul>
+<li><code>self.var</code> is <strong>unique to each object</strong></li>
+<li><code>Class.var</code> is <strong>shared across all</strong></li>
+</ul>
+</section></details>
 
 
 </section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
