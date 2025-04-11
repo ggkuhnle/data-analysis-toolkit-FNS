@@ -35,6 +35,34 @@
     "text": "Projects\nThis section includes the following notebooks:\n\n00 project template"
   },
   {
+    "objectID": "notebooks/data_handling/01_what_are_data.html",
+    "href": "notebooks/data_handling/01_what_are_data.html",
+    "title": "📊 3.1 What Are Data? Types and Structures",
+    "section": "",
+    "text": "This notebook introduces foundational data concepts.\nWe’ll cover: - What is a vector, a table, and a tidy dataset? - Differences between wide and long formats - How these relate to tools like Excel and pandas\nIn Excel, each row typically represents a single observation. In pandas, data structures are more flexible and powerful.\nCode\nimport pandas as pd\nimport numpy as np"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_what_are_data.html#exercise-wide-to-long-format",
+    "href": "notebooks/data_handling/01_what_are_data.html#exercise-wide-to-long-format",
+    "title": "📊 3.1 What Are Data? Types and Structures",
+    "section": "🧪 Exercise: Wide to Long Format",
+    "text": "🧪 Exercise: Wide to Long Format\nConvert this nutrition dataset from wide to long format.\n\n\nCode\ndf = pd.DataFrame({\n    'Participant': ['P1', 'P2', 'P3'],\n    'Iron_2020': [8.2, 9.1, 7.5],\n    'Iron_2021': [8.5, 9.3, 7.8]\n})\ndf_melted = df.melt(id_vars='Participant', var_name='Year', value_name='Iron')\ndf_melted['Year'] = df_melted['Year'].str.extract(r'(\\d+)')\ndf_melted"
+  },
+  {
+    "objectID": "notebooks/data_handling/03_uploading_colab_saving.html",
+    "href": "notebooks/data_handling/03_uploading_colab_saving.html",
+    "title": "☁️ 3.3 Uploading to Colab and Saving Outputs",
+    "section": "",
+    "text": "Covered: - Uploading files in Google Colab - Saving cleaned data to .csv or .json\n\n\nCode\nfrom google.colab import files\nuploaded = files.upload()\n\n\n\n\nCode\n# Save your DataFrame to file\ndf.to_csv('cleaned_data.csv', index=False)\nfiles.download('cleaned_data.csv')"
+  },
+  {
+    "objectID": "notebooks/data_handling/02_importing_data.html",
+    "href": "notebooks/data_handling/02_importing_data.html",
+    "title": "📁 3.2 Importing Data",
+    "section": "",
+    "text": "You’ll frequently import data from CSV, Excel, or JSON files.\nCovered: - pd.read_csv() - pd.read_excel() - pd.read_json() - APIs with requests\n\n\nCode\nimport pandas as pd\nimport requests\n\n\n\n🧪 Load CSV Example\n\n\nCode\n# Simulate loading CSV\nurl = 'https://raw.githubusercontent.com/ggkuhnle/data-analysis/main/data/hippos_cleaned.csv'\ndf = pd.read_csv(url)\ndf.head()"
+  },
+  {
     "objectID": "notebooks/programming_basics/08_oop_basics.html",
     "href": "notebooks/programming_basics/08_oop_basics.html",
     "title": "🐘 2.6 Object-Oriented Programming (OOP) Basics",
@@ -777,32 +805,46 @@
     "text": "🧠 Advanced (foldable)\n\n\nWhy Python chose indentation?\n\n\nPython emphasises readability and minimal syntax.\nForcing indentation reduces ambiguity and improves collaboration.\nStudies suggest visual structure improves error detection.\n\nCompare with C-style syntax:\nif (x &gt; 3) {\n    do_something();\n}"
   },
   {
-    "objectID": "notebooks/data_handling/03_what_are_data.html",
-    "href": "notebooks/data_handling/03_what_are_data.html",
-    "title": "📊 3.1 What Are Data? Types and Structures",
+    "objectID": "notebooks/data_handling/index.html",
+    "href": "notebooks/data_handling/index.html",
+    "title": "Data Handling",
     "section": "",
-    "text": "This notebook introduces foundational concepts in data structure.\nWe will cover: - What is a vector, table, or tidy dataset? - The differences between wide and long format - How these formats appear in tools like Excel, R, and pandas\nUnderstanding data structure is essential for cleaning, transforming, and analysing data efficiently."
+    "text": "This section covers the foundations of working with real datasets: - importing, - cleaning, - reshaping, - and preparing data for analysis.\n\n\n\n\n01 – What Are Data? Types and Structures\n02 – Importing Data\n03 – Uploading to Colab and Saving Outputs\n04 – Cleaning Data\n05 – Sorting, Filtering, Grouping, Joining\n06 – Converting Formats\n\n\n\n\n\n\nUnderstand data formats and structures\nConfidently load and inspect datasets\nTidy, clean, and reshape data for analysis"
   },
   {
-    "objectID": "notebooks/data_handling/03_what_are_data.html#what-are-data",
-    "href": "notebooks/data_handling/03_what_are_data.html#what-are-data",
-    "title": "📊 3.1 What Are Data? Types and Structures",
-    "section": "🔢 What Are Data?",
-    "text": "🔢 What Are Data?\nData are representations of information — typically organised in a tabular format.\n\nVector: A single list of values, e.g. [1, 2, 3, 4]\nTable (DataFrame): Rows and columns, like an Excel sheet\nTidy data: Each row is an observation; each column is a variable\n\n\n📐 Wide vs Long Format\n\nWide format: More columns, fewer rows (e.g. one column per timepoint)\nLong format: Fewer columns, more rows (e.g. values stacked in a single column)\n\nExample (Wide):\n\n\n\nSubject\nWeight_Day1\nWeight_Day2\n\n\n\n\nA\n70\n71\n\n\nB\n80\n79\n\n\n\nSame data (Long):\n\n\n\nSubject\nDay\nWeight\n\n\n\n\nA\nDay1\n70\n\n\nA\nDay2\n71\n\n\nB\nDay1\n80\n\n\nB\nDay2\n79\n\n\n\n\n\nCode\n# Example using pandas to reshape from wide to long format\nimport pandas as pd\n\ndf_wide = pd.DataFrame({\n    'Subject': ['A', 'B'],\n    'Weight_Day1': [70, 80],\n    'Weight_Day2': [71, 79]\n})\n\ndf_long = pd.melt(df_wide, id_vars='Subject', \n                  var_name='Day', value_name='Weight')\ndf_long['Day'] = df_long['Day'].str.replace('Weight_', '')\ndf_long"
+    "objectID": "notebooks/data_handling/index.html#notebooks",
+    "href": "notebooks/data_handling/index.html#notebooks",
+    "title": "Data Handling",
+    "section": "",
+    "text": "01 – What Are Data? Types and Structures\n02 – Importing Data\n03 – Uploading to Colab and Saving Outputs\n04 – Cleaning Data\n05 – Sorting, Filtering, Grouping, Joining\n06 – Converting Formats"
   },
   {
-    "objectID": "notebooks/data_handling/03_what_are_data.html#exercise-convert-wide-to-long",
-    "href": "notebooks/data_handling/03_what_are_data.html#exercise-convert-wide-to-long",
-    "title": "📊 3.1 What Are Data? Types and Structures",
-    "section": "🧪 Exercise: Convert Wide to Long",
-    "text": "🧪 Exercise: Convert Wide to Long\nTry this yourself with a new example: - Create a wide-format dataset showing fruit consumption across days. - Use pd.melt() to convert it to long format. - Rename the columns to match tidy principles. - Add a comment on why long format is helpful for plotting or analysis."
+    "objectID": "notebooks/data_handling/index.html#learning-outcomes",
+    "href": "notebooks/data_handling/index.html#learning-outcomes",
+    "title": "Data Handling",
+    "section": "",
+    "text": "Understand data formats and structures\nConfidently load and inspect datasets\nTidy, clean, and reshape data for analysis"
   },
   {
-    "objectID": "notebooks/data_handling/03_what_are_data.html#advanced-why-tidy-format-matters",
-    "href": "notebooks/data_handling/03_what_are_data.html#advanced-why-tidy-format-matters",
-    "title": "📊 3.1 What Are Data? Types and Structures",
-    "section": "🧠 Advanced: Why Tidy Format Matters",
-    "text": "🧠 Advanced: Why Tidy Format Matters\n\n\nClick to expand\n\nTidy format simplifies operations like:\n\nGrouping and summarising (e.g. with groupby)\nFiltering and faceting plots\nFitting regression models (where variables must be clearly identified)\n\nIn many R and Python libraries, long/tidy data is the expected input format."
+    "objectID": "notebooks/data_handling/04_cleaning_data.html",
+    "href": "notebooks/data_handling/04_cleaning_data.html",
+    "title": "🧼 3.4 Cleaning Data",
+    "section": "",
+    "text": "Covered: - Handling missing values - Renaming columns - Replacing and mapping values\n\n\nCode\nimport pandas as pd\nimport numpy as np\n\ndf = pd.DataFrame({\n    'food': ['apple', 'banana', 'bread', 'banana'],\n    'energy_kcal': [52, 89, np.nan, 85]\n})\ndf['energy_kcal'] = df['energy_kcal'].fillna(df['energy_kcal'].mean())\ndf['food'] = df['food'].replace('banana', 'ripe banana')\ndf"
+  },
+  {
+    "objectID": "notebooks/data_handling/06_format_conversion.html",
+    "href": "notebooks/data_handling/06_format_conversion.html",
+    "title": "🔄 3.6 Converting Formats",
+    "section": "",
+    "text": "Long &lt;-&gt; wide\nString manipulation\nSave as JSON\n\n\n\nCode\nimport pandas as pd\n\ndf_long = pd.DataFrame({\n    'participant': ['P1', 'P1', 'P2', 'P2'],\n    'year': [2020, 2021, 2020, 2021],\n    'vitamin_d': [10.5, 12.1, 9.8, 11.0]\n})\ndf_wide = df_long.pivot(index='participant', columns='year', values='vitamin_d')\ndf_wide.to_json('vitamin_d.json')"
+  },
+  {
+    "objectID": "notebooks/data_handling/05_sort_filter_group.html",
+    "href": "notebooks/data_handling/05_sort_filter_group.html",
+    "title": "🔍 3.5 Sorting, Filtering, Grouping, Joining",
+    "section": "",
+    "text": "Sort and group data with pandas methods.\n\n\nCode\nimport pandas as pd\n\ndf = pd.DataFrame({\n    'sex': ['male', 'female', 'female', 'male'],\n    'age': [25, 30, 45, 35],\n    'iron_mg': [12, 14, 11, 13]\n})\ndf.groupby('sex')['iron_mg'].mean()"
   },
   {
     "objectID": "notebooks/projects/00_project_template.html",
