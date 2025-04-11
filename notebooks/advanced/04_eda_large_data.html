@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧪 Student Mini-Project Template – Data Analysis Toolkit for FNS</title>
+<title>📊 Exploratory Data Analysis at Scale – Data Analysis Toolkit for FNS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,6 +66,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
 
 </head>
@@ -89,31 +90,35 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">🏠 Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../notebooks/infrastructure/index.html"> 
-<span class="menu-text">Infrastructure</span></a>
+<span class="menu-text">🔧 Infrastructure</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../notebooks/programming_basics/index.html"> 
-<span class="menu-text">Programming</span></a>
+<span class="menu-text">🧱 Programming</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../notebooks/data_handling/index.html"> 
-<span class="menu-text">Data Handling</span></a>
+<span class="menu-text">🧮 Data Handling</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../notebooks/data_analysis/index.qmd"> 
-<span class="menu-text">Data Analysis</span></a>
+    <a class="nav-link" href="../../notebooks/data_analysis/index.html"> 
+<span class="menu-text">📊 Data Analysis</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../notebooks/advanced/index.html"> 
-<span class="menu-text">Advanced</span></a>
+<span class="menu-text">🚀 Advanced</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../notebooks/projects/index.html"> 
-<span class="menu-text">Projects</span></a>
+<span class="menu-text">🧪 Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notebooks/qualitative/index.html"> 
+<span class="menu-text">🗂️ Qualitative</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -134,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">🧪 Student Mini-Project Template</h1>
+<h1 class="title">📊 Exploratory Data Analysis at Scale</h1>
 </div>
 
 
@@ -151,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Use this notebook as a starting point for your independent data project.</p>
+<p>Use <code>dask</code> and <code>vaex</code> for handling large datasets…</p>
 
 
 
@@ -311,6 +316,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -629,4 +639,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
