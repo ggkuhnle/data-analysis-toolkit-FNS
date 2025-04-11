@@ -57,7 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -100,6 +100,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -165,7 +168,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#exercise-wide-to-long-format" id="toc-exercise-wide-to-long-format" class="nav-link active" data-scroll-target="#exercise-wide-to-long-format">🧪 Exercise: Wide to Long Format</a></li>
+  <li><a href="#vectors-the-simplest-data" id="toc-vectors-the-simplest-data" class="nav-link active" data-scroll-target="#vectors-the-simplest-data">🧬 Vectors: The Simplest Data</a></li>
+  <li><a href="#tables-organizing-vectors" id="toc-tables-organizing-vectors" class="nav-link" data-scroll-target="#tables-organizing-vectors">📋 Tables: Organizing Vectors</a></li>
+  <li><a href="#tidy-data-the-golden-rule" id="toc-tidy-data-the-golden-rule" class="nav-link" data-scroll-target="#tidy-data-the-golden-rule">🧼 Tidy Data: The Golden Rule</a></li>
+  <li><a href="#wide-vs.-long-formats" id="toc-wide-vs.-long-formats" class="nav-link" data-scroll-target="#wide-vs.-long-formats">📏 Wide vs.&nbsp;Long Formats</a></li>
+  <li><a href="#exercise-convert-wide-to-long-format" id="toc-exercise-convert-wide-to-long-format" class="nav-link" data-scroll-target="#exercise-convert-wide-to-long-format">🧪 Exercise: Convert Wide to Long Format</a></li>
+  <li><a href="#your-turn-try-it-yourself" id="toc-your-turn-try-it-yourself" class="nav-link" data-scroll-target="#your-turn-try-it-yourself">🎯 Your Turn: Try It Yourself!</a></li>
+  <li><a href="#bonus-visualize-the-difference" id="toc-bonus-visualize-the-difference" class="nav-link" data-scroll-target="#bonus-visualize-the-difference">📈 Bonus: Visualize the Difference</a></li>
+  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">🎉 Wrap-Up</a></li>
   </ul>
 </nav>
     </div>
@@ -191,32 +201,246 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This notebook introduces foundational data concepts.</p>
-<p>We’ll cover: - What is a vector, a table, and a tidy dataset? - Differences between wide and long formats - How these relate to tools like Excel and pandas</p>
-<p>In Excel, each row typically represents a single observation. In pandas, data structures are more flexible and powerful.</p>
-<div id="3dc69aff" class="cell">
+<p>Welcome to the world of <strong>data</strong>! Think of data as the ingredients in a recipe: they come in different forms, and how you organize them matters for cooking up insights. In this notebook, we’ll unpack the basics of data structures and formats, setting you up to handle real-world datasets like a pro. 🧑‍🍳</p>
+<p><strong>What we’ll cover:</strong> - <strong>Vectors</strong>: The simplest building blocks of data (like a list of numbers). - <strong>Tables</strong>: Organized grids of data (think spreadsheets). - <strong>Tidy data</strong>: A way to structure data so it’s easy to analyze. - <strong>Wide vs.&nbsp;Long formats</strong>: Two ways to arrange your data table. - <strong>Why this matters</strong>: How these concepts connect to tools like Excel and pandas.</p>
+<p><strong>Why care?</strong> In nutrition, data might be nutrient intakes, survey responses, or lab results. Understanding their structure helps you clean, analyze, and visualize them effectively.</p>
+<p>Let’s dive in! 🚀</p>
+<details>
+<summary>
+🤔 Advanced: Beyond Tables
+</summary>
+Data isn’t always tabular! In advanced work, you might encounter time-series, geospatial, or graph data. For now, we’ll focus on tables since they’re common in nutrition research, but keep an eye out for these other types later!
+</details>
+<div id="3dc69aff" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let’s load our trusty tools</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt  <span class="co"># For a quick visual</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<section id="exercise-wide-to-long-format" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-wide-to-long-format">🧪 Exercise: Wide to Long Format</h2>
-<p>Convert this nutrition dataset from wide to long format.</p>
-<div id="e72ba8d6" class="cell">
+<section id="vectors-the-simplest-data" class="level2">
+<h2 class="anchored" data-anchor-id="vectors-the-simplest-data">🧬 Vectors: The Simplest Data</h2>
+<p>A <strong>vector</strong> is just a sequence of values of the same type—like a column in a spreadsheet. For example, the iron intake of three participants could be a vector: <code>[8.2, 9.1, 7.5]</code>.</p>
+<p>In Python, vectors are often represented as <strong>lists</strong> or <strong>NumPy arrays</strong>. Let’s create one:</p>
+<div id="new_vector" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Participant'</span>: [<span class="st">'P1'</span>, <span class="st">'P2'</span>, <span class="st">'P3'</span>],</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Iron_2020'</span>: [<span class="fl">8.2</span>, <span class="fl">9.1</span>, <span class="fl">7.5</span>],</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Iron_2021'</span>: [<span class="fl">8.5</span>, <span class="fl">9.3</span>, <span class="fl">7.8</span>]</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>df_melted <span class="op">=</span> df.melt(id_vars<span class="op">=</span><span class="st">'Participant'</span>, var_name<span class="op">=</span><span class="st">'Year'</span>, value_name<span class="op">=</span><span class="st">'Iron'</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>df_melted[<span class="st">'Year'</span>] <span class="op">=</span> df_melted[<span class="st">'Year'</span>].<span class="bu">str</span>.extract(<span class="vs">r'(\d+)'</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>df_melted</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>iron_intake <span class="op">=</span> np.array([<span class="fl">8.2</span>, <span class="fl">9.1</span>, <span class="fl">7.5</span>])</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Iron intake vector: </span><span class="sc">{</span>iron_intake<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Type: </span><span class="sc">{</span><span class="bu">type</span>(iron_intake)<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Iron intake vector: [8.2 9.1 7.5]
+Type: &lt;class 'numpy.ndarray'&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="tables-organizing-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="tables-organizing-vectors">📋 Tables: Organizing Vectors</h2>
+<p>A <strong>table</strong> combines multiple vectors into a grid, with rows and columns. In nutrition, a table might store participant data, where each row is a person and each column is a measurement (like iron intake or age).</p>
+<p>In <strong>pandas</strong>, tables are called <strong>DataFrames</strong>. They’re like Excel spreadsheets but supercharged for coding. Let’s create a simple table:</p>
+<div id="create_table" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Participant'</span>: [<span class="st">'P1'</span>, <span class="st">'P2'</span>, <span class="st">'P3'</span>],</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Iron_2020'</span>: [<span class="fl">8.2</span>, <span class="fl">9.1</span>, <span class="fl">7.5</span>],</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Iron_2021'</span>: [<span class="fl">8.5</span>, <span class="fl">9.3</span>, <span class="fl">7.8</span>]</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Participant</th>
+<th data-quarto-table-cell-role="th">Iron_2020</th>
+<th data-quarto-table-cell-role="th">Iron_2021</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>P1</td>
+<td>8.2</td>
+<td>8.5</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>P2</td>
+<td>9.1</td>
+<td>9.3</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>P3</td>
+<td>7.5</td>
+<td>7.8</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="tidy-data-the-golden-rule" class="level2">
+<h2 class="anchored" data-anchor-id="tidy-data-the-golden-rule">🧼 Tidy Data: The Golden Rule</h2>
+<p><strong>Tidy data</strong> is a way to organize tables so they’re easy to analyze. The rules are simple: 1. Each <strong>variable</strong> is a column. 2. Each <strong>observation</strong> is a row. 3. Each <strong>value</strong> has its own cell.</p>
+<p>Our table above isn’t tidy! Why? Because <code>Iron_2020</code> and <code>Iron_2021</code> are values of the same variable (iron intake) split across two columns. Instead, we want one column for <code>Year</code> and one for <code>Iron</code>.</p>
+<p>This brings us to <strong>wide vs.&nbsp;long formats</strong>.</p>
+<details>
+<summary>
+🔍 Learn More: Tidy Data
+</summary>
+Read Hadley Wickham’s <a href="https://www.jstatsoft.org/article/view/v059i10">Tidy Data paper</a> for a deeper dive. It’s a classic in data science!
+</details>
+</section>
+<section id="wide-vs.-long-formats" class="level2">
+<h2 class="anchored" data-anchor-id="wide-vs.-long-formats">📏 Wide vs.&nbsp;Long Formats</h2>
+<ul>
+<li><strong>Wide format</strong>: Each variable’s values spread across multiple columns (like <code>Iron_2020</code>, <code>Iron_2021</code>).</li>
+<li><strong>Long format</strong>: Each variable gets one column, with another column indicating the category (like <code>Year</code>).</li>
+</ul>
+<p>Wide is great for reading or reporting, but long is better for analysis because it’s tidy. Let’s convert our table to long format.</p>
+<details>
+<summary>
+🛠️ Advanced: When to Use Wide
+</summary>
+Wide formats are useful for pivot tables or heatmaps. You’ll see them in dashboard apps or when presenting summary stats.
+</details>
+</section>
+<section id="exercise-convert-wide-to-long-format" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-convert-wide-to-long-format">🧪 Exercise: Convert Wide to Long Format</h2>
+<p>Let’s make our data tidy by converting it from wide to long format using pandas’ <code>melt</code> function. Follow the code below, then try it yourself!</p>
+<p><strong>Task</strong>: Convert the DataFrame to long format, so we have columns: <code>Participant</code>, <code>Year</code>, and <code>Iron</code>.</p>
+<div id="melt_example" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_melted <span class="op">=</span> df.melt(id_vars<span class="op">=</span><span class="st">'Participant'</span>, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                    value_vars<span class="op">=</span>[<span class="st">'Iron_2020'</span>, <span class="st">'Iron_2021'</span>],</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                    var_name<span class="op">=</span><span class="st">'Year'</span>, </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                    value_name<span class="op">=</span><span class="st">'Iron'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean up the Year column</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>df_melted[<span class="st">'Year'</span>] <span class="op">=</span> df_melted[<span class="st">'Year'</span>].<span class="bu">str</span>.extract(<span class="vs">r'(\d+)'</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>df_melted</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Participant</th>
+<th data-quarto-table-cell-role="th">Year</th>
+<th data-quarto-table-cell-role="th">Iron</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>P1</td>
+<td>2020</td>
+<td>8.2</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>P2</td>
+<td>2020</td>
+<td>9.1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>P3</td>
+<td>2020</td>
+<td>7.5</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>P1</td>
+<td>2021</td>
+<td>8.5</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>P2</td>
+<td>2021</td>
+<td>9.3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>P3</td>
+<td>2021</td>
+<td>7.8</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>What happened?</strong> - <code>id_vars</code>: Columns to keep as is (<code>Participant</code>). - <code>value_vars</code>: Columns to melt into one (<code>Iron_2020</code>, <code>Iron_2021</code>). - <code>var_name</code>: Name of the new column for categories (<code>Year</code>). - <code>value_name</code>: Name of the new column for values (<code>Iron</code>). - We used <code>str.extract</code> to grab just the year number.</p>
+<p>Now our data is <strong>tidy</strong>! Each row is an observation (one participant’s iron intake in a specific year), and each variable (<code>Participant</code>, <code>Year</code>, <code>Iron</code>) has its own column.</p>
+</section>
+<section id="your-turn-try-it-yourself" class="level2">
+<h2 class="anchored" data-anchor-id="your-turn-try-it-yourself">🎯 Your Turn: Try It Yourself!</h2>
+<p>Here’s a new dataset with calcium intakes. Convert it from wide to long format.</p>
+<p><strong>Task</strong>: Create a tidy DataFrame with columns <code>Participant</code>, <code>Year</code>, and <code>Calcium</code>.</p>
+<div id="student_exercise" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_calcium <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Participant'</span>: [<span class="st">'A1'</span>, <span class="st">'A2'</span>, <span class="st">'A3'</span>],</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Calcium_2019'</span>: [<span class="dv">1200</span>, <span class="dv">1100</span>, <span class="dv">1300</span>],</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Calcium_2020'</span>: [<span class="dv">1150</span>, <span class="dv">1050</span>, <span class="dv">1250</span>]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here:</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># df_calcium_melted = ...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+</section>
+<section id="bonus-visualize-the-difference" class="level2">
+<h2 class="anchored" data-anchor-id="bonus-visualize-the-difference">📈 Bonus: Visualize the Difference</h2>
+<p>Let’s plot our tidy iron data to see why long format is great for analysis. We’ll make a line plot of iron intake over time for each participant.</p>
+<div id="plot_tidy" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> participant <span class="kw">in</span> df_melted[<span class="st">'Participant'</span>].unique():</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    subset <span class="op">=</span> df_melted[df_melted[<span class="st">'Participant'</span>] <span class="op">==</span> participant]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    plt.plot(subset[<span class="st">'Year'</span>], subset[<span class="st">'Iron'</span>], marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span>participant)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Iron Intake (mg)'</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Iron Intake Over Time'</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Figure size 640x480 with 1 Axes&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="wrap-up" class="level2">
+<h2 class="anchored" data-anchor-id="wrap-up">🎉 Wrap-Up</h2>
+<p>You’ve learned: - <strong>Vectors</strong> are single columns of data. - <strong>Tables</strong> organize vectors into rows and columns. - <strong>Tidy data</strong> makes analysis easier with one variable per column and one observation per row. - <strong>Wide vs.&nbsp;Long</strong>: Long format is tidy and great for coding, while wide is better for reading.</p>
+<p><strong>What’s next?</strong> In the next notebook, we’ll load real datasets and start exploring them!</p>
+<p><strong>Resources</strong>: - <a href="https://pandas.pydata.org/docs/reference/api/pandas.melt.html">Pandas Melt Documentation</a> - <a href="https://www.dataschool.io/tidy-data-python-pandas/">Tidy Data in Python</a> - Try this notebook on <a href="https://colab.research.google.com/">Google Colab</a> or fork it from our <a href="https://github.com/your-repo-link">GitHub repo</a>!</p>
+<details>
+<summary>
+🏆 Challenge: Go Deeper
+</summary>
+Try converting the tidy data back to wide format using <code>pivot</code> or <code>pivot_table</code>. Hint: Check the <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pivot.html">pandas pivot docs</a>.
+</details>
 
 
 </section>

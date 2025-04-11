@@ -39,14 +39,63 @@
     "href": "notebooks/data_handling/01_what_are_data.html",
     "title": "📊 3.1 What Are Data? Types and Structures",
     "section": "",
-    "text": "This notebook introduces foundational data concepts.\nWe’ll cover: - What is a vector, a table, and a tidy dataset? - Differences between wide and long formats - How these relate to tools like Excel and pandas\nIn Excel, each row typically represents a single observation. In pandas, data structures are more flexible and powerful.\nCode\nimport pandas as pd\nimport numpy as np"
+    "text": "Welcome to the world of data! Think of data as the ingredients in a recipe: they come in different forms, and how you organize them matters for cooking up insights. In this notebook, we’ll unpack the basics of data structures and formats, setting you up to handle real-world datasets like a pro. 🧑‍🍳\nWhat we’ll cover: - Vectors: The simplest building blocks of data (like a list of numbers). - Tables: Organized grids of data (think spreadsheets). - Tidy data: A way to structure data so it’s easy to analyze. - Wide vs. Long formats: Two ways to arrange your data table. - Why this matters: How these concepts connect to tools like Excel and pandas.\nWhy care? In nutrition, data might be nutrient intakes, survey responses, or lab results. Understanding their structure helps you clean, analyze, and visualize them effectively.\nLet’s dive in! 🚀\nCode\n# Let’s load our trusty tools\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt  # For a quick visual\n%matplotlib inline"
   },
   {
-    "objectID": "notebooks/data_handling/01_what_are_data.html#exercise-wide-to-long-format",
-    "href": "notebooks/data_handling/01_what_are_data.html#exercise-wide-to-long-format",
+    "objectID": "notebooks/data_handling/01_what_are_data.html#vectors-the-simplest-data",
+    "href": "notebooks/data_handling/01_what_are_data.html#vectors-the-simplest-data",
     "title": "📊 3.1 What Are Data? Types and Structures",
-    "section": "🧪 Exercise: Wide to Long Format",
-    "text": "🧪 Exercise: Wide to Long Format\nConvert this nutrition dataset from wide to long format.\n\n\nCode\ndf = pd.DataFrame({\n    'Participant': ['P1', 'P2', 'P3'],\n    'Iron_2020': [8.2, 9.1, 7.5],\n    'Iron_2021': [8.5, 9.3, 7.8]\n})\ndf_melted = df.melt(id_vars='Participant', var_name='Year', value_name='Iron')\ndf_melted['Year'] = df_melted['Year'].str.extract(r'(\\d+)')\ndf_melted"
+    "section": "🧬 Vectors: The Simplest Data",
+    "text": "🧬 Vectors: The Simplest Data\nA vector is just a sequence of values of the same type—like a column in a spreadsheet. For example, the iron intake of three participants could be a vector: [8.2, 9.1, 7.5].\nIn Python, vectors are often represented as lists or NumPy arrays. Let’s create one:\n\n\nCode\niron_intake = np.array([8.2, 9.1, 7.5])\nprint(f'Iron intake vector: {iron_intake}')\nprint(f'Type: {type(iron_intake)}')\n\n\nIron intake vector: [8.2 9.1 7.5]\nType: &lt;class 'numpy.ndarray'&gt;"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_what_are_data.html#tables-organizing-vectors",
+    "href": "notebooks/data_handling/01_what_are_data.html#tables-organizing-vectors",
+    "title": "📊 3.1 What Are Data? Types and Structures",
+    "section": "📋 Tables: Organizing Vectors",
+    "text": "📋 Tables: Organizing Vectors\nA table combines multiple vectors into a grid, with rows and columns. In nutrition, a table might store participant data, where each row is a person and each column is a measurement (like iron intake or age).\nIn pandas, tables are called DataFrames. They’re like Excel spreadsheets but supercharged for coding. Let’s create a simple table:\n\n\nCode\ndf = pd.DataFrame({\n    'Participant': ['P1', 'P2', 'P3'],\n    'Iron_2020': [8.2, 9.1, 7.5],\n    'Iron_2021': [8.5, 9.3, 7.8]\n})\ndf\n\n\n\n\n\n\n\n\n\nParticipant\nIron_2020\nIron_2021\n\n\n\n\n0\nP1\n8.2\n8.5\n\n\n1\nP2\n9.1\n9.3\n\n\n2\nP3\n7.5\n7.8"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_what_are_data.html#tidy-data-the-golden-rule",
+    "href": "notebooks/data_handling/01_what_are_data.html#tidy-data-the-golden-rule",
+    "title": "📊 3.1 What Are Data? Types and Structures",
+    "section": "🧼 Tidy Data: The Golden Rule",
+    "text": "🧼 Tidy Data: The Golden Rule\nTidy data is a way to organize tables so they’re easy to analyze. The rules are simple: 1. Each variable is a column. 2. Each observation is a row. 3. Each value has its own cell.\nOur table above isn’t tidy! Why? Because Iron_2020 and Iron_2021 are values of the same variable (iron intake) split across two columns. Instead, we want one column for Year and one for Iron.\nThis brings us to wide vs. long formats.\n\n\n🔍 Learn More: Tidy Data\n\nRead Hadley Wickham’s Tidy Data paper for a deeper dive. It’s a classic in data science!"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_what_are_data.html#wide-vs.-long-formats",
+    "href": "notebooks/data_handling/01_what_are_data.html#wide-vs.-long-formats",
+    "title": "📊 3.1 What Are Data? Types and Structures",
+    "section": "📏 Wide vs. Long Formats",
+    "text": "📏 Wide vs. Long Formats\n\nWide format: Each variable’s values spread across multiple columns (like Iron_2020, Iron_2021).\nLong format: Each variable gets one column, with another column indicating the category (like Year).\n\nWide is great for reading or reporting, but long is better for analysis because it’s tidy. Let’s convert our table to long format.\n\n\n🛠️ Advanced: When to Use Wide\n\nWide formats are useful for pivot tables or heatmaps. You’ll see them in dashboard apps or when presenting summary stats."
+  },
+  {
+    "objectID": "notebooks/data_handling/01_what_are_data.html#exercise-convert-wide-to-long-format",
+    "href": "notebooks/data_handling/01_what_are_data.html#exercise-convert-wide-to-long-format",
+    "title": "📊 3.1 What Are Data? Types and Structures",
+    "section": "🧪 Exercise: Convert Wide to Long Format",
+    "text": "🧪 Exercise: Convert Wide to Long Format\nLet’s make our data tidy by converting it from wide to long format using pandas’ melt function. Follow the code below, then try it yourself!\nTask: Convert the DataFrame to long format, so we have columns: Participant, Year, and Iron.\n\n\nCode\ndf_melted = df.melt(id_vars='Participant', \n                    value_vars=['Iron_2020', 'Iron_2021'],\n                    var_name='Year', \n                    value_name='Iron')\n# Clean up the Year column\ndf_melted['Year'] = df_melted['Year'].str.extract(r'(\\d+)')\ndf_melted\n\n\n\n\n\n\n\n\n\nParticipant\nYear\nIron\n\n\n\n\n0\nP1\n2020\n8.2\n\n\n1\nP2\n2020\n9.1\n\n\n2\nP3\n2020\n7.5\n\n\n3\nP1\n2021\n8.5\n\n\n4\nP2\n2021\n9.3\n\n\n5\nP3\n2021\n7.8\n\n\n\n\n\n\n\nWhat happened? - id_vars: Columns to keep as is (Participant). - value_vars: Columns to melt into one (Iron_2020, Iron_2021). - var_name: Name of the new column for categories (Year). - value_name: Name of the new column for values (Iron). - We used str.extract to grab just the year number.\nNow our data is tidy! Each row is an observation (one participant’s iron intake in a specific year), and each variable (Participant, Year, Iron) has its own column."
+  },
+  {
+    "objectID": "notebooks/data_handling/01_what_are_data.html#your-turn-try-it-yourself",
+    "href": "notebooks/data_handling/01_what_are_data.html#your-turn-try-it-yourself",
+    "title": "📊 3.1 What Are Data? Types and Structures",
+    "section": "🎯 Your Turn: Try It Yourself!",
+    "text": "🎯 Your Turn: Try It Yourself!\nHere’s a new dataset with calcium intakes. Convert it from wide to long format.\nTask: Create a tidy DataFrame with columns Participant, Year, and Calcium.\n\n\nCode\ndf_calcium = pd.DataFrame({\n    'Participant': ['A1', 'A2', 'A3'],\n    'Calcium_2019': [1200, 1100, 1300],\n    'Calcium_2020': [1150, 1050, 1250]\n})\n\n# Your code here:\n# df_calcium_melted = ..."
+  },
+  {
+    "objectID": "notebooks/data_handling/01_what_are_data.html#bonus-visualize-the-difference",
+    "href": "notebooks/data_handling/01_what_are_data.html#bonus-visualize-the-difference",
+    "title": "📊 3.1 What Are Data? Types and Structures",
+    "section": "📈 Bonus: Visualize the Difference",
+    "text": "📈 Bonus: Visualize the Difference\nLet’s plot our tidy iron data to see why long format is great for analysis. We’ll make a line plot of iron intake over time for each participant.\n\n\nCode\nplt.figure(figsize=(8, 5))\nfor participant in df_melted['Participant'].unique():\n    subset = df_melted[df_melted['Participant'] == participant]\n    plt.plot(subset['Year'], subset['Iron'], marker='o', label=participant)\nplt.xlabel('Year')\nplt.ylabel('Iron Intake (mg)')\nplt.title('Iron Intake Over Time')\nplt.legend()\nplt.show()\n\n\n&lt;Figure size 640x480 with 1 Axes&gt;"
+  },
+  {
+    "objectID": "notebooks/data_handling/01_what_are_data.html#wrap-up",
+    "href": "notebooks/data_handling/01_what_are_data.html#wrap-up",
+    "title": "📊 3.1 What Are Data? Types and Structures",
+    "section": "🎉 Wrap-Up",
+    "text": "🎉 Wrap-Up\nYou’ve learned: - Vectors are single columns of data. - Tables organize vectors into rows and columns. - Tidy data makes analysis easier with one variable per column and one observation per row. - Wide vs. Long: Long format is tidy and great for coding, while wide is better for reading.\nWhat’s next? In the next notebook, we’ll load real datasets and start exploring them!\nResources: - Pandas Melt Documentation - Tidy Data in Python - Try this notebook on Google Colab or fork it from our GitHub repo!\n\n\n🏆 Challenge: Go Deeper\n\nTry converting the tidy data back to wide format using pivot or pivot_table. Hint: Check the pandas pivot docs."
   },
   {
     "objectID": "notebooks/data_handling/03_uploading_colab_saving.html",
