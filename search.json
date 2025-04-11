@@ -315,200 +315,67 @@
     "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nCode is more than syntax — it’s thinking.\nCoding trains us to: - Break problems into small steps - Be explicit about what we want - Handle unexpected situations (errors, exceptions)\nOver time, you’ll find that even non-coding tasks become more structured — this is why programming is such a powerful skill."
   },
   {
-    "objectID": "notebooks/infrastructure/04_git_and_version_control.html",
-    "href": "notebooks/infrastructure/04_git_and_version_control.html",
-    "title": "🗂️ Git and Version Control Basics",
+    "objectID": "notebooks/data_analysis/04_bayes_vs_frequentist.html",
+    "href": "notebooks/data_analysis/04_bayes_vs_frequentist.html",
+    "title": "⚖️ 4.4 Bayesian vs Frequentist Fundamentals",
     "section": "",
-    "text": "Version control helps you track changes in your work and collaborate with others. Git is the most popular tool for this — and it’s easier than you might think."
+    "text": "Detailed explanation and examples…"
   },
   {
-    "objectID": "notebooks/infrastructure/04_git_and_version_control.html#basic-view",
-    "href": "notebooks/infrastructure/04_git_and_version_control.html#basic-view",
-    "title": "🗂️ Git and Version Control Basics",
+    "objectID": "notebooks/data_analysis/02_data_transformation.html",
+    "href": "notebooks/data_analysis/02_data_transformation.html",
+    "title": "🔁 4.2 Data Transformation",
+    "section": "",
+    "text": "Detailed explanation and examples…"
+  },
+  {
+    "objectID": "notebooks/data_analysis/08_power_calculations.html",
+    "href": "notebooks/data_analysis/08_power_calculations.html",
+    "title": "🔋 4.8 Power Calculations",
+    "section": "",
+    "text": "Detailed explanation and examples…"
+  },
+  {
+    "objectID": "notebooks/data_analysis/06_regression.html",
+    "href": "notebooks/data_analysis/06_regression.html",
+    "title": "📈 4.6 Regression",
+    "section": "",
+    "text": "Detailed explanation and examples…"
+  },
+  {
+    "objectID": "notebooks/data_analysis/09_visualising_results.html",
+    "href": "notebooks/data_analysis/09_visualising_results.html",
+    "title": "🖼️ 4.9 Visualising Results",
+    "section": "",
+    "text": "Detailed explanation and examples…"
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html",
+    "title": "🌍 What is a Data Science Environment?",
+    "section": "",
+    "text": "Welcome! In this notebook, we explore what a data science environment is — and why setting up the right tools can make your work easier, cleaner, and more reproducible."
+  },
+  {
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
+    "title": "🌍 What is a Data Science Environment?",
     "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nWhat is version control?\nThink of it like track changes in Word — but for your code, notebooks, and data.\nWhy it matters: - Revert mistakes easily - See what changed, when, and why - Collaborate without overwriting others’ work - Protect your analysis history\n\n\nWhat is Git?\nGit is a tool that tracks versions of files in a project.\nWith Git, you can: - Save a snapshot of your project (commit) - Back it up online (push to GitHub) - Download updates (pull) - Work with others without overwriting\n\n\nGitHub: your Git workspace in the cloud\n\nFree (private/public repositories)\nLets you store and browse code, notebooks, and data\nYou can edit Colab notebooks directly from GitHub!\n\n\n\nCode\n# You can link to GitHub files in Colab like this:\ngithub_url = \"https://raw.githubusercontent.com/yourusername/yourrepo/main/notebook.ipynb\"\nprint(f\"You can open this in Colab: {github_url}\")"
+    "text": "💡 Basic View\nA data environment is a combination of:\n\nSoftware: Python, Jupyter, Excel, R\nTools: Notebooks, scripts, version control\nData: CSVs, spreadsheets, databases\nWorkflows: Reproducible steps, documented processes\n\nThink of it like your lab bench in a research lab. You need the right tools, a clean space, and a way to document what you’ve done.\n\nWhy this matters\nIf you use Excel and manually delete a row or overwrite a number, the change is gone. There is no record of it unless you create backup files (e.g. final_final_02.xlsx 🙃).\nWith Python, your steps are scripted. Anyone (including future-you) can run the same script and get the same output.\n\n\nCode\n# Example: A small data cleaning script\nimport pandas as pd\n\ndf = pd.DataFrame({\n    \"Name\": [\"Hippo\", \"Giraffe\", \"Elephant\"],\n    \"Weight_kg\": [1500, 900, 3000]\n})\n\n# Keep only animals heavier than 1000 kg\ndf = df[df[\"Weight_kg\"] &gt; 1000]\ndf\n\n\nThis script tells you what was done — filtering animals above 1000 kg — and you can re-run it whenever needed.\nIt also produces the same result each time, unlike an unlogged Excel edit."
   },
   {
-    "objectID": "notebooks/infrastructure/04_git_and_version_control.html#advanced-view",
-    "href": "notebooks/infrastructure/04_git_and_version_control.html#advanced-view",
-    "title": "🗂️ Git and Version Control Basics",
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
+    "title": "🌍 What is a Data Science Environment?",
     "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nKey Git Commands\ngit init                # Start versioning a folder\ngit add .               # Stage all changes\ngit commit -m \"Message\" # Save a snapshot\ngit push                # Upload to GitHub\ngit pull                # Download latest from GitHub\n\n\nVersion Control Best Practices\n\nCommit small, meaningful changes\nUse informative commit messages\nNever commit large datasets or passwords!\n\n\n\nGUI Options\n\nGitHub Desktop: easy to use, drag-and-drop interface\nVS Code Git Integration: powerful + built-in\nCommand line Git: for full control and scripting"
+    "text": "🔍 Advanced View\n\n\nClick to expand advanced concepts\n\n\nIDEs and Notebooks\n\nIDE = Integrated Development Environment (e.g. VS Code, PyCharm)\nNotebook = An interactive document with code + output + explanation (like this one)\n\n\n\nEnvironments\n\nUse venv or conda to create clean environments\nAvoid package conflicts and make your analysis portable\n\n\n\nVersioning and Reproducibility\n\nUse Git to track changes to code and notebooks\nDocument your workflow with Quarto or Markdown"
   },
   {
-    "objectID": "notebooks/infrastructure/04_git_and_version_control.html#exercises",
-    "href": "notebooks/infrastructure/04_git_and_version_control.html#exercises",
-    "title": "🗂️ Git and Version Control Basics",
+    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
+    "href": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
+    "title": "🌍 What is a Data Science Environment?",
     "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nGo to github.com and create a free account (if you don’t have one).\nCreate a new repository for your data coursework.\nClone it using GitHub Desktop or VS Code and add a notebook.\nOptional: edit the notebook in Colab via GitHub and commit changes."
-  },
-  {
-    "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
-    "href": "notebooks/infrastructure/03_colab_jupyter.html",
-    "title": "☁️ Using Google Colab and Jupyter",
-    "section": "",
-    "text": "Jupyter Notebooks are a core tool for interactive data science. In this notebook, we explore two major ways to use them: Google Colab (cloud) and Jupyter (local)."
-  },
-  {
-    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#basic-view",
-    "href": "notebooks/infrastructure/03_colab_jupyter.html#basic-view",
-    "title": "☁️ Using Google Colab and Jupyter",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\nJupyter Notebooks are documents that mix: - Code cells (you can run) - Markdown cells (text, notes, explanations) - Output (tables, plots, printed messages)\nYou can run them in two main places:\n\n\n\n\n\n\n\n\n\nPlatform\nWhat it is\nPros\nCons\n\n\n\n\nGoogle Colab\nOnline notebook in your browser\nFree, no install needed, good for class\nNeeds internet\n\n\nJupyter\nLocal app (via Anaconda or pip)\nFull control, offline use\nNeeds install\n\n\n\n\n\nCode\n# A simple code cell\nprint(\"Hello from a notebook!\")\n\n\n\nHow to Run a Colab Notebook\n\nGo to your GitHub or shared notebook link\nClick “Open in Colab”\nRun each cell using the ▶️ icon or Shift + Enter\n\nYou can edit, save to your Google Drive, and download as .ipynb or .pdf.\n\n\nHow to Use Jupyter Locally\nInstall via:\npip install notebook\njupyter notebook\nOr install Anaconda to get Jupyter preinstalled.\nYou’ll open a browser window with access to your files and can run notebooks just like in Colab."
-  },
-  {
-    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#advanced-view",
-    "href": "notebooks/infrastructure/03_colab_jupyter.html#advanced-view",
-    "title": "☁️ Using Google Colab and Jupyter",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nWhich Should I Use?\n\n\n\nUse Case\nTool\n\n\n\n\nQuick work, sharing\nGoogle Colab\n\n\nHeavy data, offline\nJupyter\n\n\nIntegrating with Git\nJupyter (via VS Code or terminal)\n\n\n\n\n\nVS Code Integration\nYou can open and run notebooks directly inside Visual Studio Code with the Jupyter extension — handy if you prefer one environment."
-  },
-  {
-    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#exercises",
-    "href": "notebooks/infrastructure/03_colab_jupyter.html#exercises",
-    "title": "☁️ Using Google Colab and Jupyter",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nOpen this notebook in Google Colab. Run the first cell.\nAdd a new Markdown cell and type your name using # My name is....\nOptional: install Jupyter and open a local notebook file."
-  },
-  {
-    "objectID": "notebooks/infrastructure/02_python_vs_r.html",
-    "href": "notebooks/infrastructure/02_python_vs_r.html",
-    "title": "🚗 Python vs R vs Other Tools",
-    "section": "",
-    "text": "Data analysis can be done with many tools. This notebook helps you understand where Python fits — and why it is widely used in food and nutrition science."
-  },
-  {
-    "objectID": "notebooks/infrastructure/02_python_vs_r.html#basic-view",
-    "href": "notebooks/infrastructure/02_python_vs_r.html#basic-view",
-    "title": "🚗 Python vs R vs Other Tools",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\n\n\n\n\n\n\n\nTool\nStrengths\nLimitations\n\n\n\n\nPython\nGeneral-purpose, readable, automation, machine learning\nSlightly more setup\n\n\nR\nGreat for statistics, visualisation\nLess general-purpose\n\n\nExcel\nFamiliar, quick for small tables\nNo version control, error-prone\n\n\nSPSS\nMenu-driven stats\nLess flexible, limited scripts\n\n\nPrism\nBeautiful graphs, quick comparisons\nNot programmable\n\n\nXLStat\nBuilt into Excel, good for sensory\nExpensive, closed environment\n\n\n\nPython is our tool of choice because: - It’s open-source and free - It works for small scripts or massive data pipelines - You can write readable code and share it\n\n\nCode\n# Python is readable\ndata = [2.3, 4.5, 1.2, 5.7]\nmean = sum(data) / len(data)\nprint(f\"The average is {mean:.2f}\")\n\n\nCompare with R:\ndata &lt;- c(2.3, 4.5, 1.2, 5.7)\nmean(data)\nAnd Excel:\n\n\n\nA\n\n\n\n\n2.3\n\n\n4.5\n\n\n1.2\n\n\n5.7\n\n\n\nUse formula: =AVERAGE(A1:A4) — but there’s no clear log of this step."
-  },
-  {
-    "objectID": "notebooks/infrastructure/02_python_vs_r.html#advanced-view",
-    "href": "notebooks/infrastructure/02_python_vs_r.html#advanced-view",
-    "title": "🚗 Python vs R vs Other Tools",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand deeper comparisons\n\n\nPython is often used in pipelines, web apps, dashboards, and modelling\nR has ggplot2, dplyr, and built-in stats\nExcel is best for one-off reports or small tables — not reproducible workflows"
-  },
-  {
-    "objectID": "notebooks/infrastructure/02_python_vs_r.html#exercises",
-    "href": "notebooks/infrastructure/02_python_vs_r.html#exercises",
-    "title": "🚗 Python vs R vs Other Tools",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nWrite a short Python script to calculate the median of [1, 2, 3, 4, 100].\nTry making the same plot in Prism and in Python (using seaborn or matplotlib).\nOptional: Google “Python vs R for epidemiology” and summarise what you find."
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html",
-    "href": "notebooks/infrastructure/05_installing_packages.html",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "",
-    "text": "Python is powerful because of its packages — small add-ons that handle everything from statistics to visualisation to web scraping.\nThis notebook teaches you how to install and manage them."
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html#basic-view",
-    "href": "notebooks/infrastructure/05_installing_packages.html#basic-view",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nWhat is a package?\nA package is a reusable collection of Python code — like a plugin.\nExamples: - pandas — for dataframes and analysis - matplotlib — for plotting - scipy — for statistics\n\n\nInstalling in Google Colab\nColab already includes many packages. To install others:\n!pip install seaborn\nTry it:\n\n\nCode\n# This will install seaborn in Colab\n!pip install seaborn\n\n\nOnce installed, you can import it and use it:\nimport seaborn as sns\n\n\nInstalling Locally\nIn your terminal or Anaconda Prompt:\npip install seaborn\nOr, if you use Anaconda:\nconda install seaborn"
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
-    "href": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nrequirements.txt\nYou can list the packages your project needs:\npandas==2.0.3\nmatplotlib&gt;=3.7\nInstall all with:\npip install -r requirements.txt\nGenerate it using:\npip freeze &gt; requirements.txt\n\n\nVirtual environments\nTo avoid conflicts between projects, create a virtual environment:\npython -m venv venv\nsource venv/bin/activate  # On Mac/Linux\nvenv\\Scripts\\activate   # On Windows\nThen install your packages inside."
-  },
-  {
-    "objectID": "notebooks/infrastructure/05_installing_packages.html#exercises",
-    "href": "notebooks/infrastructure/05_installing_packages.html#exercises",
-    "title": "📦 Installing and Managing Python Packages",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nInstall seaborn and use it to make a simple plot.\nGenerate a requirements.txt from a Colab notebook.\nOptional: Try creating a virtual environment locally."
-  },
-  {
-    "objectID": "notebooks/infrastructure/index.html",
-    "href": "notebooks/infrastructure/index.html",
-    "title": "Infrastructure",
-    "section": "",
-    "text": "This section helps you set up a solid foundation for your data work, including cloud tools, local setup, packages, version control, and documentation strategies.\n\n\n\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown and Quarto\n08 - Documenting your scripts\n\n\n\n\n\nWithout the right tools and structure: - It’s easy to lose work - Mistakes go unnoticed - Projects become hard to share or reproduce\nWith this foundation, your work becomes robust, collaborative, and reproducible.\n\n\n\n\nUse these notebooks to guide your first project setups.\nIf something breaks, it’s usually fixable — learning to troubleshoot is part of the process!"
-  },
-  {
-    "objectID": "notebooks/infrastructure/index.html#notebooks",
-    "href": "notebooks/infrastructure/index.html#notebooks",
-    "title": "Infrastructure",
-    "section": "",
-    "text": "01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown and Quarto\n08 - Documenting your scripts"
-  },
-  {
-    "objectID": "notebooks/infrastructure/index.html#why-it-matters",
-    "href": "notebooks/infrastructure/index.html#why-it-matters",
-    "title": "Infrastructure",
-    "section": "",
-    "text": "Without the right tools and structure: - It’s easy to lose work - Mistakes go unnoticed - Projects become hard to share or reproduce\nWith this foundation, your work becomes robust, collaborative, and reproducible."
-  },
-  {
-    "objectID": "notebooks/infrastructure/index.html#tip",
-    "href": "notebooks/infrastructure/index.html#tip",
-    "title": "Infrastructure",
-    "section": "",
-    "text": "Use these notebooks to guide your first project setups.\nIf something breaks, it’s usually fixable — learning to troubleshoot is part of the process!"
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html",
-    "href": "notebooks/infrastructure/06_finding_help.html",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "",
-    "text": "One of the most important skills in data science is knowing how to find help when you’re stuck.\nPython (and its ecosystem) has vast documentation and a huge community — if you know how to ask."
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html#basic-view",
-    "href": "notebooks/infrastructure/06_finding_help.html#basic-view",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nStart with ? in Jupyter\nYou can get help inside a notebook using a ?:\nlen?\nThis shows the docstring — the little help box for the function.\n\n\nCode\n# Try running this\nlen?\n\n\n\n\nThe help() function\nYou can also use Python’s built-in help system:\nhelp(len)\nOr ask about a package:\nimport pandas as pd\nhelp(pd.read_csv)\n\n\nGoogle it — the smart way\nGood search terms: - “pandas drop NA” - “python list comprehension examples” - “matplotlib change axis labels”\n❌ Avoid: - “Python broken why” - “Help Python code error”\n\n\nDot notation: exploring capabilities\nIn Python, most things are objects. You can explore what an object can do using dot notation.\nmylist = [1, 2, 3]\nmylist.\nIf you press Tab after the dot in Jupyter, you’ll see a list of methods.\nYou can also check what a method does with ?, e.g.:\nmylist.append?\nThis is especially useful with pandas and other libraries to discover what options you have."
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html#advanced-view",
-    "href": "notebooks/infrastructure/06_finding_help.html#advanced-view",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nOfficial Docs (high quality)\n\npandas.pydata.org\nmatplotlib.org\nscikit-learn.org\nQuarto Docs\n\n\n\nStack Overflow tips\n\nSearch for error messages in quotes\nLook for posts with ✅ accepted answers\nIf asking: always include a minimal reproducible example\nBe clear and polite — remember people are helping for free\n\n\n\nHow to ask a good question online\nInclude: - What you’re trying to do - The code you’re using - The error you’re getting (copy-paste it!) - What you’ve already tried\nAvoid: - Vague questions like “it doesn’t work” - Screenshots of code (copy-paste text instead)"
-  },
-  {
-    "objectID": "notebooks/infrastructure/06_finding_help.html#exercises",
-    "href": "notebooks/infrastructure/06_finding_help.html#exercises",
-    "title": "🧠 Finding Help and Documentation",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nUse help() to learn about sum() and sorted().\nGoogle “pandas groupby plot” and try a small example.\nOptional: Try to find the official seaborn documentation and read how to make a violin plot.\nUse dot notation with a list or DataFrame to see what methods are available."
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "",
-    "text": "Different tools serve different purposes — and knowing when to use each helps you write better, clearer, and more reproducible code."
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "💡 Basic View",
-    "text": "💡 Basic View\n\nNotebooks\n\nBest for: Teaching, exploration, walkthroughs\nMix code + narrative + results in one file\nYou’re reading a notebook right now!\n\n\n\nScripts (.py)\n\nBest for: Repeating an analysis or cleaning step\nPlain Python code, no output inside\nWorks well for automation and functions\n\n\n\nMarkdown (.md)\n\nBest for: Notes, documentation, readmes\nSimple formatting: headings, bold, links\n\n\n\nQuarto (.qmd)\n\nBest for: Reports, websites, academic writing\nCombines Markdown + code + rendering engine\nPublish to HTML, PDF, Word, slides, dashboards\n\n\n\nCode\n# Example script (could be saved as clean.py)\nimport pandas as pd\ndf = pd.read_csv(\"mydata.csv\")\ndf = df[df[\"BMI\"] &gt; 18.5]\ndf.to_csv(\"cleaned.csv\", index=False)\n\n\nYou could run this script every time you get new data — it’s repeatable and traceable."
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nQuarto in More Detail\n\nLike R Markdown but supports Python, R, Julia, Bash\nCan generate reproducible PDFs (LaTeX), websites, or Word docs\nYou can write teaching materials with it (like this course)\n\nSee quarto.org for examples\n\n\nScripts vs Notebooks\n\n\n\nFeature\nNotebooks\nScripts\n\n\n\n\nGreat for demo\n✅\n❌\n\n\nWorks in terminal\n❌\n✅\n\n\nEasy to document\n✅\n⚠️ (needs comments)\n\n\nGood for publishing\n✅ (via Quarto)\n✅ (via Quarto)"
-  },
-  {
-    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
-    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
-    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
-    "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nCreate a simple script called hello.py and print \"Hello from a script!\"\nWrite a short Markdown document with a heading and bullet list\nOptional: Install Quarto and render a .qmd file to HTML"
+    "text": "🧪 Exercises\n\nIn your own words, describe what a data environment is.\nTry modifying the Python script above to use 2000 kg as the filter.\nOptional: Open a CSV in Excel, change a number, and ask: “Can I undo this tomorrow?”"
   },
   {
     "objectID": "notebooks/infrastructure/08_documenting_with_scripts.html",
@@ -539,32 +406,228 @@
     "text": "🧪 Exercises\n\nCreate a short data-cleaning script and add print statements to explain each step.\nTry rewriting your print statements using logging.\nOptional: Create a markdown file documenting the steps you took and link to your dataset."
   },
   {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html",
-    "title": "🌍 What is a Data Science Environment?",
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
     "section": "",
-    "text": "Welcome! In this notebook, we explore what a data science environment is — and why setting up the right tools can make your work easier, cleaner, and more reproducible."
+    "text": "Different tools serve different purposes — and knowing when to use each helps you write better, clearer, and more reproducible code."
   },
   {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html#basic-view",
-    "title": "🌍 What is a Data Science Environment?",
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#basic-view",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
     "section": "💡 Basic View",
-    "text": "💡 Basic View\nA data environment is a combination of:\n\nSoftware: Python, Jupyter, Excel, R\nTools: Notebooks, scripts, version control\nData: CSVs, spreadsheets, databases\nWorkflows: Reproducible steps, documented processes\n\nThink of it like your lab bench in a research lab. You need the right tools, a clean space, and a way to document what you’ve done.\n\nWhy this matters\nIf you use Excel and manually delete a row or overwrite a number, the change is gone. There is no record of it unless you create backup files (e.g. final_final_02.xlsx 🙃).\nWith Python, your steps are scripted. Anyone (including future-you) can run the same script and get the same output.\n\n\nCode\n# Example: A small data cleaning script\nimport pandas as pd\n\ndf = pd.DataFrame({\n    \"Name\": [\"Hippo\", \"Giraffe\", \"Elephant\"],\n    \"Weight_kg\": [1500, 900, 3000]\n})\n\n# Keep only animals heavier than 1000 kg\ndf = df[df[\"Weight_kg\"] &gt; 1000]\ndf\n\n\nThis script tells you what was done — filtering animals above 1000 kg — and you can re-run it whenever needed.\nIt also produces the same result each time, unlike an unlogged Excel edit."
+    "text": "💡 Basic View\n\nNotebooks\n\nBest for: Teaching, exploration, walkthroughs\nMix code + narrative + results in one file\nYou’re reading a notebook right now!\n\n\n\nScripts (.py)\n\nBest for: Repeating an analysis or cleaning step\nPlain Python code, no output inside\nWorks well for automation and functions\n\n\n\nMarkdown (.md)\n\nBest for: Notes, documentation, readmes\nSimple formatting: headings, bold, links\n\n\n\nQuarto (.qmd)\n\nBest for: Reports, websites, academic writing\nCombines Markdown + code + rendering engine\nPublish to HTML, PDF, Word, slides, dashboards\n\n\n\nCode\n# Example script (could be saved as clean.py)\nimport pandas as pd\ndf = pd.read_csv(\"mydata.csv\")\ndf = df[df[\"BMI\"] &gt; 18.5]\ndf.to_csv(\"cleaned.csv\", index=False)\n\n\nYou could run this script every time you get new data — it’s repeatable and traceable."
   },
   {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html#advanced-view",
-    "title": "🌍 What is a Data Science Environment?",
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#advanced-view",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
     "section": "🔍 Advanced View",
-    "text": "🔍 Advanced View\n\n\nClick to expand advanced concepts\n\n\nIDEs and Notebooks\n\nIDE = Integrated Development Environment (e.g. VS Code, PyCharm)\nNotebook = An interactive document with code + output + explanation (like this one)\n\n\n\nEnvironments\n\nUse venv or conda to create clean environments\nAvoid package conflicts and make your analysis portable\n\n\n\nVersioning and Reproducibility\n\nUse Git to track changes to code and notebooks\nDocument your workflow with Quarto or Markdown"
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nQuarto in More Detail\n\nLike R Markdown but supports Python, R, Julia, Bash\nCan generate reproducible PDFs (LaTeX), websites, or Word docs\nYou can write teaching materials with it (like this course)\n\nSee quarto.org for examples\n\n\nScripts vs Notebooks\n\n\n\nFeature\nNotebooks\nScripts\n\n\n\n\nGreat for demo\n✅\n❌\n\n\nWorks in terminal\n❌\n✅\n\n\nEasy to document\n✅\n⚠️ (needs comments)\n\n\nGood for publishing\n✅ (via Quarto)\n✅ (via Quarto)"
   },
   {
-    "objectID": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
-    "href": "notebooks/infrastructure/01_what_is_data_env.html#exercises",
-    "title": "🌍 What is a Data Science Environment?",
+    "objectID": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
+    "href": "notebooks/infrastructure/07_notebooks_scripts_quarto.html#exercises",
+    "title": "🧾 Notebooks, Scripts, Markdown, or Quarto?",
     "section": "🧪 Exercises",
-    "text": "🧪 Exercises\n\nIn your own words, describe what a data environment is.\nTry modifying the Python script above to use 2000 kg as the filter.\nOptional: Open a CSV in Excel, change a number, and ask: “Can I undo this tomorrow?”"
+    "text": "🧪 Exercises\n\nCreate a simple script called hello.py and print \"Hello from a script!\"\nWrite a short Markdown document with a heading and bullet list\nOptional: Install Quarto and render a .qmd file to HTML"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html",
+    "href": "notebooks/infrastructure/06_finding_help.html",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "",
+    "text": "One of the most important skills in data science is knowing how to find help when you’re stuck.\nPython (and its ecosystem) has vast documentation and a huge community — if you know how to ask."
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#basic-view",
+    "href": "notebooks/infrastructure/06_finding_help.html#basic-view",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nStart with ? in Jupyter\nYou can get help inside a notebook using a ?:\nlen?\nThis shows the docstring — the little help box for the function.\n\n\nCode\n# Try running this\nlen?\n\n\n\n\nThe help() function\nYou can also use Python’s built-in help system:\nhelp(len)\nOr ask about a package:\nimport pandas as pd\nhelp(pd.read_csv)\n\n\nGoogle it — the smart way\nGood search terms: - “pandas drop NA” - “python list comprehension examples” - “matplotlib change axis labels”\n❌ Avoid: - “Python broken why” - “Help Python code error”\n\n\nDot notation: exploring capabilities\nIn Python, most things are objects. You can explore what an object can do using dot notation.\nmylist = [1, 2, 3]\nmylist.\nIf you press Tab after the dot in Jupyter, you’ll see a list of methods.\nYou can also check what a method does with ?, e.g.:\nmylist.append?\nThis is especially useful with pandas and other libraries to discover what options you have."
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#advanced-view",
+    "href": "notebooks/infrastructure/06_finding_help.html#advanced-view",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nOfficial Docs (high quality)\n\npandas.pydata.org\nmatplotlib.org\nscikit-learn.org\nQuarto Docs\n\n\n\nStack Overflow tips\n\nSearch for error messages in quotes\nLook for posts with ✅ accepted answers\nIf asking: always include a minimal reproducible example\nBe clear and polite — remember people are helping for free\n\n\n\nHow to ask a good question online\nInclude: - What you’re trying to do - The code you’re using - The error you’re getting (copy-paste it!) - What you’ve already tried\nAvoid: - Vague questions like “it doesn’t work” - Screenshots of code (copy-paste text instead)"
+  },
+  {
+    "objectID": "notebooks/infrastructure/06_finding_help.html#exercises",
+    "href": "notebooks/infrastructure/06_finding_help.html#exercises",
+    "title": "🧠 Finding Help and Documentation",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nUse help() to learn about sum() and sorted().\nGoogle “pandas groupby plot” and try a small example.\nOptional: Try to find the official seaborn documentation and read how to make a violin plot.\nUse dot notation with a list or DataFrame to see what methods are available."
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html",
+    "href": "notebooks/infrastructure/index.html",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "This section helps you set up a solid foundation for your data work, including cloud tools, local setup, packages, version control, and documentation strategies.\n\n\n\n\n01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown and Quarto\n08 - Documenting your scripts\n\n\n\n\n\nWithout the right tools and structure: - It’s easy to lose work - Mistakes go unnoticed - Projects become hard to share or reproduce\nWith this foundation, your work becomes robust, collaborative, and reproducible.\n\n\n\n\nUse these notebooks to guide your first project setups.\nIf something breaks, it’s usually fixable — learning to troubleshoot is part of the process!"
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html#notebooks",
+    "href": "notebooks/infrastructure/index.html#notebooks",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "01 – What is a Data Science Environment?\n02 – Python vs R vs Other Tools\n03 – Using Google Colab and Jupyter\n04 – Git and Version Control Basics\n05 – Installing and Managing Python Packages\n06 – Finding Help and Documentation\n07 – Notebooks, Scripts, Markdown and Quarto\n08 - Documenting your scripts"
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html#why-it-matters",
+    "href": "notebooks/infrastructure/index.html#why-it-matters",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "Without the right tools and structure: - It’s easy to lose work - Mistakes go unnoticed - Projects become hard to share or reproduce\nWith this foundation, your work becomes robust, collaborative, and reproducible."
+  },
+  {
+    "objectID": "notebooks/infrastructure/index.html#tip",
+    "href": "notebooks/infrastructure/index.html#tip",
+    "title": "Infrastructure",
+    "section": "",
+    "text": "Use these notebooks to guide your first project setups.\nIf something breaks, it’s usually fixable — learning to troubleshoot is part of the process!"
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html",
+    "href": "notebooks/infrastructure/05_installing_packages.html",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "",
+    "text": "Python is powerful because of its packages — small add-ons that handle everything from statistics to visualisation to web scraping.\nThis notebook teaches you how to install and manage them."
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#basic-view",
+    "href": "notebooks/infrastructure/05_installing_packages.html#basic-view",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nWhat is a package?\nA package is a reusable collection of Python code — like a plugin.\nExamples: - pandas — for dataframes and analysis - matplotlib — for plotting - scipy — for statistics\n\n\nInstalling in Google Colab\nColab already includes many packages. To install others:\n!pip install seaborn\nTry it:\n\n\nCode\n# This will install seaborn in Colab\n!pip install seaborn\n\n\nOnce installed, you can import it and use it:\nimport seaborn as sns\n\n\nInstalling Locally\nIn your terminal or Anaconda Prompt:\npip install seaborn\nOr, if you use Anaconda:\nconda install seaborn"
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
+    "href": "notebooks/infrastructure/05_installing_packages.html#advanced-view",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nrequirements.txt\nYou can list the packages your project needs:\npandas==2.0.3\nmatplotlib&gt;=3.7\nInstall all with:\npip install -r requirements.txt\nGenerate it using:\npip freeze &gt; requirements.txt\n\n\nVirtual environments\nTo avoid conflicts between projects, create a virtual environment:\npython -m venv venv\nsource venv/bin/activate  # On Mac/Linux\nvenv\\Scripts\\activate   # On Windows\nThen install your packages inside."
+  },
+  {
+    "objectID": "notebooks/infrastructure/05_installing_packages.html#exercises",
+    "href": "notebooks/infrastructure/05_installing_packages.html#exercises",
+    "title": "📦 Installing and Managing Python Packages",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nInstall seaborn and use it to make a simple plot.\nGenerate a requirements.txt from a Colab notebook.\nOptional: Try creating a virtual environment locally."
+  },
+  {
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html",
+    "href": "notebooks/infrastructure/02_python_vs_r.html",
+    "title": "🚗 Python vs R vs Other Tools",
+    "section": "",
+    "text": "Data analysis can be done with many tools. This notebook helps you understand where Python fits — and why it is widely used in food and nutrition science."
+  },
+  {
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html#basic-view",
+    "href": "notebooks/infrastructure/02_python_vs_r.html#basic-view",
+    "title": "🚗 Python vs R vs Other Tools",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\n\n\n\n\n\n\n\nTool\nStrengths\nLimitations\n\n\n\n\nPython\nGeneral-purpose, readable, automation, machine learning\nSlightly more setup\n\n\nR\nGreat for statistics, visualisation\nLess general-purpose\n\n\nExcel\nFamiliar, quick for small tables\nNo version control, error-prone\n\n\nSPSS\nMenu-driven stats\nLess flexible, limited scripts\n\n\nPrism\nBeautiful graphs, quick comparisons\nNot programmable\n\n\nXLStat\nBuilt into Excel, good for sensory\nExpensive, closed environment\n\n\n\nPython is our tool of choice because: - It’s open-source and free - It works for small scripts or massive data pipelines - You can write readable code and share it\n\n\nCode\n# Python is readable\ndata = [2.3, 4.5, 1.2, 5.7]\nmean = sum(data) / len(data)\nprint(f\"The average is {mean:.2f}\")\n\n\nCompare with R:\ndata &lt;- c(2.3, 4.5, 1.2, 5.7)\nmean(data)\nAnd Excel:\n\n\n\nA\n\n\n\n\n2.3\n\n\n4.5\n\n\n1.2\n\n\n5.7\n\n\n\nUse formula: =AVERAGE(A1:A4) — but there’s no clear log of this step."
+  },
+  {
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html#advanced-view",
+    "href": "notebooks/infrastructure/02_python_vs_r.html#advanced-view",
+    "title": "🚗 Python vs R vs Other Tools",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand deeper comparisons\n\n\nPython is often used in pipelines, web apps, dashboards, and modelling\nR has ggplot2, dplyr, and built-in stats\nExcel is best for one-off reports or small tables — not reproducible workflows"
+  },
+  {
+    "objectID": "notebooks/infrastructure/02_python_vs_r.html#exercises",
+    "href": "notebooks/infrastructure/02_python_vs_r.html#exercises",
+    "title": "🚗 Python vs R vs Other Tools",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nWrite a short Python script to calculate the median of [1, 2, 3, 4, 100].\nTry making the same plot in Prism and in Python (using seaborn or matplotlib).\nOptional: Google “Python vs R for epidemiology” and summarise what you find."
+  },
+  {
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html",
+    "title": "☁️ Using Google Colab and Jupyter",
+    "section": "",
+    "text": "Jupyter Notebooks are a core tool for interactive data science. In this notebook, we explore two major ways to use them: Google Colab (cloud) and Jupyter (local)."
+  },
+  {
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#basic-view",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html#basic-view",
+    "title": "☁️ Using Google Colab and Jupyter",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\nJupyter Notebooks are documents that mix: - Code cells (you can run) - Markdown cells (text, notes, explanations) - Output (tables, plots, printed messages)\nYou can run them in two main places:\n\n\n\n\n\n\n\n\n\nPlatform\nWhat it is\nPros\nCons\n\n\n\n\nGoogle Colab\nOnline notebook in your browser\nFree, no install needed, good for class\nNeeds internet\n\n\nJupyter\nLocal app (via Anaconda or pip)\nFull control, offline use\nNeeds install\n\n\n\n\n\nCode\n# A simple code cell\nprint(\"Hello from a notebook!\")\n\n\n\nHow to Run a Colab Notebook\n\nGo to your GitHub or shared notebook link\nClick “Open in Colab”\nRun each cell using the ▶️ icon or Shift + Enter\n\nYou can edit, save to your Google Drive, and download as .ipynb or .pdf.\n\n\nHow to Use Jupyter Locally\nInstall via:\npip install notebook\njupyter notebook\nOr install Anaconda to get Jupyter preinstalled.\nYou’ll open a browser window with access to your files and can run notebooks just like in Colab."
+  },
+  {
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#advanced-view",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html#advanced-view",
+    "title": "☁️ Using Google Colab and Jupyter",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nWhich Should I Use?\n\n\n\nUse Case\nTool\n\n\n\n\nQuick work, sharing\nGoogle Colab\n\n\nHeavy data, offline\nJupyter\n\n\nIntegrating with Git\nJupyter (via VS Code or terminal)\n\n\n\n\n\nVS Code Integration\nYou can open and run notebooks directly inside Visual Studio Code with the Jupyter extension — handy if you prefer one environment."
+  },
+  {
+    "objectID": "notebooks/infrastructure/03_colab_jupyter.html#exercises",
+    "href": "notebooks/infrastructure/03_colab_jupyter.html#exercises",
+    "title": "☁️ Using Google Colab and Jupyter",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nOpen this notebook in Google Colab. Run the first cell.\nAdd a new Markdown cell and type your name using # My name is....\nOptional: install Jupyter and open a local notebook file."
+  },
+  {
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html",
+    "title": "🗂️ Git and Version Control Basics",
+    "section": "",
+    "text": "Version control helps you track changes in your work and collaborate with others. Git is the most popular tool for this — and it’s easier than you might think."
+  },
+  {
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html#basic-view",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html#basic-view",
+    "title": "🗂️ Git and Version Control Basics",
+    "section": "💡 Basic View",
+    "text": "💡 Basic View\n\nWhat is version control?\nThink of it like track changes in Word — but for your code, notebooks, and data.\nWhy it matters: - Revert mistakes easily - See what changed, when, and why - Collaborate without overwriting others’ work - Protect your analysis history\n\n\nWhat is Git?\nGit is a tool that tracks versions of files in a project.\nWith Git, you can: - Save a snapshot of your project (commit) - Back it up online (push to GitHub) - Download updates (pull) - Work with others without overwriting\n\n\nGitHub: your Git workspace in the cloud\n\nFree (private/public repositories)\nLets you store and browse code, notebooks, and data\nYou can edit Colab notebooks directly from GitHub!\n\n\n\nCode\n# You can link to GitHub files in Colab like this:\ngithub_url = \"https://raw.githubusercontent.com/yourusername/yourrepo/main/notebook.ipynb\"\nprint(f\"You can open this in Colab: {github_url}\")"
+  },
+  {
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html#advanced-view",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html#advanced-view",
+    "title": "🗂️ Git and Version Control Basics",
+    "section": "🔍 Advanced View",
+    "text": "🔍 Advanced View\n\n\nClick to expand\n\n\nKey Git Commands\ngit init                # Start versioning a folder\ngit add .               # Stage all changes\ngit commit -m \"Message\" # Save a snapshot\ngit push                # Upload to GitHub\ngit pull                # Download latest from GitHub\n\n\nVersion Control Best Practices\n\nCommit small, meaningful changes\nUse informative commit messages\nNever commit large datasets or passwords!\n\n\n\nGUI Options\n\nGitHub Desktop: easy to use, drag-and-drop interface\nVS Code Git Integration: powerful + built-in\nCommand line Git: for full control and scripting"
+  },
+  {
+    "objectID": "notebooks/infrastructure/04_git_and_version_control.html#exercises",
+    "href": "notebooks/infrastructure/04_git_and_version_control.html#exercises",
+    "title": "🗂️ Git and Version Control Basics",
+    "section": "🧪 Exercises",
+    "text": "🧪 Exercises\n\nGo to github.com and create a free account (if you don’t have one).\nCreate a new repository for your data coursework.\nClone it using GitHub Desktop or VS Code and add a notebook.\nOptional: edit the notebook in Colab via GitHub and commit changes."
+  },
+  {
+    "objectID": "notebooks/data_analysis/07_survival_analysis.html",
+    "href": "notebooks/data_analysis/07_survival_analysis.html",
+    "title": "⏳ 4.7 Survival Analysis",
+    "section": "",
+    "text": "Detailed explanation and examples…"
+  },
+  {
+    "objectID": "notebooks/data_analysis/01_distributions_visualisation.html",
+    "href": "notebooks/data_analysis/01_distributions_visualisation.html",
+    "title": "📊 4.1 Distributions and Visualisation",
+    "section": "",
+    "text": "Detailed explanation and examples…"
+  },
+  {
+    "objectID": "notebooks/data_analysis/03_categorical_data.html",
+    "href": "notebooks/data_analysis/03_categorical_data.html",
+    "title": "🧮 4.3 Categorical Data",
+    "section": "",
+    "text": "Detailed explanation and examples…"
+  },
+  {
+    "objectID": "notebooks/data_analysis/05_statistical_testing.html",
+    "href": "notebooks/data_analysis/05_statistical_testing.html",
+    "title": "🧪 4.5 Statistical Testing",
+    "section": "",
+    "text": "Detailed explanation and examples…"
   },
   {
     "objectID": "notebooks/programming_basics/index.html",
