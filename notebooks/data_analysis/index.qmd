@@ -1,0 +1,47 @@
+
+---
+title: "Data Analysis"
+format: html
+---
+
+# 📊 Data Analysis
+
+This section builds your ability to conduct, interpret, and visualise statistical analyses using real-world nutrition and food science data.  
+It covers everything from distributions and transformations to regression, survival analysis, and power calculations.
+
+---
+
+## 🧪 Notebooks
+
+- [01 – Distributions and Visualisation](01_distributions_and_visualisation.ipynb)
+- [02 – Data Transformation](02_data_transformation.ipynb)
+- [03 – Categorical Data](03_categorical_data.ipynb)
+- [04 – Bayesian vs Frequentist Fundamentals](04_bayesian_vs_frequentist.ipynb)
+- [05 – Statistical Testing](05_statistical_testing.ipynb)
+- [06 – Regression](06_regression.ipynb)
+- [07 – Survival Analysis](07_survival_analysis.ipynb)
+- [08 – Power Calculations](08_power_calculations.ipynb)
+- [09 – Visualising Results](09_visualising_results.ipynb)
+
+---
+
+## 🎯 Learning Objectives
+
+- Understand and visualise data distributions
+- Transform and encode variables appropriately
+- Conduct parametric and non-parametric statistical tests
+- Use regression models and survival analysis
+- Compare Bayesian and Frequentist approaches
+- Calculate statistical power and sample size
+- Create professional, clear visualisations for data reporting
+
+---
+
+## 🧠 Suggested Workflow
+
+1. Start with your raw dataset and inspect it visually
+2. Use the transformation and categorical data guides to prepare your data
+3. Choose the appropriate statistical test or model
+4. Run the analysis and interpret the outputs
+5. Visualise the results and report them clearly
+
