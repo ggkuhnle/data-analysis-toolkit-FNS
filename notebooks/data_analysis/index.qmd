@@ -3,13 +3,37 @@ title: "Data Analysis"
 format: html
 ---
 
-# Data Analysis
+# 📊 Data Analysis
 
-This section includes the following notebooks:
-
-- [01 distributions](01_distributions.ipynb)
-- [02 tests and anova](02_tests_and_anova.ipynb)
-- [03 regression](03_regression.ipynb)
-- [04 logistic and survival](04_logistic_and_survival.ipynb)
+This section builds your skills in statistical thinking, analysis, and interpretation using real-world data.
 
 ---
+
+## 📚 Notebooks
+
+- [4.1 – Distributions and Visualisation](01_distributions_and_visualisation.ipynb)
+- [4.2 – Data Transformation](02_data_transformation.ipynb)
+- [4.3 – Categorical Data](03_categorical_data.ipynb)
+- [4.4 – Bayesian vs Frequentist](04_bayesian_vs_frequentist.ipynb)
+- [4.5 – Statistical Testing](05_statistical_testing.ipynb)
+- [4.6 – Regression](06_regression.ipynb)
+- [4.7 – Survival Analysis](07_survival_analysis.ipynb)
+- [4.8 – Power Calculations](08_power_calculations.ipynb)
+- [4.9 – Visualising Results](09_visualising_results.ipynb)
+
+---
+
+## 🧠 Skills you'll build
+
+- Understanding distributions and applying transformations
+- Conducting hypothesis tests
+- Fitting and interpreting regression models
+- Creating high-quality statistical visualisations
+
+---
+
+## 💡 Applications
+
+- RCT and cohort analysis
+- Epidemiological summaries
+- Lab-based experiment analysis
