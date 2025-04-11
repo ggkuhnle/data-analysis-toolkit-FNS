@@ -1,0 +1,41 @@
+---
+title: "Advanced Techniques"
+format: html
+---
+
+# 🚀 Advanced Techniques
+
+This section introduces powerful tools and workflows for advanced data science applications in nutrition and food science. It is particularly suitable for final-year undergraduate or postgraduate students.
+
+---
+
+## 📚 Notebooks
+
+- [01 – Bayesian Methods (Intro to PyMC, MCMC)](01_bayesian_methods.ipynb)
+- [02 – Workflow Automation (Make, Quarto, GitHub Actions)](02_workflow_automation.ipynb)
+- [03 – Databases (Local and Cloud)](03_databases.ipynb)
+- [04 – Exploratory Data Analysis at Scale](04_large_scale_eda.ipynb)
+- [05 – Dashboards and Storytelling](05_dashboards_and_storytelling.ipynb)
+- [06 – Multivariate Analysis (PCA, PLS, Clustering)](06_multivariate_analysis.ipynb)
+- [07 – Image Analysis (Intro)](07_image_analysis.ipynb)
+
+---
+
+## 🧠 Skills You'll Develop
+
+- Bayesian inference and model estimation
+- Workflow automation and reproducibility
+- Working with SQL and cloud databases
+- Analysing large datasets efficiently
+- Building dashboards and interactive visualisation tools
+- Multivariate methods for high-dimensional data
+- Image analysis techniques for food science
+
+---
+
+## 🔗 Suggested Applications
+
+- Reproducible nutritional epidemiology pipelines
+- Exploratory dashboards for public datasets
+- Advanced QC in food and metabolomics data
+- Image-based classification of foods or textures
