@@ -11,10 +11,12 @@ jobs:
         run: |
           wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.0/quarto-1.4.0-linux-amd64.deb
           sudo dpkg -i quarto-1.4.0-linux-amd64.deb
+      - name: Install Python Dependencies
+        run: pip install -r requirements.txt
       - name: Render Quarto
-        run: quarto render
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
+        run: quarto render --to html --output-dir docs
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          name: quarto-outputs
-          path: docs/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
