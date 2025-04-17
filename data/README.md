@@ -1,1 +1,0 @@
-This folder contains example datasets used throughout the toolkit.

@@ -1,0 +1,6 @@
+ID,Nutrient,Year,Value,Age,Sex
+H1,Iron,2024,8.2,25,F
+H1,Iron,2025,8.5,26,F
+H2,Calcium,2024,1200,30,M
+H2,Calcium,2025,,31,M
+H3,Vitamin_D,2024,10.5,28,F

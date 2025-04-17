@@ -1,0 +1,20 @@
+name: Render Quarto Files
+on:
+  push:
+    branches: [main]
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Quarto
+        run: |
+          wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.0/quarto-1.4.0-linux-amd64.deb
+          sudo dpkg -i quarto-1.4.0-linux-amd64.deb
+      - name: Render Quarto
+        run: quarto render
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: quarto-outputs
+          path: docs/

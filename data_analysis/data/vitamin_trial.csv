@@ -1,0 +1,6 @@
+ID,Group,Vitamin_D,Time,Outcome
+P1,Control,10.5,0,Normal
+P2,Treatment,15.2,1,Improved
+P3,Control,9.8,0,Normal
+P4,Treatment,14.7,1,Improved
+P5,Control,,0,Normal
