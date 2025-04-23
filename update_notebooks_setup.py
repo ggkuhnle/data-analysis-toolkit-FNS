@@ -15,7 +15,7 @@ MODULE_DATASETS = {
 # Setup cell template for notebooks with datasets
 SETUP_CELL_WITH_DATASET = {
     "cell_type": "code",
-    "execution_count": null,
+    "execution_count": None,  # Changed from null to None
     "id": "colab_setup",
     "metadata": {},
     "outputs": [],
@@ -72,7 +72,7 @@ SETUP_CELL_WITH_DATASET = {
 # Setup cell for Programming Basics (no dataset)
 NO_DATASET_CELL = {
     "cell_type": "code",
-    "execution_count": null,
+    "execution_count": None,  # Changed from null to None
     "id": "colab_setup",
     "metadata": {},
     "outputs": [],
