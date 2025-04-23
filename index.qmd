@@ -21,7 +21,7 @@ Explore the six modules, each with notebooks you can view as HTML or run in Cola
   Set up Python, Jupyter, and Quarto for data analysis.  
   [Explore Module](notebooks/01_infrastructure/) | Try: [Getting Started](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/01_infrastructure/0_getting_started.ipynb)
 
-- **Programming установить Python**  
+- **Programming Python**  
   Master Python syntax and programming basics.  
   [Explore Module](notebooks/02_programming_basics/) | Try: [Syntax and Variables](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/02_programming_basics/1_syntax_variables_comments.ipynb)
 
