@@ -1,99 +1,125 @@
-# Data Analysis Toolkit for Food and Nutrition Sciences 🦛
+# 🦛 Data Analysis Toolkit for Food and Nutrition Sciences
 
-Welcome to the **Data Analysis Toolkit for Food and Nutrition Sciences**, a comprehensive resource for MSc students mastering data analysis in nutrition research. This toolkit features 27 Jupyter notebooks across six modules, rendered as interactive HTML tutorials using Quarto and hosted on GitHub Pages. Run the notebooks directly in Google Colab with one click! With hippo-themed datasets (🦛), it covers Python basics, data handling, statistical analysis, advanced methods, and qualitative research.
+Welcome to the **Data Analysis Toolkit for Food and Nutrition Sciences**! This repository provides a collection of Jupyter notebooks designed to support students, researchers, and enthusiasts in exploring data analysis techniques for nutrition studies. With a hippo-themed flair (🦛), the toolkit covers topics from basic programming to advanced statistical methods, using datasets inspired by nutrition research.
 
-## 🌐 View the Rendered Site
+Visit the toolkit online at: [https://ggkuhnle.github.io/data-analysis-toolkit-FNS/](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/)
 
-Explore the rendered tutorials at:  
-👉 **[https://ggkuhnle.github.io/data-analysis-toolkit-FNS/](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/)**
+## 📊 How to Use the Toolkit
 
-Highlights include:
-- Regression Modelling: [notebooks/data_analysis/regression_modelling.html](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/regression_modelling.html)
-- Logistic and Survival Analysis: [notebooks/data_analysis/04_logistic_and_survival.html](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/04_logistic_and_survival.html)
-- Syllabus: [syllabus.html](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/syllabus.html)
+This toolkit is designed to be user-friendly, whether you’re running the notebooks in the cloud or on your local machine. Below are the two main ways to get started.
 
-## 📚 About the Toolkit
+### Preferred Method: Google Colab (Cloud-Based) 🌐
 
-This toolkit guides you through:
-- **Infrastructure**: Setting up Python, Jupyter, and Quarto.
-- **Programming Basics**: Mastering Python syntax and data structures.
-- **Data Handling**: Importing, cleaning, and transforming datasets.
-- **Data Analysis**: Visualising data and building regression models.
-- **Advanced Topics**: Bayesian methods, SQL, and dashboards.
-- **Qualitative Research**: Analysing text data.
+Google Colab allows you to run the notebooks in the cloud without installing anything on your machine. It’s the recommended way to explore the toolkit, especially for beginners.
 
-Datasets include `vitamin_trial.csv`, `hippo_nutrients.csv`, and more, all themed around hippos for fun and relevance.
+#### Steps to Use in Colab
 
-## 🚀 Get Started
+1. **Visit the Toolkit Website** (~1 minute):
+   - Open [https://ggkuhnle.github.io/data-analysis-toolkit-FNS/](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/) in your browser.
+   - Navigate to the module you’re interested in (e.g., `04_data_analysis`).
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/ggkuhnle/data-analysis-toolkit-FNS.git
-   cd data-analysis-toolkit-FNS
-   ```
+2. **Open a Notebook in Colab** (~1 minute):
+   - Each module lists notebooks with a badge that says “Open in Colab” (e.g., [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com)).
+   - Click the badge for the notebook you want to explore (e.g., in `04_data_analysis`, you might choose “Clinical Trial Analysis”).
 
-2. **Set Up Environment**:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-   Install Quarto: [quarto.org](https://quarto.org/docs/get-started/).
+3. **Authorise Colab to Access GitHub** (~2 minutes):
+   - The first time you open a notebook, Colab may ask for permission to access the GitHub repository.
+   - Click “Authorise” to allow Colab to use the GitHub API. This is necessary to fetch the notebook and associated datasets.
+   - If prompted, sign in to your GitHub account and grant access to Google Colab. This is a one-time step for public repositories like this one.
+   - **Tip**: If you encounter a “Notebook not found” error, try restarting your Colab runtime (`Runtime > Restart runtime`) or re-authorising Colab in your GitHub settings (`https://github.com/settings/applications`).
 
-3. **Run Notebooks Locally**:
-   ```bash
-   jupyter notebook notebooks/01_infrastructure/0_getting_started.ipynb
-   ```
+4. **Run the Notebook** (~5–10 minutes):
+   - Once the notebook loads in Colab, you’ll see a setup cell at the top.
+   - Click the “Run” button (▶) on the setup cell to clone the repository, install dependencies, and load datasets.
+   - Follow the notebook’s instructions to run each cell, explore the analyses, and complete any exercises.
+   - **Note**: Some notebooks (e.g., Bayesian analyses) may take a few minutes to run due to sampling. Be patient! ⏳
 
-4. **Run Notebooks in Colab**:
-   - Click the "Open in Colab" badges below to run notebooks in the cloud.
+5. **Save Your Work** (Optional, ~1 minute):
+   - To save your changes, click `File > Save a copy in Drive` to store the notebook in your Google Drive.
+   - You can also download the notebook as an `.ipynb` file via `File > Download > Download .ipynb`.
 
-5. **Render the Site Locally**:
-   ```bash
-   rm -rf _site/
-   quarto render
-   ```
-   View at `_site/index.html`.
+#### Troubleshooting Colab
+- **Error: “Notebook not found”**:
+  - Ensure you’ve authorised Colab to access GitHub.
+  - Restart the runtime (`Runtime > Restart runtime`) and try again.
+  - Test in an incognito browser to rule out session issues.
+- **Error: Dataset not found**:
+  - The setup cell attempts to clone the repository automatically. If it fails, it will prompt you to upload the dataset manually.
+  - Follow the instructions to upload the required dataset (e.g., `simulated_trial.csv`) from your local machine.
 
-6. **Auto-Rendering**:
-   - The site auto-updates on pushes to the `groks-revisions` branch via GitHub Actions.
-   - See `.github/workflows/deploy.yml` for details.
+### Alternative Method: Local Setup 💻
 
-## 🧮 Modules and Notebooks
+If you prefer to run the notebooks on your own machine, you can set up a local environment. This requires some initial setup but gives you more control.
 
-- **Infrastructure** (5 notebooks):
-  - [Getting Started](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/getting_started.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/01_infrastructure/0_getting_started.ipynb)
-  - [Python Setup](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/infrastructure/python_setup.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/01_infrastructure/1_python_setup.ipynb)
+#### Prerequisites
+- **Python 3.9+**: Ensure Python is installed ([Download Python](https://www.python.org/downloads/)).
+- **Quarto**: For rendering the website locally ([Install Quarto](https://quarto.org/docs/get-started/)).
+- **Jupyter Notebook or JupyterLab**: For running the notebooks.
+- **Git**: To clone the repository ([Install Git](https://git-scm.com/downloads)).
 
-- **Programming Basics** (5 notebooks):
-  - [Syntax and Variables](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/syntax_variables_comments.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/02_programming_basics/2.1_syntax_variables_comments.ipynb)
-  - [Control Structures](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/programming_basics/control_structures.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/02_programming_basics/2.2_control_structures.ipynb)
+#### Steps to Use Locally
 
-- **Data Handling** (5 notebooks):
-  - [Importing Data](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/importing_data.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/03_data_handling/3.1_importing_data.ipynb)
-  - [Data Cleaning](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_handling/data_cleaning.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/03_data_handling/3.2_data_cleaning.ipynb)
+1. **Clone the Repository** (~2 minutes):
+   - Open a terminal or command prompt.
+   - Clone the repository to your machine:
+     ```
+     git clone https://github.com/ggkuhnle/data-analysis-toolkit-FNS.git
+     ```
+   - Navigate to the repository directory:
+     ```
+     cd data-analysis-toolkit-FNS
+     ```
 
-- **Data Analysis** (6 notebooks):
-  - [Distributions and Visualisation](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/distributions_visualisation.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.1_distributions_visualisation.ipynb)
-  - [Correlation Analysis](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/correlation_analysis.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.3_correlation_analysis.ipynb)
-  - [Regression Modelling](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/regression_modelling.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.5_regression_modelling.ipynb)
-  - [Logistic and Survival Analysis](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/data_analysis/04_logistic_and_survival.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.6_logistic_survival.ipynb)
+2. **Set Up a Python Environment** (~5 minutes):
+   - Create a virtual environment to manage dependencies:
+     ```
+     python -m venv venv
+     source venv/bin/activate  # On Windows: venv\Scripts\activate
+     ```
+   - Install required packages:
+     ```
+     pip install jupyter pandas numpy pymc arviz matplotlib seaborn scipy scikit-learn lifelines
+     ```
 
-- **Advanced Topics** (5 notebooks):
-  - [Advanced Bayesian Modelling](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/advanced/advanced_bayesian.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.1_advanced_bayesian.ipynb)
-  - [SQL for Data Analysis](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/advanced/sql_data_analysis.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.2_sql_data_analysis.ipynb)
+3. **Run Jupyter Notebook** (~2 minutes):
+   - Start Jupyter Notebook or JupyterLab:
+     ```
+     jupyter notebook
+     ```
+   - Your browser will open to the Jupyter interface.
+   - Navigate to `notebooks/04_data_analysis/` (or another module) and open a notebook (e.g., `4.7_clinical_trial_analysis.ipynb`).
 
-- **Qualitative Research** (2 notebooks):
-  - [Text Analysis](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/notebooks/qualitative/text_analysis.html) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/06_qualitative/6.1_text_analysis.ipynb)
+4. **Run the Notebook** (~5–10 minutes):
+   - The setup cell in each notebook is designed for Colab but can be skipped locally since you’ve already cloned the repository and installed packages.
+   - Run the remaining cells to perform the analyses and complete exercises.
+   - **Note**: Datasets (e.g., `data/simulated_trial.csv`) are already in the `data/` directory within each module.
 
-## 📊 Why Hippos?
+5. **Render the Website Locally** (Optional, ~5 minutes):
+   - To view the website as it appears online, use Quarto:
+     ```
+     quarto render
+     ```
+   - Open `_site/index.html` in your browser to explore the rendered site.
 
-Hippo-themed datasets make learning data analysis fun and relevant to nutrition science!
+#### Troubleshooting Local Setup
+- **Error: Package not found**:
+  - Ensure your virtual environment is activated (`source venv/bin/activate`).
+  - Reinstall missing packages (e.g., `pip install pymc`).
+- **Error: Dataset not found**:
+  - Verify the dataset is in the correct path (e.g., `notebooks/04_data_analysis/data/simulated_trial.csv`).
+  - If missing, ensure you cloned the repository correctly.
 
-## 📝 License
+## 📧 Contact Information
 
-Created by [Your Name]. Licensed under MIT.
+For questions, feedback, or support, please contact:
 
----
+- **Dr Gunter Kuhnle**  
+  Email: [g.g.kuhnle@reading.ac.uk](mailto:g.g.kuhnle@reading.ac.uk)
 
-Happy analysing! 🚀
+## Additional Notes
+
+- **Explore and Learn**: The toolkit is designed for learning. Each notebook includes exercises to deepen your understanding of data analysis in nutrition science.
+- **Contribute**: If you’d like to contribute to the toolkit (e.g., add a new notebook), feel free to fork the repository and submit a pull request on GitHub.
+- **Have Fun**: Let the hippos guide you through your data analysis journey! 🦛📊
+
+Happy analysing!
