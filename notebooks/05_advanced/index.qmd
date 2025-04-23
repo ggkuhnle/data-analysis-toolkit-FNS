@@ -8,25 +8,25 @@ This module covers advanced data analysis techniques for nutrition research, usi
 
 ## Notebooks
 
-- **Advanced Data Visualisation**  
-  Create complex visualisations for nutrition data.  
-  [View HTML](advanced_visualisation.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.1_advanced_visualisation.ipynb)
+- **Bayesian Methods**  
+  Introduction to Bayesian methods for nutrition data.  
+  [View HTML](5.1_bayesian_methods.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.1_bayesian_methods.ipynb)
 
-- **Machine Learning Basics**  
-  Introduction to ML for nutrition studies.  
-  [View HTML](machine_learning_basics.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.2_machine_learning_basics.ipynb)
+- **Workflow Automation**  
+  Automate data analysis workflows.  
+  [View HTML](5.2_workflow_automation.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.2_workflow_automation.ipynb)
 
 - **Advanced Bayesian Modelling**  
-  Apply Bayesian methods to nutrition data.  
-  [View HTML](advanced_bayesian.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.3_advanced_bayesian.ipynb)
+  Apply advanced Bayesian methods.  
+  [View HTML](5.3_adcanced_bayesian.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.3_adcanced_bayesian.ipynb)
 
-- **SQL for Data Analysis**  
+- **Databases and SQL**  
   Use SQL for querying nutrition datasets.  
-  [View HTML](sql_data_analysis.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.4_sql_data_analysis.ipynb)
+  [View HTML](5.4_databases_sql.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.4_databases_sql.ipynb)
 
-- **Dashboard Creation**  
+- **Dashboards**  
   Build interactive dashboards for data exploration.  
-  [View HTML](dashboard_creation.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.5_dashboard_creation.ipynb)
+  [View HTML](5.5_dashboards.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.5_dashboards.ipynb)
 
 ## Datasets
 

@@ -1,16 +1,21 @@
 ---
-title: "Qualitative Research Module"
-format: html
+title: "Qualitative Research"
 ---
 
-## Qualitative Research Module 📝
+# Qualitative Research Module 📝
 
-This module covers qualitative data analysis.
+This module covers basic qualitative research. 
 
-**Notebooks**:
-- [Introduction to Qualitative Research](intro_qualitative_research.html)
-- [Text Analysis](text_analysis.html)
+## Notebooks
 
-**Dataset**: `data/food_preferences.txt` (50 lines)
+- **Qualitative methods**  
+  Introduction to qualitative research methods
+  [View HTML](6.1_intro_qualitative_research.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/06_qualitative/6.1_into_qualitative_research.ipynb)
 
-Begin with [Introduction to Qualitative Research](intro_qualitative_research.html)! 🦛
+- **Text analysis**  
+  Conduct text analysis  
+  [View HTML](6.2_text_analysis.html) | [![Open in Colab](https://colab.research.   ↪google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-   ↪analysis-toolkit-FNS/blob/groks-revisions/notebooks/06_qualitative/6.2_text_analysis.ipynb)
+
+## Datasets
+
+- `data/large_food_log.csv`: Used in advanced analysis notebooks.
