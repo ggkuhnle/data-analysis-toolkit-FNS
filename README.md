@@ -1,146 +1,26 @@
-# 📦 Data Analysis Toolkit for Food and Nutritional Sciences
+# Data Analysis Toolkit for Food and Nutrition Sciences 📊
 
-This repository provides a modular, self-guided collection of Python notebooks and Quarto pages to build data skills across the FNS curriculum.
+This repository provides a comprehensive toolkit for MSc students in Food and Nutrition Sciences, covering data analysis with Python, pandas, and statistical methods. Designed for academic use, it integrates practical exercises with nutrition-focused datasets, including fun hippo-themed examples. 🦛
 
-## 🌐 View the Website
+## Getting Started
 
-You can explore the rendered teaching materials and course structure at:
+- **Colab**: Open notebooks at [colab.research.google.com](https://colab.research.google.com/).
+- **Local**: Install Anaconda, run `pip install -r requirements.txt`.
+- **GitHub Pages**: View rendered outputs at [ggkuhnle.github.io/data-analysis-toolkit-FNS](https://ggkuhnle.github.io/data-analysis-toolkit-FNS).
+- **Repository**: [github.com/ggkuhnle/data-analysis-toolkit-FNS](https://github.com/ggkuhnle/data-analysis-toolkit-FNS).
 
-🔗 [https://ggkuhnle.github.io/data-analysis-toolkit-FNS/](https://ggkuhnle.github.io/data-analysis-toolkit-FNS/)
+## Datasets
 
-This Quarto-based site includes:
-- Full navigation and section landing pages
-- Rendered notebooks and teaching pages
-- Consistent updates from this repository
+- `hippo_nutrients.csv`: Simulated nutrient intakes (iron, calcium), inspired by NDNS.
+- `hippo_diets.csv`: Calorie and protein data for dietary analysis.
+- `vitamin_trial.csv`: Vitamin D trial results for statistical exercises.
+- `food_preferences.txt`: Survey responses on food preferences.
+- `large_food_log.csv`: Detailed meal and nutrient data for advanced analysis.
 
+## Structure
 
-
----
-
-## 📘 Proposed Structure for a Three-Year Data Handling & Analysis Course
-
-This structure supports a modular, scalable data course designed to span the undergraduate programme in Nutrition and Food Science (and related disciplines). The focus is on progressive skill-building with integration across academic years and alignment with common applications.
-
----
-
-### 📁 1. Foundations and Tools *(folder: `infrastructure/`)*
-**Objective:** Familiarise students with core tools for data work and reproducible research.
-
-**Topics:**
-- What is a data science environment?
-- Python vs R vs other tools
-- Using Google Colab and Jupyter (including local setup)
-- Git and version control
-- Installing and managing packages
-- Finding help and documentation effectively
-- When to use notebooks, scripts, markdown, or Quarto
-
-**Outputs:**
-- Notebooks explaining tooling concepts
-- Practical "how-to" exercises
+See [syllabus.qmd](docs/syllabus.html) for a course roadmap.
 
 ---
 
-### 🧱 2. Programming Basics *(folder: `programming_basics/`)*
-**Objective:** Teach core Python concepts and conventions with a data-centric focus.
-
-**Topics:**
-- Syntax, data types, loops, conditionals
-- Functions, object-oriented basics
-- Markdown and Quarto for documentation
-
----
-
-### 🧮 3. Data Handling *(folder: `data_handling/`)*
-**Objective:** Acquire, clean, and manage datasets.
-
-**Topics:**
-- Data types and formats
-- Import/export data
-- Cleaning, recoding, reshaping
-
----
-
-### 📊 4. Data Analysis *(folder: `data_analysis/`)*
-**Objective:** Understand and apply statistical testing and modelling.
-
-**Topics:**
-- Distributions and transformations
-- Parametric and non-parametric testing
-- Regression and power analysis
-- Visualisation techniques
-
----
-
-### 🚀 5. Advanced Techniques *(folder: `advanced/`)*
-**Objective:** Introduce advanced methods for interested students.
-
-**Topics:**
-- Bayesian methods
-- Workflow automation
-- SQL and cloud database tools
-- Dashboards and interactive visualisations
-
----
-
-## 📂 Repository Layout
-```
-notebooks/
-├── infrastructure/
-├── programming_basics/
-├── data_handling/
-├── data_analysis/
-├── advanced/
-└── projects/
-```
-
----
-
-
-
-## 🧰 Requirements (for Local Use)
-
-If you want to run these notebooks locally using Jupyter:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Main Python Libraries Used:
-- `pandas`
-- `numpy`
-- `matplotlib`
-- `seaborn`
-- `scipy`
-- `statsmodels`
-
-
-
-
-## 📂 Directory Structure
-
-```
-data-analysis-toolkit-FNS/
-├── notebooks/
-│   ├── infrastructure/
-│   ├── programming_basics/
-│   ├── data_handling/
-│   ├── data_analysis/
-│   ├── advanced/
-│   └── projects/
-├── .github/
-│   └── workflows/
-│       └── quarto-publish.yml
-├── index.qmd
-├── _quarto.yml
-├── requirements.txt
-└── README.md
-```
-
-
-
-
-## 📝 License
-
-This material is made available for teaching and academic use.  
-You are welcome to adapt and share it **with attribution**.
+*Built with Quarto for a seamless academic experience.*

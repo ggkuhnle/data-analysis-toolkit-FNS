@@ -1,0 +1,47 @@
+---
+title: "Syllabus: Data Analysis Toolkit"
+format: 
+  html:
+    toc: true
+    theme: cosmo
+---
+
+# Course Overview
+
+This toolkit equips MSc students in Food and Nutrition Sciences with data analysis skills using Python and statistical methods. Below is a structured guide to the course content.
+
+## Module Structure
+
+1. **Foundations and Tools** (Weeks 1–2)
+   - Setup: Jupyter, Colab, Git.
+   - Key Notebook: [1.1 Environment Setup](docs/infrastructure/1.1_what_is_data_science_env.html).
+
+2. **Programming Basics** (Weeks 3–4)
+   - Python syntax, functions, OOP.
+   - Key Notebook: [2.1 Syntax and Variables](docs/programming_basics/2.1_syntax_variables_comments.html).
+
+3. **Data Handling** (Weeks 5–6)
+   - Importing, cleaning, transforming data.
+   - Key Notebook: [3.1 Data Structures](docs/data_handling/3.1_what_is_data.html).
+
+4. **Data Analysis** (Weeks 7–9)
+   - Visualisation, statistics, regression.
+   - Key Notebook: [4.1 Distributions](docs/data_analysis/4.1_distributions_visualisation.html).
+
+5. **Advanced Techniques** (Weeks 10–11)
+   - Bayesian methods, dashboards.
+   - Key Notebook: [5.1 Bayesian Inference](docs/advanced/5.1_bayesian_methods.html).
+
+6. **Qualitative Tools** (Week 12)
+   - Surveys, text analysis.
+   - Key Notebook: [6.1 Qualitative Research](docs/qualitative/6.1_intro_qualitative_research.html).
+
+## Resources
+
+- **Repository**: [github.com/ggkuhnle/data-analysis-toolkit-FNS](https://github.com/ggkuhnle/data-analysis-toolkit-FNS).
+- **Colab**: [colab.research.google.com](https://colab.research.google.com/).
+- **Contact**: Reach out via GitHub Issues for support.
+
+---
+
+*Explore the toolkit and analyse nutrition data with confidence!*

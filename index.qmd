@@ -36,3 +36,4 @@ This repository provides a comprehensive toolkit for MSc students in Food and Nu
 ---
 
 *Built with Quarto for a seamless experience.*
+

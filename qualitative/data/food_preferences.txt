@@ -1,5 +1,50 @@
-Hippo H1: I love crunchy carrots, they’re sweet!
-Hippo H2: Grass is okay, but fruit is better.
-Hippo H3: Need more variety—boring veggies!
-Hippo H4: Berries are my jam, so juicy.
-Hippo H5: Leafy greens? Meh, give me apples.
+Hippo H1: Grass is acceptable, but fruit is preferred.
+Hippo H2: I enjoy crunchy carrots for their sweetness.
+Hippo H3: Carrots and greens keep me strong.
+Hippo H4: Fruit smoothies are my favourite.
+Hippo H5: Fruit smoothies are my favourite.
+Hippo H6: More variety needed—vegetables are dull.
+Hippo H7: Grass is acceptable, but fruit is preferred.
+Hippo H8: Fruit is the best part of my diet.
+Hippo H9: Grass is acceptable, but fruit is preferred.
+Hippo H10: Mixed greens are fine, but fruit wins.
+Hippo H11: Vegetables need more flavour.
+Hippo H12: I enjoy crunchy carrots for their sweetness.
+Hippo H13: I enjoy crunchy carrots for their sweetness.
+Hippo H14: Grass is acceptable, but fruit is preferred.
+Hippo H15: Fruit smoothies are my favourite.
+Hippo H16: Fruit smoothies are my favourite.
+Hippo H17: Fruit is the best part of my diet.
+Hippo H18: Mixed greens are fine, but fruit wins.
+Hippo H19: I enjoy crunchy carrots for their sweetness.
+Hippo H20: Fruit is the best part of my diet.
+Hippo H21: Fruit smoothies are my favourite.
+Hippo H22: Fruit is the best part of my diet.
+Hippo H23: Vegetables need more flavour.
+Hippo H24: Fruit smoothies are my favourite.
+Hippo H25: Love the crunch of fresh carrots.
+Hippo H26: Mixed greens are fine, but fruit wins.
+Hippo H27: Carrots and greens keep me strong.
+Hippo H28: I enjoy crunchy carrots for their sweetness.
+Hippo H29: More variety needed—vegetables are dull.
+Hippo H30: Vegetables need more flavour.
+Hippo H31: Prefer juicy fruits over grasses.
+Hippo H32: Carrots and greens keep me strong.
+Hippo H33: More variety needed—vegetables are dull.
+Hippo H34: Fruit smoothies are my favourite.
+Hippo H35: Prefer juicy fruits over grasses.
+Hippo H36: Grass is acceptable, but fruit is preferred.
+Hippo H37: Grass is acceptable, but fruit is preferred.
+Hippo H38: Vegetables need more flavour.
+Hippo H39: Grass is acceptable, but fruit is preferred.
+Hippo H40: Prefer juicy fruits over grasses.
+Hippo H41: Prefer juicy fruits over grasses.
+Hippo H42: Mixed greens are fine, but fruit wins.
+Hippo H43: Carrots and greens keep me strong.
+Hippo H44: I enjoy crunchy carrots for their sweetness.
+Hippo H45: Love the crunch of fresh carrots.
+Hippo H46: Fruit is the best part of my diet.
+Hippo H47: Grass is acceptable, but fruit is preferred.
+Hippo H48: Vegetables need more flavour.
+Hippo H49: Grass is acceptable, but fruit is preferred.
+Hippo H50: Fruit is the best part of my diet.
