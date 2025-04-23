@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 import json
 import os
 
@@ -15,7 +16,7 @@ MODULE_DATASETS = {
 # Setup cell template for notebooks with datasets
 SETUP_CELL_WITH_DATASET = {
     "cell_type": "code",
-    "execution_count": None,  # Changed from null to None
+    "execution_count": None,
     "id": "colab_setup",
     "metadata": {},
     "outputs": [],
@@ -25,15 +26,36 @@ SETUP_CELL_WITH_DATASET = {
         "from google.colab import files\n",
         "\n",
         "# Define the module and dataset for this notebook\n",
-        "MODULE = '{module}'\n",
-        "DATASET = '{dataset}'\n",
+        "MODULE = '{module}'  # e.g., '01_infrastructure'\n",
+        "DATASET = '{dataset}'  # e.g., 'hippo_diets.csv'\n",
+        "BASE_PATH = '/content/data-analysis-toolkit-FNS'\n",
+        "MODULE_PATH = os.path.join(BASE_PATH, 'notebooks', MODULE)\n",
         "DATASET_PATH = os.path.join('data', DATASET)\n",
         "\n",
         "# Step 1: Attempt to clone the repository (automatic method)\n",
+        "# Note: If you encounter a cloning error (e.g., 'fatal: destination path already exists'),\n",
+        "#       reset the runtime (Runtime > Restart runtime) and run this cell again.\n",
         "try:\n",
         "    print('Attempting to clone repository...')\n",
-        "    !git clone https://github.com/ggkuhnle/data-analysis-toolkit-FNS.git\n",
-        "    os.chdir(f'/content/data-analysis-toolkit-FNS/notebooks/{MODULE}')\n",
+        "    if os.path.exists(BASE_PATH):\n",
+        "        print('Repository already exists, skipping clone.')\n",
+        "    else:\n",
+        "        !git clone https://github.com/ggkuhnle/data-analysis-toolkit-FNS.git\n",
+        "    \n",
+        "    # Debug: Print directory structure\n",
+        "    print('Listing repository contents:')\n",
+        "    !ls {BASE_PATH}\n",
+        "    print(f'Listing notebooks directory contents:')\n",
+        "    !ls {BASE_PATH}/notebooks\n",
+        "    \n",
+        "    # Check if the module directory exists\n",
+        "    if not os.path.exists(MODULE_PATH):\n",
+        "        raise FileNotFoundError(f'Module directory {MODULE_PATH} not found. Check the repository structure.')\n",
+        "    \n",
+        "    # Set working directory to the notebook's folder\n",
+        "    os.chdir(MODULE_PATH)\n",
+        "    \n",
+        "    # Verify dataset is accessible\n",
         "    if os.path.exists(DATASET_PATH):\n",
         "        print(f'Dataset found: {DATASET_PATH} 🦛')\n",
         "    else:\n",
@@ -72,7 +94,7 @@ SETUP_CELL_WITH_DATASET = {
 # Setup cell for Programming Basics (no dataset)
 NO_DATASET_CELL = {
     "cell_type": "code",
-    "execution_count": None,  # Changed from null to None
+    "execution_count": None,
     "id": "colab_setup",
     "metadata": {},
     "outputs": [],
