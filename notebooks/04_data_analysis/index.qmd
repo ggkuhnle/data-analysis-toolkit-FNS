@@ -1,0 +1,20 @@
+---
+title: "Data Analysis Module"
+format: html
+---
+
+## Data Analysis Module 📊
+
+This module teaches visualization and statistical analysis.
+
+**Notebooks**:
+- [Distributions and Visualization](distributions_visualisation.html)
+- [Exploratory Data Analysis](exploratory_data_analysis.html)
+- [Correlation Analysis](correlation_analysis.html)
+- [Statistical Testing](statistical_testing.html)
+- [Regression Modelling](regression_modelling.html)
+- [Logistic Regression and Survival Analysis](04_logistic_and_survival.html)
+
+**Dataset**: `data/vitamin_trial.csv` (200 rows)
+
+Try [Distributions and Visualization](distributions_visualisation.html)! 🦛

@@ -148,5 +148,95 @@
   },
   "notebooks/05_advanced/5.4_databases_sql.ipynb": {
     "5.4_databases_sql.html": "31343fcb"
+  },
+  "notebooks/05_advanced/5.3_adcanced_bayesian.ipynb": {
+    "advanced_bayesian.html": "d8b51bd9"
+  },
+  "notebooks/05_advanced/5.5_dashboards.ipynb": {
+    "5.5_dashboards.html": "8aa08606"
+  },
+  "notebooks/06_qualitative/6.1_intro_qualitative_research.ipynb": {
+    "6.1_intro_qualitative_research.html": "0f48dd09"
+  },
+  "notebooks/06_qualitative/6.2_text_analysis.ipynb": {
+    "text_analysis.html": "ca34f5a1"
+  },
+  "notebooks/02_programming_basics/2.5_oop_basics.ipynb": {
+    "2.5_oop_basics.html": "d4d30d25"
+  },
+  "notebooks/02_programming_basics/2.4_data_structures.ipynb": {
+    "2.4_data_structures.html": "94e27a9b"
+  },
+  "notebooks/02_programming_basics/2.1_syntax_variables_comments.ipynb": {
+    "2.1_syntax_variables_comments.html": "49f0063b"
+  },
+  "notebooks/02_programming_basics/2.3_functions_loops.ipynb": {
+    "2.3_functions_loops.html": "a5709823"
+  },
+  "notebooks/02_programming_basics/2.2_data_types_conversion.ipynb": {
+    "2.2_data_types_conversion.html": "fc55ba5e"
+  },
+  "notebooks/04_data_analysis/4.3_correlation_analysis.ipynb": {
+    "4.3_correlation_analysis.html": "f7a1a6a5"
+  },
+  "notebooks/05_advanced/index.qmd": {
+    "index.html": "9d2f8808"
+  },
+  "notebooks/06_qualitative/index.qmd": {
+    "index.html": "cfeaa553"
+  },
+  "notebooks/02_programming_basics/index.qmd": {
+    "index.html": "b8437fd5"
+  },
+  "notebooks/04_data_analysis/4.5_regression_modelling.ipynb": {
+    "4.5_regression_modelling.html": "bde7b28a"
+  },
+  "notebooks/04_data_analysis/index.qmd": {
+    "index.html": "d085accd"
+  },
+  "notebooks/04_data_analysis/4.2_exploratory_data_analysis.ipynb": {
+    "4.2_exploratory_data_analysis.html": "84389997"
+  },
+  "notebooks/04_data_analysis/4.1_distributions_visualisation.ipynb": {
+    "4.1_distributions_visualisation.html": "5651ea0f"
+  },
+  "notebooks/04_data_analysis/4.4_statistical_testing.ipynb": {
+    "4.4_statistical_testing.html": "a1db7962"
+  },
+  "notebooks/01_infrastructure/0_getting_started.ipynb": {
+    "0_getting_started.html": "5e653726"
+  },
+  "notebooks/01_infrastructure/1.4_quarto_basics.ipynb": {
+    "1.4_quarto_basics.html": "700dc042"
+  },
+  "notebooks/01_infrastructure/1.3_intro_to_git.ipynb": {
+    "1.3_intro_to_git.html": "7a96409f"
+  },
+  "notebooks/01_infrastructure/1.2_python_vs_r.ipynb": {
+    "1.2_python_vs_r.html": "92982074"
+  },
+  "notebooks/01_infrastructure/index.qmd": {
+    "index.html": "6a413192"
+  },
+  "notebooks/01_infrastructure/1.1_what_is_data_science_env.ipynb": {
+    "1.1_what_is_data_science_env.html": "26800521"
+  },
+  "notebooks/03_data_handling/3.3_data_cleaning.ipynb": {
+    "3.3_data_cleaning.html": "d36863a2"
+  },
+  "notebooks/03_data_handling/3.2_importing_data.ipynb": {
+    "3.2_importing_data.html": "a43bc639"
+  },
+  "notebooks/03_data_handling/3.5_data_aggregation.ipynb": {
+    "3.5_data_aggregation.html": "31cd1d4b"
+  },
+  "notebooks/03_data_handling/index.qmd": {
+    "index.html": "34313069"
+  },
+  "notebooks/03_data_handling/3.4_data_transformation.ipynb": {
+    "3.4_data_transformation.html": "25b5fba1"
+  },
+  "notebooks/03_data_handling/3.1_what_is_data.ipynb": {
+    "3.1_what_is_data.html": "99af497f"
   }
 }

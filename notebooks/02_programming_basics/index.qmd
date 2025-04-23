@@ -1,0 +1,17 @@
+---
+title: "Programming Basics Module"
+format: html
+---
+
+## Programming Basics Module 🐍
+
+This module teaches Python fundamentals for data analysis.
+
+**Notebooks**:
+- [Syntax, Variables, Comments](syntax_variables_comments.html)
+- [Data Types and Conversion](data_types_conversion.html)
+- [Functions and Loops](functions_loops.html)
+- [Data Structures](data_structures.html)
+- [Object-Oriented Programming Basics](oop_basics.html)
+
+No datasets required. Dive into [Syntax, Variables, Comments](syntax_variables_comments.html)! 🦛

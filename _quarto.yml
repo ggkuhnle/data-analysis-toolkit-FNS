@@ -1,34 +1,47 @@
 project:
-  type: website
   output-dir: _site
 
-website:
-  title: "Data Analysis Toolkit for FNS"
-  navbar:
-    left:
-      - text: "🏠 Home"
-        file: index.qmd
-      - text: "🔧 Infrastructure"
-        file: notebooks/infrastructure/index.qmd
-      - text: "🧱 Programming"
-        file: notebooks/programming_basics/index.qmd
-      - text: "🧮 Data Handling"
-        file: notebooks/data_handling/index.qmd
-      - text: "📊 Data Analysis"
-        file: notebooks/data_analysis/index.qmd
-      - text: "🚀 Advanced"
-        file: notebooks/advanced/index.qmd
-      - text: "🧪 Projects"
-        file: notebooks/projects/index.qmd
-      - text: "🗂️ Qualitative"
-        file: notebooks/qualitative/index.qmd
+book:
+  title: "Data Analysis Toolkit for Food and Nutrition Sciences"
+  chapters:
+    - index.qmd
+    - syllabus.qmd
+    - notebooks/01_infrastructure/index.qmd
+    - notebooks/01_infrastructure/0_getting_started.ipynb
+    - notebooks/01_infrastructure/1.1_what_is_data_science_env.ipynb
+    - notebooks/01_infrastructure/1.2_python_vs_r.ipynb
+    - notebooks/01_infrastructure/1.3_intro_to_git.ipynb
+    - notebooks/01_infrastructure/1.4_quarto_basics.ipynb
+    - notebooks/02_programming_basics/index.qmd
+    - notebooks/02_programming_basics/2.1_syntax_variables_comments.ipynb
+    - notebooks/02_programming_basics/2.2_data_types_conversion.ipynb
+    - notebooks/02_programming_basics/2.3_functions_loops.ipynb
+    - notebooks/02_programming_basics/2.4_data_structures.ipynb
+    - notebooks/02_programming_basics/2.5_oop_basics.ipynb
+    - notebooks/03_data_handling/index.qmd
+    - notebooks/03_data_handling/3.1_what_is_data.ipynb
+    - notebooks/03_data_handling/3.2_importing_data.ipynb
+    - notebooks/03_data_handling/3.3_data_cleaning.ipynb
+    - notebooks/03_data_handling/3.4_data_transformation.ipynb
+    - notebooks/03_data_handling/3.5_data_aggregation.ipynb
+    - notebooks/04_data_analysis/index.qmd
+    - notebooks/04_data_analysis/4.1_distributions_visualisation.ipynb
+    - notebooks/04_data_analysis/4.2_exploratory_data_analysis.ipynb
+    - notebooks/04_data_analysis/4.3_correlation_analysis.ipynb
+    - notebooks/04_data_analysis/4.4_statistical_testing.ipynb
+    - notebooks/04_data_analysis/4.5_regression_modelling.ipynb
+    - notebooks/04_data_analysis/4.6_logistic_survival.ipynb
+    - notebooks/05_advanced/index.qmd
+    - notebooks/05_advanced/5.1_bayesian_methods.ipynb
+    - notebooks/05_advanced/5.2_workflow_automation.ipynb
+    - notebooks/05_advanced/5.3_advanced_bayesian.ipynb
+    - notebooks/05_advanced/5.4_databases_sql.ipynb
+    - notebooks/05_advanced/5.5_dashboards.ipynb
+    - notebooks/06_qualitative/index.qmd
+    - notebooks/06_qualitative/6.1_intro_qualitative_research.ipynb
+    - notebooks/06_qualitative/6.2_text_analysis.ipynb
 
 format:
   html:
-    toc: true
     theme: cosmo
-    code-fold: true
-    code-tools: true
-    smooth-scroll: true
-    link-external-newwindow: true
-
+    toc: true

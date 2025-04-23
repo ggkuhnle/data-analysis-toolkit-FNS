@@ -1,0 +1,16 @@
+---
+title: "Qualitative Research Module"
+format: html
+---
+
+## Qualitative Research Module 📝
+
+This module covers qualitative data analysis.
+
+**Notebooks**:
+- [Introduction to Qualitative Research](intro_qualitative_research.html)
+- [Text Analysis](text_analysis.html)
+
+**Dataset**: `data/food_preferences.txt` (50 lines)
+
+Begin with [Introduction to Qualitative Research](intro_qualitative_research.html)! 🦛

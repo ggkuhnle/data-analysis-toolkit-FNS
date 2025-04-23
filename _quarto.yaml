@@ -6,33 +6,40 @@ book:
   chapters:
     - index.qmd
     - syllabus.qmd
-    - notebooks/01_infrastructure/0_getting_started.ipynb
-    - notebooks/01_infrastructure/1.1_what_is_data_science_env.ipynb
-    - notebooks/01_infrastructure/1.2_python_vs_r.ipynb
-    - notebooks/01_infrastructure/1.3_intro_to_git.ipynb
-    - notebooks/01_infrastructure/1.4_quarto_basics.ipynb
-    - notebooks/02_programming_basics/2.1_syntax_variables_comments.ipynb
-    - notebooks/02_programming_basics/2.2_data_types_conversion.ipynb
-    - notebooks/02_programming_basics/2.3_functions_loops.ipynb
-    - notebooks/02_programming_basics/2.4_data_structures.ipynb
-    - notebooks/02_programming_basics/2.5_oop_basics.ipynb
-    - notebooks/03_data_handling/3.1_what_is_data.ipynb
-    - notebooks/03_data_handling/3.2_importing_data.ipynb
-    - notebooks/03_data_handling/3.3_data_cleaning.ipynb
-    - notebooks/03_data_handling/3.4_data_transformation.ipynb
-    - notebooks/03_data_handling/3.5_data_aggregation.ipynb
-    - notebooks/04_data_analysis/4.1_distributions_visualisation.ipynb
-    - notebooks/04_data_analysis/4.2_exploratory_data_analysis.ipynb
-    - notebooks/04_data_analysis/4.3_correlation_analysis.ipynb
-    - notebooks/04_data_analysis/4.4_statistical_testing.ipynb
-    - notebooks/04_data_analysis/4.5_regression_modelling.ipynb
-    - notebooks/05_advanced/5.1_bayesian_methods.ipynb
-    - notebooks/05_advanced/5.2_workflow_automation.ipynb
-    - notebooks/05_advanced/5.3_advanced_bayesian.ipynb
-    - notebooks/05_advanced/5.4_databases_sql.ipynb
-    - notebooks/05_advanced/5.5_dashboards.ipynb
-    - notebooks/06_qualitative/6.1_intro_qualitative_research.ipynb
-    - notebooks/06_qualitative/6.2_text_analysis.ipynb
+    - notebooks/infrastructure/index.qmd
+    - notebooks/infrastructure/0_getting_started.ipynb
+    - notebooks/infrastructure/1.1_what_is_data_science_env.ipynb
+    - notebooks/infrastructure/1.2_python_vs_r.ipynb
+    - notebooks/infrastructure/1.3_intro_to_git.ipynb
+    - notebooks/infrastructure/1.4_quarto_basics.ipynb
+    - notebooks/programming_basics/index.qmd
+    - notebooks/programming_basics/2.1_syntax_variables_comments.ipynb
+    - notebooks/programming_basics/2.2_data_types_conversion.ipynb
+    - notebooks/programming_basics/2.3_functions_loops.ipynb
+    - notebooks/programming_basics/2.4_data_structures.ipynb
+    - notebooks/programming_basics/2.5_oop_basics.ipynb
+    - notebooks/data_handling/index.qmd
+    - notebooks/data_handling/3.1_what_is_data.ipynb
+    - notebooks/data_handling/3.2_importing_data.ipynb
+    - notebooks/data_handling/3.3_data_cleaning.ipynb
+    - notebooks/data_handling/3.4_data_transformation.ipynb
+    - notebooks/data_handling/3.5_data_aggregation.ipynb
+    - notebooks/data_analysis/index.qmd
+    - notebooks/data_analysis/4.1_distributions_visualisation.ipynb
+    - notebooks/data_analysis/4.2_exploratory_data_analysis.ipynb
+    - notebooks/data_analysis/4.3_correlation_analysis.ipynb
+    - notebooks/data_analysis/4.4_statistical_testing.ipynb
+    - notebooks/data_analysis/4.5_regression_modelling.ipynb
+    - notebooks/data_analysis/4.6_logistic_survival.ipynb
+    - notebooks/advanced/index.qmd
+    - notebooks/advanced/5.1_bayesian_methods.ipynb
+    - notebooks/advanced/5.2_workflow_automation.ipynb
+    - notebooks/advanced/5.3_advanced_bayesian.ipynb
+    - notebooks/advanced/5.4_databases_sql.ipynb
+    - notebooks/advanced/5.5_dashboards.ipynb
+    - notebooks/qualitative/index.qmd
+    - notebooks/qualitative/6.1_intro_qualitative_research.ipynb
+    - notebooks/qualitative/6.2_text_analysis.ipynb
 
 format:
   html:

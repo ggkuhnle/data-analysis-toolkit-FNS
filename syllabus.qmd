@@ -5,7 +5,7 @@ format: html
 
 ## Overview 📚
 
-This syllabus outlines the **Data Analysis Toolkit for Food and Nutrition Sciences** for MSc students. It includes 26 Jupyter notebooks across six modules, rendered as HTML tutorials in `_site/notebooks/`. Hippo-themed datasets (🦛) teach practical data analysis skills.
+This syllabus outlines the **Data Analysis Toolkit for Food and Nutrition Sciences** for MSc students. It includes 27 Jupyter notebooks across six modules, rendered as HTML tutorials in `_site/notebooks/`. Hippo-themed datasets (🦛) teach practical data analysis skills.
 
 **Note**: The `_site/` directory contains outdated HTMLs. Delete `_site/` and run `quarto render` to generate fresh tutorials.
 
@@ -13,7 +13,7 @@ This syllabus outlines the **Data Analysis Toolkit for Food and Nutrition Scienc
 
 Below are the modules, notebooks, expected HTML outputs (after rendering), datasets, and objectives.
 
-### 1. Infrastructure (5 Notebooks)
+### 1. [Infrastructure](infrastructure/index.html) (5 Notebooks)
 
 **Path**: `notebooks/01_infrastructure/`  
 **HTMLs**: `_site/notebooks/infrastructure/`  
@@ -27,7 +27,7 @@ Below are the modules, notebooks, expected HTML outputs (after rendering), datas
 | `1.3_intro_to_git.ipynb` | `intro_to_git.html` | Learn Git for version control. |
 | `1.4_quarto_basics.ipynb` | `quarto_basics.html` | Create reproducible documents. |
 
-### 2. Programming Basics (5 Notebooks)
+### 2. [Programming Basics](programming_basics/index.html) (5 Notebooks)
 
 **Path**: `notebooks/02_programming_basics/`  
 **HTMLs**: `_site/notebooks/programming_basics/`  
@@ -41,7 +41,7 @@ Below are the modules, notebooks, expected HTML outputs (after rendering), datas
 | `2.4_data_structures.ipynb` | `data_structures.html` | Work with lists and DataFrames. |
 | `2.5_oop_basics.ipynb` | `oop_basics.html` | Apply object-oriented programming. |
 
-### 3. Data Handling (5 Notebooks)
+### 3. [Data Handling](data_handling/index.html) (5 Notebooks)
 
 **Path**: `notebooks/03_data_handling/`  
 **HTMLs**: `_site/notebooks/data_handling/`  
@@ -55,7 +55,7 @@ Below are the modules, notebooks, expected HTML outputs (after rendering), datas
 | `3.4_data_transformation.ipynb` | `data_transformation.html` | Filter and pivot data. |
 | `3.5_data_aggregation.ipynb` | `data_aggregation.html` | Summarise and join datasets. |
 
-### 4. Data Analysis (5 Notebooks)
+### 4. [Data Analysis](data_analysis/index.html) (6 Notebooks)
 
 **Path**: `notebooks/04_data_analysis/`  
 **HTMLs**: `_site/notebooks/data_analysis/`  
@@ -65,11 +65,12 @@ Below are the modules, notebooks, expected HTML outputs (after rendering), datas
 |----------|---------------|------------|
 | `4.1_distributions_visualisation.ipynb` | `distributions_visualisation.html` | Visualise distributions. |
 | `4.2_exploratory_data_analysis.ipynb` | `exploratory_data_analysis.html` | Perform EDA. |
-| `4.3_correlation_analysis.ipynb` | `correlation_analysis.html` | Analyse correlations. |
+| `3_correlation_analysis.ipynb` | `correlation_analysis.html` | Analyse correlations. |
 | `4.4_statistical_testing.ipynb` | `statistical_testing.html` | Conduct t-tests and ANOVA. |
 | `4.5_regression_modelling.ipynb` | `regression_modelling.html` | Build regression models. |
+| `4.6_logistic_survival.ipynb` | `04_logistic_and_survival.html` | Apply logistic regression and survival analysis. |
 
-### 5. Advanced Topics (5 Notebooks)
+### 5. [Advanced Topics](advanced/index.html) (5 Notebooks)
 
 **Path**: `notebooks/05_advanced/`  
 **HTMLs**: `_site/notebooks/advanced/`  
@@ -83,7 +84,7 @@ Below are the modules, notebooks, expected HTML outputs (after rendering), datas
 | `5.4_databases_sql.ipynb` | `databases_sql.html` | Query databases with SQL. |
 | `5.5_dashboards.ipynb` | `dashboards.html` | Create dashboards. |
 
-### 6. Qualitative Research (2 Notebooks)
+### 6. [Qualitative Research](qualitative/index.html) (2 Notebooks)
 
 **Path**: `notebooks/06_qualitative/`  
 **HTMLs**: `_site/notebooks/qualitative/`  
@@ -99,9 +100,9 @@ Below are the modules, notebooks, expected HTML outputs (after rendering), datas
 1. **Infrastructure**: Set up tools (Weeks 1–2).
 2. **Programming Basics**: Learn Python (Weeks 3–4).
 3. **Data Handling**: Process data (Weeks 5–6).
-4. **Data Analysis**: Analyse data (Weeks 7–8).
-5. **Advanced Topics**: Explore advanced methods (Weeks 9–10).
-6. **Qualitative Research**: Analyse text (Week 11).
+4. **Data Analysis**: Analyse data (Weeks 7–9).
+5. **Advanced Topics**: Explore advanced methods (Weeks 10–11).
+6. **Qualitative Research**: Analyse text (Week 12).
 
 ## 🚀 Setup Instructions
 

@@ -1,0 +1,19 @@
+---
+title: "Infrastructure Module"
+format: html
+---
+
+## Infrastructure Module 🛠️
+
+This module sets up your data science environment for nutrition research.
+
+**Notebooks**:
+- [Getting Started](getting_started.html)
+- [What is a Data Science Environment?](what_is_data_science_env.html)
+- [Python vs R](python_vs_r.html)
+- [Introduction to Git](intro_to_git.html)
+- [Quarto Basics](quarto_basics.html)
+
+**Dataset**: `data/hippo_diets.csv` (50 rows)
+
+Start with [Getting Started](getting_started.html) to configure Python and Jupyter! 🦛

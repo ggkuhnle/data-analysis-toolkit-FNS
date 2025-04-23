@@ -1,0 +1,266 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "frontmatter",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "title: \"Logistic Regression and Survival Analysis\"\n",
+    "output-file: \"04_logistic_and_survival.html\"\n",
+    "format: html\n",
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "intro",
+   "metadata": {},
+   "source": [
+    "# 📊 4.6 Logistic Regression and Survival Analysis\n",
+    "\n",
+    "This notebook introduces logistic regression and survival analysis for nutrition research, focusing on binary outcomes and time-to-event data.\n",
+    "\n",
+    "**Objectives**:\n",
+    "- Apply logistic regression to predict binary outcomes.\n",
+    "- Perform survival analysis to model time-to-event data.\n",
+    "- Use `vitamin_trial.csv` to analyze vitamin D trial outcomes.\n",
+    "\n",
+    "**Context**: Logistic regression predicts outcomes like improved health, while survival analysis models time to events, such as response to treatment, in nutrition studies.\n",
+    "\n",
+    "<details><summary>Fun Fact</summary>\n",
+    "Hippos may not run clinical trials, but their vitamin D data helps us model health outcomes with statistical flair! 🦛\n",
+    "</details>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "setup",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Analysis environment ready.\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Install required packages\n",
+    "%pip install pandas numpy scikit-learn lifelines  # Ensures compatibility in Colab\n",
+    "import pandas as pd  # For data manipulation\n",
+    "import numpy as np  # For numerical operations\n",
+    "from sklearn.linear_model import LogisticRegression  # For logistic regression\n",
+    "from sklearn.preprocessing import LabelEncoder  # For encoding categorical variables\n",
+    "from lifelines import KaplanMeierFitter  # For survival analysis\n",
+    "import matplotlib.pyplot as plt  # For visualization\n",
+    "print('Analysis environment ready.')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "load_data",
+   "metadata": {},
+   "source": [
+    "## Data Preparation\n",
+    "\n",
+    "Load `vitamin_trial.csv`, containing vitamin D trial data, and preprocess for analysis."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "load",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Data shape: (200, 5)\n",
+      "Sample row: ID=V1, Group=Control, Vitamin_D=12.5, Time=6, Outcome=Normal\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Load the dataset\n",
+    "df = pd.read_csv('data/vitamin_trial.csv')  # Path relative to notebook\n",
+    "\n",
+    "print(f'Data shape: {df.shape}')  # Display rows and columns\n",
+    "print(f'Sample row: ID={df.iloc[0][\"ID\"]}, Group={df.iloc[0][\"Group\"]}, Vitamin_D={df.iloc[0][\"Vitamin_D\"]}, Time={df.iloc[0][\"Time\"]}, Outcome={df.iloc[0][\"Outcome\"]}')  # Show first row"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "logistic",
+   "metadata": {},
+   "source": [
+    "## Logistic Regression\n",
+    "\n",
+    "Model the probability of `Outcome` = Improved using `Vitamin_D` and `Group`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "logistic",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Logistic Regression Coefficients:\n",
+      "- Vitamin_D: 0.045\n",
+      "- Group (Treatment): 0.210\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Encode categorical variables\n",
+    "le_group = LabelEncoder()\n",
+    "df['Group_Encoded'] = le_group.fit_transform(df['Group'])  # Control=0, Treatment=1\n",
+    "le_outcome = LabelEncoder()\n",
+    "df['Outcome_Encoded'] = le_outcome.fit_transform(df['Outcome'])  # Normal=0, Improved=1\n",
+    "\n",
+    "# Prepare features and target\n",
+    "X = df[['Vitamin_D', 'Group_Encoded']]  # Features\n",
+    "y = df['Outcome_Encoded']  # Target\n",
+    "\n",
+    "# Fit logistic regression model\n",
+    "model = LogisticRegression(random_state=42)\n",
+    "model.fit(X, y)\n",
+    "\n",
+    "# Print coefficients\n",
+    "print('Logistic Regression Coefficients:')\n",
+    "print(f'- Vitamin_D: {model.coef_[0][0]:.3f}')\n",
+    "print(f'- Group (Treatment): {model.coef_[0][1]:.3f}')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "survival",
+   "metadata": {},
+   "source": [
+    "## Survival Analysis\n",
+    "\n",
+    "Estimate Kaplan-Meier survival curves for `Time` to `Outcome` = Improved, stratified by `Group`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "survival",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<Figure size 800x600 with 1 Axes>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "# Prepare data for survival analysis\n",
+    "df['Event'] = df['Outcome'].apply(lambda x: 1 if x == 'Improved' else 0)  # 1=Improved, 0=Normal\n",
+    "\n",
+    "# Initialize Kaplan-Meier fitter\n",
+    "kmf = KaplanMeierFitter()\n",
+    "\n",
+    "# Plot survival curves for each group\n",
+    "plt.figure(figsize=(8, 6))\n",
+    "for group in ['Control', 'Treatment']:\n",
+    "    mask = df['Group'] == group\n",
+    "    kmf.fit(df[mask]['Time'], df[mask]['Event'], label=group)\n",
+    "    kmf.plot_survival_function()\n",
+    "\n",
+    "plt.title('Kaplan-Meier Survival Curves by Group')\n",
+    "plt.xlabel('Time (Months)')\n",
+    "plt.ylabel('Survival Probability')\n",
+    "plt.show()  # Display survival curves"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "exercise",
+   "metadata": {},
+   "source": [
+    "## Exercise: Extend the Analysis\n",
+    "\n",
+    "Modify the logistic regression to include `Time` as a predictor and report the new coefficients. For survival analysis, compute the median survival time for each group.\n",
+    "\n",
+    "**Guidance**:\n",
+    "- Add `Time` to `X` in the logistic regression model.\n",
+    "- Use `kmf.median_survival_time_` to get median survival times."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "your_answer",
+   "metadata": {},
+   "source": [
+    "**Answer**:\n",
+    "\n",
+    "My extended analysis code and results are as follows:\n",
+    "\n",
+    "```python\n",
+    "# Your code here\n",
+    "```\n",
+    "\n",
+    "**Logistic Regression Coefficients**:\n",
+    "\n",
+    "- Vitamin_D: [Your Result]\n",
+    "- Group (Treatment): [Your Result]\n",
+    "- Time: [Your Result]\n",
+    "\n",
+    "**Median Survival Times**:\n",
+    "\n",
+    "- Control: [Your Result]\n",
+    "- Treatment: [Your Result]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "wrap",
+   "metadata": {},
+   "source": [
+    "## Conclusion\n",
+    "\n",
+    "You’ve applied logistic regression and survival analysis to model vitamin D trial outcomes, uncovering predictors of improvement and time-to-event patterns.\n",
+    "\n",
+    "**Next Steps**: Explore advanced topics in `notebooks/05_advanced/` or revisit earlier data analysis notebooks.\n",
+    "\n",
+    "**Resources**:\n",
+    "- [Scikit-Learn Documentation](https://scikit-learn.org/)\n",
+    "- [Lifelines Documentation](https://lifelines.readthedocs.io/)\n",
+    "- Repository: [github.com/ggkuhnle/data-analysis-toolkit-FNS](https://github.com/ggkuhnle/data-analysis-toolkit-FNS)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

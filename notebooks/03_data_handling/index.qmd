@@ -1,0 +1,19 @@
+---
+title: "Data Handling Module"
+format: html
+---
+
+## Data Handling Module 🗂️
+
+This module covers importing, cleaning, and transforming data.
+
+**Notebooks**:
+- [What is Data?](what_is_data.html)
+- [Importing Data](importing_data.html)
+- [Data Cleaning](data_cleaning.html)
+- [Data Transformation](data_transformation.html)
+- [Data Aggregation](data_aggregation.html)
+
+**Dataset**: `data/hippo_nutrients.csv` (100 rows)
+
+Start with [What is Data?](what_is_data.html)! 🦛

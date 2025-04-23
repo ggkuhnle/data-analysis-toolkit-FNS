@@ -1,0 +1,19 @@
+---
+title: "Advanced Topics Module"
+format: html
+---
+
+## Advanced Topics Module 🧠
+
+This module explores advanced data science techniques.
+
+**Notebooks**:
+- [Bayesian Methods](bayesian_methods.html)
+- [Workflow Automation](workflow_automation.html)
+- [Advanced Bayesian Modelling](advanced_bayesian.html)
+- [Databases and SQL](databases_sql.html)
+- [Dashboards](dashboards.html)
+
+**Datasets**: `data/large_food_log.csv` (500 rows), `../03_data_handling/data/hippo_nutrients.csv`
+
+Start with [Bayesian Methods](bayesian_methods.html)! 🦛
