@@ -116,9 +116,18 @@ Fun Fact
 </summary>
 Functions are like a hippo’s meal prep—do the work once, enjoy it often! 🦛
 </details>
+<div id="colab_setup" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Ensure environment is ready</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: This module (Programming Basics) does not require datasets</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'No dataset required for this notebook 🦛'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages for this notebook</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div id="setup" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No external packages needed for this notebook</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No external packages needed for this notebook</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Python environment ready.</code></pre>
 </div>
@@ -127,23 +136,23 @@ Functions are like a hippo’s meal prep—do the work once, enjoy it often! �
 <h2 class="anchored" data-anchor-id="defining-functions">Defining Functions</h2>
 <p>Create a function to calculate the percentage of a nutrient relative to a reference intake.</p>
 <div id="function_example" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function to calculate nutrient percentage</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> nutrient_percentage(intake, reference):</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate percentage of nutrient intake relative to reference.</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">        intake (float): Nutrient amount in mg or g</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">        reference (float): Reference intake in same unit</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">        float: Percentage of reference intake</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    percentage <span class="op">=</span> (intake <span class="op">/</span> reference) <span class="op">*</span> <span class="dv">100</span>  <span class="co"># Calculate percentage</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">round</span>(percentage, <span class="dv">1</span>)  <span class="co"># Round to 1 decimal place</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Test the function</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>iron_intake <span class="op">=</span> <span class="fl">8.2</span>  <span class="co"># Iron in mg</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>iron_reference <span class="op">=</span> <span class="dv">15</span>  <span class="co"># Reference intake in mg</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> nutrient_percentage(iron_intake, iron_reference)</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Iron percentage: </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">%'</span>)  <span class="co"># Display result</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a function to calculate nutrient percentage</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> nutrient_percentage(intake, reference):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Calculate percentage of nutrient intake relative to reference.</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">        intake (float): Nutrient amount in mg or g</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">        reference (float): Reference intake in same unit</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">        float: Percentage of reference intake</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    percentage <span class="op">=</span> (intake <span class="op">/</span> reference) <span class="op">*</span> <span class="dv">100</span>  <span class="co"># Calculate percentage</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">round</span>(percentage, <span class="dv">1</span>)  <span class="co"># Round to 1 decimal place</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Test the function</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>iron_intake <span class="op">=</span> <span class="fl">8.2</span>  <span class="co"># Iron in mg</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>iron_reference <span class="op">=</span> <span class="dv">15</span>  <span class="co"># Reference intake in mg</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> nutrient_percentage(iron_intake, iron_reference)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Iron percentage: </span><span class="sc">{</span>result<span class="sc">}</span><span class="ss">%'</span>)  <span class="co"># Display result</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Iron percentage: 54.7%</code></pre>
 </div>
@@ -153,15 +162,15 @@ Functions are like a hippo’s meal prep—do the work once, enjoy it often! �
 <h2 class="anchored" data-anchor-id="using-loops">Using Loops</h2>
 <p>Loop over a list of nutrient intakes to calculate percentages.</p>
 <div id="loop_example" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List of iron intakes for multiple hippos</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>iron_intakes <span class="op">=</span> [<span class="fl">8.2</span>, <span class="fl">8.0</span>, <span class="fl">8.4</span>]  <span class="co"># Intakes in mg</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>hippo_ids <span class="op">=</span> [<span class="st">'H1'</span>, <span class="st">'H2'</span>, <span class="st">'H3'</span>]  <span class="co"># Corresponding hippo IDs</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>reference <span class="op">=</span> <span class="dv">15</span>  <span class="co"># Reference intake in mg</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop over intakes</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> hid, intake <span class="kw">in</span> <span class="bu">zip</span>(hippo_ids, iron_intakes):</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    percent <span class="op">=</span> nutrient_percentage(intake, reference)  <span class="co"># Calculate percentage</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Hippo </span><span class="sc">{</span>hid<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>percent<span class="sc">}</span><span class="ss">%'</span>)  <span class="co"># Display result for each hippo</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List of iron intakes for multiple hippos</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>iron_intakes <span class="op">=</span> [<span class="fl">8.2</span>, <span class="fl">8.0</span>, <span class="fl">8.4</span>]  <span class="co"># Intakes in mg</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>hippo_ids <span class="op">=</span> [<span class="st">'H1'</span>, <span class="st">'H2'</span>, <span class="st">'H3'</span>]  <span class="co"># Corresponding hippo IDs</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>reference <span class="op">=</span> <span class="dv">15</span>  <span class="co"># Reference intake in mg</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop over intakes</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> hid, intake <span class="kw">in</span> <span class="bu">zip</span>(hippo_ids, iron_intakes):</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    percent <span class="op">=</span> nutrient_percentage(intake, reference)  <span class="co"># Calculate percentage</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Hippo </span><span class="sc">{</span>hid<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>percent<span class="sc">}</span><span class="ss">%'</span>)  <span class="co"># Display result for each hippo</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hippo H1: 54.7%
 Hippo H2: 53.3%

@@ -117,11 +117,20 @@ Fun Fact
 </summary>
 A DataFrame is like a hippo’s pantry—everything neatly organised for quick access! 🦛
 </details>
+<div id="colab_setup" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Ensure environment is ready</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: This module (Programming Basics) does not require datasets</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'No dataset required for this notebook 🦛'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages for this notebook</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div id="setup" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required package</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas  <span class="co"># Ensures compatibility in Colab</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd  <span class="co"># For DataFrames</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Data structure environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required package</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas  <span class="co"># Ensures compatibility in Colab</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd  <span class="co"># For DataFrames</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Data structure environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Data structure environment ready.</code></pre>
 </div>
@@ -130,13 +139,13 @@ A DataFrame is like a hippo’s pantry—everything neatly organised for quick a
 <h2 class="anchored" data-anchor-id="lists">Lists</h2>
 <p>Create a list of nutrient intakes for multiple hippos.</p>
 <div id="list_example" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List of iron intakes</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>iron_intakes <span class="op">=</span> [<span class="fl">8.2</span>, <span class="fl">8.0</span>, <span class="fl">8.4</span>]  <span class="co"># Iron in mg for hippos H1, H2, H3</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate average</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>average_iron <span class="op">=</span> <span class="bu">sum</span>(iron_intakes) <span class="op">/</span> <span class="bu">len</span>(iron_intakes)  <span class="co"># Compute mean</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Iron intakes: </span><span class="sc">{</span>iron_intakes<span class="sc">}</span><span class="ss">'</span>)  <span class="co"># Display list</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Average iron: </span><span class="sc">{</span><span class="bu">round</span>(average_iron, <span class="dv">1</span>)<span class="sc">}</span><span class="ss"> mg'</span>)  <span class="co"># Display average</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List of iron intakes</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>iron_intakes <span class="op">=</span> [<span class="fl">8.2</span>, <span class="fl">8.0</span>, <span class="fl">8.4</span>]  <span class="co"># Iron in mg for hippos H1, H2, H3</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate average</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>average_iron <span class="op">=</span> <span class="bu">sum</span>(iron_intakes) <span class="op">/</span> <span class="bu">len</span>(iron_intakes)  <span class="co"># Compute mean</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Iron intakes: </span><span class="sc">{</span>iron_intakes<span class="sc">}</span><span class="ss">'</span>)  <span class="co"># Display list</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Average iron: </span><span class="sc">{</span><span class="bu">round</span>(average_iron, <span class="dv">1</span>)<span class="sc">}</span><span class="ss"> mg'</span>)  <span class="co"># Display average</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Iron intakes: [8.2, 8.0, 8.4]
 Average iron: 8.2 mg</code></pre>
@@ -147,17 +156,17 @@ Average iron: 8.2 mg</code></pre>
 <h2 class="anchored" data-anchor-id="dictionaries">Dictionaries</h2>
 <p>Store nutrient data for a single hippo in a dictionary.</p>
 <div id="dict_example" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dictionary for a hippo’s nutrients</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>hippo_nutrients <span class="op">=</span> {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Iron'</span>: <span class="fl">8.2</span>,  <span class="co"># mg</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Calcium'</span>: <span class="dv">1200</span>,  <span class="co"># mg</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Protein'</span>: <span class="fl">80.5</span>  <span class="co"># g</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Access a value</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>calcium <span class="op">=</span> hippo_nutrients[<span class="st">'Calcium'</span>]  <span class="co"># Retrieve calcium value</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Hippo H1 nutrients: </span><span class="sc">{</span>hippo_nutrients<span class="sc">}</span><span class="ss">'</span>)  <span class="co"># Display dictionary</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Calcium intake: </span><span class="sc">{</span>calcium<span class="sc">}</span><span class="ss"> mg'</span>)  <span class="co"># Display calcium</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dictionary for a hippo’s nutrients</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>hippo_nutrients <span class="op">=</span> {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Iron'</span>: <span class="fl">8.2</span>,  <span class="co"># mg</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Calcium'</span>: <span class="dv">1200</span>,  <span class="co"># mg</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Protein'</span>: <span class="fl">80.5</span>  <span class="co"># g</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Access a value</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>calcium <span class="op">=</span> hippo_nutrients[<span class="st">'Calcium'</span>]  <span class="co"># Retrieve calcium value</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Hippo H1 nutrients: </span><span class="sc">{</span>hippo_nutrients<span class="sc">}</span><span class="ss">'</span>)  <span class="co"># Display dictionary</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Calcium intake: </span><span class="sc">{</span>calcium<span class="sc">}</span><span class="ss"> mg'</span>)  <span class="co"># Display calcium</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hippo H1 nutrients: {'Iron': 8.2, 'Calcium': 1200, 'Protein': 80.5}
 Calcium intake: 1200 mg</code></pre>
@@ -168,17 +177,17 @@ Calcium intake: 1200 mg</code></pre>
 <h2 class="anchored" data-anchor-id="pandas-dataframes">Pandas DataFrames</h2>
 <p>Create a DataFrame for multiple hippos’ nutrient data.</p>
 <div id="df_example" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ID'</span>: [<span class="st">'H1'</span>, <span class="st">'H2'</span>, <span class="st">'H3'</span>],</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Iron'</span>: [<span class="fl">8.2</span>, <span class="fl">8.0</span>, <span class="fl">8.4</span>],</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Calcium'</span>: [<span class="dv">1200</span>, <span class="dv">1150</span>, <span class="dv">1250</span>],</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Protein'</span>: [<span class="fl">80.5</span>, <span class="fl">75.0</span>, <span class="fl">82.3</span>]</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)  <span class="co"># Convert dictionary to DataFrame</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Display DataFrame</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)  <span class="co"># Show all rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ID'</span>: [<span class="st">'H1'</span>, <span class="st">'H2'</span>, <span class="st">'H3'</span>],</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Iron'</span>: [<span class="fl">8.2</span>, <span class="fl">8.0</span>, <span class="fl">8.4</span>],</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Calcium'</span>: [<span class="dv">1200</span>, <span class="dv">1150</span>, <span class="dv">1250</span>],</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Protein'</span>: [<span class="fl">80.5</span>, <span class="fl">75.0</span>, <span class="fl">82.3</span>]</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)  <span class="co"># Convert dictionary to DataFrame</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Display DataFrame</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)  <span class="co"># Show all rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID  Iron  Calcium  Protein
 0  H1   8.2     1200     80.5

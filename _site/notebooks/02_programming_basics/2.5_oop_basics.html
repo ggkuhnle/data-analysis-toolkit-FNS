@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>📊 2.4 Data Structures</title>
+<title>🧑‍💻 2.5 Object-Oriented Programming Basics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,10 +79,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#lists" id="toc-lists" class="nav-link active" data-scroll-target="#lists">Lists</a></li>
-  <li><a href="#dictionaries" id="toc-dictionaries" class="nav-link" data-scroll-target="#dictionaries">Dictionaries</a></li>
-  <li><a href="#pandas-dataframes" id="toc-pandas-dataframes" class="nav-link" data-scroll-target="#pandas-dataframes">Pandas DataFrames</a></li>
-  <li><a href="#exercise-1-build-a-dataframe" id="toc-exercise-1-build-a-dataframe" class="nav-link" data-scroll-target="#exercise-1-build-a-dataframe">Exercise 1: Build a DataFrame</a></li>
+  <li><a href="#classes-and-objects" id="toc-classes-and-objects" class="nav-link active" data-scroll-target="#classes-and-objects">📚 Classes and Objects</a></li>
+  <li><a href="#adding-methods-and-attributes" id="toc-adding-methods-and-attributes" class="nav-link" data-scroll-target="#adding-methods-and-attributes">🔧 Adding Methods and Attributes</a></li>
+  <li><a href="#inheritance" id="toc-inheritance" class="nav-link" data-scroll-target="#inheritance">🌱 Inheritance</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
@@ -91,7 +91,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">📊 2.4 Data Structures</h1>
+<h1 class="title">🧑‍💻 2.5 Object-Oriented Programming Basics</h1>
 </div>
 
 
@@ -108,97 +108,137 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This notebook introduces Python data structures (lists, dictionaries, DataFrames) for organizing nutrition data, essential for MSc students.</p>
-<p><strong>Objectives</strong>: - Use lists and dictionaries to store nutrient data. - Introduce pandas DataFrames for tabular data. - Manipulate data structures for analysis.</p>
-<p><strong>Context</strong>: Data structures are the backbone of nutrition datasets, like NDNS or hippo diet logs.</p>
+<p>This notebook introduces the fundamentals of Object-Oriented Programming (OOP) in Python, tailored for food and nutrition science students. OOP is a powerful way to organise code, making it more modular, reusable, and easier to maintain—perfect for managing complex nutrition data projects!</p>
+<p><strong>Objectives</strong>: - Understand key OOP concepts: classes, objects, methods, and inheritance. - Apply OOP to model nutrition-related concepts (e.g., foods, diets). - Practise creating and using classes to solve simple problems.</p>
+<p><strong>Context</strong>: In nutrition research, you often deal with related data (e.g., foods, nutrients, diets). OOP lets you model these as objects with properties (e.g., calories) and behaviours (e.g., calculate energy), making your code more intuitive and scalable.</p>
 <details>
 <summary>
 Fun Fact
 </summary>
-A DataFrame is like a hippo’s pantry—everything neatly organised for quick access! 🦛
+Think of OOP like a hippo’s diet plan—each food item is an object, and the diet is a class that organises them! 🦛
 </details>
-<div id="setup" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required package</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas  <span class="co"># Ensures compatibility in Colab</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd  <span class="co"># For DataFrames</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Data structure environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Data structure environment ready.</code></pre>
+<div id="colab_setup" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Ensure environment is ready</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: This module (Programming Basics) does not require datasets</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'No dataset required for this notebook 🦛'</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages for this notebook</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<section id="lists" class="level2">
-<h2 class="anchored" data-anchor-id="lists">Lists</h2>
-<p>Create a list of nutrient intakes for multiple hippos.</p>
-<div id="list_example" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># List of iron intakes</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>iron_intakes <span class="op">=</span> [<span class="fl">8.2</span>, <span class="fl">8.0</span>, <span class="fl">8.4</span>]  <span class="co"># Iron in mg for hippos H1, H2, H3</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate average</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>average_iron <span class="op">=</span> <span class="bu">sum</span>(iron_intakes) <span class="op">/</span> <span class="bu">len</span>(iron_intakes)  <span class="co"># Compute mean</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Iron intakes: </span><span class="sc">{</span>iron_intakes<span class="sc">}</span><span class="ss">'</span>)  <span class="co"># Display list</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Average iron: </span><span class="sc">{</span><span class="bu">round</span>(average_iron, <span class="dv">1</span>)<span class="sc">}</span><span class="ss"> mg'</span>)  <span class="co"># Display average</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Iron intakes: [8.2, 8.0, 8.4]
-Average iron: 8.2 mg</code></pre>
-</div>
-</div>
-</section>
-<section id="dictionaries" class="level2">
-<h2 class="anchored" data-anchor-id="dictionaries">Dictionaries</h2>
-<p>Store nutrient data for a single hippo in a dictionary.</p>
-<div id="dict_example" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dictionary for a hippo’s nutrients</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>hippo_nutrients <span class="op">=</span> {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Iron'</span>: <span class="fl">8.2</span>,  <span class="co"># mg</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Calcium'</span>: <span class="dv">1200</span>,  <span class="co"># mg</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Protein'</span>: <span class="fl">80.5</span>  <span class="co"># g</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Access a value</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>calcium <span class="op">=</span> hippo_nutrients[<span class="st">'Calcium'</span>]  <span class="co"># Retrieve calcium value</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Hippo H1 nutrients: </span><span class="sc">{</span>hippo_nutrients<span class="sc">}</span><span class="ss">'</span>)  <span class="co"># Display dictionary</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Calcium intake: </span><span class="sc">{</span>calcium<span class="sc">}</span><span class="ss"> mg'</span>)  <span class="co"># Display calcium</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hippo H1 nutrients: {'Iron': 8.2, 'Calcium': 1200, 'Protein': 80.5}
-Calcium intake: 1200 mg</code></pre>
-</div>
+<section id="classes-and-objects" class="level2">
+<h2 class="anchored" data-anchor-id="classes-and-objects">📚 Classes and Objects</h2>
+<p>In OOP, a <strong>class</strong> is a blueprint for creating <strong>objects</strong>. An object is an instance of a class, with its own data (attributes) and behaviours (methods). Let’s create a <code>Food</code> class to model food items in a nutrition study.</p>
+<p><strong>Example</strong>: A <code>Food</code> class with attributes for name and calories, and a method to describe the food.</p>
+<div id="food_class" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the Food class</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Food:</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constructor method to initialise attributes</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># self refers to the object being created</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories):</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name        <span class="co"># Attribute: name of the food</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> calories  <span class="co"># Attribute: calories per serving</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to describe the food</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving.'</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create objects (instances) of the Food class</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>apple <span class="op">=</span> Food(<span class="st">'Apple'</span>, <span class="dv">95</span>)   <span class="co"># Create an Apple object</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>banana <span class="op">=</span> Food(<span class="st">'Banana'</span>, <span class="dv">120</span>)  <span class="co"># Create a Banana object</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the describe method to print information</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(apple.describe())   <span class="co"># Output: Apple has 95 calories per serving.</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(banana.describe())  <span class="co"># Output: Banana has 120 calories per serving.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="pandas-dataframes" class="level2">
-<h2 class="anchored" data-anchor-id="pandas-dataframes">Pandas DataFrames</h2>
-<p>Create a DataFrame for multiple hippos’ nutrient data.</p>
-<div id="df_example" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a DataFrame</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ID'</span>: [<span class="st">'H1'</span>, <span class="st">'H2'</span>, <span class="st">'H3'</span>],</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Iron'</span>: [<span class="fl">8.2</span>, <span class="fl">8.0</span>, <span class="fl">8.4</span>],</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Calcium'</span>: [<span class="dv">1200</span>, <span class="dv">1150</span>, <span class="dv">1250</span>],</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Protein'</span>: [<span class="fl">80.5</span>, <span class="fl">75.0</span>, <span class="fl">82.3</span>]</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)  <span class="co"># Convert dictionary to DataFrame</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Display DataFrame</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)  <span class="co"># Show all rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   ID  Iron  Calcium  Protein
-0  H1   8.2     1200     80.5
-1  H2   8.0     1150     75.0
-2  H3   8.4     1250     82.3</code></pre>
-</div>
+<section id="adding-methods-and-attributes" class="level2">
+<h2 class="anchored" data-anchor-id="adding-methods-and-attributes">🔧 Adding Methods and Attributes</h2>
+<p>Let’s enhance the <code>Food</code> class by adding a method to adjust calories (e.g., for a larger serving) and an attribute for food category (e.g., fruit, vegetable).</p>
+<p><strong>Example</strong>: Extend the <code>Food</code> class with a category attribute and a method to scale calories.</p>
+<div id="food_extended" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extended Food class</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Food:</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories, category):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> calories</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.category <span class="op">=</span> category  <span class="co"># New attribute: food category</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>category<span class="sc">}</span><span class="ss">) has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving.'</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># New method to scale calories for a different serving size</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> scale_calories(<span class="va">self</span>, factor):</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> <span class="bu">int</span>(<span class="va">self</span>.calories <span class="op">*</span> factor)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'Updated </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories.'</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create objects with category</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>carrot <span class="op">=</span> Food(<span class="st">'Carrot'</span>, <span class="dv">41</span>, <span class="st">'Vegetable'</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>mango <span class="op">=</span> Food(<span class="st">'Mango'</span>, <span class="dv">60</span>, <span class="st">'Fruit'</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Describe the foods</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(carrot.describe())  <span class="co"># Output: Carrot (Vegetable) has 41 calories per serving.</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mango.describe())   <span class="co"># Output: Mango (Fruit) has 60 calories per serving.</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale calories for a larger serving (e.g., 2x serving size)</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(carrot.scale_calories(<span class="dv">2</span>))  <span class="co"># Output: Updated Carrot to 82 calories.</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(carrot.describe())         <span class="co"># Output: Carrot (Vegetable) has 82 calories per serving.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="exercise-1-build-a-dataframe" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-build-a-dataframe">Exercise 1: Build a DataFrame</h2>
-<p>Create a DataFrame for two hippos with calorie and protein data (e.g., H4: 2400 kcal, 78 g; H5: 2550 kcal, 81 g). Print it with a comment.</p>
-<p><strong>Guidance</strong>: Use <code>pd.DataFrame()</code> with a dictionary.</p>
-<p><strong>Answer</strong>:</p>
-<p>My DataFrame code is…</p>
+<section id="inheritance" class="level2">
+<h2 class="anchored" data-anchor-id="inheritance">🌱 Inheritance</h2>
+<p>Inheritance allows a class to inherit attributes and methods from another class, promoting code reuse. Let’s create a <code>Diet</code> class that inherits from <code>Food</code> to represent a special diet food with an additional attribute for diet type (e.g., low-carb).</p>
+<p><strong>Example</strong>: A <code>Diet</code> class that inherits from <code>Food</code> and adds a diet type.</p>
+<div id="diet_class" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base class (parent)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Food:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories, category):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> calories</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.category <span class="op">=</span> category</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>category<span class="sc">}</span><span class="ss">) has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving.'</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Derived class (child) that inherits from Food</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Diet(Food):</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories, category, diet_type):</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Call the parent class's __init__ method to set name, calories, category</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(name, calories, category)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.diet_type <span class="op">=</span> diet_type  <span class="co"># New attribute: diet type</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Override the describe method to include diet type</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>category<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>diet_type<span class="sc">}</span><span class="ss">) has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving.'</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a diet food object</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>keto_avocado <span class="op">=</span> Diet(<span class="st">'Avocado'</span>, <span class="dv">160</span>, <span class="st">'Fruit'</span>, <span class="st">'Keto'</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Describe the diet food</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(keto_avocado.describe())  <span class="co"># Output: Avocado (Fruit, Keto) has 160 calories per serving.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">🧪 Exercises</h2>
+<ol type="1">
+<li><p><strong>Create a New Class</strong>: Create a <code>Nutrient</code> class with attributes for <code>name</code> (e.g., ‘Protein’) and <code>amount</code> (e.g., 10 grams). Add a method <code>increase_amount</code> that increases the amount by a given factor. Test it by creating a <code>Nutrient</code> object for ‘Vitamin C’ with 90 mg and increasing it by 1.5.</p></li>
+<li><p><strong>Extend the Diet Class</strong>: Add a method to the <code>Diet</code> class called <code>is_low_calorie</code> that returns <code>True</code> if the food has fewer than 100 calories, <code>False</code> otherwise. Test it with <code>keto_avocado</code> and a new low-calorie diet food (e.g., ‘Spinach’, 23 calories, ‘Vegetable’, ‘Low-Carb’).</p></li>
+<li><p><strong>Inheritance Challenge</strong>: Create a <code>Meal</code> class that inherits from <code>Diet</code> and has an additional attribute <code>meal_type</code> (e.g., ‘Breakfast’). Override the <code>describe</code> method to include the meal type. Create a <code>Meal</code> object and test it.</p></li>
+</ol>
+<p><strong>Guidance</strong>: Use the examples above as a starting point. Experiment with different foods and diets relevant to nutrition science!</p>
+<p><strong>Your Answers</strong>:</p>
+<p><strong>Exercise 1: Nutrient Class</strong><br>
+[Write your code and test output here]</p>
+<p><strong>Exercise 2: Extend Diet Class</strong><br>
+[Write your code and test output here]</p>
+<p><strong>Exercise 3: Inheritance Challenge</strong><br>
+[Write your code and test output here]</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>You’ve learned to use lists, dictionaries, and DataFrames to organise nutrition data.</p>
-<p><strong>Next Steps</strong>: Explore object-oriented programming in 2.5.</p>
-<p><strong>Resources</strong>: - <a href="https://pandas.pydata.org/">Pandas Documentation</a> - <a href="https://docs.python.org/3/tutorial/datastructures.html">Python Data Structures</a> - Repository: <a href="https://github.com/ggkuhnle/data-analysis-toolkit-FNS">github.com/ggkuhnle/data-analysis-toolkit-FNS</a></p>
+<p>You’ve learned the basics of Object-Oriented Programming in Python, including classes, objects, methods, and inheritance. These concepts are powerful for organising nutrition data projects—imagine creating classes for meals, diets, or even hippo food preferences! 🦛</p>
+<p><strong>Next Steps</strong>: You’ve completed the Programming Basics module! Move on to the Data Handling module starting with <code>3.1_what_is_data.ipynb</code> to apply your skills to real nutrition datasets.</p>
+<p><strong>Resources</strong>: - <a href="https://docs.python.org/3/tutorial/classes.html">Python OOP Tutorial</a> - <a href="https://realpython.com/python3-object-oriented-programming/">Real Python: OOP in Python</a> - Repository: <a href="https://github.com/ggkuhnle/data-analysis-toolkit-FNS">github.com/ggkuhnle/data-analysis-toolkit-FNS</a></p>
 </section>
 
 </main>

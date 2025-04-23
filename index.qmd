@@ -19,27 +19,27 @@ Explore the six modules, each with notebooks you can view as HTML or run in Cola
 
 - **Infrastructure**  
   Set up Python, Jupyter, and Quarto for data analysis.  
-  [Explore Module](notebooks/01_infrastructure/) | Try: [Getting Started](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/01_infrastructure/0_getting_started.ipynb)
+  [Explore Module](notebooks/01_infrastructure/) | Try: [Getting Started](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/01_infrastructure/0_getting_started.ipynb)
 
 - **Programming Python**  
   Master Python syntax and programming basics.  
-  [Explore Module](notebooks/02_programming_basics/) | Try: [Syntax and Variables](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/02_programming_basics/1_syntax_variables_comments.ipynb)
+  [Explore Module](notebooks/02_programming_basics/) | Try: [Syntax and Variables](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/02_programming_basics/1_syntax_variables_comments.ipynb)
 
 - **Data Handling**  
   Import, clean, and transform nutrition datasets.  
-  [Explore Module](notebooks/03_data_handling/) | Try: [Importing Data](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/03_data_handling/3.1_importing_data.ipynb)
+  [Explore Module](notebooks/03_data_handling/) | Try: [Importing Data](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/03_data_handling/3.1_importing_data.ipynb)
 
 - **Data Analysis**  
   Visualise data and build regression models.  
-  [Explore Module](notebooks/04_data_analysis/) | Try: [Regression Modelling](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.5_regression_modelling.ipynb)
+  [Explore Module](notebooks/04_data_analysis/) | Try: [Regression Modelling](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/04_data_analysis/4.5_regression_modelling.ipynb)
 
 - **Advanced Topics**  
   Dive into Bayesian methods, SQL, and dashboards.  
-  [Explore Module](notebooks/05_advanced/) | Try: [Advanced Bayesian Modelling](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.3_advanced_bayesian.ipynb)
+  [Explore Module](notebooks/05_advanced/) | Try: [Advanced Bayesian Modelling](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/05_advanced/5.3_advanced_bayesian.ipynb)
 
 - **Qualitative Research**  
   Analyse text data for nutrition studies.  
-  [Explore Module](notebooks/06_qualitative/) | Try: [Text Analysis](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/06_qualitative/6.2_text_analysis.ipynb)
+  [Explore Module](notebooks/06_qualitative/) | Try: [Text Analysis](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/06_qualitative/6.2_text_analysis.ipynb)
 
 ## Why Hippos? 🦛
 
