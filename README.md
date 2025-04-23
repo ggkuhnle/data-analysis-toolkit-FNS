@@ -86,7 +86,7 @@ git push origin my-feature
 
 ## 📬 Contact
 
-For issues, open a GitHub issue or contact [your.email@example.com](mailto:your.email@example.com).
+For issues, please contact me [g.g.kuhnle@reading.ac.uk](mailto:g.g.kuhnle@reading.ac.uk)
 
 Happy analysing, and may your data be as robust as a hippo! 🦛🚀
 
