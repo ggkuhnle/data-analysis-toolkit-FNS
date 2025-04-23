@@ -1,19 +1,33 @@
 ---
-title: "Infrastructure Module"
-format: html
+title: "Infrastructure"
 ---
 
-## Infrastructure Module 🛠️
+# Infrastructure 🛠️
 
-This module sets up your data science environment for nutrition research.
+This module guides you through setting up the tools needed for data analysis in nutrition science, using hippo-themed examples (🦛).
 
-**Notebooks**:
-- [Getting Started](getting_started.html)
-- [What is a Data Science Environment?](what_is_data_science_env.html)
-- [Python vs R](python_vs_r.html)
-- [Introduction to Git](intro_to_git.html)
-- [Quarto Basics](quarto_basics.html)
+## Notebooks
 
-**Dataset**: `data/hippo_diets.csv` (50 rows)
+- **Getting Started**  
+  Introduction to the toolkit and environment setup.  
+  [View HTML](getting_started.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/01_infrastructure/0_getting_started.ipynb)
 
-Start with [Getting Started](getting_started.html) to configure Python and Jupyter! 🦛
+- **Python Setup**  
+  Install and configure Python and Jupyter.  
+  [View HTML](python_setup.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/01_infrastructure/1_python_setup.ipynb)
+
+- **Jupyter Basics**  
+  Learn to use Jupyter notebooks effectively.  
+  [View HTML](jupyter_basics.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/01_infrastructure/2_jupyter_basics.ipynb)
+
+- **Quarto Setup**  
+  Set up Quarto for rendering tutorials.  
+  [View HTML](quarto_setup.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/01_infrastructure/3_quarto_setup.ipynb)
+
+- **Environment Management**  
+  Manage Python environments with venv and conda.  
+  [View HTML](environment_management.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/01_infrastructure/4_environment_management.ipynb)
+
+## Datasets
+
+- `data/hippo_diets.csv`: Example dataset for setup exercises.

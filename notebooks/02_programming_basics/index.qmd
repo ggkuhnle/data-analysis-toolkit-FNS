@@ -1,17 +1,33 @@
 ---
-title: "Programming Basics Module"
-format: html
+title: "Programming Basics"
 ---
 
-## Programming Basics Module 🐍
+# Programming Basics 🧑‍💻
 
-This module teaches Python fundamentals for data analysis.
+This module covers the fundamentals of Python programming for nutrition data analysis, with hippo-themed examples (🦛).
 
-**Notebooks**:
-- [Syntax, Variables, Comments](syntax_variables_comments.html)
-- [Data Types and Conversion](data_types_conversion.html)
-- [Functions and Loops](functions_loops.html)
-- [Data Structures](data_structures.html)
-- [Object-Oriented Programming Basics](oop_basics.html)
+## Notebooks
 
-No datasets required. Dive into [Syntax, Variables, Comments](syntax_variables_comments.html)! 🦛
+- **Syntax and Variables**  
+  Learn Python syntax, variables, and comments.  
+  [View HTML](syntax_variables_comments.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/02_programming_basics/1_syntax_variables_comments.ipynb)
+
+- **Control Structures**  
+  Explore conditionals and loops.  
+  [View HTML](control_structures.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/02_programming_basics/2_control_structures.ipynb)
+
+- **Functions**  
+  Write and use Python functions.  
+  [View HTML](functions.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/02_programming_basics/3_functions.ipynb)
+
+- **Data Structures**  
+  Work with lists, dictionaries, and sets.  
+  [View HTML](data_structures.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/02_programming_basics/4_data_structures.ipynb)
+
+- **Modules and Libraries**  
+  Import and use Python libraries.  
+  [View HTML](modules_libraries.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/02_programming_basics/5_modules_libraries.ipynb)
+
+## Datasets
+
+- None required for this module.

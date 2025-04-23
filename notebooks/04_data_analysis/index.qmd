@@ -1,20 +1,37 @@
 ---
-title: "Data Analysis Module"
-format: html
+title: "Data Analysis"
 ---
 
-## Data Analysis Module 📊
+# Data Analysis 📊
 
-This module teaches visualization and statistical analysis.
+This module introduces techniques for exploring and analysing nutrition data, from visualisations to regression models, using hippo-themed datasets (🦛).
 
-**Notebooks**:
-- [Distributions and Visualization](distributions_visualisation.html)
-- [Exploratory Data Analysis](exploratory_data_analysis.html)
-- [Correlation Analysis](correlation_analysis.html)
-- [Statistical Testing](statistical_testing.html)
-- [Regression Modelling](regression_modelling.html)
-- [Logistic Regression and Survival Analysis](04_logistic_and_survival.html)
+## Notebooks
 
-**Dataset**: `data/vitamin_trial.csv` (200 rows)
+- **Distributions and Visualisation**  
+  Explore data distributions and create visualisations.  
+  [View HTML](distributions_visualisation.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.1_distributions_visualisation.ipynb)
 
-Try [Distributions and Visualization](distributions_visualisation.html)! 🦛
+- **Exploratory Data Analysis**  
+  Perform EDA to uncover patterns in nutrition data.  
+  [View HTML](exploratory_data_analysis.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.2_exploratory_data_analysis.ipynb)
+
+- **Correlation Analysis**  
+  Analyse relationships between variables.  
+  [View HTML](correlation_analysis.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.3_correlation_analysis.ipynb)
+
+- **Statistical Testing**  
+  Conduct hypothesis tests for nutrition studies.  
+  [View HTML](statistical_testing.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.4_statistical_testing.ipynb)
+
+- **Regression Modelling**  
+  Build and interpret regression models for vitamin D data.  
+  [View HTML](regression_modelling.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.5_regression_modelling.ipynb)
+
+- **Logistic and Survival Analysis**  
+  Model binary outcomes and survival data.  
+  [View HTML](04_logistic_and_survival.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/04_data_analysis/4.6_logistic_survival.ipynb)
+
+## Datasets
+
+- `data/vitamin_trial.csv`: Used in regression and survival analysis notebooks.

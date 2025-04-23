@@ -1,19 +1,33 @@
 ---
-title: "Advanced Topics Module"
-format: html
+title: "Advanced Topics"
 ---
 
-## Advanced Topics Module 🧠
+# Advanced Topics 🔍
 
-This module explores advanced data science techniques.
+This module covers advanced data analysis techniques for nutrition research, using hippo-themed datasets (🦛).
 
-**Notebooks**:
-- [Bayesian Methods](bayesian_methods.html)
-- [Workflow Automation](workflow_automation.html)
-- [Advanced Bayesian Modelling](advanced_bayesian.html)
-- [Databases and SQL](databases_sql.html)
-- [Dashboards](dashboards.html)
+## Notebooks
 
-**Datasets**: `data/large_food_log.csv` (500 rows), `../03_data_handling/data/hippo_nutrients.csv`
+- **Advanced Data Visualisation**  
+  Create complex visualisations for nutrition data.  
+  [View HTML](advanced_visualisation.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.1_advanced_visualisation.ipynb)
 
-Start with [Bayesian Methods](bayesian_methods.html)! 🦛
+- **Machine Learning Basics**  
+  Introduction to ML for nutrition studies.  
+  [View HTML](machine_learning_basics.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.2_machine_learning_basics.ipynb)
+
+- **Advanced Bayesian Modelling**  
+  Apply Bayesian methods to nutrition data.  
+  [View HTML](advanced_bayesian.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.3_advanced_bayesian.ipynb)
+
+- **SQL for Data Analysis**  
+  Use SQL for querying nutrition datasets.  
+  [View HTML](sql_data_analysis.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.4_sql_data_analysis.ipynb)
+
+- **Dashboard Creation**  
+  Build interactive dashboards for data exploration.  
+  [View HTML](dashboard_creation.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/groks-revisions/notebooks/05_advanced/5.5_dashboard_creation.ipynb)
+
+## Datasets
+
+- `data/large_food_log.csv`: Used in advanced analysis notebooks.
