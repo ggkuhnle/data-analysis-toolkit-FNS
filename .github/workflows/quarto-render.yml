@@ -1,7 +1,9 @@
 name: Render Quarto Files
 on:
   push:
-    branches: [main]
+    branches: 
+      - main
+      - groks-revisions
 jobs:
   render:
     runs-on: ubuntu-latest
