@@ -370,17 +370,21 @@ Clinical trials are like a hippo testing a new swimming spot—careful measureme
 <span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    trace <span class="op">=</span> pm.sample(<span class="dv">1000</span>, tune<span class="op">=</span><span class="dv">1000</span>, return_inferencedata<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarise the posterior difference</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>diff_mean <span class="op">=</span> trace.posterior[<span class="st">'diff'</span>].mean().values  <span class="co"># Mean of the difference</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>diff_hdi <span class="op">=</span> az.hdi(trace.posterior[<span class="st">'diff'</span>], hdi_prob<span class="op">=</span><span class="fl">0.95</span>)  <span class="co"># Compute the 95% HDI</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>lower_hdi <span class="op">=</span> diff_hdi.sel(hdi<span class="op">=</span><span class="st">'lower'</span>).values  <span class="co"># Extract the lower bound</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>upper_hdi <span class="op">=</span> diff_hdi.sel(hdi<span class="op">=</span><span class="st">'higher'</span>).values  <span class="co"># Extract the upper bound</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Posterior mean difference (Intervention - Control): </span><span class="sc">{</span>diff_mean<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"95% HDI: [</span><span class="sc">{</span>lower_hdi<span class="sc">:.2f}</span><span class="ss">, </span><span class="sc">{</span>upper_hdi<span class="sc">:.2f}</span><span class="ss">]"</span>)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>diff_mean <span class="op">=</span> trace.posterior[<span class="st">'diff'</span>].mean().values.item()  <span class="co"># Mean of the difference</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Compute HDI</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>diff_hdi <span class="op">=</span> az.hdi(trace.posterior[<span class="st">'diff'</span>], hdi_prob<span class="op">=</span><span class="fl">0.95</span>)</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 2: Access the variable (usually named 'diff')</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>diff_hdi_values <span class="op">=</span> diff_hdi[<span class="st">'diff'</span>]</span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualise the posterior difference</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>az.plot_posterior(trace, var_names<span class="op">=</span>[<span class="st">'diff'</span>], ref_val<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Posterior Distribution of Difference in Means'</span>)</span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 3: Select bounds and extract scalar</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>lower_hdi <span class="op">=</span> diff_hdi_values.sel(hdi<span class="op">=</span><span class="st">'lower'</span>).values.item()</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>upper_hdi <span class="op">=</span> diff_hdi_values.sel(hdi<span class="op">=</span><span class="st">'higher'</span>).values.item()</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualise the posterior difference</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>az.plot_posterior(trace, var_names<span class="op">=</span>[<span class="st">'diff'</span>], ref_val<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Posterior Distribution of Difference in Means'</span>)</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="visualise-the-data" class="level2">
