@@ -14,7 +14,7 @@ This module covers basic qualitative research.
 
 - **Text analysis**  
   Conduct text analysis  
-  [View HTML](6.2_text_analysis.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-   ↪analysis-toolkit-FNS/blob/main/notebooks/06_qualitative/6.2_text_analysis.ipynb)
+  [View HTML](6.2_text_analysis.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/06_qualitative/6.2_text_analysis.ipynb)
 
 ## Datasets
 
