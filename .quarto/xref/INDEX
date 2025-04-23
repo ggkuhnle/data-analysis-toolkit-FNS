@@ -238,5 +238,11 @@
   },
   "notebooks/03_data_handling/3.1_what_is_data.ipynb": {
     "3.1_what_is_data.html": "99af497f"
+  },
+  "notebooks/04_data_analysis/4.6_logistic_survival.ipynb": {
+    "04_logistic_and_survival.html": "c5650166"
+  },
+  "notebooks/04_data_analysis/4.7_clinical_trial_analyis.ipynb": {
+    "4.7_clinical_trial_analyis.html": "cf2168d7"
   }
 }

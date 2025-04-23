@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧮 1.2 Python vs R vs Other Tools for Nutrition Data Analysis</title>
+<title>Logistic Regression and Survival Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,16 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="1.2_python_vs_r_files/libs/clipboard/clipboard.min.js"></script>
-<script src="1.2_python_vs_r_files/libs/quarto-html/quarto.js"></script>
-<script src="1.2_python_vs_r_files/libs/quarto-html/popper.min.js"></script>
-<script src="1.2_python_vs_r_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="1.2_python_vs_r_files/libs/quarto-html/anchor.min.js"></script>
-<link href="1.2_python_vs_r_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="1.2_python_vs_r_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="1.2_python_vs_r_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="1.2_python_vs_r_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="1.2_python_vs_r_files/libs/bootstrap/bootstrap-10daa034703793678e481cc8cee6d76f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="4.6_logistic_survival_files/libs/clipboard/clipboard.min.js"></script>
+<script src="4.6_logistic_survival_files/libs/quarto-html/quarto.js"></script>
+<script src="4.6_logistic_survival_files/libs/quarto-html/popper.min.js"></script>
+<script src="4.6_logistic_survival_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="4.6_logistic_survival_files/libs/quarto-html/anchor.min.js"></script>
+<link href="4.6_logistic_survival_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="4.6_logistic_survival_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="4.6_logistic_survival_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="4.6_logistic_survival_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="4.6_logistic_survival_files/libs/bootstrap/bootstrap-10daa034703793678e481cc8cee6d76f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -79,12 +79,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#tool-comparison" id="toc-tool-comparison" class="nav-link active" data-scroll-target="#tool-comparison">💡 Tool Comparison</a></li>
-  <li><a href="#fun-analogy-if-statistics-tools-were-cars" id="toc-fun-analogy-if-statistics-tools-were-cars" class="nav-link" data-scroll-target="#fun-analogy-if-statistics-tools-were-cars">🚗 Fun Analogy: If Statistics Tools Were Cars…</a></li>
-  <li><a href="#python-analysis-example" id="toc-python-analysis-example" class="nav-link" data-scroll-target="#python-analysis-example">Python Analysis Example</a></li>
-  <li><a href="#how-other-tools-would-do-this" id="toc-how-other-tools-would-do-this" class="nav-link" data-scroll-target="#how-other-tools-would-do-this">How Other Tools Would Do This</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
+  <li><a href="#logistic-regression-and-survival-analysis" id="toc-logistic-regression-and-survival-analysis" class="nav-link active" data-scroll-target="#logistic-regression-and-survival-analysis">📊 4.6 Logistic Regression and Survival Analysis</a>
+  <ul class="collapse">
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation">📥 Data Preparation</a></li>
+  <li><a href="#logistic-regression" id="toc-logistic-regression" class="nav-link" data-scroll-target="#logistic-regression">📈 Logistic Regression</a></li>
+  <li><a href="#survival-analysis" id="toc-survival-analysis" class="nav-link" data-scroll-target="#survival-analysis">⏳ Survival Analysis</a></li>
+  <li><a href="#exercises-extend-the-analysis" id="toc-exercises-extend-the-analysis" class="nav-link" data-scroll-target="#exercises-extend-the-analysis">🧪 Exercises: Extend the Analysis</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -92,7 +94,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">🧮 1.2 Python vs R vs Other Tools for Nutrition Data Analysis</h1>
+<h1 class="title">Logistic Regression and Survival Analysis</h1>
 </div>
 
 
@@ -109,19 +111,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This notebook compares Python, R, SPSS, and XLStat as tools for data analysis in food and nutrition sciences, helping MSc students choose the right tool for their research.</p>
-<p><strong>Objectives</strong>:</p>
-<ul>
-<li>Understand the strengths and weaknesses of Python, R, SPSS, and XLStat.</li>
-<li>Perform a simple analysis in Python using <code>hippo_diets.csv</code>.</li>
-<li>Reflect on tool selection for nutrition research (e.g., NDNS analysis).</li>
-</ul>
-<p><strong>Context</strong>: Nutrition studies often require robust data analysis tools. Python offers flexibility, R excels in statistical packages, SPSS provides a user-friendly interface, and XLStat integrates with Excel for sensory analysis. Choosing the right tool depends on your project needs!</p>
+<section id="logistic-regression-and-survival-analysis" class="level1">
+<h1>📊 4.6 Logistic Regression and Survival Analysis</h1>
+<p>This notebook introduces logistic regression and survival analysis for nutrition research, focusing on binary outcomes and time-to-event data.</p>
+<p><strong>Objectives</strong>: - Apply logistic regression to predict binary outcomes. - Perform survival analysis to model time-to-event data. - Use <code>vitamin_trial.csv</code> to analyse vitamin D trial outcomes.</p>
+<p><strong>Context</strong>: Logistic regression predicts outcomes like improved health, while survival analysis models time to events, such as response to treatment, in nutrition studies.</p>
 <details>
 <summary>
 Fun Fact
 </summary>
-Choosing a tool is like a hippo picking its favourite snack—carrots, fruit, or a mix of both might suit different tastes! 🦛
+Hippos may not run clinical trials, but their vitamin D data helps us model health outcomes with statistical flair! 🦛
 </details>
 <div id="colab_setup" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Fetch datasets automatically or manually</span></span>
@@ -129,11 +128,11 @@ Choosing a tool is like a hippo picking its favourite snack—carrots, fruit, or
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the module and dataset for this notebook</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>MODULE <span class="op">=</span> <span class="st">'01_infrastructure'</span>  <span class="co"># e.g., '01_infrastructure'</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>DATASET <span class="op">=</span> <span class="st">'hippo_diets.csv'</span>  <span class="co"># e.g., 'hippo_diets.csv'</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>BASE_PATH <span class="op">=</span> <span class="st">'/content/data-analysis-toolkit-FNS'</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>MODULE_PATH <span class="op">=</span> os.path.join(BASE_PATH, <span class="st">'notebooks'</span>, MODULE)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>DATASET_PATH <span class="op">=</span> os.path.join(<span class="st">'data'</span>, DATASET)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>MODULE <span class="op">=</span> <span class="st">'04_data_analysis'</span>  <span class="co"># The module directory in notebooks/</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>DATASET <span class="op">=</span> <span class="st">'vitamin_trial.csv'</span>  <span class="co"># The dataset file to load</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>BASE_PATH <span class="op">=</span> <span class="st">'/content/data-analysis-toolkit-FNS'</span>  <span class="co"># Base path for the cloned repository</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>MODULE_PATH <span class="op">=</span> os.path.join(BASE_PATH, <span class="st">'notebooks'</span>, MODULE)  <span class="co"># Path to the module directory</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>DATASET_PATH <span class="op">=</span> os.path.join(<span class="st">'data'</span>, DATASET)  <span class="co"># Path to the dataset within the module</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Attempt to clone the repository (automatic method)</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: If you encounter a cloning error (e.g., 'fatal: destination path already exists'),</span></span>
@@ -145,7 +144,7 @@ Choosing a tool is like a hippo picking its favourite snack—carrots, fruit, or
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">!</span>git clone https:<span class="op">//</span>github.com<span class="op">/</span>ggkuhnle<span class="op">/</span>data<span class="op">-</span>analysis<span class="op">-</span>toolkit<span class="op">-</span>FNS.git</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Debug: Print directory structure</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Debug: Print directory structure to help with troubleshooting</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Listing repository contents:'</span>)</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Listing notebooks directory contents:'</span>)</span>
@@ -168,7 +167,7 @@ Choosing a tool is like a hippo picking its favourite snack—carrots, fruit, or
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Cloning failed: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">'</span>)</span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Falling back to manual upload option...'</span>)</span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Step 2: Manual upload option</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Step 2: Manual upload option if cloning fails</span></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Please upload </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> manually.'</span>)</span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'1. Click the "Choose Files" button below.'</span>)</span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'2. Select </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> from your local machine.'</span>)</span>
@@ -189,152 +188,148 @@ Choosing a tool is like a hippo picking its favourite snack—carrots, fruit, or
 <span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f'Upload failed. Please ensure you uploaded </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss">.'</span>)</span>
 <span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages for this notebook</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas numpy</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas numpy scikit<span class="op">-</span>learn lifelines matplotlib</span>
 <span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="tool-comparison" class="level2">
-<h2 class="anchored" data-anchor-id="tool-comparison">💡 Tool Comparison</h2>
-<p>Here’s a detailed comparison of Python, R, SPSS, and XLStat, focusing on their use in nutrition data analysis:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 9%">
-<col style="width: 31%">
-<col style="width: 29%">
-<col style="width: 28%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Tool</th>
-<th>Strengths</th>
-<th>Limitations</th>
-<th>Best For</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Python</strong></td>
-<td>Open-source, general-purpose, readable, supports automation, machine learning, and large datasets</td>
-<td>Requires coding knowledge, slightly more setup</td>
-<td>Pipelines, dashboards, reproducible workflows, NDNS analysis</td>
-</tr>
-<tr class="even">
-<td><strong>R</strong></td>
-<td>Excellent statistical packages (e.g., <code>ggplot2</code>, <code>dplyr</code>), built-in stats functions, visualisation</td>
-<td>Less general-purpose, steeper learning curve for non-stats tasks</td>
-<td>Statistical analysis, visualisation, epidemiology studies</td>
-</tr>
-<tr class="odd">
-<td><strong>SPSS</strong></td>
-<td>User-friendly GUI, menu-driven stats, widely used in social sciences and nutrition</td>
-<td>Limited flexibility, expensive, poor reproducibility (manual steps)</td>
-<td>Quick statistical tests, small studies, users preferring GUI</td>
-</tr>
-<tr class="even">
-<td><strong>XLStat</strong></td>
-<td>Integrates with Excel, excellent for sensory analysis and multivariate stats, user-friendly</td>
-<td>Expensive, closed environment, limited scripting, tied to Excel’s limitations</td>
-<td>Sensory evaluation, Excel-based workflows, quick multivariate analysis</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Detailed Differences</strong>:</p>
-<ul>
-<li><strong>Usability</strong>:
-<ul>
-<li>Python and R require coding but offer flexibility and reproducibility. Python’s syntax (e.g., <code>pandas</code>) is often more intuitive for beginners, while R’s statistical functions (e.g., <code>summary()</code>) are straightforward for stats tasks.</li>
-<li>SPSS uses a graphical interface, making it accessible for non-coders, but manual steps (e.g., clicking menus) hinder automation. For example, running an ANOVA in SPSS involves selecting options through menus, which isn’t logged as code.</li>
-<li>XLStat also uses a GUI within Excel, ideal for users comfortable with spreadsheets. It simplifies tasks like principal component analysis (PCA) for sensory data but lacks the depth of Python or R for custom analyses.</li>
-</ul></li>
-<li><strong>Reproducibility</strong>:
-<ul>
-<li>Python and R excel here—code can be shared and rerun exactly (e.g., this notebook!). Python’s <code>pandas</code> and R’s <code>dplyr</code> allow scripted workflows.</li>
-<li>SPSS and XLStat struggle with reproducibility. SPSS can generate syntax, but it’s often an afterthought, and XLStat’s Excel integration means steps are buried in spreadsheet operations, making them error-prone and hard to replicate.</li>
-</ul></li>
-<li><strong>Cost</strong>:
-<ul>
-<li>Python and R are free and open-source, making them accessible for students and researchers.</li>
-<li>SPSS and XLStat are commercial. SPSS requires a costly licence, often prohibitive for individuals, though universities may provide access. XLStat also requires a paid licence, adding to Excel’s cost, which can be a barrier for small research groups.</li>
-</ul></li>
-<li><strong>Flexibility</strong>:
-<ul>
-<li>Python is the most flexible, supporting everything from data cleaning (<code>pandas</code>) to machine learning (<code>scikit-learn</code>) and dashboards (<code>Dash</code>). It’s ideal for building end-to-end pipelines in nutrition research.</li>
-<li>R is strong for statistical modelling and visualisation but less suited for non-stats tasks like web apps.</li>
-<li>SPSS is rigid—its GUI limits customisation, and scripting is clunky. It’s best for standard statistical tests (e.g., t-tests, ANOVA).</li>
-<li>XLStat offers flexibility within Excel’s ecosystem, with modules for sensory analysis, but it’s constrained by Excel’s limitations (e.g., handling large datasets, automation).</li>
-</ul></li>
-</ul>
-<p><strong>Why Python for This Toolkit?</strong><br>
-Python is our choice because it’s free, supports reproducible workflows, and can handle everything from small scripts to large nutrition data pipelines (e.g., NDNS analysis). It’s also widely used in modern research, making it a valuable skill for MSc students!</p>
-</section>
-<section id="fun-analogy-if-statistics-tools-were-cars" class="level2">
-<h2 class="anchored" data-anchor-id="fun-analogy-if-statistics-tools-were-cars">🚗 Fun Analogy: If Statistics Tools Were Cars…</h2>
-<p>To lighten things up, here’s a humorous take on these tools as cars, reflecting their characteristics in data analysis:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/statistics.png" class="img-fluid figure-img"></p>
-<figcaption>If statistics programs/languages were cars</figcaption>
-</figure>
-</div>
-<ul>
-<li><strong>Excel</strong>: A broken-down car—familiar but unreliable for serious analysis due to errors and lack of reproducibility.</li>
-<li><strong>SPSS</strong>: An old station wagon—functional for basic stats but outdated and slow for modern research needs.</li>
-<li><strong>Python</strong>: A sleek Tesla—modern, versatile, and powerful, perfect for cutting-edge nutrition research.</li>
-<li><strong>R</strong>: A Mad Max-style armoured vehicle—robust for stats but complex and intimidating for beginners.</li>
-<li><strong>Stata</strong>: A reliable SUV—practical and user-friendly, though not as flexible as Python or R.</li>
-<li><strong>Minitab</strong>: A small hatchback—basic and limited, suitable for quick tasks but not heavy lifting.</li>
-<li><strong>SAS</strong>: A classic luxury car—powerful and expensive, often overkill for most nutrition studies.</li>
-</ul>
-<p><strong>Note</strong>: SPSS and XLStat aren’t shown in the image, but we’d imagine SPSS as a dependable but clunky minivan (user-friendly but not agile) and XLStat as a modified Excel car—handy for specific tasks but constrained by its base model (Excel)!</p>
-</section>
-<section id="python-analysis-example" class="level2">
-<h2 class="anchored" data-anchor-id="python-analysis-example">Python Analysis Example</h2>
-<p>Let’s perform a simple analysis in Python using <code>hippo_diets.csv</code> to compute summary statistics for calories and protein. This mirrors what you might do in R, SPSS, or XLStat, but with Python’s reproducible code.</p>
-<div id="stats" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import required libraries</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd  <span class="co"># For data manipulation</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np  <span class="co"># For numerical operations</span></span>
+<section id="data-preparation" class="level2">
+<h2 class="anchored" data-anchor-id="data-preparation">📥 Data Preparation</h2>
+<p>We’ll load <code>vitamin_trial.csv</code>, which contains data from a vitamin D trial. The dataset includes: - <code>ID</code>: Participant identifier. - <code>Group</code>: Control or Treatment. - <code>Vitamin_D</code>: Vitamin D level (ng/mL). - <code>Time</code>: Time to outcome (months). - <code>Outcome</code>: Normal or Improved.</p>
+<p>Let’s load and inspect the data to prepare for analysis.</p>
+<div id="load" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import libraries for data handling</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd  <span class="co"># For data manipulation and DataFrame operations</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np   <span class="co"># For numerical operations</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset using a robust path</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># os.path.join ensures compatibility across environments (local, Colab, etc.)</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(os.path.join(<span class="st">'data'</span>, <span class="st">'hippo_diets.csv'</span>))</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute summary statistics for Calories and Protein columns</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># .describe() generates stats like count, mean, std, min, max</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># We select specific rows for clarity</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> df[[<span class="st">'Calories'</span>, <span class="st">'Protein'</span>]].describe().loc[[<span class="st">'count'</span>, <span class="st">'mean'</span>, <span class="st">'std'</span>, <span class="st">'min'</span>, <span class="st">'max'</span>]]</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary)  <span class="co"># Display the summary statistics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/vitamin_trial.csv'</span>)  <span class="co"># Path relative to the current working directory (notebooks/04_data_analysis/)</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Display basic information about the dataset</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Data shape: </span><span class="sc">{</span>df<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">'</span>)  <span class="co"># Show the number of rows and columns</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Sample row: ID=</span><span class="sc">{</span>df<span class="sc">.</span>iloc[<span class="dv">0</span>][<span class="st">"ID"</span>]<span class="sc">}</span><span class="ss">, Group=</span><span class="sc">{</span>df<span class="sc">.</span>iloc[<span class="dv">0</span>][<span class="st">"Group"</span>]<span class="sc">}</span><span class="ss">, Vitamin_D=</span><span class="sc">{</span>df<span class="sc">.</span>iloc[<span class="dv">0</span>][<span class="st">"Vitamin_D"</span>]<span class="sc">}</span><span class="ss">, Time=</span><span class="sc">{</span>df<span class="sc">.</span>iloc[<span class="dv">0</span>][<span class="st">"Time"</span>]<span class="sc">}</span><span class="ss">, Outcome=</span><span class="sc">{</span>df<span class="sc">.</span>iloc[<span class="dv">0</span>][<span class="st">"Outcome"</span>]<span class="sc">}</span><span class="ss">'</span>)  <span class="co"># Show the first row for inspection</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows to understand the data structure</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="how-other-tools-would-do-this" class="level2">
-<h2 class="anchored" data-anchor-id="how-other-tools-would-do-this">How Other Tools Would Do This</h2>
-<p><strong>R</strong>: In R, you’d use <code>summary()</code> for similar stats:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'data/hippo_diets.csv'</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df[, <span class="fu">c</span>(<span class="st">'Calories'</span>, <span class="st">'Protein'</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>R’s output includes quartiles (e.g., 25%, 50%, 75%), which Python’s <code>describe()</code> also provides but we filtered out for brevity.</p>
-<p><strong>SPSS</strong>: In SPSS, you’d: 1. Import <code>hippo_diets.csv</code> via File &gt; Open &gt; Data. 2. Go to Analyze &gt; Descriptive Statistics &gt; Frequencies. 3. Select <code>Calories</code> and <code>Protein</code>, then click Statistics to choose mean, std, min, max. 4. Run and view results in the Output window. This is user-friendly but manual—steps aren’t scripted, making it hard to reproduce.</p>
-<p><strong>XLStat</strong>: In XLStat (within Excel): 1. Open <code>hippo_diets.csv</code> in Excel. 2. Go to XLStat &gt; Describing Data &gt; Descriptive Statistics. 3. Select <code>Calories</code> and <code>Protein</code> columns, choose stats (mean, std, etc.), and run. 4. Results appear in a new Excel sheet. This is quick for Excel users but limited by Excel’s scalability and lack of scripting.</p>
+<section id="logistic-regression" class="level2">
+<h2 class="anchored" data-anchor-id="logistic-regression">📈 Logistic Regression</h2>
+<p>We’ll use logistic regression to model the probability of the <code>Outcome</code> being “Improved” (binary outcome) based on predictors <code>Vitamin_D</code> and <code>Group</code>. Logistic regression is ideal for binary classification tasks, predicting the log-odds of the outcome.</p>
+<p><strong>Steps</strong>: 1. Encode categorical variables (<code>Group</code> and <code>Outcome</code>) as numerical values. 2. Fit a logistic regression model. 3. Interpret the coefficients.</p>
+<div id="logistic" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import library for logistic regression</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression  <span class="co"># Scikit-learn's logistic regression model</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder      <span class="co"># For encoding categorical variables as numbers</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Encode categorical variables</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert 'Group' (Control/Treatment) to numerical values: Control=0, Treatment=1</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>le_group <span class="op">=</span> LabelEncoder()</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Group_Encoded'</span>] <span class="op">=</span> le_group.fit_transform(df[<span class="st">'Group'</span>])</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert 'Outcome' (Normal/Improved) to numerical values: Normal=0, Improved=1</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>le_outcome <span class="op">=</span> LabelEncoder()</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Outcome_Encoded'</span>] <span class="op">=</span> le_outcome.fit_transform(df[<span class="st">'Outcome'</span>])</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare features (X) and target (y) for the model</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df[[<span class="st">'Vitamin_D'</span>, <span class="st">'Group_Encoded'</span>]]  <span class="co"># Features: Vitamin D level and Group</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df[<span class="st">'Outcome_Encoded'</span>]               <span class="co"># Target: Outcome (0 or 1)</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the logistic regression model</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> LogisticRegression(random_state<span class="op">=</span><span class="dv">42</span>)  <span class="co"># random_state ensures reproducibility</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>model.fit(X, y)                              <span class="co"># Train the model on the data</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the coefficients</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Positive coefficients indicate an increase in the predictor increases the log-odds of 'Improved'</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Logistic Regression Coefficients:'</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'- Vitamin_D: </span><span class="sc">{</span>model<span class="sc">.</span>coef_[<span class="dv">0</span>][<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss">'</span>)  <span class="co"># Coefficient for Vitamin_D</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'- Group (Treatment): </span><span class="sc">{</span>model<span class="sc">.</span>coef_[<span class="dv">0</span>][<span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss">'</span>)  <span class="co"># Coefficient for Group (Treatment vs Control)</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Interpretation</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Interpretation:'</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'- A 1-unit increase in Vitamin_D changes the log-odds of "Improved" by </span><span class="sc">{</span>model<span class="sc">.</span>coef_[<span class="dv">0</span>][<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss">.'</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'- Being in the Treatment group (vs Control) changes the log-odds of "Improved" by </span><span class="sc">{</span>model<span class="sc">.</span>coef_[<span class="dv">0</span>][<span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss">.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">🧪 Exercises</h2>
+<section id="survival-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="survival-analysis">⏳ Survival Analysis</h2>
+<p>Survival analysis models the time to an event. Here, we’ll estimate Kaplan-Meier survival curves to model the time to <code>Outcome</code> = “Improved”, stratified by <code>Group</code>. The Kaplan-Meier method is a non-parametric approach to estimate survival probabilities over time.</p>
+<p><strong>Steps</strong>: 1. Create an event indicator (1 if Outcome = Improved, 0 otherwise). 2. Fit Kaplan-Meier curves for each group. 3. Plot the survival curves to compare groups.</p>
+<div id="survival" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import libraries for survival analysis and plotting</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lifelines <span class="im">import</span> KaplanMeierFitter  <span class="co"># For Kaplan-Meier survival analysis</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt         <span class="co"># For plotting survival curves</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an event indicator</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Event = 1 if Outcome is 'Improved', 0 if 'Normal'</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Event'</span>] <span class="op">=</span> df[<span class="st">'Outcome'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="dv">1</span> <span class="cf">if</span> x <span class="op">==</span> <span class="st">'Improved'</span> <span class="cf">else</span> <span class="dv">0</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the Kaplan-Meier fitter</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>kmf <span class="op">=</span> KaplanMeierFitter()</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the plot</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit and plot survival curves for each group</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> group <span class="kw">in</span> [<span class="st">'Control'</span>, <span class="st">'Treatment'</span>]:</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a mask to filter data for the current group</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    mask <span class="op">=</span> df[<span class="st">'Group'</span>] <span class="op">==</span> group</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fit the Kaplan-Meier model to the group's data</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    kmf.fit(df[mask][<span class="st">'Time'</span>], df[mask][<span class="st">'Event'</span>], label<span class="op">=</span>group)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the survival curve</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    kmf.plot_survival_function()</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Add plot labels and title</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Kaplan-Meier Survival Curves by Group'</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Time (Months)'</span>)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Survival Probability (Not Improved)'</span>)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)  <span class="co"># Add a grid for readability</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>plt.show()      <span class="co"># Display the survival curves</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: In this context, 'survival' means the probability of not having the event (Outcome = Improved).</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="co"># A lower curve indicates a higher probability of 'Improved' occurring earlier.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="exercises-extend-the-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="exercises-extend-the-analysis">🧪 Exercises: Extend the Analysis</h2>
+<p>Let’s deepen your understanding with two tasks:</p>
 <ol type="1">
-<li><p><strong>Compare Outputs</strong>: Run the Python code above. How does Python’s <code>describe()</code> output compare to what you’d expect from R’s <code>summary()</code>, SPSS’s Frequencies, or XLStat’s Descriptive Statistics? Write your thoughts in a Markdown cell below. Consider ease of use, output format, and reproducibility.</p></li>
-<li><p><strong>Calculate a Median</strong>: Write a Python script to calculate the median of <code>[1, 2, 3, 4, 100]</code>. How would you do this in SPSS or XLStat? (Hint: SPSS uses Analyze &gt; Descriptive Statistics; XLStat uses Describing Data &gt; Descriptive Statistics.)</p></li>
-<li><p><strong>Research Tools</strong>: Choose one tool (SPSS or XLStat) and Google “<tool> vs Python for nutrition data analysis”. Summarise your findings in a Markdown cell. How does this influence your tool choice for a project like NDNS analysis?</tool></p></li>
+<li><strong>Extend Logistic Regression</strong>: Add <code>Time</code> as a predictor in the logistic regression model and report the new coefficients.</li>
+<li><strong>Survival Analysis</strong>: Compute the median survival time (time to 50% probability of not having the event) for each group.</li>
 </ol>
-<p><strong>Guidance</strong>: Use the comparison table and car analogy to reflect on which tool suits your research needs!</p>
+<p><strong>Guidance</strong>: - For the logistic regression, include <code>Time</code> in the feature matrix <code>X</code> and re-fit the model. - For survival analysis, use <code>kmf.median_survival_time_</code> after fitting the Kaplan-Meier model to get the median survival time.</p>
 <p><strong>Your Answers</strong>:</p>
-<p><strong>Exercise 1: Compare Outputs</strong><br>
-Python’s <code>describe()</code> provides…</p>
-<p><strong>Exercise 2: Calculate Median</strong><br>
-[Write your Python code and compare with SPSS/XLStat]</p>
-<p><strong>Exercise 3: Research Tools</strong><br>
-[Summarise your findings here]</p>
+<p><strong>Exercise 1: Extend Logistic Regression</strong><br>
+Add <code>Time</code> as a predictor and report the coefficients.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extend the feature matrix to include Time</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>X_extended <span class="op">=</span> df[[<span class="st">'Vitamin_D'</span>, <span class="st">'Group_Encoded'</span>, <span class="st">'Time'</span>]]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>y_extended <span class="op">=</span> df[<span class="st">'Outcome_Encoded'</span>]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the extended logistic regression model</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>model_extended <span class="op">=</span> LogisticRegression(random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>model_extended.fit(X_extended, y_extended)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the coefficients</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Extended Logistic Regression Coefficients:'</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'- Vitamin_D: </span><span class="sc">{</span>model_extended<span class="sc">.</span>coef_[<span class="dv">0</span>][<span class="dv">0</span>]<span class="sc">:.3f}</span><span class="ss">'</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'- Group (Treatment): </span><span class="sc">{</span>model_extended<span class="sc">.</span>coef_[<span class="dv">0</span>][<span class="dv">1</span>]<span class="sc">:.3f}</span><span class="ss">'</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'- Time: </span><span class="sc">{</span>model_extended<span class="sc">.</span>coef_[<span class="dv">0</span>][<span class="dv">2</span>]<span class="sc">:.3f}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Coefficients</strong>: - Vitamin_D: [Your Result] - Group (Treatment): [Your Result] - Time: [Your Result]</p>
+<p><strong>Exercise 2: Median Survival Times</strong><br>
+Compute the median survival time for each group.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute median survival times</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>kmf <span class="op">=</span> KaplanMeierFitter()</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> group <span class="kw">in</span> [<span class="st">'Control'</span>, <span class="st">'Treatment'</span>]:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    mask <span class="op">=</span> df[<span class="st">'Group'</span>] <span class="op">==</span> group</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    kmf.fit(df[mask][<span class="st">'Time'</span>], df[mask][<span class="st">'Event'</span>], label<span class="op">=</span>group)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    median_time <span class="op">=</span> kmf.median_survival_time_</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Median survival time for </span><span class="sc">{</span>group<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>median_time<span class="sc">:.1f}</span><span class="ss"> months'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Median Survival Times</strong>: - Control: [Your Result] months - Treatment: [Your Result] months</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>You’ve compared Python, R, SPSS, and XLStat for nutrition data analysis and performed a Python analysis with <code>hippo_diets.csv</code>. Python’s flexibility and reproducibility make it ideal for this toolkit, but R, SPSS, and XLStat have their strengths—R for stats, SPSS for GUI users, and XLStat for Excel-based sensory analysis.</p>
-<p><strong>Next Steps</strong>: Explore version control with Git in <code>1.3_intro_to_git.ipynb</code>.</p>
-<p><strong>Resources</strong>: - <a href="https://docs.python.org/3/">Python Documentation</a> - <a href="https://www.r-project.org/">R Project</a> - <a href="https://www.ibm.com/products/spss-statistics">SPSS Overview</a> - <a href="https://www.xlstat.com/en/">XLStat Features</a> - Repository: <a href="https://github.com/ggkuhnle/data-analysis-toolkit-FNS">github.com/ggkuhnle/data-analysis-toolkit-FNS</a></p>
+<p>You’ve applied logistic regression and survival analysis to model vitamin D trial outcomes, uncovering predictors of improvement and time-to-event patterns. These techniques are powerful for understanding health outcomes in nutrition research.</p>
+<p><strong>Next Steps</strong>: Explore clinical trial analysis in <code>4.7_clinical_trial_analysis.ipynb</code> or dive into advanced topics in <code>notebooks/05_advanced/</code>.</p>
+<p><strong>Resources</strong>: - <a href="https://scikit-learn.org/">Scikit-Learn Documentation</a> - <a href="https://lifelines.readthedocs.io/">Lifelines Documentation</a> - Repository: <a href="https://github.com/ggkuhnle/data-analysis-toolkit-FNS">github.com/ggkuhnle/data-analysis-toolkit-FNS</a></p>
+</section>
 </section>
 
 </main>
