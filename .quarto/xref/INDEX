@@ -136,5 +136,17 @@
   },
   "notebooks/programming_basics/07_coding_style_and_comments (1).ipynb": {
     "07_coding_style_and_comments (1).html": "103fc5f8"
+  },
+  "syllabus.qmd": {
+    "syllabus.html": "3af83720"
+  },
+  "notebooks/05_advanced/5.2_workflow_automation.ipynb": {
+    "5.2_workflow_automation.html": "5e4a0816"
+  },
+  "notebooks/05_advanced/5.1_bayesian_methods.ipynb": {
+    "5.1_bayesian_methods.html": "49319b3a"
+  },
+  "notebooks/05_advanced/5.4_databases_sql.ipynb": {
+    "5.4_databases_sql.html": "31343fcb"
   }
 }

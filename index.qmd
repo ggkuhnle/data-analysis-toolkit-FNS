@@ -1,39 +1,66 @@
 ---
-title: "Data Analysis Toolkit for Food and Nutrition Sciences"
-format: 
-  html:
-    toc: true
-    theme: cosmo
+title: "Data Analysis Toolkit for Food and Nutrition Sciences 🦛"
+format: html
 ---
 
-# Welcome
+## Welcome to the Toolkit! 📚
 
-This repository provides a comprehensive toolkit for MSc students in Food and Nutrition Sciences, covering data analysis with Python, pandas, and statistical methods. Explore the sections below to access rendered notebooks and resources.
+This toolkit is your guide to mastering data analysis for Food and Nutrition Sciences, tailored for MSc students. With a hippo-themed twist (🦛), it covers Python basics to advanced Bayesian modelling and qualitative text analysis, using datasets like hippo nutrient intakes.
 
-## Sections
+Explore 26 Jupyter notebooks across six modules, rendered as HTML tutorials. Each module includes exercises, comments, and datasets to build skills for research projects like the National Diet and Nutrition Survey (NDNS).
 
-- **Foundations and Tools** ([infrastructure/](docs/infrastructure/)): Environment setup, Git, and Quarto.
-- **Programming Basics** ([programming_basics/](docs/programming_basics/)): Python syntax, functions, and OOP.
-- **Data Handling** ([data_handling/](docs/data_handling/)): Importing, cleaning, and transforming data.
-- **Data Analysis** ([data_analysis/](docs/data_analysis/)): Visualisation, statistics, and regression.
-- **Advanced Techniques** ([advanced/](docs/advanced/)): Bayesian methods, dashboards, and databases.
-- **Qualitative Tools** ([qualitative/](docs/qualitative/)): Surveys and text analysis.
+## 🧮 Modules
 
-## Getting Started
+Navigate the modules below. Tutorials will be in `_site/notebooks/` after rendering:
 
-- **Colab**: Open notebooks at [colab.research.google.com](https://colab.research.google.com/).
-- **Local**: Install Anaconda, run `pip install -r requirements.txt`.
-- **Rendered Outputs**: Browse HTML/PDF versions in [docs/](docs/).
-- **Repository**: [github.com/ggkuhnle/data-analysis-toolkit-FNS](https://github.com/ggkuhnle/data-analysis-toolkit-FNS).
+1. **[Infrastructure](/notebooks/infrastructure/index.html)** (5 notebooks): Set up your data science environment.
+   - Example: [Getting Started](/notebooks/infrastructure/getting_started.html)
+   - Dataset: `notebooks/01_infrastructure/data/hippo_diets.csv`
+2. **[Programming Basics](/notebooks/programming_basics/index.html)** (5 notebooks): Learn Python fundamentals.
+   - Example: [Syntax and Variables](/notebooks/programming_basics/syntax_variables_comments.html)
+3. **[Data Handling](/notebooks/data_handling/index.html)** (5 notebooks): Import, clean, and transform data.
+   - Example: [Importing Data](/notebooks/data_handling/importing_data.html)
+   - Dataset: `notebooks/03_data_handling/data/hippo_nutrients.csv`
+4. **[Data Analysis](/notebooks/data_analysis/index.html)** (5 notebooks): Visualise and analyse data.
+   - Example: [Distributions](/notebooks/data_analysis/distributions_visualisation.html)
+   - Dataset: `notebooks/04_data_analysis/data/vitamin_trial.csv`
+5. **[Advanced Topics](/notebooks/advanced/index.html)** (5 notebooks): Explore Bayesian methods, SQL, and dashboards.
+   - Example: [Bayesian Methods](/notebooks/advanced/bayesian_methods.html)
+   - Datasets: `notebooks/05_advanced/data/large_food_log.csv`, `notebooks/03_data_handling/data/hippo_nutrients.csv`
+6. **[Qualitative Research](/notebooks/qualitative/index.html)** (2 notebooks): Analyse text data.
+   - Example: [Text Analysis](/notebooks/qualitative/text_analysis.html)
+   - Dataset: `notebooks/06_qualitative/data/food_preferences.txt`
 
-## Datasets
+**Note**: The `_site/` directory contains outdated HTMLs. Delete `_site/` and run `quarto render` to generate fresh tutorials.
 
-- `nutrient_survey.csv`: Simulated nutrient intakes (iron, calcium).
-- `nutrient_intakes.csv`: Calorie and protein data.
-- `vitamin_trial.csv`: Vitamin D trial results.
-- `food_preferences.txt`: Survey responses on food preferences.
+## 🚀 Get Started
+
+1. **Clone the Repo**:
+   ```bash
+   git clone https://github.com/ggkuhnle/data-analysis-toolkit-FNS.git
+   ```
+2. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   Install Quarto: [quarto.org](https://quarto.org).
+3. **Run Notebooks**:
+   Start with `notebooks/01_infrastructure/0_getting_started.ipynb` in Jupyter or Colab.
+4. **Render the Site**:
+   ```bash
+   rm -rf _site/
+   quarto render
+   ```
+   View at `_site/index.html`.
+
+## 📊 Why This Toolkit?
+
+- **Practical**: Real-world nutrition datasets.
+- **Educational**: Copious comments and exercises.
+- **Fun**: Hippo-themed examples! 🦛
+
+Check the [Syllabus](/syllabus.html) for details. Happy analysing! 🚀
 
 ---
 
-*Built with Quarto for a seamless experience.*
-
+*Created by [Your Name]. Licensed under MIT.*

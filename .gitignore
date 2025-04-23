@@ -4,3 +4,5 @@ __pycache__/
 env/
 *.csv  # Optional: exclude large datasets
 *.txt  # Optional: exclude text data
+
+/.quarto/
