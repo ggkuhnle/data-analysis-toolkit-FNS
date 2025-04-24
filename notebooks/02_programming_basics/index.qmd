@@ -8,9 +8,13 @@ This module covers the fundamentals of Python programming for nutrition data ana
 
 ## Notebooks
 
-- **Syntax, Variables, and Comments**  
+- **Introduction to Programming**  
+  Learn about the basics of programming.  
+  [View HTML](2.0_intro_to_programming.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/02_programming_basics/2.0_intro_to_programming.ipynb)
+
+- **Programming fundamentals**  
   Learn Python syntax, variables, and comments.  
-  [View HTML](2.1_syntax_variables_comments.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/02_programming_basics/2.1_syntax_variables_comments.ipynb)
+  [View HTML](2.1_programming_fundamentals.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/02_programming_basics/2.1_programming_fundamentals.ipynb)
 
 - **Data Types and Conversion**  
   Explore Python data types and type conversion.  
