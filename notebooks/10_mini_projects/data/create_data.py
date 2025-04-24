@@ -7,7 +7,7 @@ import numpy as np
 np.random.seed(11088)
 
 # 🔧 Set sample size here
-sample_size = 1000  # Change this number to generate a larger or smaller dataset
+sample_size = 1000  # Change this to generate more or fewer records
 
 # Possible categories
 sexes = ["Male", "Female"]
@@ -30,19 +30,22 @@ for i in range(1, sample_size + 1):
     sbp_follow = sbp_base + np.random.normal(-5 if group == "Hipponol" else 3, 10)
     dbp_follow = dbp_base + np.random.normal(-3 if group == "Hipponol" else 2, 8)
 
-    # Time-to-event depending on group
-    raw_time = np.random.exponential(scale=10 if group == "Hipponol" else 3)
-    time_to_event = min(round(raw_time, 1), 24.0)  # Cap at 24
+    # Generate raw time-to-event
+    scale = 10 if group == "Hipponol" else 5  # More gradual decay for control
+    raw_time = np.random.exponential(scale=scale)
+    time_to_event = round(min(raw_time, 24.0), 1)
 
-    # 20% chance of censoring
-    censored = np.random.rand() < 0.2
-    survival = int(not censored)
+    # Apply censoring (40% chance) or if max time reached
+    if np.random.rand() < 0.4 or time_to_event == 24.0:
+        survival = 0  # Censored
+    else:
+        survival = 1  # Event occurred
 
     data.append([
         i, age, sex, smoking, group,
         round(sbp_base, 1), round(dbp_base, 1),
         round(sbp_follow, 1), round(dbp_follow, 1),
-        survival, round(time_to_event, 1)
+        survival, time_to_event
     ])
 
 # Column names
@@ -54,5 +57,4 @@ columns = ["ID", "Age", "Sex", "SmokingStatus", "Group",
 df = pd.DataFrame(data, columns=columns)
 df.to_csv("hipponol_trial_data.csv", index=False)
 
-print(f"Created 'synthetic_survival_data.csv' with {sample_size} entries.")
-
+print(f"✅ Created 'hipponol_trial_data.csv' with {sample_size} entries.")
