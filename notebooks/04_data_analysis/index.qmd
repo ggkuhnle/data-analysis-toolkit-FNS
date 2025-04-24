@@ -30,11 +30,11 @@ This module introduces techniques for exploring and analysing nutrition data, fr
 
 - **Logistic Regression and Survival Analysis**  
   Apply logistic regression and survival analysis to vitamin D trial outcomes.  
-  [View HTML](04_logistic_and_survival.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/04_data_analysis/4.6_logistic_and_survival.ipynb)
+  [View HTML](4.6_logistic_and_survival.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/04_data_analysis/4.6_logistic_and_survival.ipynb)
 
 - **Clinical Trial Analysis**  
   Analyse a simulated clinical trial with effect size estimation.  
-  [View HTML](04_clinical_trial_analysis.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/04_data_analysis/4.7_clinical_trial_analysis.ipynb)
+  [View HTML](4.7_clinical_trial_analysis.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/04_data_analysis/4.7_clinical_trial_analysis.ipynb)
 
 ## Datasets
 
