@@ -81,10 +81,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#what-is-a-clinical-trial" id="toc-what-is-a-clinical-trial" class="nav-link active" data-scroll-target="#what-is-a-clinical-trial">🧠 What is a Clinical Trial?</a></li>
   <li><a href="#step-1-simulate-the-data" id="toc-step-1-simulate-the-data" class="nav-link" data-scroll-target="#step-1-simulate-the-data">🧪 Step 1: Simulate the Data</a></li>
-  <li><a href="#step-2-baseline-table-table-1" id="toc-step-2-baseline-table-table-1" class="nav-link" data-scroll-target="#step-2-baseline-table-table-1">📋 Step 2: Baseline Table (Table 1)</a></li>
+  <li><a href="#step-2-baseline-table" id="toc-step-2-baseline-table" class="nav-link" data-scroll-target="#step-2-baseline-table">📋 Step 2: Baseline Table</a></li>
   <li><a href="#step-3-visualise-distributions" id="toc-step-3-visualise-distributions" class="nav-link" data-scroll-target="#step-3-visualise-distributions">📈 Step 3: Visualise Distributions</a></li>
-  <li><a href="#step-4-frequentist-effect-size-cohens-d" id="toc-step-4-frequentist-effect-size-cohens-d" class="nav-link" data-scroll-target="#step-4-frequentist-effect-size-cohens-d">📏 Step 4: Frequentist Effect Size (Cohen’s d)</a></li>
-  <li><a href="#step-5-bayesian-effect-size" id="toc-step-5-bayesian-effect-size" class="nav-link" data-scroll-target="#step-5-bayesian-effect-size">🧠 Step 5: Bayesian Effect Size</a></li>
+  <li><a href="#step-4-frequentist-analysis" id="toc-step-4-frequentist-analysis" class="nav-link" data-scroll-target="#step-4-frequentist-analysis">📏 Step 4: Frequentist Analysis</a></li>
+  <li><a href="#step-5-bayesian-analysis" id="toc-step-5-bayesian-analysis" class="nav-link" data-scroll-target="#step-5-bayesian-analysis">🧠 Step 5: Bayesian Analysis</a>
+  <ul class="collapse">
+  <li><a href="#step-5b-visualise-chains" id="toc-step-5b-visualise-chains" class="nav-link" data-scroll-target="#step-5b-visualise-chains">🔁 Step 5b: Visualise Chains</a></li>
+  </ul></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">✅ Summary</a>
   <ul class="collapse">
   <li><a href="#optional-exercises" id="toc-optional-exercises" class="nav-link" data-scroll-target="#optional-exercises">🔁 Optional Exercises</a></li>
@@ -113,44 +116,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This notebook walks you through analysing a <strong>simulated clinical trial</strong> — a common task in nutrition and health research. You’ll: - Simulate trial data - Summarise baseline characteristics (Table 1) - Visualise distributions - Compare groups using both <strong>frequentist</strong> and <strong>Bayesian</strong> statistics</p>
+<p>In this notebook, we’ll analyse a <strong>simulated clinical trial</strong>, a common method in nutrition research to compare outcomes between groups.</p>
+<p>You will: - Simulate trial data - Create a baseline summary table (Table 1) - Visualise variable distributions - Calculate effect sizes using frequentist and Bayesian approaches - Interpret results, including visualising posterior chains</p>
 <hr>
 <section id="what-is-a-clinical-trial" class="level3">
 <h3 class="anchored" data-anchor-id="what-is-a-clinical-trial">🧠 What is a Clinical Trial?</h3>
-<p>A clinical trial compares outcomes between groups (e.g.&nbsp;treatment vs control) to determine if an intervention works. In this case, we’ll simulate a trial comparing a <strong>biomarker outcome</strong> between two groups: Control and Intervention.</p>
+<p>A clinical trial is a study where participants are randomly assigned to groups to test the effect of an intervention (e.g.&nbsp;a new diet) on a health outcome.</p>
 </section>
 <section id="step-1-simulate-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="step-1-simulate-the-data">🧪 Step 1: Simulate the Data</h2>
-<p>We’ll simulate data for 100 participants split into two groups: - <code>group = 0</code>: Control (no intervention) - <code>group = 1</code>: Intervention (treatment group)</p>
-<p>We generate: - <code>age</code>: Normally distributed around 40 years - <code>bmi</code>: Normally distributed around 27 kg/m² - <code>outcome</code>: Biomarker change (Control: ~N(0,2), Intervention: ~N(1,2))</p>
-<div id="b7c3a830" class="cell">
+<p>We simulate a dataset for 100 participants, with two groups: - Control (group = 0) - Intervention (group = 1)</p>
+<p>We’ll generate age, BMI, and a simulated outcome (e.g., biomarker change).</p>
+<div id="746e65cf" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Set random seed for reproducibility</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate data</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'participant_id'</span>: <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>),</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'age'</span>: np.random.normal(<span class="dv">40</span>, <span class="dv">10</span>, n),</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'bmi'</span>: np.random.normal(<span class="dv">27</span>, <span class="dv">4</span>, n),</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'group'</span>: np.random.choice([<span class="dv">0</span>, <span class="dv">1</span>], size<span class="op">=</span>n)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Outcome depends on group</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'outcome'</span>] <span class="op">=</span> np.where(df[<span class="st">'group'</span>] <span class="op">==</span> <span class="dv">0</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                         np.random.normal(<span class="dv">0</span>, <span class="dv">2</span>, n),</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                         np.random.normal(<span class="dv">1</span>, <span class="dv">2</span>, n))</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'participant_id'</span>: <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'age'</span>: np.random.normal(<span class="dv">40</span>, <span class="dv">10</span>, n),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'bmi'</span>: np.random.normal(<span class="dv">27</span>, <span class="dv">4</span>, n),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'group'</span>: np.random.choice([<span class="dv">0</span>, <span class="dv">1</span>], size<span class="op">=</span>n)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'outcome'</span>] <span class="op">=</span> np.where(</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">'group'</span>] <span class="op">==</span> <span class="dv">0</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    np.random.normal(<span class="dv">0</span>, <span class="dv">2</span>, n),</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    np.random.normal(<span class="dv">1</span>, <span class="dv">2</span>, n)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="step-2-baseline-table-table-1" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-baseline-table-table-1">📋 Step 2: Baseline Table (Table 1)</h2>
-<p>“Table 1” summarises baseline characteristics (like age and BMI) by group before any analysis. This helps check that the groups are comparable at the start of the trial.</p>
-<div id="6d4bfcb2" class="cell">
+<section id="step-2-baseline-table" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-baseline-table">📋 Step 2: Baseline Table</h2>
+<p>This shows the average characteristics (age and BMI) in each group, before the intervention’s effect is measured.</p>
+<div id="b27a7b34" class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>table1 <span class="op">=</span> df.groupby(<span class="st">'group'</span>)[[<span class="st">'age'</span>, <span class="st">'bmi'</span>]].agg([<span class="st">'mean'</span>, <span class="st">'std'</span>]).<span class="bu">round</span>(<span class="dv">1</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>table1.columns <span class="op">=</span> [<span class="st">'Age (Mean)'</span>, <span class="st">'Age (SD)'</span>, <span class="st">'BMI (Mean)'</span>, <span class="st">'BMI (SD)'</span>]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>table1.index <span class="op">=</span> [<span class="st">'Control'</span>, <span class="st">'Intervention'</span>]</span>
@@ -161,28 +162,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="step-3-visualise-distributions" class="level2">
 <h2 class="anchored" data-anchor-id="step-3-visualise-distributions">📈 Step 3: Visualise Distributions</h2>
-<p>We now inspect the distributions of age, BMI, and the outcome to check: - Are the groups similarly distributed? - Are there outliers? - What’s the shape of the data?</p>
-<div id="d5ffeb75" class="cell">
+<p>We’ll use histograms and KDEs to visualise the distributions of each variable by group.</p>
+<div id="f9ee5f2e" class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">'whitegrid'</span>)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">5</span>))</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, var <span class="kw">in</span> <span class="bu">enumerate</span>([<span class="st">'age'</span>, <span class="st">'bmi'</span>, <span class="st">'outcome'</span>]):</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    sns.boxplot(data<span class="op">=</span>df, x<span class="op">=</span><span class="st">'group'</span>, y<span class="op">=</span>var, ax<span class="op">=</span>axes[i])</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    axes[i].set_title(<span class="ss">f'</span><span class="sc">{</span>var<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss"> by Group'</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    axes[i].set_xticklabels([<span class="st">'Control'</span>, <span class="st">'Intervention'</span>])</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> [<span class="st">'age'</span>, <span class="st">'bmi'</span>, <span class="st">'outcome'</span>]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>titles <span class="op">=</span> [<span class="st">'Age Distribution'</span>, <span class="st">'BMI Distribution'</span>, <span class="st">'Outcome Distribution'</span>]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, var <span class="kw">in</span> <span class="bu">enumerate</span>(variables):</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    sns.histplot(data<span class="op">=</span>df, x<span class="op">=</span>var, hue<span class="op">=</span><span class="st">'group'</span>, kde<span class="op">=</span><span class="va">True</span>, element<span class="op">=</span><span class="st">"step"</span>, stat<span class="op">=</span><span class="st">"density"</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                 common_norm<span class="op">=</span><span class="va">False</span>, palette<span class="op">=</span><span class="st">'Set1'</span>, ax<span class="op">=</span>axes[i])</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    axes[i].set_title(titles[i])</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    axes[i].legend(title<span class="op">=</span><span class="st">'Group'</span>, labels<span class="op">=</span>[<span class="st">'Control'</span>, <span class="st">'Intervention'</span>])</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="step-4-frequentist-effect-size-cohens-d" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-frequentist-effect-size-cohens-d">📏 Step 4: Frequentist Effect Size (Cohen’s d)</h2>
-<p>We’ll use <strong>Cohen’s d</strong> to estimate the effect size of the intervention: - ( d = )</p>
-<p>We also perform a t-test to check for statistical significance.</p>
-<div id="83f0b75b" class="cell">
+<section id="step-4-frequentist-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-frequentist-analysis">📏 Step 4: Frequentist Analysis</h2>
+<p>We use <strong>Cohen’s d</strong> to measure the size of the effect, and a t-test to check for statistical significance.</p>
+<div id="29954583" class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> ttest_ind</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>group0 <span class="op">=</span> df[df[<span class="st">'group'</span>] <span class="op">==</span> <span class="dv">0</span>][<span class="st">'outcome'</span>]</span>
@@ -198,11 +201,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T-test: t = </span><span class="sc">{</span>t_stat<span class="sc">:.2f}</span><span class="ss">, p = </span><span class="sc">{</span>p_val<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="step-5-bayesian-effect-size" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-bayesian-effect-size">🧠 Step 5: Bayesian Effect Size</h2>
-<p>Bayesian analysis estimates a <strong>distribution of possible effects</strong> rather than a single value. This gives us: - A posterior distribution - A 95% Highest Density Interval (HDI) showing the most credible values</p>
-<p>We use <code>PyMC</code> to model outcomes in both groups with normal priors.</p>
-<div id="d5b25802" class="cell">
+<section id="step-5-bayesian-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-bayesian-analysis">🧠 Step 5: Bayesian Analysis</h2>
+<p>We use PyMC to estimate the difference in outcome between groups and generate a <strong>posterior distribution</strong>.</p>
+<p>We will: - Estimate the posterior mean difference - Calculate a 95% HDI (Highest Density Interval) - Visualise the posterior - Plot the sampling chains to assess convergence</p>
+<div id="ad105090" class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pymc <span class="im">as</span> pm</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> arviz <span class="im">as</span> az</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -217,21 +220,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Posterior Difference in Means"</span>)</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>hdi <span class="op">=</span> az.hdi(trace.posterior[<span class="st">'diff'</span>], hdi_prob<span class="op">=</span><span class="fl">0.95</span>)</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Posterior mean difference: </span><span class="sc">{</span>trace<span class="sc">.</span>posterior[<span class="st">'diff'</span>]<span class="sc">.</span>mean()<span class="sc">.</span>values<span class="sc">.</span>item()<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"95% HDI: [</span><span class="sc">{</span>hdi<span class="sc">.</span>sel(hdi<span class="op">=</span><span class="st">'lower'</span>)<span class="sc">.</span>values<span class="sc">.</span>item()<span class="sc">:.2f}</span><span class="ss">, </span><span class="sc">{</span>hdi<span class="sc">.</span>sel(hdi<span class="op">=</span><span class="st">'higher'</span>)<span class="sc">.</span>values<span class="sc">.</span>item()<span class="sc">:.2f}</span><span class="ss">]"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Posterior mean and HDI</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>posterior_diff <span class="op">=</span> trace.posterior[<span class="st">'diff'</span>].values.flatten()</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>posterior_mean <span class="op">=</span> posterior_diff.mean()</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>hdi_bounds <span class="op">=</span> az.hdi(posterior_diff, hdi_prob<span class="op">=</span><span class="fl">0.95</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Posterior mean difference: </span><span class="sc">{</span>posterior_mean<span class="sc">:.2f}</span><span class="ss">"</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"95% HDI: [</span><span class="sc">{</span>hdi_bounds[<span class="dv">0</span>]<span class="sc">:.2f}</span><span class="ss">, </span><span class="sc">{</span>hdi_bounds[<span class="dv">1</span>]<span class="sc">:.2f}</span><span class="ss">]"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="step-5b-visualise-chains" class="level3">
+<h3 class="anchored" data-anchor-id="step-5b-visualise-chains">🔁 Step 5b: Visualise Chains</h3>
+<p>This helps us assess <strong>MCMC convergence</strong> (i.e.&nbsp;did the sampler explore the space thoroughly?)</p>
+<div id="b6c23322" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>az.plot_trace(trace, var_names<span class="op">=</span>[<span class="st">"diff"</span>])</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">"Trace Plot for Posterior Difference"</span>, y<span class="op">=</span><span class="fl">1.02</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">✅ Summary</h2>
-<p>We have: - Simulated a clinical trial - Summarised and visualised the data - Compared outcomes using frequentist and Bayesian methods</p>
+<p>You’ve: - Simulated a clinical trial dataset - Analysed it with frequentist and Bayesian methods - Visualised the posterior and trace</p>
 <p><strong>Key Insight</strong>:<br>
-Frequentist methods give you a <em>yes/no</em> answer; Bayesian methods show you the <em>range of plausible effects</em>.</p>
+Bayesian methods offer more nuance, while frequentist methods are simpler and quicker. Both can be valuable.</p>
 <hr>
 <section id="optional-exercises" class="level3">
 <h3 class="anchored" data-anchor-id="optional-exercises">🔁 Optional Exercises</h3>
 <ol type="1">
-<li>Modify the outcome mean in the Intervention group to 2 instead of 1. How does Cohen’s d and the posterior shift?</li>
+<li>Change the simulated effect size (e.g., Intervention mean = 2). Re-run and compare.</li>
 <li>Add <code>age</code> as a covariate in the Bayesian model.</li>
 <li>Create a scatterplot of <code>outcome</code> vs.&nbsp;<code>bmi</code>, coloured by group.</li>
 </ol>
