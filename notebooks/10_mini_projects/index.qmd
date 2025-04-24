@@ -1,0 +1,13 @@
+---
+title: "10 Mini Projects"
+format: html
+---
+
+# 🧪 10 Mini Projects
+
+This module contains applied mini-projects that consolidate learning from the earlier sections:
+
+- [Clinical Trial](1_clinical_trial.ipynb)
+- [Epidemiology Case Study](2_epidemiology_case_study.ipynb)
+- [Food Safety Testing](3_food_safety_testing.ipynb)
+- [Sensory Evaluation](4_sensory_evaluation.ipynb)
