@@ -7,7 +7,8 @@ format: html
 
 This module contains applied mini-projects that consolidate learning from the earlier sections:
 
-- [Clinical Trial](1_clinical_trial.ipynb)
+- Clinical Trial Analysis  
+  [View HTML](10.1_clinical_trial.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/10_mini_projects/10.1_clinical_trial.ipynb)
 - [Epidemiology Case Study](2_epidemiology_case_study.ipynb)
 - [Food Safety Testing](3_food_safety_testing.ipynb)
 - [Sensory Evaluation](4_sensory_evaluation.ipynb)
