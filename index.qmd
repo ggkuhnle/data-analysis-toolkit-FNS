@@ -41,6 +41,9 @@ Explore the six modules, each with notebooks you can view as HTML or run in Cola
   Analyse text data for nutrition studies.  
   [Explore Module](notebooks/06_qualitative/) 
 
+- **Mini projects**
+  Some mini projects, e.g. RCT
+  [Explore Module](notebooks/10_mini_projects/)
 
 ## Get Involved 🧑‍💻
 
