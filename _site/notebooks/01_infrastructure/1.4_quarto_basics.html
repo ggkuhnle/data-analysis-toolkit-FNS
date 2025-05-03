@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>📝 1.4 Quarto Basics</title>
+<title>📓 1.4 Quarto Basics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,9 +79,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#creating-a-quarto-document" id="toc-creating-a-quarto-document" class="nav-link active" data-scroll-target="#creating-a-quarto-document">Creating a Quarto Document</a></li>
+  <li><a href="#what-is-quarto" id="toc-what-is-quarto" class="nav-link active" data-scroll-target="#what-is-quarto">📝 What is Quarto?</a>
+  <ul class="collapse">
+  <li><a href="#what-can-you-use-quarto-for" id="toc-what-can-you-use-quarto-for" class="nav-link" data-scroll-target="#what-can-you-use-quarto-for">📊 What Can You Use Quarto For?</a></li>
+  <li><a href="#how-does-it-work" id="toc-how-does-it-work" class="nav-link" data-scroll-target="#how-does-it-work">💾 How Does It Work?</a></li>
+  <li><a href="#from-concept-to-practice" id="toc-from-concept-to-practice" class="nav-link" data-scroll-target="#from-concept-to-practice">🧪 From Concept to Practice</a></li>
+  <li><a href="#creating-a-quarto-document" id="toc-creating-a-quarto-document" class="nav-link" data-scroll-target="#creating-a-quarto-document">Creating a Quarto Document</a></li>
   <li><a href="#exercise-1-draft-a-quarto-file" id="toc-exercise-1-draft-a-quarto-file" class="nav-link" data-scroll-target="#exercise-1-draft-a-quarto-file">Exercise 1: Draft a Quarto File</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -89,7 +95,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">📝 1.4 Quarto Basics</h1>
+<h1 class="title">📓 1.4 Quarto Basics</h1>
 </div>
 
 
@@ -115,125 +121,189 @@ Fun Fact
 </summary>
 A Quarto document is like a hippo’s lab report—neat, detailed, and ready to share! 🦛
 </details>
+<section id="what-is-quarto" class="level1">
+<h1>📝 What is Quarto?</h1>
+<p><strong>Quarto</strong> is an open-source scientific and technical publishing system that allows you to create fully reproducible documents that combine <strong>code, narrative text, and visuals</strong>. It’s designed for <strong>researchers, analysts, and data scientists</strong> who need to communicate their findings in a clear, flexible, and transparent way.</p>
+<hr>
+<details>
+<summary>
+<strong>🔍 Why use Quarto?</strong>
+</summary>
+<section id="key-features-of-quarto" class="level4">
+<h4 class="anchored" data-anchor-id="key-features-of-quarto">✅ <strong>Key Features of Quarto</strong>:</h4>
+<ul>
+<li><strong>Integrates code and text</strong>: You can mix code chunks (e.g., Python, R) with Markdown-formatted narrative.</li>
+<li><strong>Supports multiple languages</strong>: Python, R, Julia, and Observable JavaScript.</li>
+<li><strong>Reproducible</strong>: When rendered, Quarto re-runs the code and embeds the updated results in the document.</li>
+<li><strong>Flexible output formats</strong>: HTML, PDF, MS Word, slides, and even books or websites.</li>
+<li><strong>Version control-friendly</strong>: Plain text <code>.qmd</code> files play well with Git and GitHub.</li>
+<li><strong>Interactive</strong>: Can be extended with Shiny apps, interactive widgets, or even interactive Python plots via Plotly or Bokeh.</li>
+</ul>
+</section></details>
+<hr>
+</section>
+<section id="what-can-you-use-quarto-for" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-you-use-quarto-for">📊 What Can You Use Quarto For?</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Use Case</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data Reports</strong></td>
+<td>Generate clean, consistent research reports that combine code, figures, and analysis.</td>
+</tr>
+<tr class="even">
+<td><strong>Lab Notebooks</strong></td>
+<td>Create digital, reproducible records of your work—great for MSc projects or collaborations.</td>
+</tr>
+<tr class="odd">
+<td><strong>Teaching Materials</strong></td>
+<td>Prepare slides, handouts, and web-based tutorials from a single source.</td>
+</tr>
+<tr class="even">
+<td><strong>Websites</strong></td>
+<td>Build research or teaching websites with integrated data and results.</td>
+</tr>
+<tr class="odd">
+<td><strong>Dashboards</strong></td>
+<td>With extensions, you can even build interactive dashboards.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<details>
+<summary>
+<strong>💡 Example: Nutrition Study Report</strong>
+</summary>
+<p>Imagine you’ve analysed data on polyphenol intake from the NDNS dataset. Using Quarto, you could:</p>
+<ul>
+<li>Load your dataset with Python</li>
+<li>Run statistical models</li>
+<li>Generate plots and tables</li>
+<li>Write up your interpretation</li>
+<li>Render a beautiful, standalone report in HTML or PDF format<br>
+—all from a single <code>.qmd</code> file!</li>
+</ul>
+</details>
+<hr>
+</section>
+<section id="how-does-it-work" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-it-work">💾 How Does It Work?</h2>
+<p>A Quarto file uses the <code>.qmd</code> extension and typically includes:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Example Analysis"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">## Results</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="st">"```{python}</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">import pandas as pd</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">df = pd.read_csv("</span><span class="at">data.csv")</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">df.describe()</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">```"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When you run <code>quarto render myfile.qmd</code>, it executes the code and creates a final document with the output embedded. This ensures your analysis and documentation are always in sync.</p>
+<hr>
+<p>📚 <a href="https://quarto.org">Quarto Documentation →</a><br>
+🎓 Great for MSc nutrition, food science, and sensory analysis students who need reliable, readable, and shareable outputs.</p>
+</section>
+<section id="from-concept-to-practice" class="level2">
+<h2 class="anchored" data-anchor-id="from-concept-to-practice">🧪 From Concept to Practice</h2>
+<p>Now that you know what Quarto is and why it matters, let’s see it in action! To explore how Quarto supports reproducible research, we’ll start by working with a small dataset — hippo_diets.csv. This dataset, just like your own project data, can be analysed and visualised directly in Quarto documents.</p>
+<p>In the next steps, we’ll load the data and prepare a simple plot, which we’ll later embed into a Quarto report. Let’s dive in!</p>
 <div id="colab_setup" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Fetch datasets automatically or manually</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the module and dataset for this notebook</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>MODULE <span class="op">=</span> <span class="st">'01_infrastructure'</span>  <span class="co"># e.g., '01_infrastructure'</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>DATASET <span class="op">=</span> <span class="st">'hippo_diets.csv'</span>  <span class="co"># e.g., 'hippo_diets.csv'</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>BASE_PATH <span class="op">=</span> <span class="st">'/content/data-analysis-toolkit-FNS'</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>MODULE_PATH <span class="op">=</span> os.path.join(BASE_PATH, <span class="st">'notebooks'</span>, MODULE)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>DATASET_PATH <span class="op">=</span> os.path.join(<span class="st">'data'</span>, DATASET)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Attempt to clone the repository (automatic method)</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: If you encounter a cloning error (e.g., 'fatal: destination path already exists'),</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#       reset the runtime (Runtime &gt; Restart runtime) and run this cell again.</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Attempting to clone repository...'</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.exists(BASE_PATH):</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Repository already exists, skipping clone.'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">!</span>git clone https:<span class="op">//</span>github.com<span class="op">/</span>ggkuhnle<span class="op">/</span>data<span class="op">-</span>analysis<span class="op">-</span>toolkit<span class="op">-</span>FNS.git</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Debug: Print directory structure</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Listing repository contents:'</span>)</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Listing notebooks directory contents:'</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}<span class="op">/</span>notebooks</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if the module directory exists</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> os.path.exists(MODULE_PATH):</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f'Module directory </span><span class="sc">{</span>MODULE_PATH<span class="sc">}</span><span class="ss"> not found. Check the repository structure.'</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set working directory to the notebook's folder</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    os.chdir(MODULE_PATH)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Verify dataset is accessible</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.exists(DATASET_PATH):</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Dataset found: </span><span class="sc">{</span>DATASET_PATH<span class="sc">}</span><span class="ss"> 🦛'</span>)</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Error: Dataset </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> not found after cloning.'</span>)</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Cloning failed: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Falling back to manual upload option...'</span>)</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Step 2: Manual upload option</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Please upload </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> manually.'</span>)</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'1. Click the "Choose Files" button below.'</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'2. Select </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> from your local machine.'</span>)</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'3. Ensure the file is placed in notebooks/</span><span class="sc">{</span>MODULE<span class="sc">}</span><span class="ss">/data/'</span>)</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the data directory if it doesn't exist</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    os.makedirs(<span class="st">'data'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Prompt user to upload the dataset</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    uploaded <span class="op">=</span> files.upload()</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if the dataset was uploaded</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> DATASET <span class="kw">in</span> uploaded:</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(DATASET_PATH, <span class="st">'wb'</span>) <span class="im">as</span> f:</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>            f.write(uploaded[DATASET])</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Successfully uploaded </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span>DATASET_PATH<span class="sc">}</span><span class="ss"> 🦛'</span>)</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f'Upload failed. Please ensure you uploaded </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss">.'</span>)</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages for this notebook</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas numpy</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Fetch datasets automatically or manually</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>MODULE <span class="op">=</span> <span class="st">'01_infrastructure'</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>DATASET <span class="op">=</span> <span class="st">'hippo_diets.csv'</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>BASE_PATH <span class="op">=</span> <span class="st">'/content/data-analysis-toolkit-FNS'</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>MODULE_PATH <span class="op">=</span> os.path.join(BASE_PATH, <span class="st">'notebooks'</span>, MODULE)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>DATASET_PATH <span class="op">=</span> os.path.join(<span class="st">'data'</span>, DATASET)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Attempting to clone repository...'</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.exists(BASE_PATH):</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Repository already exists, skipping clone.'</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="op">!</span>git clone https:<span class="op">//</span>github.com<span class="op">/</span>ggkuhnle<span class="op">/</span>data<span class="op">-</span>analysis<span class="op">-</span>toolkit<span class="op">-</span>FNS.git</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}<span class="op">/</span>notebooks</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> os.path.exists(MODULE_PATH):</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f'Module directory </span><span class="sc">{</span>MODULE_PATH<span class="sc">}</span><span class="ss"> not found.'</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    os.chdir(MODULE_PATH)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.exists(DATASET_PATH):</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Dataset found: </span><span class="sc">{</span>DATASET_PATH<span class="sc">}</span><span class="ss"> 🦛'</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Cloning failed: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Falling back to manual upload option...'</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    os.makedirs(<span class="st">'data'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    uploaded <span class="op">=</span> files.upload()</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> DATASET <span class="kw">in</span> uploaded:</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(DATASET_PATH, <span class="st">'wb'</span>) <span class="im">as</span> f:</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>            f.write(uploaded[DATASET])</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Successfully uploaded </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> 🦛'</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="setup" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas matplotlib  <span class="co"># Ensures compatibility in Colab</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd  <span class="co"># For data manipulation</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt  <span class="co"># For plotting</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Quarto environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas matplotlib</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Quarto environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Quarto environment ready.</code></pre>
 </div>
 </div>
+</section>
 <section id="creating-a-quarto-document" class="level2">
 <h2 class="anchored" data-anchor-id="creating-a-quarto-document">Creating a Quarto Document</h2>
 <p>Load <code>hippo_diets.csv</code> and create a plot to include in a Quarto document.</p>
 <div id="plot" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/hippo_diets.csv'</span>)  <span class="co"># Path relative to notebook</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a histogram</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.hist(df[<span class="st">'Calories'</span>], bins<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'teal'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Calories (kcal)'</span>)  <span class="co"># Label x-axis</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)  <span class="co"># Label y-axis</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Hippo Calorie Intakes'</span>)  <span class="co"># Plot title</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)  <span class="co"># Add light grid</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>plt.show()  <span class="co"># Display plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/hippo_diets.csv'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt.hist(df[<span class="st">'Calories'</span>], bins<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'teal'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Calories (kcal)'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Hippo Calorie Intakes'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="exercise-1-draft-a-quarto-file" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-1-draft-a-quarto-file">Exercise 1: Draft a Quarto File</h2>
 <p>Create a file <code>my_quarto.qmd</code> with the following:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hippo Diet Analysis"</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">## Calorie Distribution</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="at">```{python}</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Paste your histogram code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>```</p>
-<p>Render it using <code>quarto render my_quarto.qmd</code> in a terminal. Document your experience below.</p>
-<p><strong>Guidance</strong>: Ensure <code>hippo_diets.csv</code> is in the same directory.</p>
-<p><strong>Answer</strong>:</p>
-<p>I created and rendered the Quarto file by…</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Hippo Diet Analysis"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">## Calorie Distribution</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="at">```{python}</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Paste your histogram code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>``<code>Render it using</code>quarto render my_quarto.qmd` in a terminal. Document your experience below.</p>
+<p><strong>Answer</strong>: I created and rendered the Quarto file by…</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>You’ve learned to use Quarto for reproducible documents, enhancing your nutrition research outputs.</p>
-<p><strong>Next Steps</strong>: Begin programming basics in 2.1.</p>
-<p><strong>Resources</strong>: - <a href="https://quarto.org/">Quarto Documentation</a> - <a href="https://github.com/quarto-dev/quarto-cli">Quarto GitHub</a> - Repository: <a href="https://github.com/ggkuhnle/data-analysis-toolkit-FNS">github.com/ggkuhnle/data-analysis-toolkit-FNS</a></p>
+<p><strong>Next Steps</strong>: Begin programming basics in 2.1. <strong>Resources</strong>:</p>
+<ul>
+<li><a href="https://quarto.org/">Quarto Documentation</a></li>
+<li><a href="https://github.com/quarto-dev/quarto-cli">Quarto GitHub</a></li>
+<li>Repository: <a href="https://github.com/ggkuhnle/data-analysis-toolkit-FNS">github.com/ggkuhnle/data-analysis-toolkit-FNS</a></li>
+</ul>
 </section>
+
 
 </main>
 <!-- /main column -->

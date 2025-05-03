@@ -1,0 +1,12 @@
+
+Synthetic Metabolomics Dataset
+============================
+- Samples: 1000
+- Features: 200 metabolites (standardized, continuous)
+- Label: Binary (0=healthy, 1=diseased, ~20% diseased)
+- Severity: Continuous disease severity score
+- Structure: Metabolites are correlated via 9 latent factors (biological pathways).
+- Discriminative Metabolites: 10 metabolites have higher values in diseased samples.
+- Usage: Suitable for PCA, PLS-DA, Bayesian models, Random Forests, and regression.
+- Generated: 26 April 2025
+- Random Seed: 11088

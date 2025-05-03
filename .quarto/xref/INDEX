@@ -251,5 +251,50 @@
   },
   "notebooks/04_data_analysis/4.6_logistic_and_survival.ipynb": {
     "04_logistic_and_survival.html": "ed8dcce2"
+  },
+  "notebooks/02_programming_basics/2.0_intro_to_programming.ipynb": {
+    "2.0_intro_to_programming.html": "f47d230e"
+  },
+  "notebooks/02_programming_basics/2.1_programming_fundamentals.ipynb": {
+    "2.1_programming_fundamentals.html": "953a756b"
+  },
+  "notebooks/02_programming_basics/lists_in_python.md": {
+    "lists_in_python.html": "4f7fb3a6"
+  },
+  "notebooks/04_data_analysis/4.8_clinical_trial_analysis_bp.ipynb": {
+    "4.8_clinical_trial_analysis_bp.html": "0119c9c5"
+  },
+  "notebooks/01_infrastructure/quarto_intro.md": {
+    "quarto_intro.html": "59b32050"
+  },
+  "notebooks/10_mini_projects/10.7_llm.ipynb": {
+    "10.7_llm.html": "c6bdfa4b"
+  },
+  "notebooks/10_mini_projects/10.4_metabolomics.ipynb": {
+    "10.4_metabolomics.html": "286d3bb7"
+  },
+  "notebooks/10_mini_projects/10.1_clinical_trial.ipynb": {
+    "10.1_clinical_trial.html": "de576739"
+  },
+  "notebooks/10_mini_projects/10.6_ai.ipynb": {
+    "10.6_ai.html": "64e3fb80"
+  },
+  "notebooks/10_mini_projects/10.2_epidemiology_case_study.ipynb": {
+    "10.2_epidemiology_case_study.html": "b1e30e2e"
+  },
+  "notebooks/10_mini_projects/10.8_Bayesian_vs_Frequentist.ipynb": {
+    "10.8_Bayesian_vs_Frequentist.html": "e516535d"
+  },
+  "notebooks/10_mini_projects/index.qmd": {
+    "index.html": "a8d68bb4"
+  },
+  "notebooks/10_mini_projects/10.3_handling_missing_data.ipynb": {
+    "10.3_handling_missing_data.html": "64834906"
+  },
+  "notebooks/10_mini_projects/10.5_machine_learning.ipynb": {
+    "10.5_machine_learning.html": "233e4716"
+  },
+  "notebooks/10_mini_projects/10.9_fortran.ipynb": {
+    "10.9_fortran.html": "f3a0d92a"
   }
 }

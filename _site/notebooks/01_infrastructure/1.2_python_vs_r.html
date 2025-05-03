@@ -79,8 +79,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#tool-comparison" id="toc-tool-comparison" class="nav-link active" data-scroll-target="#tool-comparison">💡 Tool Comparison</a></li>
+  <li><a href="#what-do-we-mean-by-tools" id="toc-what-do-we-mean-by-tools" class="nav-link active" data-scroll-target="#what-do-we-mean-by-tools">🧰 What Do We Mean by “Tools”?</a></li>
+  <li><a href="#tool-comparison" id="toc-tool-comparison" class="nav-link" data-scroll-target="#tool-comparison">💡 Tool Comparison</a></li>
+  <li><a href="#common-use-cases-in-food-nutrition-sciences" id="toc-common-use-cases-in-food-nutrition-sciences" class="nav-link" data-scroll-target="#common-use-cases-in-food-nutrition-sciences">🍽️ Common Use Cases in Food &amp; Nutrition Sciences</a></li>
   <li><a href="#fun-analogy-if-statistics-tools-were-cars" id="toc-fun-analogy-if-statistics-tools-were-cars" class="nav-link" data-scroll-target="#fun-analogy-if-statistics-tools-were-cars">🚗 Fun Analogy: If Statistics Tools Were Cars…</a></li>
+  <li><a href="#tool-selection-guide" id="toc-tool-selection-guide" class="nav-link" data-scroll-target="#tool-selection-guide">🧭 Tool Selection Guide</a></li>
+  <li><a href="#common-use-cases-in-food-nutrition-sciences-1" id="toc-common-use-cases-in-food-nutrition-sciences-1" class="nav-link" data-scroll-target="#common-use-cases-in-food-nutrition-sciences-1">🍽️ Common Use Cases in Food &amp; Nutrition Sciences</a></li>
   <li><a href="#python-analysis-example" id="toc-python-analysis-example" class="nav-link" data-scroll-target="#python-analysis-example">Python Analysis Example</a></li>
   <li><a href="#how-other-tools-would-do-this" id="toc-how-other-tools-would-do-this" class="nav-link" data-scroll-target="#how-other-tools-would-do-this">How Other Tools Would Do This</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
@@ -123,75 +127,13 @@ Fun Fact
 </summary>
 Choosing a tool is like a hippo picking its favourite snack—carrots, fruit, or a mix of both might suit different tastes! 🦛
 </details>
-<div id="colab_setup" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Fetch datasets automatically or manually</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the module and dataset for this notebook</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>MODULE <span class="op">=</span> <span class="st">'01_infrastructure'</span>  <span class="co"># e.g., '01_infrastructure'</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>DATASET <span class="op">=</span> <span class="st">'hippo_diets.csv'</span>  <span class="co"># e.g., 'hippo_diets.csv'</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>BASE_PATH <span class="op">=</span> <span class="st">'/content/data-analysis-toolkit-FNS'</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>MODULE_PATH <span class="op">=</span> os.path.join(BASE_PATH, <span class="st">'notebooks'</span>, MODULE)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>DATASET_PATH <span class="op">=</span> os.path.join(<span class="st">'data'</span>, DATASET)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Attempt to clone the repository (automatic method)</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: If you encounter a cloning error (e.g., 'fatal: destination path already exists'),</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#       reset the runtime (Runtime &gt; Restart runtime) and run this cell again.</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Attempting to clone repository...'</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.exists(BASE_PATH):</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Repository already exists, skipping clone.'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">!</span>git clone https:<span class="op">//</span>github.com<span class="op">/</span>ggkuhnle<span class="op">/</span>data<span class="op">-</span>analysis<span class="op">-</span>toolkit<span class="op">-</span>FNS.git</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Debug: Print directory structure</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Listing repository contents:'</span>)</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Listing notebooks directory contents:'</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}<span class="op">/</span>notebooks</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if the module directory exists</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> os.path.exists(MODULE_PATH):</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f'Module directory </span><span class="sc">{</span>MODULE_PATH<span class="sc">}</span><span class="ss"> not found. Check the repository structure.'</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set working directory to the notebook's folder</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    os.chdir(MODULE_PATH)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Verify dataset is accessible</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.exists(DATASET_PATH):</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Dataset found: </span><span class="sc">{</span>DATASET_PATH<span class="sc">}</span><span class="ss"> 🦛'</span>)</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Error: Dataset </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> not found after cloning.'</span>)</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Cloning failed: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Falling back to manual upload option...'</span>)</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Step 2: Manual upload option</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Please upload </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> manually.'</span>)</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'1. Click the "Choose Files" button below.'</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'2. Select </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> from your local machine.'</span>)</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'3. Ensure the file is placed in notebooks/</span><span class="sc">{</span>MODULE<span class="sc">}</span><span class="ss">/data/'</span>)</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the data directory if it doesn't exist</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    os.makedirs(<span class="st">'data'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Prompt user to upload the dataset</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    uploaded <span class="op">=</span> files.upload()</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if the dataset was uploaded</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> DATASET <span class="kw">in</span> uploaded:</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(DATASET_PATH, <span class="st">'wb'</span>) <span class="im">as</span> f:</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>            f.write(uploaded[DATASET])</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Successfully uploaded </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span>DATASET_PATH<span class="sc">}</span><span class="ss"> 🦛'</span>)</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f'Upload failed. Please ensure you uploaded </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss">.'</span>)</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages for this notebook</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas numpy</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="what-do-we-mean-by-tools" class="level2">
+<h2 class="anchored" data-anchor-id="what-do-we-mean-by-tools">🧰 What Do We Mean by “Tools”?</h2>
+<p>In data science, a <strong>tool</strong> is a program or environment that helps you: - Load and clean data - Perform calculations and analysis - Visualise or report results</p>
+<p>You’ve probably used some already — Excel, SPSS, R, or Python.<br>
+Each tool has different strengths depending on the <em>kind of problem</em> and <em>how much flexibility or automation</em> you need.</p>
+<p>Choosing a tool is part of being a thoughtful data analyst — like choosing the right lab equipment!</p>
+</section>
 <section id="tool-comparison" class="level2">
 <h2 class="anchored" data-anchor-id="tool-comparison">💡 Tool Comparison</h2>
 <p>Here’s a detailed comparison of Python, R, SPSS, and XLStat, focusing on their use in nutrition data analysis:</p>
@@ -266,6 +208,39 @@ Choosing a tool is like a hippo picking its favourite snack—carrots, fruit, or
 <p><strong>Why Python for This Toolkit?</strong><br>
 Python is our choice because it’s free, supports reproducible workflows, and can handle everything from small scripts to large nutrition data pipelines (e.g., NDNS analysis). It’s also widely used in modern research, making it a valuable skill for MSc students!</p>
 </section>
+<section id="common-use-cases-in-food-nutrition-sciences" class="level2">
+<h2 class="anchored" data-anchor-id="common-use-cases-in-food-nutrition-sciences">🍽️ Common Use Cases in Food &amp; Nutrition Sciences</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Best Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Analysing NDNS dietary intake data</td>
+<td>🐍 Python, 📊 R</td>
+</tr>
+<tr class="even">
+<td>Quick t-test for nutrient intervention</td>
+<td>📋 SPSS</td>
+</tr>
+<tr class="odd">
+<td>Multivariate PCA for sensory scores</td>
+<td>📈 XLStat</td>
+</tr>
+<tr class="even">
+<td>Creating automated plots and reports</td>
+<td>🐍 Python</td>
+</tr>
+<tr class="odd">
+<td>Statistical model for food safety risk</td>
+<td>📊 R</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="fun-analogy-if-statistics-tools-were-cars" class="level2">
 <h2 class="anchored" data-anchor-id="fun-analogy-if-statistics-tools-were-cars">🚗 Fun Analogy: If Statistics Tools Were Cars…</h2>
 <p>To lighten things up, here’s a humorous take on these tools as cars, reflecting their characteristics in data analysis:</p>
@@ -286,30 +261,152 @@ Python is our choice because it’s free, supports reproducible workflows, and c
 </ul>
 <p><strong>Note</strong>: SPSS and XLStat aren’t shown in the image, but we’d imagine SPSS as a dependable but clunky minivan (user-friendly but not agile) and XLStat as a modified Excel car—handy for specific tasks but constrained by its base model (Excel)!</p>
 </section>
+<section id="tool-selection-guide" class="level2">
+<h2 class="anchored" data-anchor-id="tool-selection-guide">🧭 Tool Selection Guide</h2>
+<p>Use this quick decision tree to help choose a data analysis tool based on your preferences:</p>
+<pre><code>Are you comfortable writing code?
+├── ❌ No
+│   ├── Prefer Excel?               → ✅ XLStat
+│   └── Prefer menu-based stats?   → ✅ SPSS
+└── ✅ Yes
+    ├── Focus on statistics/plots? → ✅ R
+    └── Need automation/flexibility? → ✅ Python</code></pre>
+<hr>
+</section>
+<section id="common-use-cases-in-food-nutrition-sciences-1" class="level2">
+<h2 class="anchored" data-anchor-id="common-use-cases-in-food-nutrition-sciences-1">🍽️ Common Use Cases in Food &amp; Nutrition Sciences</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Scenario</th>
+<th>Best Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Analysing NDNS dietary intake data</td>
+<td>Python, R</td>
+</tr>
+<tr class="even">
+<td>Quick t-test for nutrient intervention</td>
+<td>SPSS</td>
+</tr>
+<tr class="odd">
+<td>Multivariate PCA for sensory scores</td>
+<td>XLStat</td>
+</tr>
+<tr class="even">
+<td>Creating automated plots and reports</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>Statistical model for food safety risk</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>Tip</strong>: There’s no perfect tool — it depends on your project, dataset size, goals, and your own learning style!</p>
+<details>
+<summary>
+🦛
+</summary>
+<em>Hippo says: “Use the tool that gets you moving, not just the one with the flashiest horn.”</em>
+
+<div id="colab_setup" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Fetch datasets automatically or manually</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the module and dataset for this notebook</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>MODULE <span class="op">=</span> <span class="st">'01_infrastructure'</span>  <span class="co"># e.g., '01_infrastructure'</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>DATASET <span class="op">=</span> <span class="st">'hippo_diets.csv'</span>  <span class="co"># e.g., 'hippo_diets.csv'</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>BASE_PATH <span class="op">=</span> <span class="st">'/content/data-analysis-toolkit-FNS'</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>MODULE_PATH <span class="op">=</span> os.path.join(BASE_PATH, <span class="st">'notebooks'</span>, MODULE)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>DATASET_PATH <span class="op">=</span> os.path.join(<span class="st">'data'</span>, DATASET)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Attempt to clone the repository (automatic method)</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: If you encounter a cloning error (e.g., 'fatal: destination path already exists'),</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co">#       reset the runtime (Runtime &gt; Restart runtime) and run this cell again.</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Attempting to clone repository...'</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.exists(BASE_PATH):</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Repository already exists, skipping clone.'</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">!</span>git clone https:<span class="op">//</span>github.com<span class="op">/</span>ggkuhnle<span class="op">/</span>data<span class="op">-</span>analysis<span class="op">-</span>toolkit<span class="op">-</span>FNS.git</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Debug: Print directory structure</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Listing repository contents:'</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Listing notebooks directory contents:'</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}<span class="op">/</span>notebooks</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if the module directory exists</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> os.path.exists(MODULE_PATH):</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f'Module directory </span><span class="sc">{</span>MODULE_PATH<span class="sc">}</span><span class="ss"> not found. Check the repository structure.'</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set working directory to the notebook's folder</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    os.chdir(MODULE_PATH)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Verify dataset is accessible</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.exists(DATASET_PATH):</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Dataset found: </span><span class="sc">{</span>DATASET_PATH<span class="sc">}</span><span class="ss"> 🦛'</span>)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Error: Dataset </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> not found after cloning.'</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Cloning failed: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Falling back to manual upload option...'</span>)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Step 2: Manual upload option</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Please upload </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> manually.'</span>)</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'1. Click the "Choose Files" button below.'</span>)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'2. Select </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> from your local machine.'</span>)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'3. Ensure the file is placed in notebooks/</span><span class="sc">{</span>MODULE<span class="sc">}</span><span class="ss">/data/'</span>)</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the data directory if it doesn't exist</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    os.makedirs(<span class="st">'data'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Prompt user to upload the dataset</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    uploaded <span class="op">=</span> files.upload()</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if the dataset was uploaded</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> DATASET <span class="kw">in</span> uploaded:</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(DATASET_PATH, <span class="st">'wb'</span>) <span class="im">as</span> f:</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>            f.write(uploaded[DATASET])</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Successfully uploaded </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span>DATASET_PATH<span class="sc">}</span><span class="ss"> 🦛'</span>)</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f'Upload failed. Please ensure you uploaded </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss">.'</span>)</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages for this notebook</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas numpy</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details></section>
 <section id="python-analysis-example" class="level2">
 <h2 class="anchored" data-anchor-id="python-analysis-example">Python Analysis Example</h2>
 <p>Let’s perform a simple analysis in Python using <code>hippo_diets.csv</code> to compute summary statistics for calories and protein. This mirrors what you might do in R, SPSS, or XLStat, but with Python’s reproducible code.</p>
 <div id="stats" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import required libraries</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd  <span class="co"># For data manipulation</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np  <span class="co"># For numerical operations</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset using a robust path</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># os.path.join ensures compatibility across environments (local, Colab, etc.)</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(os.path.join(<span class="st">'data'</span>, <span class="st">'hippo_diets.csv'</span>))</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute summary statistics for Calories and Protein columns</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># .describe() generates stats like count, mean, std, min, max</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># We select specific rows for clarity</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> df[[<span class="st">'Calories'</span>, <span class="st">'Protein'</span>]].describe().loc[[<span class="st">'count'</span>, <span class="st">'mean'</span>, <span class="st">'std'</span>, <span class="st">'min'</span>, <span class="st">'max'</span>]]</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary)  <span class="co"># Display the summary statistics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import required libraries</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd  <span class="co"># For data manipulation</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np  <span class="co"># For numerical operations</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset using a robust path</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># os.path.join ensures compatibility across environments (local, Colab, etc.)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(os.path.join(<span class="st">'data'</span>, <span class="st">'hippo_diets.csv'</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute summary statistics for Calories and Protein columns</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># .describe() generates stats like count, mean, std, min, max</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># We select specific rows for clarity</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>summary <span class="op">=</span> df[[<span class="st">'Calories'</span>, <span class="st">'Protein'</span>]].describe().loc[[<span class="st">'count'</span>, <span class="st">'mean'</span>, <span class="st">'std'</span>, <span class="st">'min'</span>, <span class="st">'max'</span>]]</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(summary)  <span class="co"># Display the summary statistics</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="how-other-tools-would-do-this" class="level2">
 <h2 class="anchored" data-anchor-id="how-other-tools-would-do-this">How Other Tools Would Do This</h2>
 <p><strong>R</strong>: In R, you’d use <code>summary()</code> for similar stats:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'data/hippo_diets.csv'</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df[, <span class="fu">c</span>(<span class="st">'Calories'</span>, <span class="st">'Protein'</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'data/hippo_diets.csv'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df[, <span class="fu">c</span>(<span class="st">'Calories'</span>, <span class="st">'Protein'</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>R’s output includes quartiles (e.g., 25%, 50%, 75%), which Python’s <code>describe()</code> also provides but we filtered out for brevity.</p>
 <p><strong>SPSS</strong>: In SPSS, you’d: 1. Import <code>hippo_diets.csv</code> via File &gt; Open &gt; Data. 2. Go to Analyze &gt; Descriptive Statistics &gt; Frequencies. 3. Select <code>Calories</code> and <code>Protein</code>, then click Statistics to choose mean, std, min, max. 4. Run and view results in the Output window. This is user-friendly but manual—steps aren’t scripted, making it hard to reproduce.</p>
 <p><strong>XLStat</strong>: In XLStat (within Excel): 1. Open <code>hippo_diets.csv</code> in Excel. 2. Go to XLStat &gt; Describing Data &gt; Descriptive Statistics. 3. Select <code>Calories</code> and <code>Protein</code> columns, choose stats (mean, std, etc.), and run. 4. Results appear in a new Excel sheet. This is quick for Excel users but limited by Excel’s scalability and lack of scripting.</p>

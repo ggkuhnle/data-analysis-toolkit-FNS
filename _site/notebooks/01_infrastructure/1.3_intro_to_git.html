@@ -79,9 +79,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#setting-up-git" id="toc-setting-up-git" class="nav-link active" data-scroll-target="#setting-up-git">Setting Up Git</a></li>
-  <li><a href="#exercise-1-create-a-repository" id="toc-exercise-1-create-a-repository" class="nav-link" data-scroll-target="#exercise-1-create-a-repository">Exercise 1: Create a Repository</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#what-is-git" id="toc-what-is-git" class="nav-link active" data-scroll-target="#what-is-git">🧰 What is Git?</a></li>
+  <li><a href="#setting-up-git" id="toc-setting-up-git" class="nav-link" data-scroll-target="#setting-up-git">⚙️ Setting Up Git</a></li>
+  <li><a href="#undoing-changes" id="toc-undoing-changes" class="nav-link" data-scroll-target="#undoing-changes">🔁 Undoing Changes</a></li>
+  <li><a href="#exercise-create-a-repository" id="toc-exercise-create-a-repository" class="nav-link" data-scroll-target="#exercise-create-a-repository">🧪 Exercise: Create a Repository</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">✅ Conclusion</a></li>
   </ul>
 </nav>
 </div>
@@ -115,100 +117,85 @@ Fun Fact
 </summary>
 Git is like a hippo’s journal—tracking every snack and meal with precision! 🦛
 </details>
-<div id="colab_setup" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Fetch datasets automatically or manually</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the module and dataset for this notebook</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>MODULE <span class="op">=</span> <span class="st">'01_infrastructure'</span>  <span class="co"># e.g., '01_infrastructure'</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>DATASET <span class="op">=</span> <span class="st">'hippo_diets.csv'</span>  <span class="co"># e.g., 'hippo_diets.csv'</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>BASE_PATH <span class="op">=</span> <span class="st">'/content/data-analysis-toolkit-FNS'</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>MODULE_PATH <span class="op">=</span> os.path.join(BASE_PATH, <span class="st">'notebooks'</span>, MODULE)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>DATASET_PATH <span class="op">=</span> os.path.join(<span class="st">'data'</span>, DATASET)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Step 1: Attempt to clone the repository (automatic method)</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: If you encounter a cloning error (e.g., 'fatal: destination path already exists'),</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#       reset the runtime (Runtime &gt; Restart runtime) and run this cell again.</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Attempting to clone repository...'</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.exists(BASE_PATH):</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">'Repository already exists, skipping clone.'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">!</span>git clone https:<span class="op">//</span>github.com<span class="op">/</span>ggkuhnle<span class="op">/</span>data<span class="op">-</span>analysis<span class="op">-</span>toolkit<span class="op">-</span>FNS.git</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Debug: Print directory structure</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Listing repository contents:'</span>)</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Listing notebooks directory contents:'</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">!</span>ls {BASE_PATH}<span class="op">/</span>notebooks</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if the module directory exists</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> os.path.exists(MODULE_PATH):</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f'Module directory </span><span class="sc">{</span>MODULE_PATH<span class="sc">}</span><span class="ss"> not found. Check the repository structure.'</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set working directory to the notebook's folder</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    os.chdir(MODULE_PATH)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Verify dataset is accessible</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> os.path.exists(DATASET_PATH):</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Dataset found: </span><span class="sc">{</span>DATASET_PATH<span class="sc">}</span><span class="ss"> 🦛'</span>)</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Error: Dataset </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> not found after cloning.'</span>)</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Cloning failed: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Falling back to manual upload option...'</span>)</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Step 2: Manual upload option</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'Please upload </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> manually.'</span>)</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'1. Click the "Choose Files" button below.'</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'2. Select </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> from your local machine.'</span>)</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'3. Ensure the file is placed in notebooks/</span><span class="sc">{</span>MODULE<span class="sc">}</span><span class="ss">/data/'</span>)</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create the data directory if it doesn't exist</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    os.makedirs(<span class="st">'data'</span>, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Prompt user to upload the dataset</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    uploaded <span class="op">=</span> files.upload()</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check if the dataset was uploaded</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> DATASET <span class="kw">in</span> uploaded:</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(DATASET_PATH, <span class="st">'wb'</span>) <span class="im">as</span> f:</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>            f.write(uploaded[DATASET])</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Successfully uploaded </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span>DATASET_PATH<span class="sc">}</span><span class="ss"> 🦛'</span>)</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">FileNotFoundError</span>(<span class="ss">f'Upload failed. Please ensure you uploaded </span><span class="sc">{</span>DATASET<span class="sc">}</span><span class="ss">.'</span>)</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages for this notebook</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas numpy</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="setting-up-git" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-git">Setting Up Git</h2>
-<p>Install Git locally or use a cloud platform like GitHub. Run the following in a terminal (not Python):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span>  <span class="co"># Check Git installation</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your.email@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="what-is-git" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-git">🧰 What is Git?</h2>
+<p>Git is a <strong>version control system</strong> that lets you track changes in your code, collaborate with others, and backtrack if something goes wrong. Think of it as a very detailed “track changes” for your entire project.</p>
+<p>You can: - Save snapshots of your project (commits) - Roll back to earlier versions - Collaborate via platforms like GitHub - See who changed what and when</p>
 </section>
-<section id="exercise-1-create-a-repository" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-create-a-repository">Exercise 1: Create a Repository</h2>
-<p>Create a local Git repository and commit a sample file. Follow these steps in a terminal:</p>
-<ol type="1">
-<li>Create a directory: <code>mkdir my-nutrition-repo</code></li>
-<li>Navigate: <code>cd my-nutrition-repo</code></li>
-<li>Initialise: <code>git init</code></li>
-<li>Create a file: <code>echo "# Nutrition Notes" &gt; README.md</code></li>
-<li>Stage: <code>git add README.md</code></li>
-<li>Commit: <code>git commit -m "Initial commit"</code></li>
-</ol>
-<p>Document your experience in a Markdown cell.</p>
-<p><strong>Guidance</strong>: Note any errors or successes.</p>
+<section id="setting-up-git" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-git">⚙️ Setting Up Git</h2>
+<p>Install Git locally or use a cloud platform like GitHub. Run the following in a <strong>terminal</strong> (not Python):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span>  <span class="co"># Check Git installation</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your.email@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details>
+<summary>
+📘 Common Git Commands
+</summary>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init              <span class="co"># Initialise a repository</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status            <span class="co"># Show changes</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add filename      <span class="co"># Stage a file</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"msg"</span>   <span class="co"># Commit staged files with message</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log               <span class="co"># Show history</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff              <span class="co"># Show differences</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone URL         <span class="co"># Clone a remote repo</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull              <span class="co"># Get changes from remote</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push              <span class="co"># Send changes to remote</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</section>
+<section id="undoing-changes" class="level2">
+<h2 class="anchored" data-anchor-id="undoing-changes">🔁 Undoing Changes</h2>
+<p>Here’s how to undo different types of changes:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 42%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Situation</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Unstage file</td>
+<td><code>git restore --staged filename</code></td>
+</tr>
+<tr class="even">
+<td>Discard file changes</td>
+<td><code>git restore filename</code></td>
+</tr>
+<tr class="odd">
+<td>Undo last commit (keep code)</td>
+<td><code>git reset --soft HEAD~1</code></td>
+</tr>
+<tr class="even">
+<td>Undo last commit (drop code)</td>
+<td><code>git reset --hard HEAD~1</code></td>
+</tr>
+<tr class="odd">
+<td>Undo pushed commit</td>
+<td>Avoid! Use <code>git revert &lt;hash&gt;</code> instead</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exercise-create-a-repository" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-create-a-repository">🧪 Exercise: Create a Repository</h2>
+<p>Try this in a <strong>terminal</strong>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> my-nutrition-repo</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> my-nutrition-repo</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"# Nutrition Notes"</span> <span class="op">&gt;</span> README.md</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add README.md</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Initial commit"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Document your experience below 👇</p>
 <p><strong>Answer</strong>:</p>
 <p>I created the repository by…</p>
 </section>
 <section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<h2 class="anchored" data-anchor-id="conclusion">✅ Conclusion</h2>
 <p>You’ve learned the basics of Git for version control. Practise these skills to manage your nutrition data projects.</p>
 <p><strong>Next Steps</strong>: Explore Quarto for reproducible documents in 1.4.</p>
 <p><strong>Resources</strong>: - <a href="https://git-scm.com/doc">Git Documentation</a> - <a href="https://guides.github.com/">GitHub Guides</a> - Repository: <a href="https://github.com/ggkuhnle/data-analysis-toolkit-FNS">github.com/ggkuhnle/data-analysis-toolkit-FNS</a></p>

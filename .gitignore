@@ -4,5 +4,6 @@ __pycache__/
 venv/
 *.csv  # Optional: exclude large datasets
 *.txt  # Optional: exclude text data
+_site
 
 /.quarto/

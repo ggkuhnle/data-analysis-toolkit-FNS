@@ -79,9 +79,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#testing-with-hippo-data" id="toc-testing-with-hippo-data" class="nav-link active" data-scroll-target="#testing-with-hippo-data">Testing with Hippo Data</a></li>
-  <li><a href="#exercise-1-explore-your-environment" id="toc-exercise-1-explore-your-environment" class="nav-link" data-scroll-target="#exercise-1-explore-your-environment">Exercise 1: Explore Your Environment</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link active" data-scroll-target="#objectives">🎯 Objectives</a></li>
+  <li><a href="#what-is-data-science" id="toc-what-is-data-science" class="nav-link" data-scroll-target="#what-is-data-science">🧠 What is Data Science?</a>
+  <ul class="collapse">
+  <li><a href="#core-components-of-data-science" id="toc-core-components-of-data-science" class="nav-link" data-scroll-target="#core-components-of-data-science">🔧 Core Components of Data Science</a></li>
+  <li><a href="#what-makes-data-science-special" id="toc-what-makes-data-science-special" class="nav-link" data-scroll-target="#what-makes-data-science-special">🧪 What Makes Data Science Special?</a></li>
+  <li><a href="#hippo-example" id="toc-hippo-example" class="nav-link" data-scroll-target="#hippo-example">🦛 Hippo Example</a></li>
+  <li><a href="#why-start-with-environments" id="toc-why-start-with-environments" class="nav-link" data-scroll-target="#why-start-with-environments">✅ Why Start With Environments?</a></li>
+  </ul></li>
+  <li><a href="#how-do-we-access-data" id="toc-how-do-we-access-data" class="nav-link" data-scroll-target="#how-do-we-access-data">📁 How Do We Access Data?</a></li>
+  <li><a href="#testing-with-hippo-data" id="toc-testing-with-hippo-data" class="nav-link" data-scroll-target="#testing-with-hippo-data">Testing with Hippo Data</a></li>
+  <li><a href="#exercise-1-explore-hippo-diets-visually" id="toc-exercise-1-explore-hippo-diets-visually" class="nav-link" data-scroll-target="#exercise-1-explore-hippo-diets-visually">🧪 Exercise 1: Explore Hippo Diets Visually</a>
+  <ul class="collapse">
+  <li><a href="#option-1-colour-by-protein-intake" id="toc-option-1-colour-by-protein-intake" class="nav-link" data-scroll-target="#option-1-colour-by-protein-intake">🔴 Option 1: Colour by Protein Intake</a></li>
+  <li><a href="#option-2-plot-a-histogram" id="toc-option-2-plot-a-histogram" class="nav-link" data-scroll-target="#option-2-plot-a-histogram">📊 Option 2: Plot a Histogram</a></li>
+  <li><a href="#how-to-do-this-in-colab" id="toc-how-to-do-this-in-colab" class="nav-link" data-scroll-target="#how-to-do-this-in-colab">✅ How to Do This in Colab?</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">✅ Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">📘 Next Steps</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">📚 Additional Resources</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -106,15 +124,115 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This notebook introduces computational environments for data analysis in nutrition sciences, including Jupyter and Google Colab.</p>
-<p><strong>Objectives</strong>: - Compare local and cloud-based environments. - Install and test essential tools. - Ensure reproducibility in data analysis.</p>
+<p>Before we dive into data analysis, it’s important to understand the environment where our code runs.</p>
+<p>In nutrition and food sciencescience, we often work with sensitive or large datasets. Having a reliable, reproducible setup — whether local or in the cloud — makes our work easier to share, debug, and scale.</p>
+<hr>
+<section id="objectives" class="level3">
+<h3 class="anchored" data-anchor-id="objectives">🎯 Objectives</h3>
+<ul>
+<li>Understand the difference between local and cloud-based environments</li>
+<li>Set up and test a core Python environment</li>
+<li>Ensure reproducibility for data science workflows</li>
+</ul>
 <p><strong>Context</strong>: A robust environment is essential for analysing datasets like NDNS or hippo-themed nutrient logs. 🦛</p>
 <details>
 <summary>
-Fun Fact
+🦛
 </summary>
 A good environment is like a hippo’s kitchen—organized and ready for action! 🦛
 </details>
+</section>
+<section id="what-is-data-science" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-data-science">🧠 What is Data Science?</h2>
+<p>Data science is the process of transforming raw data into insights and decisions.<br>
+It blends statistics, computer science, and domain knowledge — in our case, nutrition and health.</p>
+<hr>
+<section id="core-components-of-data-science" class="level3">
+<h3 class="anchored" data-anchor-id="core-components-of-data-science">🔧 Core Components of Data Science</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 43%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>What It Does</th>
+<th>Example in Nutrition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Data</strong></td>
+<td>Collect, clean, and organise information</td>
+<td>Survey results, NDNS, 24hr recalls</td>
+</tr>
+<tr class="even">
+<td><strong>Statistics</strong></td>
+<td>Summarise, model, and test relationships</td>
+<td>Are protein levels linked to age or BMI?</td>
+</tr>
+<tr class="odd">
+<td><strong>Programming</strong></td>
+<td>Automate tasks, build tools, repeat analyses</td>
+<td>Clean hundreds of food logs efficiently</td>
+</tr>
+<tr class="even">
+<td><strong>Visualisation</strong></td>
+<td>Reveal patterns and communicate findings</td>
+<td>Plot sugar trends across age groups</td>
+</tr>
+<tr class="odd">
+<td><strong>Communication</strong></td>
+<td>Tell a story with data</td>
+<td>Make a compelling case for public policy</td>
+</tr>
+<tr class="even">
+<td><strong>Reproducibility</strong></td>
+<td>Make sure others (or future you!) can repeat your work</td>
+<td>Share code + data = reliable science</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="what-makes-data-science-special" class="level3">
+<h3 class="anchored" data-anchor-id="what-makes-data-science-special">🧪 What Makes Data Science Special?</h3>
+<ul>
+<li>It’s <strong>iterative</strong>: You don’t start with all the answers.</li>
+<li>It’s <strong>exploratory</strong>: You poke around to understand what’s going on.</li>
+<li>It’s <strong>interdisciplinary</strong>: You bring together tools, evidence, and context.</li>
+<li>It’s <strong>powerful</strong>: It helps uncover things that no single experiment ever could.</li>
+</ul>
+<hr>
+</section>
+<section id="hippo-example" class="level3">
+<h3 class="anchored" data-anchor-id="hippo-example">🦛 Hippo Example</h3>
+<p>Let’s say you have data from 100 hippos about their diets, weights, and energy intake.<br>
+As a data scientist, you might ask:</p>
+<ul>
+<li>Are heavier hippos eating more calories?</li>
+<li>Which foods are linked to healthier weights?</li>
+<li>Is there a seasonal pattern to energy intake?</li>
+</ul>
+<p>With data science, you can <strong>find answers, visualise trends, and share insights</strong> — all in a way that’s reproducible, testable, and scalable.</p>
+<hr>
+</section>
+<section id="why-start-with-environments" class="level3">
+<h3 class="anchored" data-anchor-id="why-start-with-environments">✅ Why Start With Environments?</h3>
+<p>Just like you need the right kitchen to bake a cake, you need the right environment to do data science.<br>
+The rest of this notebook helps you create that space — so everything runs smoothly from here on.</p>
+</section>
+</section>
+<section id="how-do-we-access-data" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-access-data">📁 How Do We Access Data?</h2>
+<p>We typically load data in one of two ways:</p>
+<ul>
+<li>🧳 <strong>From the internet</strong> – using GitHub to pull the same files used across the course</li>
+<li>📂 <strong>Manual upload</strong> – useful if you’re testing something private or custom</li>
+</ul>
+<p>This next step tries to clone the full toolkit repository. If it fails, you’ll be asked to upload the file manually.</p>
 <div id="colab_setup" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Fetch datasets automatically or manually</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -195,6 +313,7 @@ A good environment is like a hippo’s kitchen—organized and ready for action!
 <pre><code>Environment ready.</code></pre>
 </div>
 </div>
+</section>
 <section id="testing-with-hippo-data" class="level2">
 <h2 class="anchored" data-anchor-id="testing-with-hippo-data">Testing with Hippo Data</h2>
 <p>Load <code>hippo_diets.csv</code> to verify your setup and create a simple visualization.</p>
@@ -207,17 +326,79 @@ A good environment is like a hippo’s kitchen—organized and ready for action!
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="exercise-1-explore-your-environment" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-explore-your-environment">Exercise 1: Explore Your Environment</h2>
-<p>Modify the plot above to change the marker color to red. Document your changes in a Markdown cell.</p>
-<p><strong>Guidance</strong>: Use the <code>c</code> parameter in <code>plt.scatter()</code>.</p>
+<section id="exercise-1-explore-hippo-diets-visually" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-explore-hippo-diets-visually">🧪 Exercise 1: Explore Hippo Diets Visually</h2>
+<p>Let’s go one step further and learn something <strong>useful</strong> about the data!</p>
+<p>Try one of the following (or both):</p>
+<hr>
+<section id="option-1-colour-by-protein-intake" class="level3">
+<h3 class="anchored" data-anchor-id="option-1-colour-by-protein-intake">🔴 Option 1: Colour by Protein Intake</h3>
+<p>Change the colour of the points in the scatter plot based on protein levels:</p>
+<ul>
+<li>Red for high protein (e.g.&nbsp;&gt; 80g)</li>
+<li>Blue for low protein</li>
+</ul>
+<p>This teaches you how to use conditional logic to <strong>customise plots based on data</strong>.</p>
+<hr>
+</section>
+<section id="option-2-plot-a-histogram" class="level3">
+<h3 class="anchored" data-anchor-id="option-2-plot-a-histogram">📊 Option 2: Plot a Histogram</h3>
+<p>Create a histogram showing how many hippos eat at different calorie levels.</p>
+<p>This helps you understand the <strong>distribution</strong> of a single variable.</p>
+<hr>
+</section>
+<section id="how-to-do-this-in-colab" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-do-this-in-colab">✅ How to Do This in Colab?</h3>
+<p>You don’t need to install anything! Just write code in the cell below and run it with <strong>Shift + Enter</strong>.</p>
+<p>Need a reminder?</p>
+<ul>
+<li>Use <code>df['Protein'] &gt; 80</code> to filter high-protein hippos</li>
+<li>Use <code>plt.hist()</code> for histograms</li>
+<li>Use <code>plt.scatter(x, y, c=colours)</code> for colour-coded scatter plots</li>
+</ul>
 <p><strong>Answer</strong>:</p>
 <p>I changed the marker color by…</p>
+<div id="7f88b44d" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># OPTION 1: Colour points based on protein levels</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>colours <span class="op">=</span> np.where(df[<span class="st">'Protein'</span>] <span class="op">&gt;</span> <span class="dv">80</span>, <span class="st">'red'</span>, <span class="st">'blue'</span>)  <span class="co"># True = red, False = blue</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(df[<span class="st">'Calories'</span>], df[<span class="st">'Protein'</span>], c<span class="op">=</span>colours)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Calories'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Protein (g)'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Hippo Diets by Protein Level'</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># OPTION 2: Plot histogram of Calories</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>plt.hist(df[<span class="st">'Calories'</span>], bins<span class="op">=</span><span class="dv">10</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Calories'</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Hippos'</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Hippo Calorie Intake'</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 </section>
 <section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>You’ve set up a data science environment ready for nutrition analysis. Next, explore Python vs.&nbsp;R in 1.2.</p>
-<p><strong>Resources</strong>: - <a href="https://jupyter.org/">Jupyter Documentation</a> - <a href="https://colab.research.google.com/">Colab Documentation</a> - Repository: <a href="https://github.com/ggkuhnle/data-analysis-toolkit-FNS">github.com/ggkuhnle/data-analysis-toolkit-FNS</a></p>
+<h2 class="anchored" data-anchor-id="conclusion">✅ Conclusion</h2>
+<p>🎉 You’ve successfully set up a working Python environment in the cloud and tested your first dataset.</p>
+<p>This setup ensures that:</p>
+<ul>
+<li>Your tools work correctly</li>
+<li>You can access shared data</li>
+<li>You’re ready to explore real questions in nutrition science</li>
+</ul>
+<hr>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">📘 Next Steps</h3>
+<p>Proceed to <strong>Notebook 1.2</strong> to compare <strong>Python vs.&nbsp;R</strong> and understand why this toolkit focuses on Python.</p>
+<hr>
+</section>
+<section id="additional-resources" class="level3">
+<h3 class="anchored" data-anchor-id="additional-resources">📚 Additional Resources</h3>
+<ul>
+<li><a href="https://jupyter.org/">Jupyter Documentation</a></li>
+<li><a href="https://colab.research.google.com/">Google Colab Docs</a></li>
+<li><a href="https://github.com/ggkuhnle/data-analysis-toolkit-FNS">Course Repository on GitHub</a></li>
+</ul>
+</section>
 </section>
 
 </main>

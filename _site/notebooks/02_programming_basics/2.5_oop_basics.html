@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>🧑‍💻 2.5 Object-Oriented Programming Basics</title>
+<title>oop_basics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,166 +79,403 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#classes-and-objects" id="toc-classes-and-objects" class="nav-link active" data-scroll-target="#classes-and-objects">📚 Classes and Objects</a></li>
-  <li><a href="#adding-methods-and-attributes" id="toc-adding-methods-and-attributes" class="nav-link" data-scroll-target="#adding-methods-and-attributes">🔧 Adding Methods and Attributes</a></li>
-  <li><a href="#inheritance" id="toc-inheritance" class="nav-link" data-scroll-target="#inheritance">🌱 Inheritance</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#object-oriented-programming-oop-basics" id="toc-object-oriented-programming-oop-basics" class="nav-link active" data-scroll-target="#object-oriented-programming-oop-basics">🧑‍💻 2.5 Object-Oriented Programming (OOP) Basics</a>
+  <ul class="collapse">
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">🎯 Objectives</a></li>
+  <li><a href="#why-object-oriented-programming" id="toc-why-object-oriented-programming" class="nav-link" data-scroll-target="#why-object-oriented-programming">🧠 Why Object-Oriented Programming?</a></li>
+  <li><a href="#what-is-oop" id="toc-what-is-oop" class="nav-link" data-scroll-target="#what-is-oop">🧰 What Is OOP?</a></li>
+  <li><a href="#example-from-nutrition" id="toc-example-from-nutrition" class="nav-link" data-scroll-target="#example-from-nutrition">🧪 Example from Nutrition</a></li>
+  <li><a href="#what-youll-learn-in-this-notebook" id="toc-what-youll-learn-in-this-notebook" class="nav-link" data-scroll-target="#what-youll-learn-in-this-notebook">🛠 What You’ll Learn in This Notebook</a></li>
+  </ul></li>
+  <li><a href="#python-classes-a-practical-introduction" id="toc-python-classes-a-practical-introduction" class="nav-link" data-scroll-target="#python-classes-a-practical-introduction">🧱 Python Classes: A Practical Introduction</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-class" id="toc-what-is-a-class" class="nav-link" data-scroll-target="#what-is-a-class">🧠 What Is a Class?</a></li>
+  <li><a href="#defining-a-basic-class" id="toc-defining-a-basic-class" class="nav-link" data-scroll-target="#defining-a-basic-class">📦 Defining a Basic Class</a></li>
+  <li><a href="#creating-and-using-an-object" id="toc-creating-and-using-an-object" class="nav-link" data-scroll-target="#creating-and-using-an-object">🍏 Creating and Using an Object</a></li>
+  <li><a href="#exercise-define-your-own-class" id="toc-exercise-define-your-own-class" class="nav-link" data-scroll-target="#exercise-define-your-own-class">🧪 Exercise: Define Your Own Class</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">🧭 Summary</a></li>
+  </ul></li>
+  <li><a href="#adding-methods-and-attributes-in-python-classes" id="toc-adding-methods-and-attributes-in-python-classes" class="nav-link" data-scroll-target="#adding-methods-and-attributes-in-python-classes">🛠️ Adding Methods and Attributes in Python Classes</a>
+  <ul class="collapse">
+  <li><a href="#example-extending-the-food-class" id="toc-example-extending-the-food-class" class="nav-link" data-scroll-target="#example-extending-the-food-class">🧃 Example: Extending the <code>Food</code> Class</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">🧠 Best Practices</a></li>
+  </ul></li>
+  <li><a href="#inheritance-in-python-food-and-diet-classes" id="toc-inheritance-in-python-food-and-diet-classes" class="nav-link" data-scroll-target="#inheritance-in-python-food-and-diet-classes">🥗 Inheritance in Python: Food and Diet Classes</a>
+  <ul class="collapse">
+  <li><a href="#step-by-step-building-the-food-class" id="toc-step-by-step-building-the-food-class" class="nav-link" data-scroll-target="#step-by-step-building-the-food-class">🍎 Step-by-Step: Building the <code>Food</code> Class</a></li>
+  <li><a href="#creating-a-subclass-diet" id="toc-creating-a-subclass-diet" class="nav-link" data-scroll-target="#creating-a-subclass-diet">🌿 Creating a Subclass: <code>Diet</code></a>
+  <ul class="collapse">
+  <li><a href="#whats-going-on-here" id="toc-whats-going-on-here" class="nav-link" data-scroll-target="#whats-going-on-here">🧠 What’s Going On Here?</a></li>
+  </ul></li>
+  <li><a href="#testing-the-subclass" id="toc-testing-the-subclass" class="nav-link" data-scroll-target="#testing-the-subclass">🧪 Testing the Subclass</a></li>
+  <li><a href="#summary-1" id="toc-summary-1" class="nav-link" data-scroll-target="#summary-1">✅ Summary</a></li>
+  </ul></li>
+  <li><a href="#summary-object-oriented-programming-in-python" id="toc-summary-object-oriented-programming-in-python" class="nav-link" data-scroll-target="#summary-object-oriented-programming-in-python">🧾 Summary: Object-Oriented Programming in Python</a>
+  <ul class="collapse">
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🧪 Exercises</a>
+  <ul class="collapse">
+  <li><a href="#custom-food-class" id="toc-custom-food-class" class="nav-link" data-scroll-target="#custom-food-class">1. Custom Food Class</a></li>
+  <li><a href="#composite-object" id="toc-composite-object" class="nav-link" data-scroll-target="#composite-object">2. Composite Object</a></li>
+  <li><a href="#describe-all" id="toc-describe-all" class="nav-link" data-scroll-target="#describe-all">3. Describe All</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">✅ Conclusion</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">🧑‍💻 2.5 Object-Oriented Programming Basics</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>This notebook introduces the fundamentals of Object-Oriented Programming (OOP) in Python, tailored for food and nutrition science students. OOP is a powerful way to organise code, making it more modular, reusable, and easier to maintain—perfect for managing complex nutrition data projects!</p>
-<p><strong>Objectives</strong>: - Understand key OOP concepts: classes, objects, methods, and inheritance. - Apply OOP to model nutrition-related concepts (e.g., foods, diets). - Practise creating and using classes to solve simple problems.</p>
-<p><strong>Context</strong>: In nutrition research, you often deal with related data (e.g., foods, nutrients, diets). OOP lets you model these as objects with properties (e.g., calories) and behaviours (e.g., calculate energy), making your code more intuitive and scalable.</p>
+<section id="object-oriented-programming-oop-basics" class="level1">
+<h1>🧑‍💻 2.5 Object-Oriented Programming (OOP) Basics</h1>
+<p>Welcome to the final notebook in the <strong>Programming Basics</strong> module! In this session, we’ll explore the fundamentals of <strong>Object-Oriented Programming (OOP)</strong>, a powerful approach to writing code that is <strong>organised</strong>, <strong>modular</strong>, and <strong>reusable</strong>.</p>
+<hr>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">🎯 Objectives</h2>
+<p>By the end of this notebook, you should be able to:</p>
+<ul>
+<li>Understand the <strong>core concepts</strong> of OOP: classes, objects, attributes, methods, and inheritance.</li>
+<li>Write your own classes to model nutrition-related entities like foods, nutrients, and diets.</li>
+<li>Apply OOP principles to create clean, readable, and maintainable code.</li>
+</ul>
+<hr>
+</section>
+<section id="why-object-oriented-programming" class="level2">
+<h2 class="anchored" data-anchor-id="why-object-oriented-programming">🧠 Why Object-Oriented Programming?</h2>
+<p>In the real world, data isn’t flat—it’s structured and interconnected.</p>
+<p>In nutrition science, for example, you might deal with:</p>
+<ul>
+<li>Foods that have a name, nutrient profile, and cost.</li>
+<li>Nutrients that have a name, units, and dietary recommendations.</li>
+<li>Diets that contain multiple foods and require specific calculations.</li>
+</ul>
+<p>These aren’t just isolated data points—they are <strong>related entities</strong>. OOP helps you mirror these real-world relationships in your code.</p>
+<p>Instead of managing a mess of separate variables and functions, you can <strong>bundle everything into a single unit</strong> (a class) and then create <strong>instances</strong> of that unit (objects) with unique data.</p>
+<hr>
+</section>
+<section id="what-is-oop" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-oop">🧰 What Is OOP?</h2>
+<p>Object-Oriented Programming is based on the idea of <strong>“objects”</strong>—which combine <strong>data</strong> (called attributes) and <strong>behaviours</strong> (called methods). You define a <strong>class</strong> as a blueprint, then create multiple <strong>objects</strong> (instances) from it.</p>
+<p>This makes it easy to:</p>
+<ul>
+<li>Keep related information together</li>
+<li>Reuse code through inheritance</li>
+<li>Extend or update functionality without rewriting everything</li>
+</ul>
+<hr>
+</section>
+<section id="example-from-nutrition" class="level2">
+<h2 class="anchored" data-anchor-id="example-from-nutrition">🧪 Example from Nutrition</h2>
+<p>Imagine a <code>Food</code> class:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Food:</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> calories</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can now create specific food items:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>apple <span class="op">=</span> Food(<span class="st">"Apple"</span>, <span class="dv">95</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>banana <span class="op">=</span> Food(<span class="st">"Banana"</span>, <span class="dv">120</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Each <code>Food</code> object carries its own <code>name</code> and <code>calories</code>, and you can easily create new ones without writing new functions or variables each time.</p>
+<hr>
 <details>
 <summary>
-Fun Fact
+🐘 Fun Fact
 </summary>
-Think of OOP like a hippo’s diet plan—each food item is an object, and the diet is a class that organises them! 🦛
+<p>Think of OOP like a hippo’s diet log—each <strong>food</strong> entry is an object, and the <strong>diet</strong> is a class that keeps it all neat and trackable!<br>
+Just like real-life items (e.g.&nbsp;hippos, food, nutrients) have <strong>attributes</strong> (like colour, energy, or weight) and <strong>actions</strong> (like eat, swim, or digest), objects in Python do too!</p>
 </details>
+<hr>
+</section>
+<section id="what-youll-learn-in-this-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-learn-in-this-notebook">🛠 What You’ll Learn in This Notebook</h2>
+<p>We’ll cover the core building blocks of OOP in Python:</p>
+<ul>
+<li><strong>Classes and Objects</strong>: How to define and use them</li>
+<li><strong>Attributes and Methods</strong>: How to store and interact with data</li>
+<li><strong>Inheritance</strong>: How to reuse code by creating child classes</li>
+<li><strong>Best Practices</strong>: Naming, structure, and readability</li>
+</ul>
+<p>You’ll also practise applying OOP principles to realistic nutrition problems—think <code>Nutrient</code>, <code>Meal</code>, or <code>DietPlan</code> classes.</p>
 <div id="colab_setup" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Ensure environment is ready</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: This module (Programming Basics) does not require datasets</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'No dataset required for this notebook 🦛'</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages for this notebook</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="classes-and-objects" class="level2">
-<h2 class="anchored" data-anchor-id="classes-and-objects">📚 Classes and Objects</h2>
-<p>In OOP, a <strong>class</strong> is a blueprint for creating <strong>objects</strong>. An object is an instance of a class, with its own data (attributes) and behaviours (methods). Let’s create a <code>Food</code> class to model food items in a nutrition study.</p>
-<p><strong>Example</strong>: A <code>Food</code> class with attributes for name and calories, and a method to describe the food.</p>
-<div id="food_class" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the Food class</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Food:</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Constructor method to initialise attributes</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># self refers to the object being created</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories):</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name        <span class="co"># Attribute: name of the food</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> calories  <span class="co"># Attribute: calories per serving</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Method to describe the food</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving.'</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Create objects (instances) of the Food class</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>apple <span class="op">=</span> Food(<span class="st">'Apple'</span>, <span class="dv">95</span>)   <span class="co"># Create an Apple object</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>banana <span class="op">=</span> Food(<span class="st">'Banana'</span>, <span class="dv">120</span>)  <span class="co"># Create a Banana object</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the describe method to print information</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(apple.describe())   <span class="co"># Output: Apple has 95 calories per serving.</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(banana.describe())  <span class="co"># Output: Banana has 120 calories per serving.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup for Google Colab: Ensure environment is ready</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: This module (Programming Basics) does not require datasets</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'No dataset required for this notebook 🦛'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Install required packages for this notebook</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pip install pandas</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Python environment ready.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="adding-methods-and-attributes" class="level2">
-<h2 class="anchored" data-anchor-id="adding-methods-and-attributes">🔧 Adding Methods and Attributes</h2>
-<p>Let’s enhance the <code>Food</code> class by adding a method to adjust calories (e.g., for a larger serving) and an attribute for food category (e.g., fruit, vegetable).</p>
-<p><strong>Example</strong>: Extend the <code>Food</code> class with a category attribute and a method to scale calories.</p>
-<div id="food_extended" class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extended Food class</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Food:</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories, category):</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> calories</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.category <span class="op">=</span> category  <span class="co"># New attribute: food category</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>category<span class="sc">}</span><span class="ss">) has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving.'</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># New method to scale calories for a different serving size</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> scale_calories(<span class="va">self</span>, factor):</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> <span class="bu">int</span>(<span class="va">self</span>.calories <span class="op">*</span> factor)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'Updated </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories.'</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create objects with category</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>carrot <span class="op">=</span> Food(<span class="st">'Carrot'</span>, <span class="dv">41</span>, <span class="st">'Vegetable'</span>)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>mango <span class="op">=</span> Food(<span class="st">'Mango'</span>, <span class="dv">60</span>, <span class="st">'Fruit'</span>)</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Describe the foods</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(carrot.describe())  <span class="co"># Output: Carrot (Vegetable) has 41 calories per serving.</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mango.describe())   <span class="co"># Output: Mango (Fruit) has 60 calories per serving.</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale calories for a larger serving (e.g., 2x serving size)</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(carrot.scale_calories(<span class="dv">2</span>))  <span class="co"># Output: Updated Carrot to 82 calories.</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(carrot.describe())         <span class="co"># Output: Carrot (Vegetable) has 82 calories per serving.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
-<section id="inheritance" class="level2">
-<h2 class="anchored" data-anchor-id="inheritance">🌱 Inheritance</h2>
-<p>Inheritance allows a class to inherit attributes and methods from another class, promoting code reuse. Let’s create a <code>Diet</code> class that inherits from <code>Food</code> to represent a special diet food with an additional attribute for diet type (e.g., low-carb).</p>
-<p><strong>Example</strong>: A <code>Diet</code> class that inherits from <code>Food</code> and adds a diet type.</p>
-<div id="diet_class" class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base class (parent)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Food:</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories, category):</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> calories</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.category <span class="op">=</span> category</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>category<span class="sc">}</span><span class="ss">) has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving.'</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Derived class (child) that inherits from Food</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Diet(Food):</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories, category, diet_type):</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Call the parent class's __init__ method to set name, calories, category</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(name, calories, category)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.diet_type <span class="op">=</span> diet_type  <span class="co"># New attribute: diet type</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Override the describe method to include diet type</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>category<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>diet_type<span class="sc">}</span><span class="ss">) has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving.'</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a diet food object</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>keto_avocado <span class="op">=</span> Diet(<span class="st">'Avocado'</span>, <span class="dv">160</span>, <span class="st">'Fruit'</span>, <span class="st">'Keto'</span>)</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Describe the diet food</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(keto_avocado.describe())  <span class="co"># Output: Avocado (Fruit, Keto) has 160 calories per serving.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="python-classes-a-practical-introduction" class="level1">
+<h1>🧱 Python Classes: A Practical Introduction</h1>
+<p>This section introduces the idea of classes in Python — the foundation of Object-Oriented Programming (OOP). In the context of food and nutrition science, classes allow us to model foods, nutrients, meals, and other complex entities in a structured and reusable way.</p>
+<hr>
+<section id="what-is-a-class" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-class">🧠 What Is a Class?</h2>
+<p>A <strong>class</strong> is a blueprint for creating objects. Think of it as a cookie cutter — it defines the shape, and you can make as many cookies (objects) as you want from it.</p>
+<p>Each object created from a class is called an <strong>instance</strong>. The instance has <strong>attributes</strong> (data) and <strong>methods</strong> (functions it can perform).</p>
+<hr>
 </section>
+<section id="defining-a-basic-class" class="level2">
+<h2 class="anchored" data-anchor-id="defining-a-basic-class">📦 Defining a Basic Class</h2>
+<p>Here’s a simple example of a class that represents a <code>FoodItem</code>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> FoodItem:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> calories</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> contains </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> kcal per serving.'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>__init__</code> is the <em>constructor</em>, a special method used to initialise the object.</li>
+<li><code>self</code> refers to the current instance being created.</li>
+<li><code>.describe()</code> is a method that returns a string description of the food item.</li>
+</ul>
+<hr>
+</section>
+<section id="creating-and-using-an-object" class="level2">
+<h2 class="anchored" data-anchor-id="creating-and-using-an-object">🍏 Creating and Using an Object</h2>
+<p>Let’s create an instance of <code>FoodItem</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>apple <span class="op">=</span> FoodItem(<span class="st">"Apple"</span>, <span class="dv">95</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(apple.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Output:</p>
+<pre><code>Apple contains 95 kcal per serving.</code></pre>
+<hr>
+</section>
+<section id="exercise-define-your-own-class" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-define-your-own-class">🧪 Exercise: Define Your Own Class</h2>
+<p>Create a class called <code>Drink</code> with attributes: - <code>name</code> (e.g., “Orange Juice”) - <code>volume_ml</code> (e.g., 250) - <code>sugar_g</code> (e.g., 22)</p>
+<p>Add a method <code>sugar_concentration()</code> that returns grams of sugar per 100 mL.</p>
+<div id="a889e054" class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<details>
+<summary>
+💡 Show Answer
+</summary>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Drink:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, volume_ml, sugar_g):</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.volume_ml <span class="op">=</span> volume_ml</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.sugar_g <span class="op">=</span> sugar_g</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> sugar_concentration(<span class="va">self</span>):</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (<span class="va">self</span>.sugar_g <span class="op">/</span> <span class="va">self</span>.volume_ml) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>juice <span class="op">=</span> Drink(<span class="st">"Orange Juice"</span>, <span class="dv">250</span>, <span class="dv">22</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>juice<span class="sc">.</span>name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>juice<span class="sc">.</span>sugar_concentration()<span class="sc">:.1f}</span><span class="ss"> g sugar per 100 mL'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">🧭 Summary</h2>
+<ul>
+<li>A <strong>class</strong> is a way to bundle data and functionality together.</li>
+<li>Each <strong>object</strong> is an instance of a class.</li>
+<li>Use <code>__init__</code> to define how each object is constructed.</li>
+<li>Add <strong>methods</strong> to define behaviours.</li>
+<li>OOP helps you organise code better, especially in complex projects.</li>
+</ul>
+<p>In the next part, we’ll explore <strong>methods</strong>, <strong>attributes</strong>, and <strong>inheritance</strong> in more detail.</p>
+</section>
+</section>
+<section id="adding-methods-and-attributes-in-python-classes" class="level1">
+<h1>🛠️ Adding Methods and Attributes in Python Classes</h1>
+<p>Once you’ve defined a basic class, you can add more functionality by defining <strong>methods</strong> (functions inside classes) and <strong>attributes</strong> (data stored in each object). This makes your classes more useful and more descriptive.</p>
+<hr>
+<section id="example-extending-the-food-class" class="level2">
+<h2 class="anchored" data-anchor-id="example-extending-the-food-class">🧃 Example: Extending the <code>Food</code> Class</h2>
+<p>Let’s take our basic <code>Food</code> class and add:</p>
+<ul>
+<li>A new <strong>attribute</strong> for category (e.g., ‘Fruit’, ‘Vegetable’)</li>
+<li>A <strong>method</strong> to update the calorie value based on serving size</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Food:</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories, category):</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> calories</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.category <span class="op">=</span> category  <span class="co"># new attribute</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>category<span class="sc">}</span><span class="ss">) has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving."</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> scale_calories(<span class="va">self</span>, factor):</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> <span class="bu">int</span>(<span class="va">self</span>.calories <span class="op">*</span> factor)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"Updated </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now let’s create and use some objects:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>carrot <span class="op">=</span> Food(<span class="st">"Carrot"</span>, <span class="dv">41</span>, <span class="st">"Vegetable"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>mango <span class="op">=</span> Food(<span class="st">"Mango"</span>, <span class="dv">60</span>, <span class="st">"Fruit"</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(carrot.describe())     <span class="co"># Carrot (Vegetable) has 41 calories per serving.</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mango.describe())      <span class="co"># Mango (Fruit) has 60 calories per serving.</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Scale the calorie value</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(carrot.scale_calories(<span class="dv">2</span>))  <span class="co"># Updated Carrot to 82 calories.</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(carrot.describe())         <span class="co"># Carrot (Vegetable) has 82 calories per serving.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices">🧠 Best Practices</h2>
+<ul>
+<li>Add <strong>only the attributes and methods you need</strong>—not everything!</li>
+<li>Try to keep your class <strong>focused</strong> on one concept.</li>
+<li>Use <strong>meaningful method names</strong> like <code>describe</code>, <code>scale_calories</code>, <code>increase_amount</code>, etc.</li>
+<li>Add a <strong>docstring</strong> to methods if they are not self-explanatory.</li>
+</ul>
+<hr>
+<details>
+<summary>
+🔍 Hidden Tip: Why use methods instead of changing attributes directly?
+</summary>
+<p>Using a method like <code>scale_calories()</code> lets you <strong>control and validate</strong> how attributes are changed, and makes the code more readable. It also makes it easier to maintain or adjust later.</p>
+</details>
+</section>
+</section>
+<section id="inheritance-in-python-food-and-diet-classes" class="level1">
+<h1>🥗 Inheritance in Python: Food and Diet Classes</h1>
+<p>In Object-Oriented Programming (OOP), <strong>inheritance</strong> is a powerful concept where one class (called the <em>child</em> or <em>subclass</em>) derives properties and behaviour (methods and attributes) from another class (called the <em>parent</em> or <em>base class</em>).</p>
+<p>This helps you avoid writing the same code again, making your code more organised and modular.</p>
+<hr>
+<section id="step-by-step-building-the-food-class" class="level2">
+<h2 class="anchored" data-anchor-id="step-by-step-building-the-food-class">🍎 Step-by-Step: Building the <code>Food</code> Class</h2>
+<p>First, we define a general class that represents any food item:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parent class</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Food:</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories, category):</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.calories <span class="op">=</span> calories</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.category <span class="op">=</span> category</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>category<span class="sc">}</span><span class="ss">) has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving.'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>__init__</code> is the <em>constructor</em>. It runs when an object is created.</li>
+<li><code>self.name</code>, <code>self.calories</code>, and <code>self.category</code> are <strong>attributes</strong> that belong to a specific object.</li>
+<li>The method <code>describe</code> returns a string that summarises the object.</li>
+</ul>
+<hr>
+</section>
+<section id="creating-a-subclass-diet" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-subclass-diet">🌿 Creating a Subclass: <code>Diet</code></h2>
+<p>Now let’s say we want to add an extra piece of information for some foods that are part of a <strong>diet plan</strong>, such as <code>"Low-Carb"</code> or <code>"Keto"</code>. Instead of rewriting the whole <code>Food</code> class, we create a child class <code>Diet</code> that inherits from it.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Child class that inherits from Food</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Diet(Food):</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, calories, category, diet_type):</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># super() refers to the parent class (Food) and calls its constructor</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(name, calories, category)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.diet_type <span class="op">=</span> diet_type</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Overriding the describe method to include diet_type</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> describe(<span class="va">self</span>):</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss"> (</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>category<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>diet_type<span class="sc">}</span><span class="ss">) has </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>calories<span class="sc">}</span><span class="ss"> calories per serving.'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="whats-going-on-here" class="level3">
+<h3 class="anchored" data-anchor-id="whats-going-on-here">🧠 What’s Going On Here?</h3>
+<ul>
+<li><code>Diet(Food)</code> means: <em>Diet is a subclass of Food</em>.</li>
+<li><code>super().__init__(...)</code> calls the parent class’s <code>__init__</code> method so we don’t have to retype the <code>name</code>, <code>calories</code>, and <code>category</code> assignments. This is good practice and prevents duplication.</li>
+<li>We then add a new attribute <code>diet_type</code> specific to the <code>Diet</code> class.</li>
+<li>We also <strong>override</strong> the <code>describe</code> method to include the diet type.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="testing-the-subclass" class="level2">
+<h2 class="anchored" data-anchor-id="testing-the-subclass">🧪 Testing the Subclass</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>keto_avocado <span class="op">=</span> Diet(<span class="st">"Avocado"</span>, <span class="dv">160</span>, <span class="st">"Fruit"</span>, <span class="st">"Keto"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(keto_avocado.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Output</strong>:</p>
+<pre><code>Avocado (Fruit, Keto) has 160 calories per serving.</code></pre>
+<p>This shows that the new class works just like <code>Food</code>, but with extra features.</p>
+<hr>
+</section>
+<section id="summary-1" class="level2">
+<h2 class="anchored" data-anchor-id="summary-1">✅ Summary</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 84%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>class</code></td>
+<td>A blueprint for creating objects</td>
+</tr>
+<tr class="even">
+<td><code>__init__</code></td>
+<td>A constructor that runs when the object is created</td>
+</tr>
+<tr class="odd">
+<td><code>super()</code></td>
+<td>A function that gives access to the parent class’s methods</td>
+</tr>
+<tr class="even">
+<td>Inheritance</td>
+<td>A way for one class to reuse or extend another class’s code</td>
+</tr>
+<tr class="odd">
+<td>Override</td>
+<td>Redefining a method in the child class to change its behaviour</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="summary-object-oriented-programming-in-python" class="level1">
+<h1>🧾 Summary: Object-Oriented Programming in Python</h1>
+<p>By now, you’ve learned the foundational concepts of Object-Oriented Programming (OOP), including:</p>
+<ul>
+<li><strong>Classes</strong>: Blueprints for creating objects (like templates for food items).</li>
+<li><strong>Objects</strong>: Instances of classes with their own data (attributes) and actions (methods).</li>
+<li><strong>Attributes</strong>: Variables that belong to a class/object.</li>
+<li><strong>Methods</strong>: Functions that belong to a class/object and operate on its data.</li>
+<li><strong>Inheritance</strong>: Allows a new class to inherit methods and attributes from an existing class, promoting code reuse.</li>
+</ul>
+<hr>
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">🧪 Exercises</h2>
-<ol type="1">
-<li><p><strong>Create a New Class</strong>: Create a <code>Nutrient</code> class with attributes for <code>name</code> (e.g., ‘Protein’) and <code>amount</code> (e.g., 10 grams). Add a method <code>increase_amount</code> that increases the amount by a given factor. Test it by creating a <code>Nutrient</code> object for ‘Vitamin C’ with 90 mg and increasing it by 1.5.</p></li>
-<li><p><strong>Extend the Diet Class</strong>: Add a method to the <code>Diet</code> class called <code>is_low_calorie</code> that returns <code>True</code> if the food has fewer than 100 calories, <code>False</code> otherwise. Test it with <code>keto_avocado</code> and a new low-calorie diet food (e.g., ‘Spinach’, 23 calories, ‘Vegetable’, ‘Low-Carb’).</p></li>
-<li><p><strong>Inheritance Challenge</strong>: Create a <code>Meal</code> class that inherits from <code>Diet</code> and has an additional attribute <code>meal_type</code> (e.g., ‘Breakfast’). Override the <code>describe</code> method to include the meal type. Create a <code>Meal</code> object and test it.</p></li>
-</ol>
-<p><strong>Guidance</strong>: Use the examples above as a starting point. Experiment with different foods and diets relevant to nutrition science!</p>
-<p><strong>Your Answers</strong>:</p>
-<p><strong>Exercise 1: Nutrient Class</strong><br>
-[Write your code and test output here]</p>
-<p><strong>Exercise 2: Extend Diet Class</strong><br>
-[Write your code and test output here]</p>
-<p><strong>Exercise 3: Inheritance Challenge</strong><br>
-[Write your code and test output here]</p>
+<section id="custom-food-class" class="level3">
+<h3 class="anchored" data-anchor-id="custom-food-class">1. Custom Food Class</h3>
+<p>Create a <code>Snack</code> class that inherits from <code>Food</code> and includes: - A new attribute <code>snack_type</code> (e.g., ‘sweet’, ‘salty’) - A method <code>is_healthy()</code> that returns <code>True</code> if calories are below 200.</p>
+<p>Test it with examples like:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>popcorn <span class="op">=</span> Snack(<span class="st">'Popcorn'</span>, <span class="dv">150</span>, <span class="st">'Grain'</span>, <span class="st">'salty'</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(popcorn.is_healthy())  <span class="co"># Should return True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="composite-object" class="level3">
+<h3 class="anchored" data-anchor-id="composite-object">2. Composite Object</h3>
+<p>Create a <code>Meal</code> class that: - Takes a list of <code>Food</code> or <code>Diet</code> objects - Has a method <code>total_calories()</code> that sums their calories</p>
+<hr>
+</section>
+<section id="describe-all" class="level3">
+<h3 class="anchored" data-anchor-id="describe-all">3. Describe All</h3>
+<p>Create a function <code>describe_meal(meal)</code> that loops through the foods in a <code>Meal</code> object and prints their descriptions.</p>
+<hr>
+</section>
 </section>
 <section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>You’ve learned the basics of Object-Oriented Programming in Python, including classes, objects, methods, and inheritance. These concepts are powerful for organising nutrition data projects—imagine creating classes for meals, diets, or even hippo food preferences! 🦛</p>
-<p><strong>Next Steps</strong>: You’ve completed the Programming Basics module! Move on to the Data Handling module starting with <code>3.1_what_is_data.ipynb</code> to apply your skills to real nutrition datasets.</p>
-<p><strong>Resources</strong>: - <a href="https://docs.python.org/3/tutorial/classes.html">Python OOP Tutorial</a> - <a href="https://realpython.com/python3-object-oriented-programming/">Real Python: OOP in Python</a> - Repository: <a href="https://github.com/ggkuhnle/data-analysis-toolkit-FNS">github.com/ggkuhnle/data-analysis-toolkit-FNS</a></p>
+<h2 class="anchored" data-anchor-id="conclusion">✅ Conclusion</h2>
+<p>Object-Oriented Programming makes your Python code: - Easier to organise - More reusable - Cleaner and more intuitive</p>
+<p>You can now model real-world nutrition problems in a structured and scalable way.</p>
+<details>
+<summary>
+🔍 Advanced: Magic Methods and Encapsulation
+</summary>
+<ul>
+<li><strong>Magic methods</strong> like <code>__str__</code> or <code>__repr__</code> let you control how objects are printed.</li>
+<li><strong>Encapsulation</strong> helps you protect internal states with naming conventions (e.g., <code>_private</code>, <code>__very_private</code>).</li>
+<li>You can also use <code>@property</code> decorators to create computed attributes.</li>
+</ul>
+</details>
+<p>🎉 Well done! You’re ready to tackle real-world nutrition modelling using OOP!</p>
+</section>
 </section>
 
 </main>
