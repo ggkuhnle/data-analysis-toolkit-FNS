@@ -55,6 +55,6 @@ columns = ["ID", "Age", "Sex", "SmokingStatus", "Group",
 
 # Create DataFrame and export
 df = pd.DataFrame(data, columns=columns)
-df.to_csv("hipponol_trial_data.csv", index=False)
+df.to_csv("../data/hipponol_trial_data.csv", index=False)
 
 print(f"✅ Created 'hipponol_trial_data.csv' with {sample_size} entries.")

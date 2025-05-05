@@ -66,7 +66,7 @@ try:
             data.loc[mask, col] = np.nan
 
     # Save the dataset
-    data.to_csv('epidemiological_study.csv', index=False)
+    data.to_csv('../data/epidemiological_study.csv', index=False)
     print("Dataset simulated and saved as 'epidemiological_study.csv'")
 
 except Exception as e:

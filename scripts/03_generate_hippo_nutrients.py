@@ -21,4 +21,4 @@ for h in hippos:
                 value = np.random.normal(10.5, 1) if np.random.rand() > 0.1 else np.nan
             data.append([h, n, y, round(value, 1) if not np.isnan(value) else np.nan, age, sex])
 df = pd.DataFrame(data, columns=['ID', 'Nutrient', 'Year', 'Value', 'Age', 'Sex'])
-df.to_csv('hippo_nutrients.csv', index=False)
+df.to_csv('../data/hippo_nutrients.csv', index=False)

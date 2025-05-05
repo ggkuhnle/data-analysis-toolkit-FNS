@@ -13,4 +13,4 @@ for i, h in enumerate(hippos):
     date = (start_date + timedelta(days=i)).strftime('%Y-%m-%d')
     data.append([h, round(calories), round(protein, 1) if not np.isnan(protein) else np.nan, date])
 df = pd.DataFrame(data, columns=['ID', 'Calories', 'Protein', 'Date'])
-df.to_csv('hippo_diets.csv', index=False)
+df.to_csv('../data/hippo_diets.csv', index=False)

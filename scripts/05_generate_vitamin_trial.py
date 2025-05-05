@@ -18,4 +18,4 @@ for i in range(1, 201):
         outcome = 'Improved'
     data.append([pid, group, round(vit_d, 1), time, outcome])
 df = pd.DataFrame(data, columns=['ID', 'Group', 'Vitamin_D', 'Time', 'Outcome'])
-df.to_csv('vitamin_trial.csv', index=False)
+df.to_csv('../data/vitamin_trial.csv', index=False)

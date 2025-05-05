@@ -80,6 +80,6 @@ Synthetic Metabolomics Dataset
 - Generated: 26 April 2025
 - Random Seed: 11088
 """
-with open('metabolomics_dataset_metadata.txt', 'w') as f:
+with open('../data/metabolomics_dataset_metadata.txt', 'w') as f:
     f.write(metadata)
 print("Metadata saved as 'metabolomics_dataset_metadata.txt'")

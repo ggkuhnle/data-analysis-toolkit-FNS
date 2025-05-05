@@ -24,4 +24,4 @@ for i in range(500):
     date = (start_date + timedelta(days=i % 90)).strftime('%Y-%m-%d')
     data.append([h, meal, nutrient, round(amount, 1), date])
 df = pd.DataFrame(data, columns=['ID', 'Meal', 'Nutrient', 'Amount', 'Date'])
-df.to_csv('large_food_log.csv', index=False)
+df.to_csv('../data/large_food_log.csv', index=False)

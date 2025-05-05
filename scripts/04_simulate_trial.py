@@ -22,5 +22,5 @@ data['outcome'] = np.where(
 
 # Create DataFrame and save
 df = pd.DataFrame(data)
-df.to_csv('simulated_trial.csv', index=False)
-print('Dataset saved as notebooks/04_data_analysis/data/simulated_trial.csv')
+df.to_csv('../data/simulated_trial.csv', index=False)
+print('Dataset saved as data/simulated_trial.csv')

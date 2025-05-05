@@ -15,7 +15,7 @@ preferences = [
     'Fruit is the best part of my diet.',
     'Mixed greens are fine, but fruit wins.'
 ]
-with open('food_preferences.txt', 'w') as f:
+with open('../data/food_preferences.txt', 'w') as f:
     for h in hippos:
         pref = random.choice(preferences)
         f.write(f'Hippo {h}: {pref}\n')
