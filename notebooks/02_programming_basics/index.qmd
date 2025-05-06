@@ -1,37 +1,53 @@
 ---
-title: "Programming Basics"
+title: "2 – Programming Basics"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+execute:
+  echo: false
 ---
 
-# Programming Basics 🧑‍💻
+# Welcome to Programming Basics
 
-This module covers the fundamentals of Python programming for nutrition data analysis, with hippo-themed examples (🦛).
+In this module you’ll learn the foundations of writing code for data analysis in nutrition science:
+from understanding what programming is, all the way through object-oriented design.
 
-## Notebooks
+---
 
-- **Introduction to Programming**  
-  Learn about the basics of programming.  
-  [View HTML](2.0_intro_to_programming.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/02_programming_basics/2.0_intro_to_programming.ipynb)
+## 📑 Notebooks
 
-- **Programming fundamentals**  
-  Learn Python syntax, variables, and comments.  
-  [View HTML](2.1_programming_fundamentals.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/02_programming_basics/2.1_programming_fundamentals.ipynb)
+1. **2.0 Intro to Programming**  
+   *What is programming, why it matters for data analysis, and how Python fits into the story.*  
+   ❯ [Open notebook](2.0_intro_to_programming.ipynb)
 
-- **Data Types and Conversion**  
-  Explore Python data types and type conversion.  
-  [View HTML](2.2_data_types_conversion.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/02_programming_basics/2.2_data_types_conversion.ipynb)
+2. **2.1 Programming Fundamentals**  
+   *The big picture: variables, functions, comments, formatting and error handling.*  
+   ❯ [Open notebook](2.1_programming_fundamentals.ipynb)
 
-- **Functions and Loops**  
-  Write functions and use loops in Python.  
-  [View HTML](2.3_functions_loops.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/02_programming_basics/2.3_functions_loops.ipynb)
+3. **2.2 Data Types & Conversion**  
+   *Integers, floats, strings, dates, and strategies for type‐casting & missing values.*  
+   ❯ [Open notebook](2.2_data_types_conversion.ipynb)
 
-- **Data Structures**  
-  Work with lists, dictionaries, and sets.  
-  [View HTML](2.4_data_structures.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/02_programming_basics/2.4_data_structures.ipynb)
+4. **2.3 Functions, Loops & Control Flow**  
+   *Reusable functions, looping constructs, conditionals and best practices.*  
+   ❯ [Open notebook](2.3_functions_loops.ipynb)
 
-- **Object-Oriented Programming Basics**  
-  Introduction to OOP in Python.  
-  [View HTML](2.5_oop_basics.html) | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ggkuhnle/data-analysis-toolkit-FNS/blob/main/notebooks/02_programming_basics/2.5_oop_basics.ipynb)
+5. **2.4 Data Structures**  
+   *Lists, dictionaries, NumPy arrays, and pandas DataFrames for organising your data.*  
+   ❯ [Open notebook](2.4_data_structures.ipynb)
 
-## Datasets
+6. **2.5 Input & Output**  
+   *Console I/O, text files, CSV, and JSON—how to read external data and export results.*  
+   ❯ [Open notebook](2.5_input_output.ipynb)
 
-- None required for this module.
+7. **2.6 OOP Basics**  
+   *Classes, objects, methods, inheritance and when to use object-oriented design.*  
+   ❯ [Open notebook](2.6_oop_basics.ipynb)
+
+---
+
+## 🛠️ Next Steps
+
+Once you’ve worked through these notebooks, move on to Module 3 for data cleaning and exploration techniques.
+
